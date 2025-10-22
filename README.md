@@ -54,6 +54,11 @@ DisastQA/
 │   ├── OE_evaluation/               # evaluation scripts (local/difficulty)
 │   └── DATA/                        # annotation/intermediate artifacts
 │
+├── assets/
+│   ├── pipeline.png
+│   ├── disastqa_results_overview.png
+│   └── event_type_breakdown.png
+│
 ├── requirements.txt
 ├── LICENSE
 └── README.md

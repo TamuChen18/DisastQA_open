@@ -76,7 +76,6 @@ DisastQA/
 5. Generate difficulty levels via keypoint count (OE).
 6. Evaluate 18 models under Base, Mix, and Golden settings.
 
----
 
 ---
 

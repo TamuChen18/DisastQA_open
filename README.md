@@ -82,9 +82,10 @@ DisastQA/
   <img src="assets/pipeline.png" alt="DisastQA Construction Pipeline" width="85%">
 </p>
 
-*Figure: Overview of the Human–LLM collaborative pipeline for DisastQA construction and model evaluation. The benchmark is built via a Human–LLM collaboration workflow, covering query rewriting, human validation, and keypoint-based evaluation.*
+*Figure: Overview of the Human–LLM collaborative pipeline for DisastQA construction and evaluation. The pipeline integrates query rewriting, human validation, and keypoint-based evaluation across MCQ and OE tracks.*
 
 ---
+
 
 
 ## 🚀 Quick Start

@@ -1,16 +1,18 @@
-# DisastQA: Datasets and Evaluation for Disaster-domain QA
+# 🧠 DisastQA: Datasets and Evaluation for Disaster-Domain Question Answering
 
-## Overview
-DisastQA provides finalized datasets and evaluation scripts for disaster-domain question answering. It supports two tasks:
-- MCQ: Multiple-choice questions
-- OE: Open-ended questions
+**DisastQA** provides finalized datasets and evaluation scripts for disaster-domain question answering.  
+It supports two major tasks:
+- **MCQ:** Multiple-choice questions  
+- **OE:** Open-ended questions  
 
 This repository contains:
-- `benchmark/`: scripts to generate MCQ/OE test sets from corpus/query/qrels
-- `DATA/`: finalized datasets, human annotations, and evaluation results/scripts
-- Root-level analysis scripts and reports
+- `benchmark/`: scripts to generate MCQ/OE test sets from corpus/query/qrels  
+- `DATA/`: finalized datasets, human annotations, and evaluation results/scripts  
+- Root-level analysis scripts and reports  
 
-Folder names and paths are stable and must NOT be changed.
+Folder names and paths are stable and **must NOT be changed** to ensure reproducibility.
+
+---
 
 ## Repository Structure
 ```
@@ -42,7 +44,7 @@ DisastQA/
 │   │   ├── local_evaluation.py         # For local/open models
 │   │   └── evaluate_closemodel.py      # For closed-source API models
 │   ├── OE_evaluation/                  # OE evaluation scripts
-│   │   ├── local_evaluation.py
+│   │   ├── local_evaluation.py  
 │   │   └── local_evaluation_with_difficulty.py
 │   ├── local_MCQ/                      # Model-specific MCQ results
 │   ├── local_OE/                       # Model-specific OE results
@@ -54,32 +56,30 @@ DisastQA/
 ```
 
 ## Data Pipeline (Summary)
-1. In `benchmark/MCQ/data_prepare.py`, build per-file mappings from `qrels` and `test_query`; extract pairs with score=3.
-2. In `benchmark/MCQ/generate_mcq_set.py`, generate candidate MCQs; then human annotate/correct.
-3. Human-balanced selection to 2000 MCQs → `DATA/DATA/annotation_mcq/ground_truth_MCQ_correctly_balanced.json`.
-4. Final MCQ test sets written to `DATA/final_mcq/` as `base_2000.json`, `mix_2000.json`, `golden_2000.json`.
-5. OE sets generated from remaining (5740−2000) balanced items → `DATA/final_OE/` as `base_oe.json`, etc. Difficulty variants consider keypoint counts.
-6. Evaluation results for models are stored under `DATA/local_MCQ/` and `DATA/local_OE/`.
+1. In `benchmark/MCQ/data_prepare.py`, build per-file mappings from `qrels` and `test_query`; extract pairs with score=3.  
+2. In `benchmark/MCQ/generate_mcq_set.py`, generate candidate MCQs; then human annotate/correct.  
+3. Human-balanced selection to 2000 MCQs → `DATA/DATA/annotation_mcq/ground_truth_MCQ_correctly_balanced.json`.  
+4. Final MCQ test sets written to `DATA/final_mcq/` as `base_2000.json`, `mix_2000.json`, `golden_2000.json`.  
+5. OE sets generated from remaining (5740−2000) balanced items → `DATA/final_OE/` as `base_oe.json`, etc. Difficulty variants consider keypoint counts.  
+6. Evaluation results for models are stored under `DATA/local_MCQ/` and `DATA/local_OE/`.  
+
+---
 
 ## Quick Start
+
 ### 1) Environment
 ```bash
 pip install -r requirements.txt
-```
 
 ### 2) MCQ Evaluation (local models)
-```bash
 python DATA/MCQ_evaluation/local_evaluation.py \
   --mcq_path DATA/final_mcq/base_2000.json \
   --model_name <your_local_model>
-```
 
 ### 3) OE Evaluation (local models, difficulty-aware)
-```bash
 python DATA/OE_evaluation/local_evaluation_with_difficulty.py \
   --oe_path DATA/final_OE/base_oe_with_difficulty.json \
   --model_name <your_local_model>
-```
 
 ### 4) Closed-source models
 Use the corresponding `evaluate_closemodel*.py` in `DATA/MCQ_evaluation/` or `DATA/OE_evaluation/`.
@@ -91,8 +91,13 @@ Use the corresponding `evaluate_closemodel*.py` in `DATA/MCQ_evaluation/` or `DA
 Note: Do not change directory names or relative paths.
 
 ## Metrics
-- MCQ: Accuracy
-- OE: ROUGE-L, BLEU-4, BERTScore-F1
+| Task | Metric       | Description                                   |
+| ---- | ------------ | --------------------------------------------- |
+| MCQ  | Accuracy     | Proportion of correct answers                 |
+| OE   | ROUGE-L      | Lexical overlap with reference answers        |
+| OE   | BLEU-4       | Precision-based n-gram overlap                |
+| OE   | BERTScore-F1 | Semantic similarity via contextual embeddings |
+
 
 ## Notes
 - Large models, prebuilt indexes, and temporary files are excluded via `.gitignore`.

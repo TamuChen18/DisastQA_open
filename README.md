@@ -79,7 +79,7 @@ DisastQA/
 ## 🧮 DisastQA Construction Pipeline
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TamuChen18/DisastQA/main/assets/pipeline.png" 
+  <img src="https://raw.githubusercontent.com/TamuChen18/DisastQA/main/assets/pipeline.pdf" 
        alt="DisastQA Construction Pipeline" width="85%"/>
 </p>
 

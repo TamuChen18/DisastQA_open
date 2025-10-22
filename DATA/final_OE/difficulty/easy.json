@@ -1,0 +1,1959 @@
+[
+  {
+    "original_query": "The rapid expansion of the IT industry in Bangalore is emblematic of a larger trend in many of India's urban centers, such as Chennai, Mumbai, Hyderabad, Pune, and Gurgaon. This exponential growth brings significant waste management challenges that cities struggle to address. The predominant contributors to the electronic waste problem are classified into three main categories: large household appliances, which account for 42%, followed by information and communication technology (ICT) equipment at 34%, and consumer electronics making up the remaining 14%. This overwhelming surge of electronic waste not only strains local infrastructures but also poses severe environmental hazards, stirring growing concern among municipal authorities and environmentalists alike. The ongoing digital revolution, which began in 1980, has led to an influx of affordable and user-friendly technological products that have now permeated households entirely.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the main categories contributing to the electronic waste problem in Indian cities experiencing rapid IT industry growth, and what percentage does each category represent?",
+          "llm_answer": "",
+          "correct_answer": "Corrected Answer: The passage does not provide specific categories or percentages contributing to the electronic waste problem in Indian cities. It only mentions that rapid urbanization due to IT industry growth exacerbates electronic waste and associated environmental issues.",
+          "key_points": [
+            "The passage does not specify categories or percentages related to electronic waste in Indian cities.",
+            "Rapid urbanization driven by IT industry growth is linked to increased electronic waste and environmental issues."
+          ]
+        }
+      }
+    },
+    "passage": "Rapid urbanization due to IT industry growth in Indian cities exacerbates electronic waste and associated environmental issues.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Ensuring that adequate storage sites for disaster waste management are available and fully planned before a disaster strikes can lead to less waste being produced during the event. Proactive measures can streamline waste management and reduce the volume of debris that interferes with recovery efforts. Effective disaster waste disposal strategies combined with thorough planning can contribute significantly to the reduction in overall waste generation during unforeseen emergencies.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How can comprehensive waste disposal measures and securing storage options before crises reduce the amount of waste generated during those events?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that implementing thorough waste disposal measures and securing storage options in advance of crises can meaningfully curtail the amount of waste generated during those events.",
+          "key_points": [
+            "Implementing thorough waste disposal measures in advance of crises can reduce waste generation during those events.",
+            "Securing storage options before crises can help in minimizing the amount of waste produced during such events."
+          ]
+        }
+      }
+    },
+    "passage": "Implementing thorough waste disposal measures and securing storage options in advance of crises can meaningfully curtail the amount of waste generated during those events.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "During severe weather events, it is crucial to prioritize your safety by relocating to an interior room located on the lowest floor of your building to minimize exposure to storm hazards.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In the context of severe weather events, what strategies should individuals prioritize for ensuring their safety?",
+          "llm_answer": "",
+          "correct_answer": "The passage suggests that during a storm, individuals should prioritize seeking shelter in an interior room on the lowest floor as the safest action.",
+          "key_points": [
+            "During a storm, individuals should prioritize seeking shelter.",
+            "The safest action is to find an interior room on the lowest floor."
+          ]
+        }
+      }
+    },
+    "passage": "Seeking shelter in an interior room on the lowest floor is the safest action during a storm.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Finally, there are substances that are not combusted, such as metals. All these components are polluting and have serious environmental impacts. It is possible to make combustion processes less environmentally damaging either by cleaning the flue gases or by improving the efficiency of combustion, for instance, with catalytic converters or increased temperatures. However, there are clear limitations to this approach. The continued reliance on fossil fuel combustion should be scrutinized and transformed if we aim to mitigate air pollution effectively. Fossil fuels are central to current energy systems, and this presents a significant challenge for environmental reform. Enhancing air quality necessitates a transition toward a new energy paradigm that prioritizes renewable energy sources. Additionally, emissions of nitrogenous substances, particularly ammonia, from agricultural processes have been exacerbated due to industrialization, requiring integrated approaches to nutrition management in sustainable farming. By harmonizing animal and crop production, we can effectively reduce nitrogen outputs into the atmosphere.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What measures does the passage suggest for reducing the environmental impact of energy-related activities?",
+          "llm_answer": "",
+          "correct_answer": "The passage suggests adopting cleaner and more efficient combustion technologies and transitioning to renewable energy sources for reducing the environmental impact.",
+          "key_points": [
+            "Adopting cleaner and more efficient combustion technologies.",
+            "Transitioning to renewable energy sources."
+          ]
+        }
+      }
+    },
+    "passage": "In light of the significant environmental impacts posed by non-combusted substances and the limitations of current combustion efficiencies, adopting cleaner and more efficient combustion technologies, alongside a transition to renewable energy sources, is imperative for lasting environmental protection.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Acid rain is caused by pollutants from human activities.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the primary human activities that lead to the formation of acid rain?",
+          "llm_answer": "",
+          "correct_answer": "The primary human activities leading to the formation of acid rain are the burning of fossil fuels in power plants and vehicles, as stated in the passage.",
+          "key_points": [
+            "The burning of fossil fuels in power plants is a primary human activity leading to the formation of acid rain.",
+            "The burning of fossil fuels in vehicles is another primary human activity contributing to acid rain formation."
+          ]
+        }
+      }
+    },
+    "passage": "The burning of fossil fuels in power plants and vehicles contributes significantly to acid rain.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The severe weather caused by the ongoing strong winds resulted in numerous trees being uprooted across various locations, which posed a significant risk to public safety, especially when they fell on structures or vehicles. Reports noted that a tree had hit a camping trailer in Steele Creek Park, leading to injuries for the occupants within. In addition, several trees fell onto cars in residential areas, creating hazardous conditions for drivers and pedestrians.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the hazards associated with strong winds according to recent incidents involving falling trees?",
+          "llm_answer": "",
+          "correct_answer": "Strong winds contribute to hazards by causing trees to fall, which poses a risk to safety as people have been reported injured when trees struck their vehicles or shelters.",
+          "key_points": [
+            "Strong winds cause trees to fall, creating safety hazards.",
+            "Falling trees due to strong winds have resulted in injuries to people when trees hit vehicles or shelters."
+          ]
+        }
+      }
+    },
+    "passage": "The falling trees caused by the strong winds have the potential to injure individuals, as evidenced by reports of people being harmed when trees struck their vehicles or shelters.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What new design guidelines are proposed to improve bridge resilience against flooding, particularly regarding the use of tandem piers?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What does the document propose to enhance the resilience of bridges against flood-related failures?",
+          "llm_answer": "",
+          "correct_answer": "The document proposes new design guidelines for bridges with tandem piers to mitigate risks associated with flooding and scouring. However, it does not provide specific innovative design strategies or detailed guidelines regarding the use of tandem piers.",
+          "key_points": [
+            "The document proposes new design guidelines for bridges with tandem piers to mitigate risks associated with flooding and scouring.",
+            "The document lacks specific innovative design strategies or detailed guidelines regarding the use of tandem piers."
+          ]
+        }
+      }
+    },
+    "passage": "The document discusses the critical issue of bridge failures during flood events, highlighting the significant public safety, economic, and environmental impacts associated with such collapses. It references various case studies, including a notable bridge collapse in Gold Coast, Australia, and provides statistical data on bridge failures in the U.S. from 1989 to 2012, indicating that approximately 60% of these failures are due to flooding and scouring. The document emphasizes the technical aspects of bridge scouring, detailing the stages leading to collapse and proposing new design guidelines for bridges with tandem piers to mitigate these risks. The research aims to enhance the resilience of both new and existing bridges against flood-related failures.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Natural disasters significantly impact communication infrastructure, causing critical failures in telephone systems and delaying responses from emergency services when people urgently need help, especially in areas prone to floods or earthquakes with inadequate system diversity.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What is the impact of communication failures on emergency response efforts during natural disasters?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that communication failures during natural disasters can lead to significant delays for emergency responders in reaching individuals in need.",
+          "key_points": [
+            "Communication failures during natural disasters can cause significant delays for emergency responders.",
+            "These delays impact the ability of responders to reach individuals in need effectively."
+          ]
+        }
+      }
+    },
+    "passage": "As a result of communication failures, emergency responders may experience significant delays in reaching individuals in need during a natural disaster.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Thermal-optical techniques are innovative methods used to accurately measure carbon emissions by integrating heating processes with optical detection. These advancements facilitate a clear differentiation between organic and elemental carbon, thereby enhancing the precision of carbon monitoring. These methodologies provide critical insights essential for environmental regulations and climate science.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How has the integration of optical measurements in thermal-optical techniques improved carbon emissions data accuracy?",
+          "llm_answer": "",
+          "correct_answer": "The integration of optical measurements in thermal-optical techniques has significantly improved the accuracy of carbon emissions data, which in turn supports more effective regulatory measures.",
+          "key_points": [
+            "The integration of optical measurements in thermal-optical techniques has significantly improved the accuracy of carbon emissions data.",
+            "Improved accuracy in carbon emissions data supports more effective regulatory measures."
+          ]
+        }
+      }
+    },
+    "passage": "The integration of optical measurements in thermal-optical techniques has significantly improved the accuracy of carbon emissions data, supporting more effective regulatory measures.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The Task Force deployed in response to the outbreak of ASF is made up of specialized personnel, including field epidemiologists and quarantine staff, ensuring that the proper containment and control measures coexist with the strategic response to manage the impacted areas effectively and swiftly.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the inclusion of field epidemiologists and quarantine staff in the Task Force enhance its ability to respond to the ASF outbreak?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that the Task Force includes field epidemiologists and quarantine staff, making it well-equipped to respond swiftly and effectively to control the ASF outbreak.",
+          "key_points": [
+            "The inclusion of field epidemiologists and quarantine staff equips the Task Force to respond swiftly to the ASF outbreak.",
+            "The Task Force is well-prepared to control the ASF outbreak effectively due to the presence of specialized personnel."
+          ]
+        }
+      }
+    },
+    "passage": "With a diverse team that includes field epidemiologists and quarantine staff, the Task Force is well-equipped to respond swiftly and effectively to control the ASF outbreak.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "In the Tijuana River valley, intense flooding events have a 1% annual exceedance probability, leading to significant risks for both human beings and vehicles. Reports indicate that during such floods, children and adults are easily toppled by the force of the water, while vehicles experience challenges such as sliding and being damaged. Moreover, structural home damage is a frequent consequence of these floods, highlighting the severe impact they have on communities living along the riverbank. Areas with poor drainage systems or obstructed culverts can experience even greater danger, exacerbating the threat to lives and property.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the risks faced by communities living in the Tijuana River valley during flooding events, particularly in terms of human safety and vehicle safety?",
+          "llm_answer": "",
+          "correct_answer": "The passage highlights that inhabitants living near the Tijuana River valley face significant risks during flooding events. Specifically, there is a considerable risk of injury to individuals due to high water forces that can topple people. Additionally, these high water forces pose a threat to vehicle safety, as they are capable of damaging vehicles.",
+          "key_points": [
+            "Inhabitants near the Tijuana River valley face significant risks of injury during flooding events due to high water forces.",
+            "High water forces during flooding events pose a threat to vehicle safety, as they can damage vehicles."
+          ]
+        }
+      }
+    },
+    "passage": "Inhabitants living near the Tijuana River valley face a considerable risk of injury and property loss during flooding events due to high water forces capable of toppling individuals and damaging vehicles.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Power plants that have the greatest energy losses are located in Afghanistan, Pakistan, northern India, northern China, Armenia, southern Kazakhstan and the Islamic Republic of Iran. The aggregation of energy loss in Asia-Pacific countries is illustrated in Figure 3-10. It shows that Pakistan has the highest percentage of energy loss due to sand and dust deposition, a loss that is also high in absolute terms. Following Pakistan, the next most significant energy losses in the region occur in Kazakhstan, China, India and Bangladesh, whereas more dispersed losses are noted in Russia, Australia, and Iran. This information underlines critical infrastructural challenges faced by these countries, particularly in enhancing energy efficiency. As these losses contribute substantially to hindering energy security and economic development, understanding the patterns of energy wastage becomes essential for policymakers who aim to implement remedial measures or optimize plant performances across these diverse nations.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key factors contributing to significant energy losses in power plants across Afghanistan, Pakistan, northern India, northern China, Armenia, southern Kazakhstan, and the Islamic Republic of Iran?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that significant energy losses in the specified regions are primarily due to sand and dust deposition, with Pakistan experiencing the highest percentage of energy loss from this cause.",
+          "key_points": [
+            "Significant energy losses in the specified regions are primarily due to sand and dust deposition.",
+            "Pakistan experiences the highest percentage of energy loss from sand and dust deposition among the regions mentioned."
+          ]
+        }
+      }
+    },
+    "passage": "Power plants that have the greatest energy losses \nare located in Afghanistan, Pakistan, northern India, \nnorthern China, Armenia, southern Kazakhstan and \nthe Islamic Republic of Iran. The aggregation of energy \nloss in Asia-Pacific countries is illustrated in Figure 3-10. It shows that Pakistan has the highest percentage of \nenergy loss due to sand and dust deposition, a loss that \nSource: Produced by APDIM, Data: (i) Dust deposition from MERRA-2 Reanalysis, (ii) Solar power plant capacity and location from Asia-Pacific Energy Portal, \nDisclaimer: The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United \nNations. Dotted line represents approximately the Line of Control in Jammu and Kashmir agreed upon by India and Pakistan. is also high in absolute terms. After Pakistan, the highest \nenergy losses (kWh) experienced in the region occur in \nKazakhstan, China, India and Bangladesh, followed by \nthe Russian Federation, Australia, the Islamic Republic of \nIran and Afghanistan.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The smallpox affected the Royal Family in Nepal and the King Girvana died of smallpox on 20 November 1816 at the young age of 21. The disease also affected the Royal Court of King Rana Bahadur Shah. A prominent figure in the court suffered from the disease and his disfigurement and subsequent suicide led to the desecration and destruction of many temples including the previous Sitala temple at Swayambhu. This widespread impact caused people to question the royal family's authority, as it seemed that even the highest echelons of power were not immune to calamity.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How did the impact of smallpox on the Royal Family of Nepal, particularly the death of King Girvana and the associated tragedies, affect public perception of the monarchy's authority and ability to govern during health crises?",
+          "llm_answer": "",
+          "correct_answer": "The impact of smallpox on the Royal Family of Nepal, particularly the death of King Girvana and the associated tragedies, diminished the public's perception of the royal family's invulnerability and authority. This led to increased skepticism about their ability to govern effectively during health crises.",
+          "key_points": [
+            "The death of King Girvana due to smallpox diminished the public's perception of the royal family's invulnerability.",
+            "The associated tragedies led to increased skepticism about the monarchy's ability to govern effectively during health crises."
+          ]
+        }
+      }
+    },
+    "passage": "The death of King Girvana and the tragedies associated with smallpox likely diminished the public's perception of the royal family's invulnerability and authority, leading to increased skepticism about their ability to govern effectively during health crises.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "An ELISA was then developed and optimized using a cocktail of equal amounts of the eight proteins as antigen. In the final set-up, results were analyzed in comparison to a reference serum and signals reported as percent positivity. Reproducibility was determined to an average intra assay coefficient of variation (CV) of 3% and average inter assay CV of 8%. A proof-of-concept study including 47 sera revealed a five-fold signal ratio separation between CBPP positive and CBPP negative sera (105 and 22 % positivity respectively, see Figure 11.3). Receiver operator characteristics of the assay showed a high diagnostic capability since the area under the curve was calculated to 0.991. An initial cut-off of 50% positivity resulted in no false positives and two false negatives with about 30% positivity.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the ELISA method, as developed in the cited study, ensure accurate diagnosis of CBPP, particularly in terms of specificity?",
+          "llm_answer": "",
+          "correct_answer": "The ELISA method ensures accurate diagnosis of CBPP by having a low false positive rate and significant signal differentiation between positive and negative sera, which contributes to its high specificity.",
+          "key_points": [
+            "The ELISA method ensures accurate diagnosis of CBPP by having a low false positive rate.",
+            "Significant signal differentiation between positive and negative sera contributes to the high specificity of the ELISA method."
+          ]
+        }
+      }
+    },
+    "passage": "The ELISA method is highly specific and accurate for diagnosing CBPP due to its low false positive rate and significant signal differentiation between positive and negative sera.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How do NOAA and USGS collaborate to provide early warning systems that alert communities about impending floods, especially after wildfires like the CZU Lightning Complex fire?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What role do the National Oceanic and Atmospheric Administration (NOAA) and the United States Geological Survey (USGS) play in informing communities about potential flooding risks in areas affected by wildfires?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that NOAA and USGS establish early warning systems to alert communities of impending floods in areas affected by wildfires.",
+          "key_points": [
+            "NOAA and USGS establish early warning systems.",
+            "These systems alert communities of impending floods in areas affected by wildfires."
+          ]
+        }
+      }
+    },
+    "passage": "This document outlines the risks associated with debris flows and flooding in areas affected by wildfires, particularly following the CZU Lightning Complex fire. It emphasizes that residents in and below burn areas should be vigilant, as the likelihood of dangerous debris flows and flash floods increases for several rainy seasons post-fire. The document explains how wildfires alter terrain, making it more susceptible to rapid runoff and flooding, with even minimal rainfall potentially triggering flash floods. It details the characteristics of debris flows, the dangers they pose, and the importance of early warning systems established by NOAA and USGS to alert communities of impending floods. Residents are encouraged to register for emergency alerts and understand the different types of flood advisories and warnings to ensure safety.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The generally accepted principle of operation in adverse weather conditions is the clean wing concept, which requires that take-offs do not begin unless the airplane's external surfaces are free from any deposits such as ice or snow that could impair its performance or control.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the clean wing concept contribute to flight safety during take-off, and what potential risks are associated with failing to maintain this principle in adverse weather conditions?",
+          "llm_answer": "",
+          "correct_answer": "The clean wing concept contributes to flight safety during take-off by ensuring that critical surfaces of the aircraft are free from ice or snow. Failure to adhere to this principle may put flight safety at risk, potentially leading to loss of control during take-off if ice or snow is present on these surfaces.",
+          "key_points": [
+            "The clean wing concept ensures flight safety during take-off by keeping critical aircraft surfaces free from ice or snow.",
+            "Failure to maintain the clean wing principle can lead to a loss of control during take-off if ice or snow is present on critical surfaces."
+          ]
+        }
+      }
+    },
+    "passage": "Failure to adhere to the clean wing concept may put flight safety at risk, potentially leading to loss of control during take-off if ice or snow is present on critical surfaces.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "A wildfire might have greater impacts in the mountain communities.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways could wildfires disproportionately affect mountain communities compared to suburban areas, considering factors like evacuation routes and access for emergency services?",
+          "llm_answer": "",
+          "correct_answer": "Wildfires could disproportionately affect mountain communities compared to suburban areas because the mountain communities have limited roads available for evacuation, making it more challenging for the population to leave the area quickly. Additionally, these communities are more difficult for response workers to access, which could delay emergency services and exacerbate the impact of the wildfire.",
+          "key_points": [
+            "Mountain communities have limited roads for evacuation, making it challenging for residents to leave quickly during wildfires.",
+            "Emergency services face difficulties accessing mountain communities, potentially delaying response efforts and worsening the wildfire's impact."
+          ]
+        }
+      }
+    },
+    "passage": "(e.g., flood \nprone areas, populations with limited or no ability to \nCommunity D is located in a mountainous \nregion, with its population spread between the \nsuburban areas in the foothills and the rural \nmountain communities. A wildfire might have \ngreater impacts in the mountain communities, \nwhich have limited roads that the population \ncan use to evacuate and is more difficult to \naccess by response workers. See the example context descriptions below for a comparison between sufficient and insufficient \nlevels of detail. The example with sufficient detail provides suggested types of information that \na community might want to consider including in their context descriptions. Example Context Description: Insufficient Level of Detail \nAn active shooter incident occurs, involving multiple gunmen and many potential victims. There are dozens of fatalities and injuries, and first responders arrive to the scene quickly. There are reports that the incident may be related to terrorism. Example Context Description: Sufficient Level of Detail \nAt approximately 2:00 p.m. on a Sunday afternoon, local police and State Troopers are \ndispatched to Thiraland City Mall responding to reports of an active shooter situation.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are the average concentration levels of microplastics in the surface waters of the Changjiang Estuary, and what are the primary concerns identified in relation to environmental pollution?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What insights can be drawn regarding the average concentration levels of microplastics in the surface waters of the Changjiang Estuary, and what primary environmental pollution concerns are associated with these findings?",
+          "llm_answer": "",
+          "correct_answer": "The passage provides insights that the average concentration of microplastics in the surface waters of the Changjiang Estuary is 23.1 ± 18.2 n/100 L. The primary environmental pollution concern associated with these findings is the critical risk posed by polyvinyl chloride, as indicated by the risk assessment models developed using data on both the concentration and chemical hazard of microplastic polymers.",
+          "key_points": [
+            "The average concentration of microplastics in the surface waters of the Changjiang Estuary is 23.1 ± 18.2 n/100 L.",
+            "The primary environmental pollution concern is the critical risk posed by polyvinyl chloride, as highlighted by risk assessment models based on microplastic concentration and chemical hazard data."
+          ]
+        }
+      }
+    },
+    "passage": "Contents lists available at ScienceDirect\nMarine Pollution Bulletin\njournal homepage: www.elsevier.com/locate/marpolbul\nMicroplastic risk assessment in surface waters: A case study in the\nChangjiang Estuary, China\nPei Xu, Guyu Peng, Lei Su, Yongqiang Gao, Lei Gao, Daoji Li⁎\nState Key Laboratory of Estuarine and Coastal Research, East China Normal University, 200062 Shanghai, China\nChangjiang Estuary\nRisk assessment\nPollution load index\nThe rapid development of plastic industry has resulted in a series of environmental problems caused by mi-\ncroplastics originating from larger plastics. Microplastic pollution risk in surface waters of the Changjiang\nEstuary was explored based on risk assessment models. The average microplastic concentration was\n23.1 ± 18.2 n/100 L. Shape, size, color and composition types of microplastics were examined. The risk as-\nsessment models were developed using data on both the concentration and chemical hazard of microplastic\npolymers. Assessment results indicated that polyvinyl chloride exhibited a critical concern for microplastic risk.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Vaccination often leads to observable reactions in infants, yet recent studies show that half of the vaccinated infants exhibit no local or systemic reactions at all. Among those who do respond, the reactions are typically mild or moderate, with the majority being small local reactions, such as a slight fever that tends to fall below critical thresholds. Similarly, significant adverse reactions like severe temperature increases or considerable swelling have been largely rare, and complications such as serious infections or even deaths may occur independently of the vaccination itself. Moreover, risk for anaphylaxis remains extremely low, indicating that while some neurological or physical changes post-vaccination are noted, they do not outweigh the protective benefits the vaccines furnish against communicable diseases.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What does the passage suggest about the balance between the side effects of vaccinations and their benefits in reducing disease morbidity in infants?",
+          "llm_answer": "",
+          "correct_answer": "The passage suggests that the benefits of vaccinations in reducing disease morbidity far exceed the minor and temporary side effects observed post-vaccination in infants. It indicates that the overall safety profile of vaccinations is supported by the lack of significant adverse reactions in the majority of cases.",
+          "key_points": [
+            "The benefits of vaccinations in reducing disease morbidity in infants significantly outweigh the minor and temporary side effects.",
+            "The overall safety profile of vaccinations is reinforced by the absence of significant adverse reactions in most cases."
+          ]
+        }
+      }
+    },
+    "passage": "The overall safety profile of vaccinations for infants is supported by the lack of significant adverse reactions in the majority of cases, suggesting that the benefits of reduced morbidity from diseases far exceed the minor and temporary side effects observed post-vaccination.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How is the Red Cross helping in disaster recovery efforts after the recent earthquakes?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what specific ways is the Red Cross contributing to the disaster recovery efforts in Nepal following the recent earthquakes?",
+          "llm_answer": "",
+          "correct_answer": "The Red Cross is contributing to disaster recovery efforts in Nepal by delivering supplies and setting up temporary shelters for those affected by the earthquake.",
+          "key_points": [
+            "The Red Cross is delivering supplies to those affected by the earthquake in Nepal.",
+            "The Red Cross is setting up temporary shelters for earthquake victims in Nepal."
+          ]
+        }
+      }
+    },
+    "passage": "It's heartwarming to see so many organizations coming together to support Nepal after the earthquake. @RedCross is on the ground delivering supplies and setting up temporary shelters for those affected. Let's keep the donations coming! #NepalEarthquake",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Discussing the dangers of naval mines in the Baltic Sea and their effects on marine safety.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the major risks associated with underwater mines in the Baltic Sea, and how might these mines affect marine safety and navigation for vessels operating in the region?",
+          "llm_answer": "",
+          "correct_answer": "The major risks associated with underwater mines in the Baltic Sea include causing accidents and blocking safe navigation. These mines pose a significant threat to marine safety and can severely affect navigation for vessels operating in the region.",
+          "key_points": [
+            "Underwater mines in the Baltic Sea pose a significant threat to marine safety.",
+            "These mines can cause accidents and block safe navigation for vessels operating in the region."
+          ]
+        }
+      }
+    },
+    "passage": "Just read about the huge threat of underwater mines in the Baltic Sea.ð 100,000 mines have been laid, causing accidents and blocking safe navigation. We really need to prioritize sea safety...nerve-wracking stuff! ð¢âï¸ #BalticSea #æµ·ã®å®å¨",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are the current safeguards in place to ensure the safety of AZOMITEÃÂ® in terms of contamination with hazardous chemicals during its mining and processing operations?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What do the test results of AZOMITE® say about its contamination with hazardous chemicals like dioxins and PCBs?",
+          "llm_answer": "",
+          "correct_answer": "The test results of AZOMITE® indicate that none of the samples showed contamination with hazardous chemicals like dioxins and PCBs above the detection limit of 0.1 ppt. Independent assays using the CALUX® method were conducted on three composite samples in late 2011, confirming that the levels were below the regulatory detection limits.",
+          "key_points": [
+            "AZOMITE® test results showed no contamination with hazardous chemicals like dioxins and PCBs above the detection limit of 0.1 ppt.",
+            "Independent assays using the CALUX® method were conducted on three composite samples in late 2011, confirming levels were below regulatory detection limits."
+          ]
+        }
+      }
+    },
+    "passage": "The document addresses concerns regarding the potential contamination of AZOMITE® with hazardous chemicals, specifically dioxins and PCBs. It states that none of the raw materials in AZOMITE® have exceeded the European Union's regulatory limit for dioxin/PCB contamination, which is set at 1 TEQ (1 nanogram/kilogram). Independent assays utilizing the CALUX® method, developed by XDS, were conducted to quantify dioxin-like chemicals, including the highly toxic 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD). The results indicated that three composite samples of AZOMITE® examined in late 2011 did not show contamination above the detection limit of 0.1 ppt. For further inquiries, XDS can be contacted directly.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Marawi situation and aid distribution reports",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What challenges are aid groups facing in distributing essentials in Marawi?",
+          "llm_answer": "",
+          "correct_answer": "Aid groups in Marawi are facing chaos while trying to distribute essentials due to the presence of thousands in need.",
+          "key_points": [
+            "Aid groups in Marawi are experiencing chaos during the distribution of essentials.",
+            "The chaos is caused by the presence of thousands of people in need."
+          ]
+        }
+      }
+    },
+    "passage": "Just saw the heartbreaking scenes from Marawi. Aid groups are trying to distribute essentials, but it's chaotic with thousands in need. We need more support for those affected! ð #MarawiRelief",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Looking for updates on UNMACC's mine assessment activities in Kosovo!",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What does the passage reveal about UNMACC's mine assessment activities in Kosovo?",
+          "llm_answer": "",
+          "correct_answer": "The passage reveals that the team from UNMACC is engaging in thorough mine assessments in Kosovo, and their work is crucial for ensuring community safety.",
+          "key_points": [
+            "The UNMACC team is conducting thorough mine assessments in Kosovo.",
+            "Their work is crucial for ensuring community safety."
+          ]
+        }
+      }
+    },
+    "passage": "Just saw the team from UNMACC engaging in thorough mine assessments in Kosovo. Their hard work is really crucial for ensuring community safety! #MineAction #Kosovo",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Tell me about the experiences of Hurricane Katrina survivors and community support in New Orleans.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What has a Hurricane Katrina survivor done to help communities in New Orleans rebuild since the storm?",
+          "llm_answer": "",
+          "correct_answer": "The passage describes a Hurricane Katrina survivor who has helped over 100 families rebuild their homes since the storm.",
+          "key_points": [
+            "A Hurricane Katrina survivor has actively participated in rebuilding efforts in New Orleans.",
+            "The survivor has assisted over 100 families in reconstructing their homes since the storm."
+          ]
+        }
+      }
+    },
+    "passage": "Just met a Katrina survivor at the community center! Her story of resilience is inspiring. Since the storm, sheâs helped over 100 families rebuild their homes. New Orleans has such a strong heart! â¤ï¸ #Katrina #NewOrleansStrong",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are the potential health and environmental risks associated with shifting the UK's pesticide regulation from a hazard-based to a risk-based system?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the implications of transitioning the UK's pesticide regulation from a hazard-based framework to a risk-based system, specifically regarding the potential effects on public health and environmental safety?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that transitioning the UK's pesticide regulation from a hazard-based framework to a risk-based system could lead to increased pesticide toxicity and environmental harm. This shift could undermine existing protections for public health and environmental safety.",
+          "key_points": [
+            "Transitioning the UK's pesticide regulation from a hazard-based framework to a risk-based system could lead to increased pesticide toxicity.",
+            "This regulatory shift could undermine existing protections for public health and environmental safety."
+          ]
+        }
+      }
+    },
+    "passage": "This document discusses the contrasting regulatory approaches to pesticide management: hazard-based and risk-based systems. The hazard-based approach, prevalent in the EU, prohibits the use of pesticides with intrinsic hazardous characteristics, aligning with the precautionary principle to protect human health and the environment. In contrast, the risk-based approach, used in the US, assesses and manages risks associated with pesticide use, allowing for the approval of more hazardous substances. The paper highlights the implications of these approaches, noting that a shift from a hazard-based to a risk-based system in the UK could lead to increased pesticide toxicity and environmental harm, undermining existing protections. It emphasizes the need for the UK to maintain its current hazard-based regulations to ensure high standards of health and environmental safety while minimizing risks and regulatory complexity. The document concludes with recommendations for the UK government to strengthen its pesticide regulations and maintain a precautionary stance.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "UN airstrikes in Afghanistan and associated civilian casualties reports",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What is the reported impact of the recent UN airstrikes in Kunduz, Afghanistan, on civilians?",
+          "llm_answer": "",
+          "correct_answer": "The recent UN airstrikes in Kunduz, Afghanistan, reportedly have potentially impacted up to 55 civilians, according to local sources.",
+          "key_points": [
+            "The recent UN airstrikes in Kunduz, Afghanistan, have reportedly impacted civilians.",
+            "Local sources indicate that up to 55 civilians may have been affected by the airstrikes."
+          ]
+        }
+      }
+    },
+    "passage": "Hearing heartbreaking stories from Kunduz after the recent UN airstrikes. ðï¸ Local sources are saying up to 55 civilians might have been impacted. This conflict never seems to end. ð #Afghanistan #CivilianCasualties",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How does environmental degradation influence ongoing conflicts in Gaza?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways does environmental degradation, specifically the deterioration of air and water quality, contribute to escalating conflicts in Gaza, and how do these environmental issues impact community tensions?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that the dire conditions of air and water in Gaza contribute to escalating conflicts by worsening the tension between communities. The lack of access to clean resources, such as air and water, can significantly escalate these conflicts, thereby impacting community tensions.",
+          "key_points": [
+            "The deterioration of air and water quality in Gaza contributes to escalating conflicts.",
+            "Lack of access to clean air and water significantly worsens tensions between communities."
+          ]
+        }
+      }
+    },
+    "passage": "The air and water in Gaza are in dire conditions, which only worsens the tension between communities. The lack of access to clean resources can really escalate the conflicts here. #Gaza #EnviroJustice",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What steps should local officials take to access FEMA resources for obtaining preliminary flood risk maps in Maine?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How can local officials in Maine participate in the process of updating Coastal Flood Insurance Rate Maps (FIRMs)?",
+          "llm_answer": "",
+          "correct_answer": "Local officials in Maine can participate in the process of updating Coastal Flood Insurance Rate Maps by engaging in the mapping process through submitting comments or appeals regarding flood hazard data, as emphasized in the passage.",
+          "key_points": [
+            "Local officials in Maine can participate in updating Coastal Flood Insurance Rate Maps by engaging in the mapping process.",
+            "Officials can submit comments or appeals regarding flood hazard data as part of their participation."
+          ]
+        }
+      }
+    },
+    "passage": "This document provides essential information for local officials regarding updates to Maine's Coastal Flood Insurance Rate Maps (FIRMs). It outlines the importance of understanding Special Flood Hazard Areas (SFHAs), including coastal and riverine flood zones, and the implications for flood insurance and building regulations. Key terms such as Base Flood Elevation (BFE) and the significance of flood history and stillwater elevations are explained. The document details the mapping schedule for various counties, highlights improvements in flood hazard analysis using new topographical data, and discusses changes in flood zone designations. It emphasizes the need for accurate mapping to reflect properties' flood risks and provides guidance on accessing FEMA resources for flood risk products and preliminary map information. Local officials are encouraged to engage in the mapping process by submitting comments or appeals regarding flood hazard data.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Colorado avalanche management",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What is one method mentioned in the passage that avalanche management crews in Colorado are using to mitigate avalanche risks?",
+          "llm_answer": "",
+          "correct_answer": "The passage mentions that avalanche management crews in Colorado are setting up new strategic snow fences to minimize avalanche risks.",
+          "key_points": [
+            "Avalanche management crews in Colorado are using strategic snow fences.",
+            "The purpose of these snow fences is to minimize avalanche risks."
+          ]
+        }
+      }
+    },
+    "passage": "Just saw the avalanche management crews in Colorado setting up new strategic snow fences today! ð¨ð ï¸ It's fascinating how they engineer these responses to minimize avalanche risks. Stay safe out there, everyone! #AvalancheSafety #Colorado",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "I am trying to understand the common symptoms of Hepatitis C and how they might manifest in someone who has contracted the virus. It seems important to know not only if there are various symptoms but also how they might differ from other liver diseases. Additionally, could the symptoms present in a mild form at first, or do they typically show up significantly enough for someone to realize there's an issue? My focus is also on learning about any unusual symptoms not often associated with your typical liver conditions. Any detailed explanation or list would be appreciated in order to help me recognize this condition if it appears.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the common symptoms of Hepatitis C, and how might these symptoms manifest?",
+          "llm_answer": "",
+          "correct_answer": "The common symptoms of Hepatitis C include fatigue, muscle and joint pain, jaundice (characterized by yellowing of the skin and eyes), dark urine, pale stool, itching, appetite loss, and nausea. These symptoms can vary in severity, and some might be mistaken for other conditions or present very subtly.",
+          "key_points": [
+            "Common symptoms of Hepatitis C include fatigue, muscle and joint pain, jaundice, dark urine, pale stool, itching, appetite loss, and nausea.",
+            "Symptoms of Hepatitis C can vary in severity and may be mistaken for other conditions or present subtly."
+          ]
+        }
+      }
+    },
+    "passage": "Hepatitis C can produce a range of symptoms that affect individuals differently. Common symptoms include fatigue, which many patients report feeling unusually tired despite adequate rest. Alongside fatigue, many individuals experience muscle and joint pain, making daily activities more challenging. Another symptom that may occur is jaundice, characterized by yellowing of the skin and eyes due to the build-up of bilirubin in the blood. Some people may also encounter dark urine and pale stool, which can be tell-tale signs of liver issues. Others report itching, as the accumulation of certain toxins in the body prompts discomfort. Furthermore, some patients might struggle with appetite loss and nausea, which could lead to weight loss over time. It is crucial to acknowledge that symptoms can range in severity, and some can even be mistaken for other conditions or may present very subtly.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "VDEM enhances counter-terrorism efforts with NVRIC.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the collaboration between VDEM and the Northern Virginia Regional Intelligence Center (NVRIC) enhance counter-terrorism efforts, and what specific contributions does this partnership make to intelligence-gathering initiatives against emerging threats?",
+          "llm_answer": "",
+          "correct_answer": "The collaboration between VDEM and the Northern Virginia Regional Intelligence Center (NVRIC) enhances counter-terrorism efforts by providing crucial operational and strategic counter-terrorism intelligence. This partnership specifically contributes to intelligence-gathering initiatives by aiding in the collection of intelligence on emerging threats, thereby reinforcing the effectiveness of counter-terrorism efforts across various sectors.",
+          "key_points": [
+            "The collaboration between VDEM and NVRIC enhances counter-terrorism efforts by providing crucial operational and strategic counter-terrorism intelligence.",
+            "This partnership aids in the collection of intelligence on emerging threats, reinforcing the effectiveness of counter-terrorism efforts across various sectors."
+          ]
+        }
+      }
+    },
+    "passage": "VDEM collaborates with the Northern Virginia Regional Intelligence Center (NVRIC) to provide crucial operational and strategic counter-terrorism intelligence. This partnership aids in intelligence gathering on emerging threats, reinforcing the effectiveness of counter-terrorism efforts across various sectors.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "National Earthquake Information Center international collaboration on earthquake preparedness",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the National Earthquake Information Center collaborate internationally to enhance earthquake preparedness?",
+          "llm_answer": "",
+          "correct_answer": "The National Earthquake Information Center operates as a forum for the international exchange of earthquake information, promoting the exchange of information on earthquake research and earthquake preparedness between the United States and other nations.",
+          "key_points": [
+            "The National Earthquake Information Center serves as a forum for international exchange of earthquake information.",
+            "It promotes the exchange of information on earthquake research and preparedness between the United States and other nations."
+          ]
+        }
+      }
+    },
+    "passage": "In carrying out this paragraph, \nthe Director of the United States Geological Survey shall— \n(A) conduct a systematic assessment of the seismic \nrisks in each region of the Nation prone to earthquakes, \nincluding, where appropriate, the establishment and oper-\nation of intensive monitoring projects on hazardous faults, \nseismic microzonation studies in urban and other devel-\noped areas where earthquake risk is determined to be sig-\nnificant, and engineering seismology studies; \n(B) work with officials of State and local governments \nto ensure that they are knowledgeable about the specific \nseismic risks in their areas; \n(C) develop standard procedures, in consultation with \nthe Administrator of the Federal Emergency Management \nAgency and the Director of the National Institute of Stand-\nards and Technology, for issuing earthquake alerts and \nearly warnings; \n(D) issue when necessary and feasible, and notify the \nAdministrator of the Federal Emergency Management \nAgency, the Director of the National Institute of Standards \nand Technology, and State and local officials, an alert and \nan earthquake warning; \n(E) operate, including the National Earthquake Infor-\nmation Center, a forum for the international exchange of \nearthquake information which shall— \n(i) promote the exchange of information on earth-\nquake research and earthquake preparedness between \nthe United States and other nations; \n(ii) maintain a library containing selected reports, \nresearch papers, and data produced through the Pro-\nVerDate Nov 24 2008 \nJkt 000000\nFrm 00010\nSfmt 9001\nApril 15, 2024 \nG:\\COMP\\SCIENCE\\EARTHQUAKE HAZARDS REDUCTION ACT OF 1977.XML\nAs Amended Through P.L.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Pesticide wastes, depending upon the amount of waste generated per month, have legal time limits they can be stored before disposal. This highlights the regulatory framework intended to manage hazardous waste efficiently and mitigate potential environmental hazards. Failure to adhere to these time limits can result in significant penalties for the generating parties. Agencies responsible for pesticide waste must implement diligent tracking of their waste generation rates to ensure compliance and avoid incurring fines or damage to their reputation. Consequently, effective waste management not only fulfills legal obligations but also safeguards public health and outdoor ecosystems.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do legal time limits for storing pesticide wastes influence the practices of waste management agencies?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that legal time limits for storing pesticide wastes influence waste management agencies by necessitating timely disposal to avoid hefty fines. This makes it imperative for waste managers to understand and adhere to these regulations to avoid financial and legal repercussions.",
+          "key_points": [
+            "Legal time limits for storing pesticide wastes require waste management agencies to dispose of waste promptly.",
+            "Adhering to these time limits is crucial to avoid hefty fines and legal repercussions."
+          ]
+        }
+      }
+    },
+    "passage": "Timely disposal of pesticide wastes is crucial as non-compliance with legal storage limits can lead to hefty fines, making it imperative for waste managers to understand and adhere to these regulations to avoid financial and legal repercussions.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What time of year is the risk of coral bleaching elevated due to increased sea temperatures, and how can this information guide disaster management efforts in coastal regions?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What time of year does the coral bleaching season begin in the Caribbean, and what role does NOAA play in monitoring this risk?",
+          "llm_answer": "",
+          "correct_answer": "The coral bleaching season in the Caribbean begins in August. The U.S. National Oceanic and Atmospheric Administration (NOAA) plays a role in monitoring this risk by using satellite data to identify areas around the world where corals are currently at risk for bleaching.",
+          "key_points": [
+            "The coral bleaching season in the Caribbean begins in August.",
+            "NOAA monitors coral bleaching risk using satellite data to identify at-risk areas globally."
+          ]
+        }
+      }
+    },
+    "passage": "Table of Contents\n1 Introduction\n2 What is Coral Bleaching? 3 NOAA Satellites and Sea Surface Temperature\n4 Monitoring for Coral Bleaching Conditions\n6 Relevant Web Sites\n7 Further Reading\nBleached elkhorn coral near St. Croix, USVI,\nin October 2005. (Source: NOAA Center for\nCoastal Monitoring and Assessment)\nEncyclopedia of Earth\nCoral bleaching, satellite observations, and coral reef\nLead Author: Tyler R. L. Christensen (other articles)\nContributing Author: Mark Eakin (other articles)\nArticle Topics: Climate change, Coral reefs and Marine\nThis article has been reviewed and approved by the\nfollowing Topic Editor: John Bruno (other articles)\nLast Updated: August 8, 2008\nThe U.S. National Oceanic and Atmospheric Administration\n(NOAA) uses satellite data to pinpoint areas around the world where\ncorals are presently at risk for bleaching. This article gives a brief\nbackground on coral bleaching, and then introduces some satellite\ntools used to assess bleaching risk in near-real-time. August is the start of the coral bleaching season in the Caribbean. Average water temperatures reach a maximum in August and\nSeptember, putting corals at risk.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Can we talk about the USGS's funding for earthquake research? They really need to allocate enough resources!",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the implications of the current funding levels for the USGS's earthquake research, particularly the $83.4 million annual allocation, on community preparedness and safety measures against earthquakes?",
+          "llm_answer": "",
+          "correct_answer": "The passage suggests that the $83.4 million annual funding for the USGS's earthquake research will help in staying prepared for significant earthquakes. It implies that this funding is crucial for ensuring that the USGS has the necessary resources to maintain community safety and preparedness against earthquakes.",
+          "key_points": [
+            "The $83.4 million annual funding for the USGS's earthquake research is essential for maintaining preparedness for significant earthquakes.",
+            "This funding is crucial for ensuring that the USGS has the necessary resources to support community safety and preparedness against earthquakes."
+          ]
+        }
+      }
+    },
+    "passage": "Nice to see USGS getting $83.4 million annually for earthquake research! ððª This funding will help us stay prepared for the big ones. Let's make sure they have what they need to keep our communities safe! #EarthquakeReady",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are key endpoints for risk assessment?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are some of the risk assessment endpoints identified for genetically modified mosquitoes?",
+          "llm_answer": "",
+          "correct_answer": "The passage identifies two risk assessment endpoints for genetically modified mosquitoes: 1. An increase in the malaria vectorial capacity of genetically modified mosquitoes. 2. Transmission of a novel blood-borne pathogen to human or vertebrate hosts.",
+          "key_points": [
+            "An increase in the malaria vectorial capacity of genetically modified mosquitoes.",
+            "Transmission of a novel blood-borne pathogen to human or vertebrate hosts."
+          ]
+        }
+      }
+    },
+    "passage": "Following a detailed literature review and a systematic, inductive hazard analysis, the CSIRO\nproject team in conjunction with members of the Target Malaria consortium identiﬁed 5 risk as-\nsessment endpoints:\n1. An increase in the malaria vectorial capacity of genetically modiﬁed mosquitoes. 2. Transmission of a novel (i.e. not previously known to be vectored by An. gambiae) blood-\nborne pathogen to human or vertebrate host. 3.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Alternatives to chemical pesticides exist.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the effective non-chemical alternatives to chemical pesticides for pest management, and how do biological controls function within these agroecological practices?",
+          "llm_answer": "",
+          "correct_answer": "The passage identifies biological controls as effective non-chemical alternatives to chemical pesticides for pest management. These biological controls function within agroecological practices by sustainably managing pests without the use of chemical pesticides, offering a beneficial alternative for pest management.",
+          "key_points": [
+            "Biological controls are effective non-chemical alternatives to chemical pesticides for pest management.",
+            "Biological controls function within agroecological practices by sustainably managing pests without chemical pesticides."
+          ]
+        }
+      }
+    },
+    "passage": "The assessment indicates viable non-chemical alternatives like biological controls can sustainably manage pests without chemical pesticides. These agroecological practices offer effective solutions for pest management, emphasizing the potential of biological controls as a beneficial alternative.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What is the Pennsylvania Department of Natural Resources doing about the oil spill's ecological impact?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How is the Pennsylvania Department of Natural Resources conducting research to understand the ecological impacts of the oil spill on wildlife?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that the Pennsylvania Department of Natural Resources is conducting oil impact studies and sampling mussels to assess the devastation caused by the oil spill. This suggests they are focusing on understanding the impact on wildlife, particularly mussels, as part of their research efforts.",
+          "key_points": [
+            "The Pennsylvania Department of Natural Resources is conducting oil impact studies to understand the ecological effects of the oil spill.",
+            "The research includes sampling mussels to assess the devastation caused by the oil spill on wildlife."
+          ]
+        }
+      }
+    },
+    "passage": "Just talked to folks from the Pennsylvania Dept of Natural Resources. They're doing critical work on oil impact studies & have been sampling mussels to assess the devastation. It's heart-wrenching to see so much wildlife affected. We need to step up for our rivers! #EnvironmentalProtection",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are the health impacts of inhaling chlorine gas? Are there any public health warnings?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the short-term and long-term health effects associated with inhaling chlorine gas?",
+          "llm_answer": "",
+          "correct_answer": "The passage describes several short-term and long-term health effects associated with inhaling chlorine gas. Short-term effects include severe irritation of mucous membranes of the nose, throat, and respiratory tract, severe coughing, burning sensation, chest pain, vomiting, headache, anxiety, feeling of suffocation, severe breathing difficulties, pneumonitis, and pulmonary edema, which may be fatal. Long-term effects from repeated or prolonged exposure include reduced pulmonary capacity and dental erosion.",
+          "key_points": [
+            "Short-term health effects of inhaling chlorine gas include severe irritation of mucous membranes, severe coughing, burning sensation, chest pain, vomiting, headache, anxiety, feeling of suffocation, severe breathing difficulties, pneumonitis, and pulmonary edema, which may be fatal.",
+            "Long-term health effects from repeated or prolonged exposure to chlorine gas include reduced pulmonary capacity and dental erosion."
+          ]
+        }
+      }
+    },
+    "passage": "Exposure to chlorine gas may cause severe irritation\nof mucous membranes of the nose, throat and respiratory tract followed by severe coughing,\nburning, chest pain, vomiting, headache, anxiety and feeling of suffocation. Severe breathing\npneumonitis and pulmonary edema and may be fatal. Repeated or prolonged exposure may result in\nreduced pulmonary capacity and dental erosion. Ingestion: Ingestion of liquid chlorine may result in severe irritation or ulceration of the mouth,\nthroat and digestive tract which may be displayed by nausea, pain, vomiting and in severe cases,\ncollapse, shock and death. Eye contact: Exposure to chlorine gas may cause severe eye damage. Direct contact of the eyes\nwith liquid chlorine will produce serious eye burns even blindness. Skin contact: Contact with liquid chlorine may cause serious burns, blistering and tissue destruction. a frostbite hazard. Chronic effects: Chlorine is a primary irritant to the mucous membranes of the eyes, nose, and\nthroat and to the linings of the entire respiratory tract.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How is the recovery from Hurricane Dorian going for the impacted communities?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What measures are being implemented by local governments in the Caribbean to support recovery efforts in communities affected by Hurricane Dorian, and how are these efforts contributing to overall resilience in the region?",
+          "llm_answer": "",
+          "correct_answer": "Local governments in the Caribbean, particularly in the Bahamas, are focused on restoring infrastructure and providing immediate aid to those affected by Hurricane Dorian. These efforts are contributing to the overall resilience in the region by helping communities recover and bounce back stronger.",
+          "key_points": [
+            "Local governments in the Caribbean, especially in the Bahamas, are prioritizing the restoration of infrastructure and the provision of immediate aid to communities affected by Hurricane Dorian.",
+            "These recovery efforts are enhancing the overall resilience of the region by enabling communities to recover and become stronger post-disaster."
+          ]
+        }
+      }
+    },
+    "passage": "After Dorian, it's amazing to see the strength of the Caribbean! ð§ð¨ Recovery efforts in the Bahamas are hitting high gear â local govs are focused on restoring infrastructure and providing immediate aid to those affected. Together, we'll bounce back stronger! ðªð #HurricaneDorian #CaribbeanStrong",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Taiwan has 88% coastal population.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What is the significance of 88% of Taiwan's population living within 100 km of the coast?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that 88% of Taiwan's population living within 100 km of the coast highlights significant coastal population density, suggesting substantial vulnerability to coastal-related climate change risks.",
+          "key_points": [
+            "88% of Taiwan's population resides within 100 km of the coast.",
+            "This high coastal population density indicates a significant vulnerability to climate change risks related to coastal areas."
+          ]
+        }
+      }
+    },
+    "passage": "Of the overall 41 nations, the proportion of the population living within 100 km of the coast ranged from 9% (Germany) to 88% (Taiwan). This highlights the significant coastal population density in Taiwan and suggests a substantial vulnerability to coastal-related climate change risks.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What should I look for in pesticide exposure signs?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key symptoms and signs of pesticide exposure that individuals should be aware of, and how can these symptoms vary in onset and severity?",
+          "llm_answer": "",
+          "correct_answer": "The key symptoms and signs of pesticide exposure that individuals should be aware of include headache, giddiness, sweating, blurred vision, nausea, vomiting, diarrhea, muscle weakness, difficulty in breathing, pinpoint pupils, and allergic reactions. These symptoms may manifest immediately or after some time following exposure, indicating that the onset can vary. The passage does not provide specific information on the variation in severity of these symptoms.",
+          "key_points": [
+            "Symptoms of pesticide exposure include headache, giddiness, sweating, blurred vision, nausea, vomiting, diarrhea, muscle weakness, difficulty in breathing, pinpoint pupils, and allergic reactions.",
+            "The onset of symptoms can vary, appearing immediately or after some time following exposure."
+          ]
+        }
+      }
+    },
+    "passage": "Symptoms of pesticide poisoning include headache, giddiness, sweating, blurred vision, nausea, vomiting, diarrhea, muscle weakness, difficulty in breathing, pinpoint pupils, and allergic reactions. These may manifest immediately or after some time following exposure.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The UXO clearance process involves thorough searches for unexploded ordnance to depths of 3 to 5 meters in order to ensure the safety of land for agricultural and general livelihood use. This deep clearance is especially warranted when there may be surface or shallow contamination, and even if the immediate land usage only requires clearance to a depth of 30 centimeters. For regions prone to contamination, vans, water supply systems, and barns above the cleared depth can be deemed safe for agricultural activities. Moreover, it is critical to account for the costs associated with both direct UXO clearance efforts and any indirect costs resulting from precautions and contingencies necessary for a complete clearance operation.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the specific depths involved in UXO clearance for agricultural safety and what types of structures can be safely utilized post-clearance?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that UXO clearance for agricultural purposes involves thorough clearance to depths of 3 to 5 meters. This depth allows for the safe use of structures such as vans, water supply systems, and barns in agricultural settings.",
+          "key_points": [
+            "UXO clearance for agricultural purposes requires thorough clearance to depths of 3 to 5 meters.",
+            "Post-clearance, structures such as vans, water supply systems, and barns can be safely utilized in agricultural settings."
+          ]
+        }
+      }
+    },
+    "passage": "Vans, water supply systems, and barns can be safely used for agricultural purposes after thorough UXO clearance to depths of 3 to 5 meters.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "discussions on gas production rates and subsidence effects on the environment",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do increased gas production rates influence subsidence issues, and why is there a need to focus on better environmental practices?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that increased gas production rates can lead to serious subsidence issues due to the process of extracting gas changing the land beneath us. It emphasizes the need to focus on better practices to avoid damaging the environment, highlighting a concern for sustainability.",
+          "key_points": [
+            "Increased gas production rates can cause serious subsidence issues due to changes in the land from gas extraction.",
+            "There is a need to focus on better environmental practices to prevent damage and ensure sustainability."
+          ]
+        }
+      }
+    },
+    "passage": "Just read about how increased gas production rates can lead to serious subsidence issues. It's crazy how the process of extracting gas changes the land beneath us! We really need to focus on better practices to avoid damaging the environment. #GasExtraction #Sustainability",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Research indicates that broiler chickens experience a decline in growth metrics such as body weight and feed intake when they are exposed to increasing levels of mercury in their diet. Specifically, findings show that diets with 500 mg/kg of mercury led to reduced body weight gain and higher mortality rates in chickens, compared to lower levels of mercury. Significant adverse effects have been observed with mercury concentrations exceeding this threshold.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do increasing levels of mercury impact chicken growth metrics?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that increasing mercury levels reduce chicken growth metrics.",
+          "key_points": [
+            "Increasing mercury levels negatively impact chicken growth metrics."
+          ]
+        }
+      }
+    },
+    "passage": "Increasing mercury levels reduce chicken growth metrics.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The soil erosion hazard key can accurately predict soil erosion risk due to harvesting activities such as skidding.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "Can the soil erosion hazard key accurately assess erosion risk from harvesting activities such as skidding?",
+          "llm_answer": "",
+          "correct_answer": "Yes, the soil erosion hazard key can accurately assess erosion risk from harvesting activities such as skidding.",
+          "key_points": [
+            "The soil erosion hazard key is capable of accurately assessing erosion risk.",
+            "The assessment includes risks from harvesting activities such as skidding."
+          ]
+        }
+      }
+    },
+    "passage": "The soil erosion hazard key correctly assesses erosion from harvest activities like skidding.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How are health organizations communicating expectations for pandemic preparedness?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the National Strategy for Pandemic Influenza plan to communicate expectations and responsibilities during a pandemic?",
+          "llm_answer": "",
+          "correct_answer": "The National Strategy for Pandemic Influenza, as mentioned in the passage, plans to communicate expectations and responsibilities during a pandemic by ensuring clear and coordinated risk communication domestically and internationally. This includes identifying credible spokespersons who can communicate helpful, informative, and timely messages.",
+          "key_points": [
+            "The National Strategy for Pandemic Influenza aims to ensure clear and coordinated risk communication both domestically and internationally during a pandemic.",
+            "The strategy includes identifying credible spokespersons to deliver helpful, informative, and timely messages."
+          ]
+        }
+      }
+    },
+    "passage": "Therefore, \ninformation management should be a primary focus. Whether it is the President informing the public about the \nFederal handling of the crisis or a business owner assuring \nemployees about the safety of the workplace, the demands \nfor information during a pandemic will be unremitting \nfor weeks, even months at a time. Moreover, sustaining \nemployee conﬁdence and morale for many months will be \na tremendous challenge. As with any crisis communication \nplan, business leaders must provide their employees, the \nmedia, and the public with consistent, relevant, truthful, \nand timely information. In the National Strategy for Pandemic Inﬂuenza, 19 \nthe White House outlined strategies designed to help \ncommunicate expectations and responsibilities in the face \nof a pandemic. The National Strategy recognizes planning \nfor a pandemic requires the government to articulate \nclearly the actions and priorities necessary to prepare for \nand respond to a pandemic. In order to accomplish this \ngoal, the Federal government will: \nEnsure clear and coordinated risk communication, \ndomestically and internationally, before and during \na pandemic. This includes identifying credible \nspokespersons who can communicate helpful, \ninformative, and timely messages.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What symptoms should prompt a referral for disease evaluation?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key symptoms associated with anthrax disease that should lead individuals to seek immediate medical evaluation, and why is it crucial to recognize these symptoms promptly?",
+          "llm_answer": "",
+          "correct_answer": "The key symptoms associated with anthrax disease that should lead individuals to seek immediate medical evaluation include cough or shortness of breath, vomiting, diarrhea, or the appearance of a painless sore on the skin. Recognizing these symptoms promptly is crucial because they indicate possible exposure to anthrax, which requires immediate medical attention to prevent serious health complications.",
+          "key_points": [
+            "Key symptoms of anthrax include cough or shortness of breath, vomiting, diarrhea, and a painless sore on the skin.",
+            "Immediate medical evaluation is crucial upon recognizing these symptoms to prevent serious health complications from anthrax exposure."
+          ]
+        }
+      }
+    },
+    "passage": "When contacting potentially exposed persons, educate them about possible symptoms of anthrax disease, including specific conditions that should prompt immediate medical evaluation, such as: cough or shortness of breath, vomiting, diarrhea, or appearance of a painless sore on the skin.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What Managed Aquifer Recharge techniques like surface spreading and subsurface recharge can be implemented in the Friuli Venezia Giulia region to combat groundwater depletion and improve water quality?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the potential of Managed Aquifer Recharge (MAR) in the Friuli Venezia Giulia region address groundwater depletion and water quality, considering climatic challenges?",
+          "llm_answer": "",
+          "correct_answer": "The article explores the potential of Managed Aquifer Recharge (MAR) in the Friuli Venezia Giulia region, where climate impacts have led to declining groundwater levels. It emphasizes the need for optimized MAR strategies that incorporate environmental and socio-economic factors to enhance the effectiveness of MAR in addressing groundwater depletion and improving water quality.",
+          "key_points": [
+            "The article examines the potential of Managed Aquifer Recharge (MAR) in the Friuli Venezia Giulia region to combat declining groundwater levels caused by climate impacts.",
+            "Optimized MAR strategies are necessary, taking into account environmental and socio-economic factors, to effectively address groundwater depletion and improve water quality."
+          ]
+        }
+      }
+    },
+    "passage": "The article reviews Managed Aquifer Recharge (MAR) as a strategy for sustainable groundwater management, particularly in light of climate change and increasing water demand. It discusses various MAR techniques, including surface spreading and subsurface recharge, and highlights the challenges and risks associated with their implementation. The review emphasizes the importance of balancing water quantity and quality in MAR projects, noting a trend in research favoring quantitative studies over qualitative assessments. The potential of MAR in the Friuli Venezia Giulia region of Italy is explored, where climate impacts have led to declining groundwater levels. The article calls for optimized strategies that incorporate environmental and socio-economic factors to enhance the effectiveness of MAR in addressing groundwater depletion and improving water quality.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Can anyone share updates about how the Department of Homeland Security is responding to disasters in West Virginia lately?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What measures and support has the Department of Homeland Security implemented in West Virginia in response to recent disasters, particularly relating to the floods, and how are these efforts impacting local communities?",
+          "llm_answer": "",
+          "correct_answer": "The Department of Homeland Security has provided vital EMPG (Emergency Management Performance Grant) funds to local agencies in West Virginia in response to the recent floods. This support is described as a lifesaver for communities that are trying to recover, indicating a positive impact on local efforts to bounce back from the disaster.",
+          "key_points": [
+            "The Department of Homeland Security has provided Emergency Management Performance Grant (EMPG) funds to local agencies in West Virginia in response to recent floods.",
+            "The EMPG funds are described as a lifesaver for communities, indicating a positive impact on their recovery efforts from the disaster."
+          ]
+        }
+      }
+    },
+    "passage": "Just heard that the DHS is helping West Virginia big time after those recent floods! They've provided vital EMPG funds to local agencies. It's a lifesaver for communities trying to bounce back. #DisasterRelief #WestVirginia",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "In the United States, vector-borne disease cases have reportedly doubled over the last two decades, highlighting an ongoing health threat.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What factors have contributed to the doubling of vector-borne disease cases in the United States over the last two decades, and how does this trend reflect the need for an enhanced national strategy to address these emerging public health threats?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that the doubling of vector-borne disease cases in the United States over the last two decades is largely due to mosquito-borne and expanding tickborne disease outbreaks. This trend underscores the need for a robust national strategy to combat these escalating public health threats.",
+          "key_points": [
+            "The doubling of vector-borne disease cases in the United States over the last two decades is primarily due to mosquito-borne and expanding tickborne disease outbreaks.",
+            "This trend highlights the necessity for a robust national strategy to address these growing public health threats."
+          ]
+        }
+      }
+    },
+    "passage": "Vector-borne diseases (VBDs) increasingly threaten the health and well-being of people in the United States, with reported cases doubling over the last two decades. Approximately 1,000,000 VBD cases were reported between 2001 and 2023, largely due to mosquito-borne and expanding tickborne disease outbreaks. This dramatic rise emphasizes the need for a robust national strategy to combat these escalating public health threats.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Why is it crucial to test infants for hepatitis B at 12 months?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key reasons for conducting hepatitis B testing in infants at 12 months of age, and how does this testing impact their health management?",
+          "llm_answer": "",
+          "correct_answer": "The key reason for conducting hepatitis B testing in infants at 12 months of age is to identify babies who have become chronically infected with hepatitis B despite vaccination. This testing allows for the prompt referral of these infants for further management, which is crucial for their health management.",
+          "key_points": [
+            "Hepatitis B testing in infants at 12 months is conducted to identify those who have become chronically infected despite vaccination.",
+            "Testing allows for the prompt referral of infected infants for further management, which is crucial for their health management."
+          ]
+        }
+      }
+    },
+    "passage": "Testing at or after 12 months of age is important to identify babies who have \nbecome chronically infected with hepatitis B despite vaccination and will allow prompt \nreferral for further management. The test can be carried out at the same appointment as the \none-year dose. A free national dried blood spot (DBS) service, with testing kit, facilitates \nHepatitis B\nChapter 18: Hepatitis B\ntesting these infants at or after 12 months old in primary care; further information on the \nDBS service is available at: https://www.gov.uk/guidance/hepatitis-b-dried-blood-spot-dbs-\nA further dose of hepatitis B-containing vaccine at 3 years and 4 months is no longer \nrecommended for those children on the selective neonatal programme (received a post \nexposure course) who have completed their routine primary immunisations with the \nhexavalent hepatitis B-containing vaccine. It is also no longer required for children who \nreceived pentavalent DTaP/IPV/Hib vaccine, but who have completed a hepatitis B post \nexposure course and have been tested for infection.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The impacts of diarrheal disease on children in low-income regions.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key factors contributing to the high incidence of diarrheal diseases among children in low-income regions, and how can effective interventions be applied to reduce their impact?",
+          "llm_answer": "",
+          "correct_answer": "The passage does not provide specific key factors contributing to the high incidence of diarrheal diseases among children in low-income regions. However, it does mention interventions that can help reduce the impact of diarrheal diseases, which include the provision of safe water, hand washing, the use of sanitation facilities, exclusive breastfeeding of infants, and rotavirus vaccination.",
+          "key_points": [
+            "The answer does not specify key factors contributing to the high incidence of diarrheal diseases among children in low-income regions.",
+            "Interventions mentioned to reduce the impact of diarrheal diseases include the provision of safe water, hand washing, the use of sanitation facilities, exclusive breastfeeding of infants, and rotavirus vaccination."
+          ]
+        }
+      }
+    },
+    "passage": "The Open Infectious Diseases Journal, 2010, 4, 113-124 \n2010 Bentham Open \nOpen Access \nDiarrheal Diseases in Low- and Middle-Income Countries: Incidence, \nPrevention and Management \nJill W. Ahs*, Wenjing Tao, Jenny Löfgren and Birger C. Forsberg \nDivision of Global Health (IHCAR), Department of Public Health Sciences, Karolinska Institutet, 171 77 Stockholm, \nAbstract: Diarrheal diseases due to infection constitute a major burden of disease. Dehydration resulting from diarrhea \ncan be fatal. It is the cause of approximately 1.8 million deaths every year. The vast majority of these deaths are of \nchildren under five years of age living in low- and middle- income countries. Interventions to prevent diarrhea include \nprovision of safe water, hand washing, the use of sanitation facilities, exclusive breastfeeding of infants and rotavirus \nvaccination. Diagnosis is guided by symptoms into one of three categories: acute watery diarrhea, dysentery or bloody \ndiarrhea, or persistent diarrhea of longer than 2 weeks in duration.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The integration of past thermal stress pushes the threat underestimate given the profound impact of the 1998 mass events on ecosystem recovery. Generally, it appears that patterns of recovery are inversely correlated with local stressors; in regions where additional stressors are more limited, such as the Chagos Archipelago and the Maldives, better recovery outcomes are observed. Conversely, in areas like the northern Seychelles, the consistency and speed of recovery remain significantly hampered due to ongoing ecological challenges that stem from human impacts on marine environments. Nonetheless, it is important to note that not every regional study aligns with this trend, as some indicate no correlations between recovery rates inside marine protected areas and those outside them. As climate-related risks are set to escalate by 2030, overall threat levels are projected to rise above 85 percent, complicating future recovery forecasts.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do local stressors influence the recovery patterns of marine ecosystems following thermal stress events, particularly in regions like the Chagos Archipelago and the Maldives?",
+          "llm_answer": "",
+          "correct_answer": "Areas with limited local anthropogenic stressors, such as the Chagos Archipelago and the Maldives, are likely to experience improved recovery outcomes when confronted with thermal stress and ecological challenges.",
+          "key_points": [
+            "Regions with limited local anthropogenic stressors, like the Chagos Archipelago and the Maldives, tend to have better recovery outcomes after thermal stress events.",
+            "The presence of fewer local stressors enhances the resilience of marine ecosystems to ecological challenges."
+          ]
+        }
+      }
+    },
+    "passage": "Areas with limited local anthropogenic stressors, particularly in the Chagos Archipelago and the Maldives, are likely to experience improved recovery outcomes when confronted with thermal stress and ecological challenges.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The reports reviewing the situation in San Mateo County have drawn urgent attention to the challenges posed by sea level rise. Sea level rise can catastrophically affect essential infrastructures like roads, schools, and hospitals if indigenous developments do not happen promptly. Cities like East Palo Alto, which are highlighted as particularly vulnerable, are facing crises that require immediate action. Failing to counteract these imminent hazards means risking huge costs in emergency response and disaster recovery, detrimental effects on local businesses, and a possible decrease in property values. Furthermore, comprehensive planning, funding, and execution of vital infrastructure projects is not only expensive but also time-consuming, emphasizing the legal permissions and community acceptance needed for effective initiatives. Without timely preparations, the backlash could fundamentally reshape the lived experience of residents in regions already exhibiting at-risk profiles now, understandably underscoring the importance for severe caution and readiness today.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the potential long-term consequences for San Mateo County if urgent measures to address sea level rise are not implemented, particularly regarding economic stability, infrastructure resilience, and community impact?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that if urgent measures to address sea level rise are not implemented in San Mateo County, the region may face long-term economic consequences due to population displacement and loss of property value. Additionally, there could be exceedingly high costs related to disaster recovery efforts and extensive repairs to devastated infrastructure.",
+          "key_points": [
+            "Failure to implement urgent measures for sea level rise in San Mateo County could lead to long-term economic consequences due to population displacement and loss of property value.",
+            "There may be exceedingly high costs associated with disaster recovery efforts and extensive repairs to devastated infrastructure."
+          ]
+        }
+      }
+    },
+    "passage": "If actions are not taken now to mitigate the impacts of sea level rise in San Mateo County, the region may face exceedingly high costs related to disaster recovery efforts, extensive repairs to devastated infrastructure, and long-term economic consequences that come from population displacement and loss of property value.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Excessive groundwater extraction in Punjab has led to increased salinity levels.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the implications of excessive groundwater extraction in Punjab on salinity levels, and how does this phenomenon compare to approaches taken in nearby regions regarding groundwater management for agriculture?",
+          "llm_answer": "",
+          "correct_answer": "In the Indian state of Punjab, excessive groundwater extraction for irrigation has led to declining groundwater levels and an increasing salt concentration in groundwater. This contrasts with the approach in nearby Pakistan, where using groundwater for irrigation improves soil and crop yield by acting as artificial drainage, which controls waterlogging and water table rise.",
+          "key_points": [
+            "Excessive groundwater extraction in Punjab has resulted in declining groundwater levels and increased salt concentration in the water.",
+            "In contrast, Pakistan uses groundwater for irrigation to improve soil and crop yield by providing artificial drainage, which helps control waterlogging and water table rise."
+          ]
+        }
+      }
+    },
+    "passage": "Globally, this trend of increasing groundwater salinity with decreas-\ning water table depth is observed in regions that predominantly use groundwater for ir-\nrigation [95,118]. In the Indian state of Punjab and Haryana, the overexploitation of \ngroundwater for irrigation pumping has led to declining groundwater levels and an in-\ncreasing salt concentration in groundwater [119], while, in Pakistan, using groundwater \nfor irrigation improves the soil and crop yield since it acts as artificial-drainage, which \ncontrols waterlogging and water table rise [117]. Figure 2. Effects of irrigation-induced salinity and sodicity hazards on groundwater. When the saline- and sodic-irrigated water inﬁltrates and reaches the groundwater\ntable, it ﬁrst increases the water’s pH and, over time, contaminates the aquifer. The\ngroundwater salinity could further affect the water quality regionally, as connected aquifers\ncan result in regional impacts [112]. The extent and severity of the contamination, however,\ncould vary with the type of salt, concentration, and climate geography. Alternatively, the\nuse of saline/sodic groundwater for irrigation could affect the soil by altering its physio-\nchemical properties and structure [113].",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Farmers are sharing their thoughts on no-till farming and its benefits for improving soil health.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What benefit of no-till farming on soil health is experienced by the farmer in the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that a benefit of no-till farming on soil health, as experienced by the farmer, is improved moisture retention in the soil.",
+          "key_points": [
+            "No-till farming improves moisture retention in the soil."
+          ]
+        }
+      }
+    },
+    "passage": "Just switched to no-till farming and Iâm shocked at how much better my soil holds moisture now! ð±ð§ Can't believe I waited this long. #SoilHealth #FarmersLife",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Soil erosion is a serious problem in almost 10% of the area of the Nangka watershed, with 0.920 km2 being classified as in a severe condition and 2.310 km2 in a state of very severe erosion. The analysis indicates that both land cover and slope are crucial in understanding the rate of erosion. In areas with steeper slopes and less vegetative cover, higher rates of erosion are prevalent, which poses severe risks to the ecosystem and agriculture i.e. through loss of soil quality and reduced crop yields. Addressing these issues requires targeted interventions aimed at improving land management and reinforcing vegetative buffers.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the potential consequences of the increasing severity of soil erosion in the Nangka watershed for local communities?",
+          "llm_answer": "",
+          "correct_answer": "The increasing severity of soil erosion in the Nangka watershed will likely lead to significant degradation of agricultural productivity and heighten vulnerability to environmental hazards for the local communities.",
+          "key_points": [
+            "The increasing severity of soil erosion in the Nangka watershed is expected to significantly degrade agricultural productivity for local communities.",
+            "Local communities will face heightened vulnerability to environmental hazards due to the worsening soil erosion in the Nangka watershed."
+          ]
+        }
+      }
+    },
+    "passage": "The ongoing and increasing severity of soil erosion in the Nangka watershed will likely lead to significant degradation of agricultural productivity and heighten vulnerability to environmental hazards for the local communities.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Applicators are required to take EPA-approved paraquat training every 3 years.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What is the requirement regarding how often applicators must retake the training?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that all applicators must retake the training every three years.",
+          "key_points": [
+            "Applicators are required to retake the training every three years."
+          ]
+        }
+      }
+    },
+    "passage": "All applicators must retake the training every three years.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Dynamite fishing has numerous negative impacts on marine ecosystems and biodiversity, necessitating urgent action to stop these practices globally.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the ecological consequences of dynamite fishing on marine ecosystems and biodiversity, and what measures can be taken to prevent such destructive practices globally?",
+          "llm_answer": "",
+          "correct_answer": "The passage describes the ecological consequences of dynamite fishing as being destructive to coral reefs. The use of explosives to kill or stun fish destroys coral in the process, which contributes to the vulnerability of these ecosystems. To prevent such destructive practices globally, the passage suggests adopting and enforcing national legislation in all coral reef countries to incorporate international agreements on marine pollution. This would help reduce marine-based threats to reefs.",
+          "key_points": [
+            "Dynamite fishing is destructive to coral reefs as it uses explosives that kill or stun fish, leading to the destruction of coral and increased vulnerability of marine ecosystems.",
+            "To prevent dynamite fishing globally, it is suggested to adopt and enforce national legislation in coral reef countries that incorporates international agreements on marine pollution, thereby reducing threats to reefs."
+          ]
+        }
+      }
+    },
+    "passage": "Such overfished reefs appear to be generally less resilient \nto stressors, and may be more vulnerable to disease and slower \nto recover from other human impacts.60, 61, 62 \nIn some places, the fishing methods themselves are \ndestructive. Most notable is the use of explosives to kill or \nstun fish, which destroys coral in the process.63 Although \nillegal in many countries, blast (or dynamite) fishing \nremains a persistent threat, particularly in Southeast Asia \nand East Africa.64 Poison fishing is also destructive to corals. This practice typically involves using cyanide to stun and \ncapture fish live for the lucrative live reef food fish or aquar-\nium fish markets. The poison can bleach corals and kill  \npolyps. Fishers often break corals to extract the stunned fish, \nwhile other species in the vicinity are killed or left vulnera-\nble to predation.65 Map 3.1 provides a summary of locations \nidentified as threatened by fishing with explosives or poison. Adopting and enforcing national legislation in all coral \nreef countries to incorporate international agreements on \nmarine pollution would greatly help to reduce marine-based \nthreats to reefs.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Primary hyphae are haploid and secondary hyphae are dikaryotic.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key differences between primary and secondary hyphae in fungi regarding their ploidy levels and structural characteristics?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that primary hyphae are haploid, while secondary hyphae are binucleate and dikaryotic.",
+          "key_points": [
+            "Primary hyphae in fungi are haploid.",
+            "Secondary hyphae in fungi are binucleate and dikaryotic."
+          ]
+        }
+      }
+    },
+    "passage": "Primary hyphae are haploid; secondary hyphae are binucleate and dikaryotic.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "California has regulations to prevent UST leaks.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What specific regulations has California implemented to prevent leaks from underground storage tanks, and how do these regulations ensure the protection of human health and the environment?",
+          "llm_answer": "",
+          "correct_answer": "The passage does not provide specific information about the regulations that California has implemented to prevent leaks from underground storage tanks. It only outlines general requirements for such regulations, including maintaining leak detection systems, record-keeping, reporting and taking corrective action for releases, and ensuring proper closure of tanks to prevent future leaks.",
+          "key_points": [
+            "The passage does not provide specific information about California's regulations for preventing leaks from underground storage tanks.",
+            "General requirements for such regulations include maintaining leak detection systems, record-keeping, reporting and taking corrective action for releases, and ensuring proper closure of tanks to prevent future leaks."
+          ]
+        }
+      }
+    },
+    "passage": "\"(c) REQUIREMENTS.—The regulations promulgated pursuant to \nthis section shall include, but need not be limited to, the following \nrequirements respecting all underground storage tanks— \n\"(1) requirements for maintaining a leak detection system, an \ninventory control system together with tank testing, or a com-\nparable system or method designed to identify releases in a \nmanner consistent with the protection of human health and the \n\"(2) requirements for maintaining records of any monitoring \nor leak detection system or inventory control system or tank \ntesting or comparable system; \n\"(3) requirements for reporting of releases and corrective \naction taken in response to a release from an underground \nstorage tank; \n\"(4) requirements for taking corrective action in response to a \nreleeise from an underground storage tank; and \n\"(5) requirements for the closure of tanks to prevent future \nreleases of regulated substances into the environment.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What does CMAH say about avalanche safety and triggers?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the latest advisory from CMAH address avalanche safety concerns, particularly regarding the role of snowpack instability and the types of triggers that can lead to avalanches?",
+          "llm_answer": "",
+          "correct_answer": "The latest advisory from CMAH addresses avalanche safety concerns by highlighting the crucial role of snowpack instability. It emphasizes that even small triggers can lead to avalanches, indicating the sensitivity of the snowpack.",
+          "key_points": [
+            "The CMAH advisory highlights the crucial role of snowpack instability in avalanche safety concerns.",
+            "The advisory emphasizes that even small triggers can lead to avalanches, indicating the sensitivity of the snowpack."
+          ]
+        }
+      }
+    },
+    "passage": "Just saw the latest CMAH advisory on avalanche sensitivity! ð¨ï¸ They say snowpack instability is crucial - even small triggers can set things off! Stay safe out there, fellow snow lovers! #AvalancheSafety #CMAH",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What is RAPAM doing to advocate for the ban of hazardous pesticides in Mexico?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways has RAPAM actively engaged with Mexican authorities and other organizations to promote the progressive ban on hazardous pesticides, and what measures have been taken to support agroecological alternatives?",
+          "llm_answer": "",
+          "correct_answer": "RAPAM actively engaged with Mexican authorities and other organizations by addressing a letter to the Mexican government, alongside 23 public interest non-governmental organizations and social organizations like the National Association of Rural Producers’ Enterprises (ANEC), demanding support for the proposal to create a global alliance for the progressive ban on highly hazardous pesticides. Additionally, RAPAM declared its support for including the progressive ban on these pesticides in the agenda to develop the national SAICM implementation plan, with a focus on prioritizing agroecological alternatives for pest, weed, and disease management, as indicated in the ICCM4 resolution.",
+          "key_points": [
+            "RAPAM collaborated with 23 public interest NGOs and social organizations to address a letter to the Mexican government, advocating for a global alliance to progressively ban highly hazardous pesticides.",
+            "RAPAM supports the inclusion of a progressive ban on hazardous pesticides in the national SAICM implementation plan, emphasizing the importance of agroecological alternatives for managing pests, weeds, and diseases."
+          ]
+        }
+      }
+    },
+    "passage": "Chapter 1\nfrom the main universities in Mexico (RAPAM, 2015b)71 addressed a letter to \nthe Mexican authorities demanding that the Mexican government support the \nproposal to create a global alliance for the progressive ban on highly hazardous \npesticides, together with 23 public interest non-governmental organizations and \nsocial organizations like the National Association of Rural Producers’ Enterprises \n(ANEC in Spanish) (RAPAM, 2015b). It must be kept in mind that the Mexican \nMinistry of Foreign Affairs, SEMARNAT, and even the Ministry of Health gave \na positive response in writing, as opposed to SAGARPA and the Ministry of \nEconomy. RAPAM, in turn, declared that it favored including the progressive \nban on highly hazardous pesticides in the agenda to develop the national SAICM \nimplementation plan, prioritizing support for agroecological alternatives for pest, \nweed and disease management, as indicated in the ICCM4 resolution.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Coastal erosion, driven by various factors including geological activity and human actions, dramatically alters the landscape and leads to significant land loss near coastlines. The processes that cause erosion, such as changing wave patterns and rising sea levels, contribute to the submersion of vital habitats like sand dunes and beaches. As this land is lost, there are cascading effects on local ecosystems and human communities reliant on these natural barriers for protection against storms and flooding.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does coastal erosion threaten vital habitats for species such as sea turtles and birds?",
+          "llm_answer": "",
+          "correct_answer": "The passage explains that coastal erosion poses risks by threatening vital habitats for many species, such as nesting areas for sea turtles and birds, putting them at risk of destruction.",
+          "key_points": [
+            "Coastal erosion threatens vital habitats for many species.",
+            "Nesting areas for sea turtles and birds are at risk of destruction due to coastal erosion."
+          ]
+        }
+      }
+    },
+    "passage": "As coastal erosion progresses, not only is land lost to the ocean, but vital habitats for many species, such as nesting areas for sea turtles and birds, are also increasingly at risk of destruction.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Can anyone share how the American Red Cross is managing shelters for those affected by the recent tornadoes?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What is the American Red Cross doing to help tornado victims according to the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that the American Red Cross is setting up shelters for tornado victims in affected areas and working around the clock to provide food, comfort, and safety for everyone impacted.",
+          "key_points": [
+            "The American Red Cross is setting up shelters for tornado victims in affected areas.",
+            "They are working around the clock to provide food, comfort, and safety for everyone impacted."
+          ]
+        }
+      }
+    },
+    "passage": "The American Red Cross is setting up shelters for tornado victims in affected areas. Theyâre working around the clock to provide food, comfort, and safety for everyone impacted. â¤ï¸ #TornadoRelief #RedCross",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Increased flood risks in the Odra River due to climate change predictions.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What do climate models predict about flood risks along the Odra River by the end of the century?",
+          "llm_answer": "",
+          "correct_answer": "Climate models predict alarming increases in flood risks along the Odra River by the end of the century, indicating that what used to be a rare event might happen more frequently.",
+          "key_points": [
+            "Climate models predict an alarming increase in flood risks along the Odra River by the end of the century.",
+            "Events that were previously rare are expected to occur more frequently."
+          ]
+        }
+      }
+    },
+    "passage": "ðâ The climate models are showing alarming increases in flood risks along the Odra River! What used to be a rare event might happen more frequently by the end of the century. We need urgent action to prepare for these changes! #OdraRiver #ClimateChange #FloodRisk",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Global emission reductions are necessary for coral reef ecosystems.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "Why is a reduction in global emissions necessary for coral reef ecosystems, and what role does the Paris Agreement play in their future?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that a reduction in global emissions is necessary to deliver a positive future for coral reef ecosystems. It also states that global action through the Paris Agreement is crucial for the future of coral reefs, implying that international cooperation is important for their sustainability.",
+          "key_points": [
+            "A reduction in global emissions is necessary to ensure a positive future for coral reef ecosystems.",
+            "The Paris Agreement plays a crucial role in the future of coral reefs by facilitating global action and international cooperation for their sustainability."
+          ]
+        }
+      }
+    },
+    "passage": "It is clear that a reduction in global emissions is necessary to deliver a positive future for coral reef ecosystems and the human communities that depend on them. Global action through the Paris Agreement is crucial for the future of coral reefs.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Flood conditions in Camarillo Springs during the December 2014 event",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What were the key impacts of the December 2014 floods on the roads in Camarillo Springs according to the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that the December 2014 floods in Camarillo Springs caused significant damage to the roads, which were waterlogged. It was difficult to discern where some neighborhoods began due to the extent of the flooding.",
+          "key_points": [
+            "The December 2014 floods in Camarillo Springs caused significant damage to the roads.",
+            "The roads were waterlogged, making it difficult to discern where some neighborhoods began due to the extent of the flooding."
+          ]
+        }
+      }
+    },
+    "passage": "Just drove through Camarillo Springs, and wow, the floods did serious damage. Roads are waterlogged, and it's hard to see where some neighborhoods even started. Be careful out there, everyone! #Camarillo #Floods2014",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Indeed, the high price of recognition may explain the fact that recognition of belligerency by territorial states has become so rare. This scarcity of practice has led various scholars to conclude that the doctrine of belligerency had fallen into desuetude. The impact of this rarity can affect international power dynamics and the resolution of disputes.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "Why has the recognition of belligerency by territorial states become rare?",
+          "llm_answer": "",
+          "correct_answer": "The passage suggests that the recognition of belligerency by territorial states has become rare due to the high price associated with such recognition. This has contributed to scholars concluding that the doctrine of belligerency has fallen into desuetude.",
+          "key_points": [
+            "Recognition of belligerency by territorial states has become rare due to the high costs associated with such recognition.",
+            "The rarity of recognizing belligerency has led scholars to conclude that the doctrine of belligerency has fallen into disuse."
+          ]
+        }
+      }
+    },
+    "passage": "Indeed, the high\nprice of recognition may explain the fact that recognition of belligerency\nby territorial states has become so rare.77 This scarcity of practice has\nled various scholars to conclude that the doctrine of belligerency had\nfallen into desuetude.78 However, besides the fact that recognition of\nCastrén (1966), 156; Neff (2005), 263 (‘In addition, it should be appreciated that\nthe expression “recognition of belligerency” is actually somewhat misleading, in\nthat it might be misunderstood to constitute merely a recognition of the\ninsurgents as lawful belligerents, with the full rights of war, rather than as mere\ncriminals. Recognition of belligerency did have that effect. But the full signifi-\ncance of it was that it referred to the over-all status of the conflict as such, not\nmerely to the character of the rebel faction alone’). Falk (1964), 205; Cullen (2010), 20. Military and Paramilitary Activities in and against Nicaragua (Nicaragua\nv. US) (Merits) [1986] ICJ Reports 14, [228].",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "West Nile virus can rarely be transmitted through blood transfusions.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What measures are in place to mitigate the risk of West Nile virus transmission through blood transfusions, as supported by the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that West Nile virus can be spread through blood transfusions, although this occurs rarely. To mitigate this risk, blood banks conduct screenings to ensure that the virus does not contaminate the donated blood.",
+          "key_points": [
+            "West Nile virus can be transmitted through blood transfusions, but such occurrences are rare.",
+            "Blood banks implement screening procedures to prevent the contamination of donated blood with the West Nile virus."
+          ]
+        }
+      }
+    },
+    "passage": "West Nile virus can indeed be spread through blood transfusions, but it occurs rarely. Blood banks conduct screenings to ensure that the virus does not contaminate the donated blood. There was a documented case in 2002 in the United States of a mother passing the virus to her baby during pregnancy, highlighting the importance of these precautions.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "We need updates on the Haiti earthquake recovery projects and ongoing aid distribution.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What has the Red Cross been doing to assist those affected by the Haiti earthquake?",
+          "llm_answer": "",
+          "correct_answer": "The passage mentions that a team from @RedCrossUSA has landed in Port-au-Prince, bringing much-needed supplies and medical help for those affected by the devastating Haiti earthquake.",
+          "key_points": [
+            "A team from the American Red Cross has arrived in Port-au-Prince.",
+            "The team is providing essential supplies and medical assistance to those affected by the Haiti earthquake."
+          ]
+        }
+      }
+    },
+    "passage": "Just saw a team from @RedCrossUSA land in Port-au-Prince! Theyâre bringing much-needed supplies and medical help for those affected by the devastating Haiti earthquake. ðð­ð¹ #HaitiEarthquake #HumanitarianAid",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How is the Emergency Operations Center handling the recent flood disasters?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways has the Emergency Operations Center demonstrated its effectiveness in managing the response to recent flood disasters, particularly in terms of coordination and communication efforts?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that the Emergency Operations Center has demonstrated its effectiveness in managing the response to recent flood disasters by coordinating search and rescue teams and keeping everyone informed.",
+          "key_points": [
+            "The Emergency Operations Center has effectively managed flood disaster responses by coordinating search and rescue teams.",
+            "The Emergency Operations Center has kept everyone informed during flood disaster responses, demonstrating effective communication efforts."
+          ]
+        }
+      }
+    },
+    "passage": "The Emergency Operations Center has been a lifesaver during the recent floods! Theyâve been coordinating search and rescue teams and keeping everyone informed. Huge appreciation for all their hard work! #FloodResponse #EmergencyOps",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "The increase in SEP radiation due to solar flares is significant, but of relatively short duration, of the order of hours. Therefore although solar flares are hazardous to astronauts and sensitive electronics equipment in space, when considering the integrated flux of SEP radiation on the surface of Mars over the course of a year the solar flare data should have only minor impact on the final particle counts. Galactic Cosmic Rays (GCR) originate from exotic energy sources in the galactic core, such as quasars, black holes, or supernovae, and despite the concern, their presence is relatively established and can be measured.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do short-duration solar flare events impact the long-term radiation levels on Mars?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that Mars' long-term radiation levels remain largely unaffected by short-duration solar flare events.",
+          "key_points": [
+            "Mars' long-term radiation levels remain largely unaffected by short-duration solar flare events."
+          ]
+        }
+      }
+    },
+    "passage": "Mars' long-term radiation levels remain largely unaffected by short-duration solar flare events.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What initiatives are in place for disability inclusion in disaster response in Los Angeles?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How is Los Angeles ensuring individuals with disabilities can access help during disasters?",
+          "llm_answer": "",
+          "correct_answer": "Los Angeles is ensuring individuals with disabilities can access help during disasters by making sure there is clear information and accessible shelters available.",
+          "key_points": [
+            "Los Angeles is providing clear information to ensure individuals with disabilities can access help during disasters.",
+            "Accessible shelters are being made available for individuals with disabilities during disasters."
+          ]
+        }
+      }
+    },
+    "passage": "Love how LA is stepping up for people with disabilities in emergency plans! ð They're making sure EVERYone can access help in disasters - from clear info to accessible shelters. Community means caring for each other! #AccessForAll #EmergencyPreparedness",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Hurricane Katrina recovery efforts in New Orleans",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How are the recovery efforts after Hurricane Katrina described in the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage mentions that the recovery efforts post-Hurricane Katrina have involved communities coming together to rebuild homes and restore hope.",
+          "key_points": [
+            "Recovery efforts after Hurricane Katrina involved communities coming together.",
+            "The focus of the recovery efforts was on rebuilding homes and restoring hope."
+          ]
+        }
+      }
+    },
+    "passage": "It's heartwarming to see the recovery efforts post-Hurricane Katrina. The communities are coming together to rebuild homes and restore hope! ðªð½â¤ï¸ #Katrina10 #RebuildNOLA",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Asteroid collisions cause quicker and more severe environmental changes than volcanic eruptions.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What does the passage state about the speed of environmental changes caused by asteroid impacts compared to volcanic eruptions?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that asteroid impacts cause rapid environmental changes that outpace volcanic eruptions significantly.",
+          "key_points": [
+            "Asteroid impacts cause rapid environmental changes.",
+            "These changes occur at a much faster rate than those caused by volcanic eruptions."
+          ]
+        }
+      }
+    },
+    "passage": "Asteroid impacts cause rapid environmental changes, outpacing volcanic eruptions significantly.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How to involve stakeholders after a disaster?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "Why is it recommended to involve local stakeholders in restoration projects?",
+          "llm_answer": "",
+          "correct_answer": "It is recommended to involve local stakeholders in restoration projects because their understanding of the purpose and value of the project enhances long-term project success.",
+          "key_points": [
+            "Involving local stakeholders in restoration projects enhances long-term project success.",
+            "Local stakeholders' understanding of the project's purpose and value is crucial for its success."
+          ]
+        }
+      }
+    },
+    "passage": "It \nis recommended that all restoration projects \ninvolve local stakeholders in the restoration \nas community understanding of the purpose \nand value of the project enhances long-term \nproject success (TNC, 2021).",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What is the Emergency Management Centre for Animal Health doing to address animal health emergencies and vaccination campaigns?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How is the Emergency Management Centre for Animal Health implementing strategies to manage animal health emergencies, particularly in relation to vaccination campaigns against recent disease outbreaks?",
+          "llm_answer": "",
+          "correct_answer": "The Emergency Management Centre for Animal Health is implementing strategies to manage animal health emergencies by rolling out rapid vaccination campaigns to combat the latest animal disease outbreaks.",
+          "key_points": [
+            "The Emergency Management Centre for Animal Health is implementing strategies to manage animal health emergencies.",
+            "Rapid vaccination campaigns are being rolled out to combat recent animal disease outbreaks."
+          ]
+        }
+      }
+    },
+    "passage": "Just saw an update from the Emergency Management Centre for Animal Health! They're rolling out rapid vaccination campaigns to combat the latest animal disease outbreaks. Protecting our livestock is more crucial than ever! ðâ¤ï¸ #AnimalHealth #Vaccination",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How is the United Nations responding to the humanitarian needs in war-torn regions?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What efforts is the United Nations making to address humanitarian needs in Syria and Yemen?",
+          "llm_answer": "",
+          "correct_answer": "The United Nations is providing essential supplies and medical assistance to address humanitarian needs in Syria and Yemen.",
+          "key_points": [
+            "The United Nations is providing essential supplies to address humanitarian needs in Syria and Yemen.",
+            "The United Nations is offering medical assistance to support humanitarian efforts in Syria and Yemen."
+          ]
+        }
+      }
+    },
+    "passage": "Heartwarming to see the UN stepping up their efforts in places like Syria and Yemen! ð Theyâre providing essential supplies and medical assistance to those who need it most. Every bit counts! #UnitedNations #HumanitarianAid",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Trinity nuclear test and its environmental impact and safety concerns.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How did the Trinity nuclear test affect the environment according to the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage mentions that radiation from the Trinity nuclear test affected the environment around the test site and indicates that the lasting impact is a serious issue.",
+          "key_points": [
+            "Radiation from the Trinity nuclear test affected the environment around the test site.",
+            "The lasting impact of the radiation is considered a serious issue."
+          ]
+        }
+      }
+    },
+    "passage": "Just watched a doc on the Trinity nuclear test, and itâs chilling how radiation affected the environment around there. The lasting impact is a serious issue. ð #TrinityTest #Radiation",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "In the study by Napora et al. (1990), the comparison between patients with diagnosed conjunctival intraepithelial neoplasia and their controls provided critical insights into the factors associated with this condition. Notably, including age- and sex-matched controls helps ensure that the differences observed are more likely attributable to the condition rather than confounding variables. Therefore, control groups are essential in establishing valid causal relations in medical research.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the inclusion of age- and sex-matched controls contribute to the reliability of findings?",
+          "llm_answer": "",
+          "correct_answer": "The inclusion of age- and sex-matched controls strengthens the reliability of the findings by minimizing the impact of confounding variables.",
+          "key_points": [
+            "The inclusion of age- and sex-matched controls enhances the reliability of findings.",
+            "Age- and sex-matched controls help minimize the impact of confounding variables."
+          ]
+        }
+      }
+    },
+    "passage": "The use of age- and sex-matched controls strengthens the reliability of the findings by minimizing the impact of confounding variables.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are the effects of El NiÃ±o on tropical cyclones in the eastern Pacific?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does El Niño affect tropical cyclones in the eastern Pacific according to the passage?",
+          "llm_answer": "",
+          "correct_answer": "El Niño affects tropical cyclones in the eastern Pacific by intensifying them due to subsurface heat discharge.",
+          "key_points": [
+            "El Niño intensifies tropical cyclones in the eastern Pacific.",
+            "The intensification is due to subsurface heat discharge."
+          ]
+        }
+      }
+    },
+    "passage": "Substantial \neconomic losses had resulted from droughts and floods across \nvarious parts of the globe due to teleconnections. For instance, direct \n6.5 billion USD (Christidis et al. 2018b) were estimated to have been \nincurred from severe urban inundation in cities along the Yangtze \nRiver in China and the extreme drought in Thailand, respectively. ENSO events affect TCs activity through variations in the low-level wind \nanomalies, vertical wind shear, mid-level relative humidity, steering \nflow, the monsoon trough and the western Pacific subtropical high in \nAsia (Yonekura and Hall, 2014; Zhang and Guan, 2014). The subsurface \nheat discharge due to El Niño can intensify TCs in the eastern Pacific \n(Jin et al. 2014; Moon et al. 2015b).",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Transformers are crucial components in electrical systems, converting alternating current (AC) from one voltage level to another efficiently. They utilize magnetically permeable materials, typically silicon steel, to create a core that enables this process. However, should the input current exceed designed specifications, the transformer's core can reach magnetic saturation. This saturation compromises its ability to contain the oscillating magnetic field produced by the current, leading to stray magnetic force fields that can induce erratic and potentially damaging currents in the input and output wires. These unintended currents might cause malfunctioning behaviors, even resulting in 'hotspots' where insulation could be compromised and ultimately fail.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do transformers function in electrical systems?",
+          "llm_answer": "",
+          "correct_answer": "Transformers in electrical systems function by changing the voltage in alternating current circuits.",
+          "key_points": [
+            "Transformers change the voltage in alternating current circuits."
+          ]
+        }
+      }
+    },
+    "passage": "Equipment that switches, steps down, or regulates voltage of electricity. Also \nserves as a control and transfer point on a transmission system. Transformer. Electrical device that changes the voltage in alternating current circuits.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Remote sensing measures sulfur dioxide effectively.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does the methodology outlined by Gabrieli et al. (2016) demonstrate the effectiveness of remote sensing in accurately measuring sulfur dioxide concentrations, particularly in challenging conditions such as cloud cover?",
+          "llm_answer": "",
+          "correct_answer": "The methodology outlined by Gabrieli et al. (2016) demonstrates the effectiveness of remote sensing in accurately measuring sulfur dioxide concentrations by providing average SO2 concentrations even in cloudy backgrounds. This indicates its capability to retrieve atmospheric data accurately despite interference from cloud cover.",
+          "key_points": [
+            "The methodology by Gabrieli et al. (2016) effectively uses remote sensing to measure sulfur dioxide concentrations.",
+            "It can accurately retrieve atmospheric data even in the presence of cloud cover, demonstrating its robustness in challenging conditions."
+          ]
+        }
+      }
+    },
+    "passage": "The Gabrieli et al. (2016) method effectively provided average SO2 concentrations even in cloudy backgrounds, demonstrating its capability to retrieve atmospheric data accurately despite interference from cloud cover.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Loggerhead sea turtles in the Western Mediterranean ingest plastic.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What evidence exists regarding the ingestion of plastic by loggerhead sea turtles in the Western Mediterranean?",
+          "llm_answer": "",
+          "correct_answer": "The passage provides evidence that plastic debris is often found in the digestive tracts of dead loggerhead sea turtles and in the fecal pellets of living individuals in the Western Mediterranean Sea, indicating significant plastic ingestion.",
+          "key_points": [
+            "Plastic debris is frequently found in the digestive tracts of dead loggerhead sea turtles in the Western Mediterranean.",
+            "Living loggerhead sea turtles in the Western Mediterranean also show evidence of plastic ingestion through the presence of plastic in their fecal pellets."
+          ]
+        }
+      }
+    },
+    "passage": "Monitoring of loggerhead sea turtles in the Western Mediterranean Sea reveals that plastic debris is often found in the digestive tracts of dead turtles and in the fecal pellets of living individuals, indicating significant plastic ingestion.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How is the Red Cross helping those affected by the recent floods?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what specific ways is the Red Cross mobilizing its resources and teams to assist communities impacted by the recent floods, and what types of relief efforts are being implemented to support those in need?",
+          "llm_answer": "",
+          "correct_answer": "The Red Cross is mobilizing its resources and teams by setting up shelters and delivering essential supplies to assist communities impacted by the recent floods.",
+          "key_points": [
+            "The Red Cross is setting up shelters to assist communities impacted by the recent floods.",
+            "The Red Cross is delivering essential supplies to support those affected by the floods."
+          ]
+        }
+      }
+    },
+    "passage": "So proud to see @RedCross mobilizing teams to provide relief for those affected by the recent floods! Theyâre setting up shelters and delivering essential supplies. ðð #DisasterRelief #RedCross",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What was the American Red Cross response to Hurricane Katrina?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways did the American Red Cross contribute to the response efforts during Hurricane Katrina?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that the American Red Cross contributed to the response efforts during Hurricane Katrina by coordinating rescue missions and providing blankets, food, and crucial medical aid to those in need.",
+          "key_points": [
+            "The American Red Cross coordinated rescue missions during Hurricane Katrina.",
+            "The organization provided blankets, food, and crucial medical aid to those in need."
+          ]
+        }
+      }
+    },
+    "passage": "Huge shoutout to FEMA and the American Red Cross for all their hard work during Hurricane Katrina! ð They coordinated rescue missions and provided blankets, food, and crucial medical aid to those in need. Don't forget their dedication! #Katrina #Heroes",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Pressure and wind cause different types of injuries, but during the airburst event, casualties resulted primarily from pressure shocks. This caused not only internal injuries but also the collapse of structures, which could potentially lead to higher mortality rates through indirect means. Many factors were involved.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do pressure shocks from airburst events contribute to increased overall mortality rates according to the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that pressure shocks from airburst events lead to the collapse of buildings and other structures, which can significantly increase the overall mortality rates by causing additional casualties beyond direct injuries.",
+          "key_points": [
+            "Pressure shocks from airburst events cause the collapse of buildings and structures.",
+            "The collapse of buildings and structures leads to increased overall mortality rates by causing additional casualties beyond direct injuries."
+          ]
+        }
+      }
+    },
+    "passage": "Collapses of buildings and other structures during a pressure shock could significantly increase the overall mortality rates beyond just direct injuries.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "How are farmers dealing with leaf rust in wheat this season?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What treatment is being used to combat leaf rust in wheat fields, and has it shown any effectiveness?",
+          "llm_answer": "",
+          "correct_answer": "The passage mentions that Liquid Copper is being used to combat leaf rust in wheat fields. It has shown some effectiveness, as indicated by the observation of improvement following the treatment.",
+          "key_points": [
+            "Liquid Copper is being used to combat leaf rust in wheat fields.",
+            "The treatment with Liquid Copper has shown some effectiveness, as improvements have been observed following its application."
+          ]
+        }
+      }
+    },
+    "passage": "We've been battling leaf rust in our wheat fields this year. Sprayed with Liquid Copper last week and really hoping it puts a stop to those pesky spores! Can already see some improvement. Anyone else facing this struggle? ð¾ðª #wheatfarmers #leafrust",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Volcanic eruptions lead to heavy casualties because of long dormancy periods, which create a false sense of security among residents.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do long dormancy periods of volcanoes contribute to public perception of volcanic risk?",
+          "llm_answer": "",
+          "correct_answer": "The passage explains that long dormancy periods of volcanoes have a dual effect on human perception of volcanic risk. When a volcano has had large-scale eruptions closer to the present time than its mean eruption interval, the danger may be exaggerated. Conversely, volcanoes that have remained dormant for very long periods may be wrongly regarded as extinct.",
+          "key_points": [
+            "Long dormancy periods of volcanoes can lead to exaggerated perceptions of danger if recent eruptions have occurred closer to the present than the average eruption interval.",
+            "Volcanoes that have been dormant for extended periods may be incorrectly perceived as extinct, reducing perceived risk."
+          ]
+        }
+      }
+    },
+    "passage": "Simkin (1994) estimated that eruptions with VEI≥2 occur \nevery few weeks whilst those with VEI≥3 take place several times per year. Eruptions with \nVEI≥5, such as the 1980 eruption of Mount St Helens, occur perhaps once per decade, and \nthose of VEI 6, such as Krakatau (1883) and Mount Pinatubo (1991), only occur about once \nevery century. Only one known historic eruption, that of Tambora in 1815, has been assigned \neruptions of this magnitude. The long intervals between eruptions at many volcanoes have a dual effect on human \nperception. The danger may be exaggerated at volcanoes which have had large-scale \neruptions much closer to the present time than their mean eruption interval. On the other \nhand, volcanoes that have remained dormant for very long periods may be wrongly regarded \nLong intervals between volcanic activity commonly precede unusually violent eruptions.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Montana CAP is helping communities with flood insurance compliance and creating resources for disaster resilience.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What organization is collaborating with Montana CAP to provide communities with resources on flood insurance compliance?",
+          "llm_answer": "",
+          "correct_answer": "The organization collaborating with Montana CAP to provide communities with resources on flood insurance compliance is NHMA.",
+          "key_points": [
+            "NHMA is collaborating with Montana CAP.",
+            "The collaboration aims to provide communities with resources on flood insurance compliance."
+          ]
+        }
+      }
+    },
+    "passage": "ð¢ Huge shoutout to @MontanaCAP for teaming up with @NHMA to provide our communities with essential resources on flood insurance compliance! ðð¡ Knowing what's covered in a basement can be a game changer after a flood. Let's stay prepared! #FloodInsurance #CommunitySupport",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What management strategies are recommended for controlling brucellosis in developing countries, particularly in regions like Bangladesh where the disease is endemic among domestic ruminants?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "According to the research, what measures are recommended to control brucellosis in high-prevalence herds and among occupationally exposed individuals in Bangladesh?",
+          "llm_answer": "",
+          "correct_answer": "The study recommends vaccination in high-prevalence herds and emphasizes the need for regular screening of individuals who are occupationally exposed to brucellosis.",
+          "key_points": [
+            "Vaccination is recommended for high-prevalence herds to control brucellosis.",
+            "Regular screening is emphasized for individuals occupationally exposed to brucellosis."
+          ]
+        }
+      }
+    },
+    "passage": "This thesis investigates the epidemiology of brucellosis, a widespread zoonotic disease, in Bangladesh, focusing on its prevalence in humans and domestic ruminants. The study highlights that brucellosis is endemic in many developing countries, including Bangladesh, where previous prevalence studies lacked random sampling, potentially misrepresenting the disease's status. The research evaluates the performance of various diagnostic tests, estimates true prevalence, identifies risk factors, and detects Brucella species. Findings indicate low prevalence rates in cattle under small-scale management systems, while higher rates were observed in intensive farming contexts. The study recommends vaccination in high-prevalence herds and emphasizes the need for regular screening of occupationally exposed individuals. The thesis comprises multiple chapters detailing the research methodology, results, and implications for future control strategies against brucellosis in Bangladesh.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Demolition of weakened structures requires shoring or bracing to prevent collapse during the demolition process, except under specific approved conditions.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the safety measures and regulations surrounding the demolition of weakened structures, particularly regarding the use of shoring or bracing, and under what specific conditions might these measures be waived when using mechanical equipment?",
+          "llm_answer": "",
+          "correct_answer": "The safety regulations state that weakened structures being demolished must be shored or braced to ensure safety and stability. However, these measures can be waived if the demolition is performed with mechanical equipment and meets approval conditions.",
+          "key_points": [
+            "Weakened structures being demolished must be shored or braced to ensure safety and stability.",
+            "Shoring or bracing measures can be waived if the demolition is performed with mechanical equipment and meets approval conditions."
+          ]
+        }
+      }
+    },
+    "passage": "According to safety regulations, weakened structures being demolished must be shored or braced unless demolition is performed with mechanical equipment and meets approval conditions. This ensures safety and stability during the process.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Changes in average speed have a larger impact on crash severity in rural areas compared to urban areas.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways do changes in average speed influence crash severity differently in rural areas compared to urban settings, and what empirical evidence supports this distinction?",
+          "llm_answer": "",
+          "correct_answer": "Changes in average speed influence crash severity more significantly in rural areas compared to urban settings. The passage indicates that speed changes have a larger effect on crash severity on rural roads. This distinction is supported by empirical data from 115 studies, which show that the gap in crash severity outcomes is more pronounced in rural areas.",
+          "key_points": [
+            "Changes in average speed have a more significant impact on crash severity in rural areas compared to urban settings.",
+            "Empirical data from 115 studies support the finding that the effect of speed changes on crash severity is more pronounced in rural areas."
+          ]
+        }
+      }
+    },
+    "passage": "According to analyses that include more urban roads, data shows that speed changes have a larger effect on crash severity on rural roads than in urban settings. This is supported by empirical data from 115 studies indicating that the gap in crash severity outcomes is more pronounced in rural areas.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Contact with strong oxidizers such as peroxides or chromates can create a fire hazard due to their reactive nature.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the potential risks associated with strong oxidizers in terms of fire hazards and chemical reactions?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that strong oxidizers pose a fire and explosion hazard.",
+          "key_points": [
+            "Strong oxidizers pose a fire hazard.",
+            "Strong oxidizers pose an explosion hazard."
+          ]
+        }
+      }
+    },
+    "passage": "CHROMIUM TRIOXIDE (CHRONIC ANHYDRIDE): Possible ignition. CYANURIC CHLORIDE: Violent reaction. DIETHYL ZINC: Possible ignition and explosion. HYDROGEN PEROXIDE + WATER: Explosion hazard. IODINE + ETHANOL + MERCURIC OXIDE: Explosion hazard. LEAD PERCHLORATE: Explosion hazard. MAGNESIUM (POWDERED): Mixtures are capable of detonation. NITRIC ACID (CONCENTRATED): Mixtures of greater than 25% acid may decompose violently. OXIDIZERS (STRONG): Fire and explosion hazard. PHOSPHOROUS TRIOXIDE: Possible violent reaction and ignition. PLASTICS, RUBBER, COATINGS: May be attacked. POTASSIUM HYDROXIDE + CHLOROFORM: Exothermic reaction. Richard-Allan Scientific \nRevision December 2001\nPOTASSIUM TERT-BUTOXIDE: Fire and explosion hazard. SODIUM + CHLOROFORM: Possible explosion. SODIUM HYPOCHLORITE: Explosion hazard.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Landfill gases pose significant health risks to the surrounding populace.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the potential health risks associated with landfill gases for communities located near landfills, and what measures can be taken to mitigate these risks?",
+          "llm_answer": "",
+          "correct_answer": "The potential health risks associated with landfill gases for communities located near landfills include respiratory problems, skin irritations, and long-term illnesses such as cancer. To mitigate these risks, awareness and regulation surrounding landfill gas emission are critical.",
+          "key_points": [
+            "Communities near landfills face health risks from landfill gases, including respiratory problems, skin irritations, and long-term illnesses such as cancer.",
+            "Mitigating these health risks requires increased awareness and regulation of landfill gas emissions."
+          ]
+        }
+      }
+    },
+    "passage": "Landfill gases (LFG) contain a myriad of potentially harmful compounds, including ammonia, hydrogen sulfide, and volatile organic compounds. Numerous studies indicate a direct correlation between exposure to these gases and various health issues such as respiratory problems, skin irritations, and even long-term illnesses such as cancer. The toxic substances resulting from the decomposition of waste not only impact air quality but can also lead to significant public health hazards for those living in proximity to landfills. Awareness and regulation surrounding landfill gas emission are critical to mitigating these risks.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What documentation will I receive after getting vaccinated for yellow fever, particularly if I'm planning to travel to an area where the disease is prevalent?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What specific documentation should travelers expect to receive after being vaccinated against yellow fever, and what are the implications of this documentation for traveling to areas with a high prevalence of the disease?",
+          "llm_answer": "",
+          "correct_answer": "After being vaccinated against yellow fever, travelers should expect to receive an International Certificate of Vaccination as proof of vaccination. This documentation is crucial for traveling to areas with a high prevalence of the disease, as it serves as evidence that the individual has been vaccinated, which is often a requirement for entry into these regions.",
+          "key_points": [
+            "Travelers receive an International Certificate of Vaccination after being vaccinated against yellow fever.",
+            "The certificate serves as proof of vaccination and is often required for entry into areas with a high prevalence of yellow fever."
+          ]
+        }
+      }
+    },
+    "passage": "The document provides essential information about the yellow fever vaccine, which is crucial for preventing yellow fever, a serious disease transmitted by infected mosquitoes. It outlines the symptoms of yellow fever, which can range from mild to severe, and emphasizes the importance of vaccination for those traveling to or living in areas at risk. The vaccine is a single shot that offers lifelong protection for most individuals. It is administered only at designated vaccination centers, and recipients receive an International Certificate of Vaccination as proof of vaccination. The document also advises on precautions to take before vaccination, potential side effects, and the importance of reporting adverse reactions. Additionally, it highlights the need for individuals with specific medical conditions to consult their healthcare provider before receiving the vaccine. For further information, individuals can visit the CDC's Travelers’ Health website.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Depending on local circumstances, well design, and specific geology and reservoir conditions, various mitigation options could include, but not necessarily be limited to: a) pumping of successive stages at reduced volumes; b) skipping a next stage; c) delay of further pumping until seismicity subsides; and d) potentially redesigning the perforation clusters to allow pumping at lower rates and volumes. As the observation of many hydraulic fracturing operations has shown, induced seismicity potentially related to hydraulic fracturing is extremely rare. When it does occur, it is often quickly mitigated, and in the United States has had little direct impact. Therefore, the evaluation and response systems such as the 'Traffic Light' for hydraulic fracturing should be tailored differently than those for disposal.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In the context of hydraulic fracturing, what mitigation strategies could be employed to address induced seismicity, and how should evaluation and response systems like the 'Traffic Light' system be adapted based on the specific geological and reservoir conditions?",
+          "llm_answer": "",
+          "correct_answer": "In the context of hydraulic fracturing, mitigation strategies to address induced seismicity could include: a) pumping of successive stages at reduced volumes; b) skipping a next stage; c) delaying further pumping until seismicity subsides; and d) potentially redesigning the perforation clusters to allow pumping at lower rates and volumes. The passage suggests that evaluation and response systems such as the \"Traffic Light\" system for hydraulic fracturing should be tailored differently than those for disposal, taking into account the specific geological and reservoir conditions.",
+          "key_points": [
+            "Mitigation strategies for induced seismicity in hydraulic fracturing include pumping successive stages at reduced volumes, skipping a stage, delaying further pumping until seismicity subsides, and redesigning perforation clusters for lower rates and volumes.",
+            "Evaluation and response systems like the 'Traffic Light' system should be adapted to account for specific geological and reservoir conditions, differing from systems used for disposal."
+          ]
+        }
+      }
+    },
+    "passage": "Depending on local circumstances, well design, and specific geology and reservoir conditions, \nvarious mitigation options could include, but not necessarily be limited to: a) pumping of successive \nstages at reduced volumes; b) skipping a next stage; c) delay of further pumping until seismicity \nsubsides; and d) potentially redesigning the perforation clusters to allow pumping at lower rates \nand volumes. As the observation of many hydraulic fracturing operations has shown, induced seismicity potentially \nrelated to hydraulic fracturing is extremely rare. When it does occur, it is often quickly mitigated, and \nin the United States has had little direct impact. Therefore, the evaluation and response systems such \nas the “Traffic Light” for hydraulic fracturing should be tailored differently than those for disposal. The fracturing of a stage is a very transient process, and the subdivision of the wellbore into stages \nisolates subsequent intervals so that extended fault contact is not likely. There are multiple locations for which the regulatory agency has established special conditions \nfor seismic monitoring during hydraulic fracturing.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Only approved scaffolds shall be used by workers.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What is required for workers in terms of scaffolding and safety standards?",
+          "llm_answer": "",
+          "correct_answer": "Workers are required to use scaffolds that meet the approval standards set forth in safety requirements to ensure proper safety.",
+          "key_points": [
+            "Workers must use scaffolds that comply with established safety standards.",
+            "The use of approved scaffolds is essential to ensure worker safety."
+          ]
+        }
+      }
+    },
+    "passage": "It is mandatory that workers use scaffolds that meet approval standards set forth in safety requirements to ensure proper safety.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Oil spill prevention systems are effective when accident simulations and risk assessment surveys are utilized to improve them, but public participation in defining performance indicators is crucial for their success.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways can accident simulations and risk assessment surveys enhance the effectiveness of oil spill prevention systems, and why is public involvement in establishing performance indicators essential for their success?",
+          "llm_answer": "",
+          "correct_answer": "The passage suggests that the effectiveness of oil spill prevention systems, such as the OSRA, could be enhanced through accident simulations and risk acceptance surveys. These methods could improve the system by providing better insights into potential risks and how to manage them. Additionally, public participation in defining performance indicators is considered paramount, implying that involving the public is essential for ensuring that the performance indicators are relevant and comprehensive, which in turn contributes to the success of the prevention systems.",
+          "key_points": [
+            "Accident simulations and risk acceptance surveys can enhance oil spill prevention systems by providing better insights into potential risks and management strategies.",
+            "Public participation in defining performance indicators is essential to ensure they are relevant and comprehensive, contributing to the success of prevention systems."
+          ]
+        }
+      }
+    },
+    "passage": "Finally, the effectiveness of the OSRA\ncould be improved, for example, via accident simulations and risk\nacceptance surveys, although public participation in deﬁning per-\nformance indicators is paramount (14). 4.2. Risk identiﬁcation\nAs previously discussed, the only potential source of risk in the\nOSRA was the power station oil storage facilities (22). Thus\noceanographic conditions and characteristics of the oil spill (23). After the crisis in 2006, the UNEP e ROWA (2012) identiﬁed ﬁfteen\nhigh priority and twenty medium priority sites in terms of\necological and cultural aspects (Supplementary material, Fig. S1)\n(24). Unfortunately, the report does not include accurate estimates\nof the socioeconomic aspects of the coastal sites. Events triggering\noil pollution were restricted to an accidental oil spill (25) caused by\nTable 3 (continued )\nEffectiveness and efﬁciency of the available oil spill\nprevention, detection and combat instruments. Spill detection system unavailable and combat\ninstruments unable to tackle large spills.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Deeper lagoon areas have higher potential for preserving paleotsunami deposits compared to landward regions.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "Why do deeper areas have a higher potential for preserving paleotsunami deposits compared to landward regions?",
+          "llm_answer": "",
+          "correct_answer": "Deeper areas have a higher potential for preserving paleotsunami deposits compared to landward regions due to sedimentation rates.",
+          "key_points": [
+            "Deeper areas have a higher potential for preserving paleotsunami deposits.",
+            "This is due to the sedimentation rates in deeper areas compared to landward regions."
+          ]
+        }
+      }
+    },
+    "passage": "Deeper areas better preserve paleotsunami deposits than landward regions due to sedimentation rates.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Polypropylene siding's maximum wind speed limit in construction cannot exceed 100 miles per hour, as stated in specific building codes. Any installation in areas where wind speeds exceed this limit must follow additional tests or calculations for compliance.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the implications for installing polypropylene siding in areas where wind speeds exceed 100 miles per hour, and what additional requirements must builders consider to ensure compliance with building codes?",
+          "llm_answer": "",
+          "correct_answer": "In areas where wind speeds exceed 100 miles per hour, builders must submit tests or calculations indicating compliance with Chapter 16 to ensure that the polypropylene siding installation meets building code requirements. Additionally, polypropylene siding must be installed in accordance with the manufacturer's instructions and secured to the building to provide weather protection for the exterior walls.",
+          "key_points": [
+            "Builders must submit tests or calculations to demonstrate compliance with Chapter 16 for polypropylene siding installations in areas with wind speeds exceeding 100 miles per hour.",
+            "Polypropylene siding must be installed according to the manufacturer's instructions to ensure it is properly secured and provides adequate weather protection for exterior walls."
+          ]
+        }
+      }
+    },
+    "passage": "Shingles and other\nweather coverings shall be attached with appropriate stan-\ndard-shingle nails to furring strips securely nailed to studs, or\nwith approved mechanically bonding nails, except where\nsheathing is of wood not less than 1-inch (25 mm) nominal\nthickness or of wood structural panels as specified in Table\n1405.18 Polypropylene siding. Polypropylene siding con-\nforming to the requirements of this section and complying\nwith Section 1404.12 shall be limited to exterior walls of\nType VB construction located in areas where the wind speed\nspecified in Chapter 16 does not exceed 100 miles per hour\nfeet (12 192 mm) in Exposure C. Where construction is\nlocated in areas where the basic wind speed exceeds 100\nmiles per hour (45 m/s), or building heights are in excess of\n40 feet (12 192 mm), tests or calculations indicating compli-\nance with Chapter 16 shall be submitted. Polypropylene sid-\ning shall be installed in accordance with the manufacturer’s\ninstructions. Polypropylene siding shall be secured to the\nbuilding so as to provide weather protection for the exterior\nwalls of the building.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are the local government initiatives in response to hazardous spills in Des Moines?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What initiatives has the Des Moines city council implemented to effectively manage and respond to hazardous material spills, and how do these initiatives contribute to community safety?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that the Des Moines city council has approved funding for rapid response teams to tackle hazardous material spills. This initiative contributes to community safety by ensuring that there are dedicated teams ready to quickly and effectively manage and respond to such incidents, thereby minimizing potential risks and hazards to the community.",
+          "key_points": [
+            "The Des Moines city council has approved funding for rapid response teams to address hazardous material spills.",
+            "These rapid response teams enhance community safety by being prepared to quickly and effectively manage hazardous material incidents, reducing potential risks and hazards."
+          ]
+        }
+      }
+    },
+    "passage": "Hey everyone! ð±ð¨ Just heard that the Des Moines city council approved funding for rapid response teams to tackle hazardous material spills! ðª Letâs keep our community safe and stay informed! #DesMoines #HazardResponse",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Oxygen deficiency poses a significant danger within confined spaces due to the potential for serious health risks and hazardous conditions occurring in such environments.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the health risks associated with oxygen deficiency in confined spaces, and what safety measures can be implemented to protect individuals working in these hazardous environments?",
+          "llm_answer": "",
+          "correct_answer": "The health risks associated with oxygen deficiency in confined spaces include suffocation and incapacitation, which can render individuals unable to react appropriately. To protect individuals working in these hazardous environments, proper monitoring and safety protocols should be implemented.",
+          "key_points": [
+            "Oxygen deficiency in confined spaces poses health risks such as suffocation and incapacitation.",
+            "Proper monitoring and safety protocols are essential to protect individuals working in hazardous environments."
+          ]
+        }
+      }
+    },
+    "passage": "Oxygen deficiency in confined spaces is indeed a critical concern, as insufficient oxygen levels can lead to suffocation or incapacitation, rendering individuals unable to react appropriately. These conditions are especially prevalent in spaces that are not designed for human occupancy, highlighting the need for proper monitoring and safety protocols to protect workers entering hazardous areas.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "What are the risks associated with asteroid threats like Apophis?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What potential consequences do asteroid threats like Apophis pose to humanity, and how do their collision risks vary in terms of severity and societal impact?",
+          "llm_answer": "",
+          "correct_answer": "Asteroid threats like Apophis pose potential consequences to humanity that include global catastrophes, civilization collapse, and extensive environmental damage. The severity of these risks varies with the size of the asteroid, as larger impacts are likely to impose more severe threats to human societies.",
+          "key_points": [
+            "Asteroid threats like Apophis can lead to global catastrophes, civilization collapse, and extensive environmental damage.",
+            "The severity of the risks posed by asteroid impacts varies with the size of the asteroid, with larger impacts posing more severe threats to human societies."
+          ]
+        }
+      }
+    },
+    "passage": "Asteroid collisions pose significant risks to humanity, leading to possible global catastrophes. Effects from larger impacts could increase harm to societies, resulting in potential civilization collapse and extensive environmental damage. Probability assessments indicate that larger collisions are likely to impose more severe human threats.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Locations above 50Â° geomagnetic latitude are affected.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the implications of geomagnetic storms on electric power infrastructures located above 50° geomagnetic latitude, and how do these events affect regions such as Scandinavia, the United Kingdom, and the Northeast and Pacific Northwest of North America?",
+          "llm_answer": "",
+          "correct_answer": "The passage indicates that a severe geomagnetic storm would likely cause the loss of multiple EHV (extra-high voltage) assets in areas above the 50° geomagnetic latitude. This would lead to widespread power outages in four specific regions around the globe: Scandinavia, the United Kingdom, the Pacific Northwest region shared by the United States and Canada, and the Northeast region shared by the United States and Canada, including Quebec, New York, and New England.",
+          "key_points": [
+            "Severe geomagnetic storms can cause the loss of multiple extra-high voltage (EHV) assets in regions above 50° geomagnetic latitude.",
+            "Such storms would lead to widespread power outages in Scandinavia, the United Kingdom, the Pacific Northwest of North America, and the Northeast of North America, including Quebec, New York, and New England."
+          ]
+        }
+      }
+    },
+    "passage": "Figure 5. Vulnerability of North American Electric Power Assets to Geomagnetic Storms \nFigure 5 above shows a small number of North American EHV assets that fall within the area of likely \ngreatest geomagnetic disturbance or the regions of highest regional conductivity (or both), and where \nwe would expect the most severe consequences, while Figure 6 below shows the same information for \nalong the entire eastern seaboard of the United States, there are fewer studies of storms that fall \nbetween that extreme and the historical benchmark of the 1989 storm, and none that attempt to predict \nmore suitable basis for analysis, therefore, this analysis will rely on a simplifying assumption that a \nsevere geomagnetic storm would cause the loss of multiple EHV assets in areas above the 50 degree \ngeomagnetic latitude, leading to a widespread power outage for four areas around the globe: \nScandinavia; the United Kingdom; the Pacific Northwest region shared by the United States and \nCanada, and; the Northeast region shared by the United States and Canada, to include Quebec, New \nYork, and New England. Figure 6.",
+    "difficulty": "easy"
+  },
+  {
+    "original_query": "Sidescan sonar is effective in underwater investigations.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How does sidescan sonar assist in underwater investigations involving structures and wrecks?",
+          "llm_answer": "",
+          "correct_answer": "The passage states that sidescan sonar provides clear images of underwater structures and wrecks, which aids investigations.",
+          "key_points": [
+            "Sidescan sonar provides clear images of underwater structures and wrecks.",
+            "These clear images assist in underwater investigations."
+          ]
+        }
+      }
+    },
+    "passage": "Sidescan sonar provides clear images of underwater structures and wrecks, aiding investigations.",
+    "difficulty": "easy"
+  }
+]

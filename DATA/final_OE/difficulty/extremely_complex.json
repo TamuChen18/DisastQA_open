@@ -1,0 +1,648 @@
+[
+  {
+    "original_query": "What are the specific firefighting procedures recommended for dealing with Benzene leaks, as outlined in the Safety Data Sheet?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What detailed firefighting and emergency response procedures should be followed in the event of a Benzene leak, considering both immediate actions and longer-term safety measures as indicated in safety guidelines?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines several immediate actions and safety measures to follow in the event of a Benzene leak:\n\n1. Evacuate personnel and secure and control entrance to the area.\n2. Eliminate all ignition sources.\n3. Absorb liquids using vermiculite, dry sand, earth, or a similar material, and deposit them in sealed containers.\n4. Ventilate the area of the spill or leak.\n5. Keep Benzene out of confined spaces, such as sewers, due to the risk of explosion.\n6. Use water spray to reduce vapors and keep containers cool.\n\nAdditionally, it is important to contact Environmental Protection (DEP) or the regional office of the federal Environmental Protection Agency (EPA) for specific guidance. Prior to working with Benzene, individuals should be trained on its proper handling and storage, and a regulated, marked area should be established for handling, using, or storing Benzene as required by the OSHA Benzene Standard (29 CFR 1910.1028).",
+          "key_points": [
+            "Evacuate personnel and secure and control entrance to the area in the event of a Benzene leak.",
+            "Eliminate all ignition sources to prevent fire or explosion.",
+            "Absorb leaked Benzene using materials like vermiculite, dry sand, or earth, and store in sealed containers.",
+            "Ventilate the area to disperse Benzene vapors.",
+            "Prevent Benzene from entering confined spaces such as sewers due to explosion risk.",
+            "Use water spray to reduce vapors and keep containers cool.",
+            "Contact Environmental Protection (DEP) or the regional office of the EPA for specific guidance.",
+            "Ensure individuals are trained on proper handling and storage of Benzene before working with it.",
+            "Establish a regulated, marked area for handling, using, or storing Benzene as per OSHA Benzene Standard (29 CFR 1910.1028)."
+          ]
+        }
+      }
+    },
+    "passage": "If Benzene is spilled or leaked, take the following steps: \n Evacuate personnel and secure and control entrance to the \n Eliminate all ignition sources.  Absorb liquids in vermiculite, dry sand, earth, or a similar \nmaterial and deposit in sealed containers.  Ventilate area of spill or leak.  Keep Benzene out of confined spaces, such as sewers, \nbecause of the possibility of an explosion.  Use water spray to reduce vapors and keep containers cool. Environmental Protection (DEP) or your regional office of the \nfederal Environmental Protection Agency (EPA) for specific \nHandling and Storage \nPrior to working with Benzene you should be trained on its \nproper handling and storage.  A regulated, marked area should be established where \nBenzene is handled, used or stored as required by the \nOSHA Benzene Standard (29 CFR 1910.1028).",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "How can machine learning improve thunderstorm hazard predictions by utilizing various data sources like radar and satellite imagery?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways can machine learning be harnessed to enhance the accuracy of thunderstorm hazard predictions by integrating and analyzing diverse data sources such as radar, satellite imagery, lightning observations, and numerical weather prediction? How might the selection of these data sources impact the effectiveness of the machine learning models used in this context?",
+          "llm_answer": "",
+          "correct_answer": "Machine learning can enhance the accuracy of thunderstorm hazard predictions by integrating and analyzing diverse data sources such as radar, satellite imagery, lightning observations, and numerical weather prediction (NWP) data. The study indicates that radar data is the most significant predictor for forecasting storm track radar reflectivity, lightning occurrence, and hail indicators. Satellite imagery is particularly useful in enhancing predictions in regions where radar data is scarce. Lightning data is specifically valuable for forecasting lightning but is less effective for predicting other hazards. The selection of these data sources impacts the effectiveness of machine learning models by influencing prediction accuracy and the risk of overfitting. Careful selection of input data is crucial to avoid overfitting and to enhance prediction accuracy. The study suggests that understanding the contributions of different data sources is important, and future work should explore additional data sources and ML methods to further refine thunderstorm hazard predictions.",
+          "key_points": [
+            "Machine learning enhances thunderstorm hazard predictions by integrating diverse data sources such as radar, satellite imagery, lightning observations, and numerical weather prediction data.",
+            "Radar data is the most significant predictor for forecasting storm track radar reflectivity, lightning occurrence, and hail indicators.",
+            "Satellite imagery is particularly useful in regions where radar data is scarce, enhancing prediction accuracy.",
+            "Lightning data is valuable for forecasting lightning but less effective for predicting other hazards.",
+            "The selection of data sources impacts the effectiveness of machine learning models by influencing prediction accuracy and the risk of overfitting.",
+            "Careful selection of input data is crucial to avoid overfitting and enhance prediction accuracy.",
+            "Understanding the contributions of different data sources is important for improving model effectiveness.",
+            "Future work should explore additional data sources and machine learning methods to further refine thunderstorm hazard predictions."
+          ]
+        }
+      }
+    },
+    "passage": "This study investigates the effectiveness of various data sources for machine learning (ML)-based nowcasting of thunderstorm hazards, focusing on ground-based radar, satellite imagery, lightning observations, numerical weather prediction (NWP) data, and digital elevation models (DEM). The research evaluates 106 predictive variables to forecast storm track radar reflectivity, lightning occurrence, and hail indicators in the Northeastern United States. Results indicate that radar data is the most significant predictor, while satellite imagery enhances predictions in radar-scarce regions. Lightning data is valuable for lightning forecasting but less so for other hazards. The study highlights the importance of understanding the contributions of different data sources, suggesting that while ML can improve nowcasting, careful selection of input data is crucial to avoid overfitting and enhance prediction accuracy. Future work should explore additional data sources and ML methods to further refine thunderstorm hazard predictions.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What comprehensive strategies should policymakers implement to improve drought preparedness and response in arid and semi-arid regions, considering local knowledge and early warning systems?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What evidence-based strategies should policymakers prioritize to enhance drought preparedness and response in arid and semi-arid regions, while integrating local knowledge and effective early warning systems?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines several evidence-based strategies that policymakers should prioritize to enhance drought preparedness and response in arid and semi-arid regions. These include:\n\n1. Improving the capabilities of the National Meteorological Service for drought early-warning and monitoring by expanding and equipping the national network of weather stations, investing in state-of-the-art technology, and collaborating with national and international institutions for information exchange and dissemination.\n\n2. Establishing a communication strategy to disseminate rainfall and drought seasonal early-warning measures for agriculture using various national and local media such as radio, television, press, and the internet.\n\n3. Promoting the modernization of production units by providing drought-tolerant improved seeds, fertilizers, and preferably organic agrochemicals for pest and weed control.\n\n4. Encouraging production reconversion in regions where water is scarce by promoting the use of crops and varieties with low water requirements to replace those with higher demand.\n\n5. Providing technical assistance to production units by qualified technical staff to improve cultivation practices and optimize the use and management of available resources.\n\n6. Encouraging the diversification of agricultural production systems by introducing forestry and livestock species through agro-silvopastoral systems.\n\n7. Promoting preventive grain storage for times of poor harvest.\n\n8. Granting credit and insurance to agricultural production units, especially small producers, for acquiring adequate infrastructure and machinery.\n\n9. Facilitating access to local and regional markets by improving communication channels and transportation.\n\n10. Providing advice on organizing production units into civil associations and commercial corporations to ease and expedite access to loans and insurance from financial institutions.",
+          "key_points": [
+            "Enhance the National Meteorological Service's capabilities for drought early-warning and monitoring by expanding weather stations, investing in technology, and collaborating with institutions for information exchange.",
+            "Develop a communication strategy to disseminate early-warning measures for agriculture through various media channels.",
+            "Modernize production units by providing drought-tolerant seeds, fertilizers, and organic agrochemicals.",
+            "Promote production reconversion by encouraging crops with low water requirements in water-scarce regions.",
+            "Offer technical assistance to improve cultivation practices and resource management.",
+            "Encourage diversification of agricultural systems by introducing forestry and livestock through agro-silvopastoral systems.",
+            "Promote preventive grain storage for poor harvest periods.",
+            "Provide credit and insurance to agricultural units, especially small producers, for infrastructure and machinery acquisition.",
+            "Improve access to local and regional markets by enhancing communication and transportation.",
+            "Advise on organizing production units into associations and corporations to facilitate access to loans and insurance."
+          ]
+        }
+      }
+    },
+    "passage": "In this regard, some of the agricultural drought risk management\nand climate change adaptation strategies that must be adopted and implemented by public\npolicies and government programs such as PRONACOSE or the various rural support\nprograms are:\nImproving the capabilities of the National Meteorological Service to conduct drought\nearly-warning and monitoring activities by expanding and equipping the national\nnetwork of weather stations, investing in state-of-the-art technology, and collaborating\nwith national and international institutions to exchange and disseminate information;\nEstablishing a communication strategy to disseminate rainfall and drought seasonal\nearly-warning measures for agriculture using different national and local media\n(radio, television, press, internet, etc.);\nPromoting the modernization of production units by providing drought-tolerant\nimproved seeds, fertilizers, and agrochemicals (preferably organic) for pest and\nweed control;\nPromoting production reconversion in regions where water is scarce, i.e., encourage\nthe use of crops and varieties with low water requirements to replace crops with\nhigher demand;\nProviding technical assistance to production units by qualiﬁed technical staff to im-\nprove cultivation practices (sowing, fertilizing, harvesting, etc.) and help to optimize\nthe use and management of available resources;\nEncouraging the diversiﬁcation of agricultural production systems by introducing\nforestry and livestock species (agro-silvopastoral systems);\nWater 2021, 13, 1431\nPromoting preventive grain storage for times of poor harvest;\nGranting credit and insurance to agricultural production units, especially small pro-\nducers, for the acquisition of adequate infrastructure and machinery to carry out\ntheir activities;\nFacilitating the access of production units to local and regional markets by improving\ncommunication channels and transportation;\nProviding advice on the organization of production units to civil associations and\ncommercial corporations so that they can have easier and faster access to loans and\ninsurance provided by ﬁnancial institutions.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "In cases of minor spills during chemical handling, it is critical to implement specific measures to minimize exposure and environmental impact. Cleaning up spills promptly and regularly is essential, as is avoiding exposure to dust that can be harmful when inhaled or contacted with skin and eyes. To protect against these risks, individuals involved in the cleanup are advised to wear appropriate protective equipment such as gloves, safety glasses, dust respirators, and protective clothing. It is also vital to avoid generating excessive dust during cleanup, for which a vacuum that filters the particles exhaustively should be used, or dampening the area to minimize dust before sweeping. Major spills require even more stringent measures, including the evacuation of personnel from the area and informing emergency responders of the situation accurately. This highlights the role personal protective equipment plays in safeguarding health and ensuring safe handling practices around hazardous materials.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What specific procedures and precautions should be taken during the cleanup of minor and major chemical spills to ensure safety and minimize environmental impact, and how do these practices differ between the two types of spills?",
+          "llm_answer": "",
+          "correct_answer": "For minor spills, the procedures and precautions include cleaning up waste regularly and addressing abnormal spills immediately. It is important to avoid breathing dust and contact with skin and eyes, so wearing protective clothing, gloves, safety glasses, and a dust respirator is necessary. Dry clean-up procedures should be used to avoid generating dust, and the area should be vacuumed or swept up. The vacuum cleaner must be fitted with an exhaust micro filter (HEPA type), and explosion-proof machines designed to be grounded during storage and use should be considered. To prevent dusting before sweeping, the area should be dampened with water, and the waste should be placed in suitable containers for disposal.\n\nFor major spills, the area should be cleared of personnel, and individuals should move upwind. Emergency Responders should be alerted, and they should be informed of the location and nature of the hazard. It is crucial not to touch the spill material.\n\nThe practices differ between minor and major spills in terms of the scale of response and the involvement of emergency personnel. Minor spills focus on immediate cleanup with personal protective equipment and dust control, while major spills require evacuation, emergency response, and avoiding direct contact with the spill material.",
+          "key_points": [
+            "For minor spills, regular cleanup and immediate response to abnormal spills are essential.",
+            "Protective measures for minor spills include wearing protective clothing, gloves, safety glasses, and a dust respirator to avoid inhalation and contact with skin and eyes.",
+            "Dry clean-up methods should be used for minor spills to prevent dust generation, and the area should be vacuumed or swept with a HEPA filter-equipped vacuum cleaner.",
+            "For minor spills, dampening the area with water before sweeping and disposing of waste in suitable containers is recommended.",
+            "For major spills, the area should be evacuated, and personnel should move upwind to avoid exposure.",
+            "Emergency responders should be alerted for major spills, and they must be informed about the location and nature of the hazard.",
+            "Direct contact with spill material should be avoided during major spills.",
+            "The response to minor spills involves immediate cleanup and personal protective equipment, while major spills require evacuation and emergency response."
+          ]
+        }
+      }
+    },
+    "passage": "Section 6 - ACCIDENTAL RELEASE MEASURES\nMINOR SPILLS\n· Clean up waste regularly and abnormal spills immediately. · Avoid breathing dust and contact with skin and eyes. · Wear protective clothing, gloves, safety glasses and dust respirator. · Use dry clean up procedures and avoid generating dust. · Vacuum up or sweep up. NOTE: Vacuum cleaner must be fitted with an exhaust micro filter (HEPA type) (consider explosion-proof\nmachines designed to be grounded during storage and use). · Dampen with water to prevent dusting before sweeping. · Place in suitable containers for disposal. MAJOR SPILLS\n· Clear area of personnel and move upwind. · Alert Emergency Responders and tell them location and nature of hazard. · DO NOT touch the spill material. Section 7 - HANDLING AND STORAGE\nPROCEDURE FOR HANDLING\n· Avoid all personal contact, including inhalation. · Wear protective clothing when risk of exposure occurs. RECOMMENDED STORAGE METHODS\n! Glass container. · Lined metal can, Lined metal pail/drum\n· Plastic pail. For low viscosity materials\n· Drums and jerricans must be of the non-removable head type.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What pathogens thrive in biofilms?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What types of pathogens are commonly found in biofilms, and what implications does their presence have for human health and water safety?",
+          "llm_answer": "",
+          "correct_answer": "The passage identifies several types of pathogens commonly found in biofilms, including Legionella, Pseudomonas aeruginosa, Naegleria fowleri, and Mycobacterium species, particularly non-tuberculosis Mycobacteria. The presence of these pathogens in biofilms has significant implications for human health and water safety. Legionella is responsible for Legionnaires' disease, while Pseudomonas aeruginosa can cause serious infections, especially in individuals with weakened immune systems. Naegleria fowleri, known as the 'brain-eating amoeba', is associated with severe and often fatal infections. Mycobacterium species can cause persistent infections that are difficult to treat. The microorganisms within biofilms are resistant to typical disinfection practices, which can lead to sporadic cases of disease and undermine public health efforts, as these pathogens can evade detection by standard surveillance systems. Understanding how these pathogens thrive in biofilms is crucial for improving management and policies for safe water distribution.",
+          "key_points": [
+            "Biofilms commonly contain pathogens such as Legionella, Pseudomonas aeruginosa, Naegleria fowleri, and non-tuberculosis Mycobacteria.",
+            "Legionella is linked to Legionnaires' disease, posing a significant health risk.",
+            "Pseudomonas aeruginosa can cause serious infections, particularly in immunocompromised individuals.",
+            "Naegleria fowleri, the 'brain-eating amoeba', is associated with severe and often fatal infections.",
+            "Mycobacterium species can lead to persistent infections that are challenging to treat.",
+            "Pathogens in biofilms are resistant to standard disinfection methods, complicating disease prevention and public health efforts.",
+            "These pathogens can evade detection by typical surveillance systems, leading to sporadic disease outbreaks.",
+            "Understanding pathogen survival in biofilms is essential for improving water safety management and policies."
+          ]
+        }
+      }
+    },
+    "passage": "Biofilms are communities of microorganisms that adhere to surfaces, and they can form in many environments, especially in water distribution systems. These biofilms are of particular concern because they can harbor a variety of pathogens that pose health risks to humans. Among the notable pathogens that can thrive in biofilms are Legionella, which is responsible for Legionnaires' disease, and Pseudomonas aeruginosa, a bacterium that can cause serious infections, particularly in individuals with weakened immune systems. Additionally, Naegleria fowleri, an amoeba often referred to as the 'brain-eating amoeba', can also exist within biofilms; it has been associated with severe and often fatal infections. Mycobacterium species, particularly non-tuberculosis Mycobacteria, can also be isolated from biofilms and are known for causing persistent infections that are difficult to treat. One key feature of biofilms is that the microorganisms within are resistant to typical disinfection practices. This resilience can lead to sporadic cases of disease, undermining public health efforts, as these pathogens can evade detection by standard surveillance systems. Therefore, understanding how these pathogens thrive in biofilms is crucial in improving management and policies for safe water distribution.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "In order to better understand the protocols and strategic arrangements necessary to mitigate risks associated with chemical reactivity hazards, I am looking for notable recommendations and systematic guidelines that highlight the widespread practices employed in industry. This encompasses procedures for both the assessment and management of such hazards as they relate to chemical processes, ensuring a robust safety culture and regulatory compliance. I'm particularly interested in insights from professionals or authoritative sources that could lend credence to these practices. What key management methodologies should be integrated to resonate with current best practices and standards described by renowned organizations?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key components and steps of Process Safety Management (PSM) as outlined in the document?",
+          "llm_answer": "",
+          "correct_answer": "The key components and steps of Process Safety Management (PSM) as outlined in the document include conducting Process Hazard Analysis (PHA), establishing a system for addressing PHA findings, developing and implementing standard operating procedures (SOPs) for all activities and processes, and developing and implementing training programs. It also involves developing and implementing mechanical integrity, maintenance, and quality assurance programs, managing contractors and their employees, developing a hot work program, and implementing change management capabilities. Additional steps include developing compliance audit programs, conducting pre-startup and shutdown operations, inspections, maintenance, recertifying PSM, compiling written Process Safety Information (PSI), and developing an Emergency Action Plan and risk mitigation strategies. The process is guided by 29 CFR 1910.119 and aims at identifying, assessing, and managing risks associated with all aspects of the processes.",
+          "key_points": [
+            "Conducting Process Hazard Analysis (PHA) and establishing a system to address PHA findings.",
+            "Developing and implementing standard operating procedures (SOPs) for all activities and processes.",
+            "Developing and implementing training programs for personnel.",
+            "Implementing mechanical integrity, maintenance, and quality assurance programs.",
+            "Managing contractors and their employees effectively.",
+            "Developing a hot work program and implementing change management capabilities.",
+            "Developing compliance audit programs and conducting pre-startup and shutdown operations.",
+            "Compiling written Process Safety Information (PSI) and developing an Emergency Action Plan.",
+            "Implementing risk mitigation strategies and recertifying PSM.",
+            "The process is guided by 29 CFR 1910.119 and focuses on identifying, assessing, and managing risks associated with all process aspects."
+          ]
+        }
+      }
+    },
+    "passage": "PROCESS SAFETY MANAGEMENT (PSM) \nExplosives Safety in RDT&E and Industrial Ops\nPROCESS SAFETY\nMANAGEMENT (PSM)\nConduct Process\nHazard Analysis \nEstablish system for \naddressing PHA \nfindings and \nDevelop and \nimplement standard\noperating procedures \n(SOPs) for all activities \nand processes\nDevelop and \nimplement training \nDevelop and \nimplement mechanical \nintegrity, maintenance, \nand quality assurance \n(QA) programs\nDevelop and \nimplement program \nfor managing \ncontractors and \ntheir employees\nDevelop hot work \nprogram procedures\nDevelop Change \nManagement Program \nand capabilities\nDevelop compliance \naudit program\nConduct pre-startup \nConduct operations\nConduct shutdown \nConduct inspection \nand maintenance \nRecertify PSM\nDevelop plan \nfor employee \nCompile written \nProcess Safety \nInformation (PSI)\nemployees associated \nwith the process\nIdentify and understand \nmaterials, processes, \nequipment, and \nDevelop concept for \nprocess and identify \ninitial risks\nDevelop Emergency \nAction Plan \nDevelop incident \nUS Army Technical Center for\nExplosives Safety (USATCES)\n(918) 420-8807, DSN: 956-8807\nOffice of the Director of Army Safety\nBuilding 1456, 9351 Hall Road\nFort Belvoir, VA 22060-5860\nBasic order in which PSM is conducted is based on 29 CFR 1910.119\nFinal preparations before operations\nActual operations\nExplosives Safety in RDT&E and Industrial Ops\nPROCESS SAFETY\nMANAGEMENT (PSM)\nUS Army Technical Center for\nExplosives Safety (USATCES)\n(918) 420-8807, DSN: 956-8807\nOffice of the Director of Army Safety\nBuilding 1456, 9351 Hall Road\nFort Belvoir, VA 22060-5860\n●Systematic, holistic approach to\nidentifying, assessing, and managing\nthe risk associated with every aspect\n●Required by law and directed by\n29 CFR 1910.119\n●Considers all facets of a process:\nOPERATIONAL &\nMAINTENANCE PROCEDURES\nEMERGENCY PLANS &\nADDITIONAL ELEMENTS\nFOR CONSIDERATION\nProcess Hazard Analysis (PHA)\nPHA Considerations\nand Methodologies\n●Identical to Army Hazard Analysis and\nrequired for all operations involving\nenergetic or hazardous materials\nPSM TERMINOLOGY\nDefined by the Occupational Safety and Health Administration (OSHA)\nor explosive properties\n●LABORATORY: A facility where the “laboratory use of hazardous chemicals” occurs; a\nworkplace where relatively small quantities of hazardous chemicals are used on a\nnon-production basis\nhighly hazardous chemicals that presents serious danger to workplace personnel\nDefine risk\ncontrol methods\nMitigate risk/\nmaintain safe\nMeet regulatory\n●Unique considerations for RDT&E:\n●May involve multiple methodologies\ndepending on number, type, and\nrelationships of identifed hazards\n17 SEPTEMBER 2017\nAppendix F \nAppendix F \nU.S.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "The estimated hazard curves for Shanghai, Fuzhou, Xiamen, Guangzhou, and Shenzhen align well with the recommended codes, suggesting reliable predictions. However, deviations are noted as Ningbo and Wenzhou exhibit higher estimates compared to coded values, whereas Zhanjiang and Haikou present lower estimates. Despite these differences, the trends for Ningbo and Wenzhou approximate the code, while the gentle rise in estimates for Zhanjiang and Haikou contrasts with code standards, indicating varied influences of tropical cyclone winds on their hazard profiles.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do the estimated hazard curves for different cities in China—specifically Shanghai, Fuzhou, Xiamen, Guangzhou, Shenzhen, Ningbo, Wenzhou, Zhanjiang, and Haikou—compare with recommended codes, and what implications do these comparisons have regarding the influence of tropical cyclone winds on hazard profiles in these regions?",
+          "llm_answer": "",
+          "correct_answer": "The estimated hazard curves for Shanghai, Fuzhou, Xiamen, Guangzhou, and Shenzhen are in satisfactory agreement with code suggestions. However, for Ningbo and Wenzhou, the study shows higher estimations than the code, while for Zhanjiang and Haikou, it shows smaller estimations. The estimated hazard curves for Ningbo and Wenzhou have a similar trend to the code, but the design wind speeds for Zhanjiang and Haikou increase more gently with return period than the code provisions. This discrepancy is related to the portion of tropical cyclone (TC) wind samples and their contributions to the probabilistic distribution of extreme winds. In Ningbo and Wenzhou, TC winds could dominate the probabilistic behavior of the yearly largest wind speed, whereas Zhanjiang and Haikou have lower portions of TC winds compared to non-TC winds. The modeling of the hazard curve may overuse the contributions of strong TC winds when combined with smaller non-TC winds in the yearly largest wind series.",
+          "key_points": [
+            "The estimated hazard curves for Shanghai, Fuzhou, Xiamen, Guangzhou, and Shenzhen align well with recommended code suggestions.",
+            "Ningbo and Wenzhou have higher estimated hazard curves compared to the code, indicating a potential underestimation of wind hazards in the code.",
+            "Zhanjiang and Haikou show lower estimated hazard curves than the code, suggesting a potential overestimation of wind hazards in the code.",
+            "The design wind speeds for Zhanjiang and Haikou increase more gently with return period than the code provisions.",
+            "The discrepancies in hazard curves are influenced by the proportion of tropical cyclone (TC) winds in the regions.",
+            "In Ningbo and Wenzhou, TC winds significantly impact the probabilistic behavior of the yearly largest wind speed.",
+            "Zhanjiang and Haikou have a lower proportion of TC winds compared to non-TC winds, affecting the hazard curve estimations.",
+            "The modeling of hazard curves may overemphasize strong TC winds when combined with smaller non-TC winds in the yearly largest wind series."
+          ]
+        }
+      }
+    },
+    "passage": "It can be seen that the predicted curves for \nShanghai, Fuzhou, Xiamen, Guangzhou and Shenzhen are in satisfactory agreement with code suggestions. But, consistent \nwith previous findings, this study shows higher estimations for Ningbo and Wenzhou while it shows smaller estimations for \nZhanjiang and Haikou than the code. It is also found that the estimated hazard curves for Ningbo and Wenzhou have a similar \ntrend to the code, but the design wind speeds for Zhanjiang and Haikou increase more gently with return period than the code \nprovisions. This is closely related to the portion of TC wind samples as well as their contributions to the description of the \nprobabilistic distribution of extreme winds in a series of largest observed annual winds as discussed above. The TC winds in \nNingbo and Wenzhou could dominate the probabilistic behaviour of the yearly largest wind speed while Zhanjiang and Haikou \nhave lower portions of TC winds compared to non-TC winds. However, the contributions of strong TC winds will be overused \nin modeling the hazard curve when they are combined with smaller non-TC winds in the yearly largest wind series.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What are the specific requirements for public employers in New York regarding the development and implementation of Workplace Violence Prevention Programs to ensure employee safety?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the detailed responsibilities and programmatic elements that public employers in New York must consider when developing and implementing Workplace Violence Prevention Programs to ensure the safety and well-being of their employees?",
+          "llm_answer": "",
+          "correct_answer": "Public employers in New York must consider several detailed responsibilities and programmatic elements when developing and implementing Workplace Violence Prevention Programs (WVPP) to ensure the safety and well-being of their employees. These include:\n\n1. **Risk Assessments**: Employers are required to assess risks associated with workplace violence to identify potential hazards.\n\n2. **Written Policies**: The development of written policies is mandated to address workplace violence and outline the procedures and protocols to be followed.\n\n3. **Employee Involvement**: Employees must be involved in the development of these programs, ensuring their input and participation in creating a safer work environment.\n\n4. **Employee Training**: Training programs must be established to educate employees about workplace violence and the measures in place to prevent it.\n\n5. **Incident Reporting Systems**: Employers need to implement systems for reporting incidents of workplace violence, ensuring that all occurrences are documented and addressed.\n\n6. **Protocols for Addressing Workplace Violence**: Clear protocols must be established for responding to incidents of workplace violence, detailing the steps to be taken to manage and mitigate such situations.\n\n7. **Management Commitment**: The document emphasizes the importance of management's commitment to the program, ensuring that leadership is actively involved in promoting workplace safety.\n\n8. **Prohibition of Retaliatory Actions**: Employers must prohibit retaliatory actions against employees who report safety concerns, protecting those who come forward with information about potential or actual workplace violence.\n\nAdditionally, compliance deadlines for various program elements are specified to ensure that public employers take timely action to protect their workforce.",
+          "key_points": [
+            "Public employers in New York must conduct risk assessments to identify potential hazards related to workplace violence.",
+            "Employers are required to develop written policies that address workplace violence and outline procedures and protocols.",
+            "Employee involvement is crucial in developing Workplace Violence Prevention Programs, ensuring their input and participation.",
+            "Training programs must be established to educate employees about workplace violence and prevention measures.",
+            "Systems for reporting incidents of workplace violence must be implemented to ensure documentation and address occurrences.",
+            "Clear protocols for responding to workplace violence incidents must be established to manage and mitigate situations.",
+            "Management's commitment to the program is essential, with leadership actively promoting workplace safety.",
+            "Employers must prohibit retaliatory actions against employees who report safety concerns, protecting whistleblowers.",
+            "Compliance deadlines for program elements are specified to ensure timely action by public employers to protect their workforce."
+          ]
+        }
+      }
+    },
+    "passage": "This document outlines the requirements for public employers in New York to develop and implement Workplace Violence Prevention Programs (WVPP) aimed at minimizing workplace violence hazards for public employees. It mandates that employers assess risks, create written policies, and involve employees in the development of these programs. Key components include risk evaluations, employee training, incident reporting systems, and protocols for addressing workplace violence. The document also emphasizes the importance of management commitment, employee participation, and the prohibition of retaliatory actions against employees who report safety concerns. Compliance deadlines for various program elements are specified, ensuring that public employers take timely action to protect their workforce.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Healthcare workers must follow rigorous protocols for doffing personal protective equipment after handling patients with potential infections. This includes methods such as disinfecting gloves and properly disposing of contaminated items to prevent cross-contamination.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the detailed steps and protocols that healthcare workers must follow when doffing personal protective equipment (PPE) to prevent contamination, and how do these practices ensure safety in a clinical setting?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines the following detailed steps and protocols for healthcare workers when doffing personal protective equipment (PPE) to prevent contamination:\n\n1. **Remove and Discard Gloves**: Care must be taken not to contaminate bare hands during the removal process.\n2. **Perform Hand Hygiene**: Use alcohol-based hand rub (ABHR) to perform hand hygiene.\n3. **Remove N95 Respirator**: Tilt the head slightly forward, grasp the bottom tie or elastic strap first, then the top tie or elastic strap, and remove the respirator without touching the front. Discard the N95 respirator.\n4. **Disinfect Inner Gloves**: Use an EPA-registered disinfectant wipe or ABHR to disinfect inner gloves.\n5. **Disinfect Washable Shoes**: Wipe down every external surface of the washable shoes with an EPA-registered disinfectant wipe.\n6. **Disinfect and Remove Inner Gloves**: Disinfect inner-gloved hands with an EPA-registered disinfectant wipe or ABHR, then remove and discard the gloves, taking care not to contaminate bare hands.\n7. **Perform Hand Hygiene Again**: Use ABHR to perform hand hygiene once more.\n8. **Inspect**: Both the trained observer and the healthcare worker perform a final inspection for contamination of the surgical scrubs or disposable garments. If contamination is identified, the garments should be carefully removed, and the wearer should shower immediately.\n\nThese practices ensure safety in a clinical setting by systematically reducing the risk of contamination through careful removal and disinfection of PPE, maintaining hand hygiene, and conducting a thorough inspection to identify any potential contamination.",
+          "key_points": [
+            "Healthcare workers must first remove and discard gloves carefully to avoid contaminating bare hands.",
+            "Hand hygiene is performed using alcohol-based hand rub (ABHR) immediately after removing gloves.",
+            "The N95 respirator is removed by tilting the head forward and carefully removing the straps without touching the front, then discarding it.",
+            "Inner gloves are disinfected using an EPA-registered disinfectant wipe or ABHR.",
+            "Washable shoes are disinfected by wiping down all external surfaces with an EPA-registered disinfectant wipe.",
+            "Inner gloves are disinfected again before being removed and discarded, ensuring bare hands are not contaminated.",
+            "Hand hygiene is performed again using ABHR after removing inner gloves.",
+            "A final inspection for contamination is conducted by both the trained observer and the healthcare worker, and if contamination is found, garments are removed and the wearer showers immediately.",
+            "These protocols systematically reduce contamination risk, maintain hand hygiene, and ensure safety in clinical settings through careful PPE removal and disinfection."
+          ]
+        }
+      }
+    },
+    "passage": "Remove and discard gloves taking care not to contaminate bare hands during removal process. b. Perform hand hygiene with ABHR. 16. Remove N95 Respirator: Remove the N95 respirator by tilting the head slightly forward, grasping first the bottom tie \nor elastic strap, then the top tie or elastic strap, and remove without touching the front of the N95 respirator. Discard N95 respirator. 17. Disinfect Inner Gloves: Disinfect inner gloves with either an *EPA-registered disinfectant wipe or ABHR. 18. Disinfect Washable Shoes: Use an *EPA-registered disinfectant wipe to wipe down every external surface of the \nwashable shoes. 19. Disinfect and Remove Inner Gloves: Disinfect inner-gloved hands with either an *EPA-registered disinfectant wipe or \nABHR. Remove and discard gloves taking care not to contaminate bare hands during removal process. 20. Perform Hand Hygiene: Perform hand hygiene with ABHR. 21. Inspect: Both the trained observer and the health care worker perform a final inspection of health care worker for \ncontamination of the surgical scrubs or disposable garments. If contamination is identified, the garments should be \ncarefully removed and the wearer should shower immediately.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Who are some experts in antimicrobial resistance?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are some of the key contributions and areas of expertise of leading professionals in the field of antimicrobial resistance, and how do their roles collectively advance the fight against this public health crisis?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines the contributions and areas of expertise of several leading professionals in the field of antimicrobial resistance (AMR), highlighting how their roles collectively advance the fight against this public health crisis. Francis Moussy leads the coalition as the Leader of Innovative Diagnostics for AMR at the World Health Organisation. Bianca Mulaney from Harvard University contributes her expertise in epidemiology and public health. Dr. Francis Murray from the University of Stirling focuses on the impact of antibiotics in fish farming. Richard Murray, Director of Policy at The King’s Fund, addresses health policy issues related to AMR. Staff at Nesta and the Office of Life Sciences are involved in innovative strategies to combat AMR. Dr. Hendrik Jan Ormel from the Food and Agriculture Organization of the United Nations addresses agricultural aspects of AMR. Dr. Jon Otter at Imperial College Healthcare NHS Trust plays a pivotal role in infection control measures. Professor Kevin Outterson from Boston University and Chatham House provides insights into law and policy regarding antibiotics. Professor Sharon Peacock from the University of Cambridge contributes to clinical microbiology. Dr. Charles Penn advises the UK Department of Health on AMR strategies. Staff at Pew Charitable Trusts support essential research. Professor Laura Piddock of the University of Birmingham specializes in microbiology, and Dr. Elizabeth Pisani, founder of Ternyata, offers a unique perspective on AMR challenges. Collectively, these experts bring a comprehensive approach to addressing AMR through their diverse expertise and roles.",
+          "key_points": [
+            "Francis Moussy leads the coalition as the Leader of Innovative Diagnostics for AMR at the World Health Organisation, focusing on diagnostic advancements.",
+            "Bianca Mulaney from Harvard University contributes expertise in epidemiology and public health to the fight against AMR.",
+            "Dr. Francis Murray from the University of Stirling examines the impact of antibiotics in fish farming.",
+            "Richard Murray, Director of Policy at The King’s Fund, addresses health policy issues related to AMR.",
+            "Staff at Nesta and the Office of Life Sciences are involved in developing innovative strategies to combat AMR.",
+            "Dr. Hendrik Jan Ormel from the Food and Agriculture Organization of the United Nations focuses on agricultural aspects of AMR.",
+            "Dr. Jon Otter at Imperial College Healthcare NHS Trust plays a pivotal role in infection control measures.",
+            "Professor Kevin Outterson from Boston University and Chatham House provides insights into law and policy regarding antibiotics.",
+            "Professor Sharon Peacock from the University of Cambridge contributes to clinical microbiology.",
+            "Dr. Charles Penn advises the UK Department of Health on AMR strategies.",
+            "Staff at Pew Charitable Trusts support essential research in the field of AMR.",
+            "Professor Laura Piddock of the University of Birmingham specializes in microbiology related to AMR.",
+            "Dr. Elizabeth Pisani, founder of Ternyata, offers a unique perspective on AMR challenges.",
+            "Collectively, these experts bring a comprehensive approach to addressing AMR through their diverse expertise and roles."
+          ]
+        }
+      }
+    },
+    "passage": "The fight against antimicrobial resistance (AMR) has mobilized a coalition of experts and professionals across various organizations. Leading this coalition is Francis Moussy, who serves as the Leader of Innovative Diagnostics for AMR at the World Health Organisation. He is joined by prominent figures like Bianca Mulaney from Harvard University, who contributes with her expertise in epidemiology and public health. Another key expert is Dr. Francis Murray, affiliated with the Institute of Aquaculture at the University of Stirling in the UK, known for his research on the impact of antibiotics in fish farming. Richard Murray serves as the Director of Policy at The Kingâs Fund, focusing on health policy issues related to AMR. Various staff at Nesta and the Office of Life Sciences are engaging in innovative strategies to combat this crisis as well. The Food and Agriculture Organization of the United Nations, represented by Dr. Hendrik Jan Ormel, is actively involved in addressing the agricultural aspects of AMR. Dr. Jon Otter, an experienced Infection Prevention and Control Epidemiologist at Imperial College Healthcare NHS Trust, plays a pivotal role in infection control measures. Additionally, Professor Kevin Outterson from Boston University and Chatham House offers insights into law and policy regarding antibiotics. Contributing to clinical microbiology is Professor Sharon Peacock from the University of Cambridge, while Dr. Charles Penn acts as an advisor to the UK Department of Health on AMR strategies. Support and research from staff at Pew Charitable Trusts play an essential role as well. Last but not least, Professor Laura Piddock of the University of Birmingham specializes in microbiology, while Dr. Elizabeth Pisani, the founder of Ternyata, brings a unique perspective to AMR challenges. The collective expertise of these individuals exemplifies a comprehensive approach to addressing the urgent issue of antimicrobial resistance.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Can anyone explain the risks and disposal regulations for benzene waste in lab settings?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the specific risks associated with handling benzene in laboratory settings, and what disposal regulations must be followed to ensure safety and compliance with hazardous waste management protocols?",
+          "llm_answer": "",
+          "correct_answer": "The specific risks associated with handling benzene in laboratory settings include its classification as ignitable/flammable and toxic/poison. Benzene is considered a P-listed waste, meaning that anything involved in the process, such as solutions in any dilution, gloves, and pipette tips, must be disposed of as hazardous waste.\n\nTo ensure safety and compliance with hazardous waste management protocols, the following disposal regulations must be followed:\n\n1. Dispose of benzene waste according to Harvard University Hazardous Waste Procedures.\n2. Set up both a solid and liquid waste stream in your Satellite Accumulation Area (SAA) for this chemical.\n3. Ensure that the chemical container for this waste stream remains sealed.\n4. Return the container to the storage area following the Harvard University Laboratory Chemical Storage Guide.\n5. Store benzene in original containers or other appropriate containers, and ensure the primary container is in designated and compatible secondary containers.\n6. Store benzene away from incompatibles.\n7. Wash hands and forearms thoroughly with soap and water before leaving the lab.",
+          "key_points": [
+            "Benzene is classified as ignitable/flammable and toxic/poison, posing specific risks in laboratory settings.",
+            "Benzene is considered a P-listed waste, requiring all related materials, such as solutions, gloves, and pipette tips, to be disposed of as hazardous waste.",
+            "Disposal of benzene waste must follow Harvard University Hazardous Waste Procedures.",
+            "A solid and liquid waste stream must be set up in the Satellite Accumulation Area (SAA) for benzene waste.",
+            "The chemical container for benzene waste must remain sealed and be returned to the storage area as per the Harvard University Laboratory Chemical Storage Guide.",
+            "Benzene should be stored in original or appropriate containers, with the primary container placed in designated and compatible secondary containers.",
+            "Benzene must be stored away from incompatible substances.",
+            "Hands and forearms should be washed thoroughly with soap and water before leaving the lab to ensure safety."
+          ]
+        }
+      }
+    },
+    "passage": "After completing the work: \nDispose of benzene waste following Harvard University Hazardous Waste Procedures   \nHazardous Waste Classification: Ignitable/Flammable and Toxic/Poison \nBenzene is a P-listed waste anything to do with the process (solution in any dilution, gloves, and pipette tips) \nmust be disposed of as a hazardous waste \nPlease set up both a solid and liquid waste stream in your SAA for this chemical. Chemical container for this waste stream must remain sealed. Return container to storage area following Harvard University Laboratory Chemical Storage Guide \nStorage Group: Flammable Liquids (FL) \nStore in original containers or other appropriate containers;  \nStore primary container in designated and compatible secondary containers; \nStore away from incompatibles; \nWash hands and forearms thoroughly with soap and water before leaving the lab. EMERGENCY PROCEDURES \nFirst Aid \nSKIN CONTACT \nWash with plenty of tepid water for at least 15 minutes using the closest available sink, safety shower or drench \nhose.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What are the best practices for activating communication networks during civil disorder situations in emergency management?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What key actions are outlined in the document for preparing for and responding to civil disorder situations?",
+          "llm_answer": "",
+          "correct_answer": "The document outlines several key actions for preparing for and responding to civil disorder situations, which include assessing the potential for unrest, establishing an Emergency Operations Center (EOC), activating communication networks, ensuring resource availability, conducting damage assessments, managing shelter operations, and maintaining ongoing reporting and coordination with various agencies. It also highlights the importance of public information dissemination and evaluating response efforts post-incident to improve future plans.",
+          "key_points": [
+            "Assess the potential for unrest to prepare for civil disorder situations.",
+            "Establish an Emergency Operations Center (EOC) to coordinate response efforts.",
+            "Activate communication networks to ensure effective information flow.",
+            "Ensure resource availability to support response activities.",
+            "Conduct damage assessments to understand the impact of civil disorder.",
+            "Manage shelter operations to provide safe havens for affected individuals.",
+            "Maintain ongoing reporting and coordination with various agencies to streamline response efforts.",
+            "Disseminate public information to keep the community informed.",
+            "Evaluate response efforts post-incident to improve future plans."
+          ]
+        }
+      }
+    },
+    "passage": "The document outlines a comprehensive checklist for emergency management and incident commanders to prepare for and respond to civil disorder situations. It emphasizes the importance of communication and coordination with local, state, and federal law enforcement, as well as public agencies like the Red Cross and Salvation Army. Key actions include assessing the potential for unrest, establishing an Emergency Operations Center (EOC), activating communication networks, and ensuring resource availability. The checklist also covers immediate response actions, damage assessments, shelter operations, and the need for ongoing reporting and coordination with various agencies. Additionally, it highlights the importance of public information dissemination and the evaluation of response efforts post-incident to identify weaknesses and improve future plans.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What are the safety precautions I should follow when handling halogens like fluorine, chlorine, bromine, and iodine? I am very concerned about their effects and need useful information about their characteristics and the best ways to handle them safely to avoid any accidental reactions or exposure. Can you provide comprehensive guidelines that cover the melting points, boiling points, and reactivity of these substances, as well as any special precautions I should take for each halogen to protect myself and others while I work with them? Understanding their physical properties and how they should be managed in a lab environment is also important to prevent any environmental contamination.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the essential safety precautions and handling guidelines for working with halogens such as fluorine, chlorine, bromine, and iodine? Could you elaborate on their physical properties and reactivity levels, and any specific protective measures necessary to ensure safe lab practices?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines several essential safety precautions and handling guidelines for working with halogens such as fluorine, chlorine, bromine, and iodine. It emphasizes the importance of using protective equipment like gloves, goggles, and a proper lab coat. Additionally, it is crucial to work in a well-ventilated area or under a fume hood to avoid inhalation of toxic gases. Decontaminating all equipment, such as vacuum pumps and glassware, after use is also necessary. Proper labeling and secure storage are essential to prevent accidental reactions or leaks, as halogens can be harmful if improperly handled. Regarding their physical properties and reactivity levels, the passage describes fluorine as extremely active, appearing as a pale yellow gas with a sharp, pungent odor. Chlorine is also very active and appears as a greenish-yellow gas with a strong, familiar smell. Bromine is a dark red liquid that emits a reddish vapor, while iodine is a less active, lustrous solid that sublimates at lower temperatures to form violet vapors.",
+          "key_points": [
+            "Use protective equipment such as gloves, goggles, and a lab coat when handling halogens.",
+            "Work in a well-ventilated area or under a fume hood to avoid inhaling toxic gases from halogens.",
+            "Decontaminate all equipment, including vacuum pumps and glassware, after using halogens.",
+            "Ensure proper labeling and secure storage of halogens to prevent accidental reactions or leaks.",
+            "Fluorine is extremely reactive, appearing as a pale yellow gas with a sharp odor.",
+            "Chlorine is very reactive, appearing as a greenish-yellow gas with a strong smell.",
+            "Bromine is a dark red liquid that emits reddish vapor.",
+            "Iodine is a less active, lustrous solid that sublimates to form violet vapors."
+          ]
+        }
+      }
+    },
+    "passage": "When handling halogens, it is crucial to take specific safety precautions to protect yourself and your environment. Halogens include Fluorine (Fâ), Chlorine (Clâ), Bromine (Brâ), and Iodine (Iâ). Fluorine is extremely active, appearing as a pale yellow gas with a sharp, pungent odor. Chlorine is also very active and appears as a greenish-yellow gas, recognized by its strong, familiar smell. Bromine, a dark red liquid, emits a reddish vapor, while Iodine is a less active, lustrous solid that sublimates at lower temperatures to form violet vapors. Always use protective equipment such as gloves, goggles, and a proper lab coat. Ensure you work in a well-ventilated area or under a fume hood to avoid inhalation of toxic gases. Decontaminate all equipment, like vacuum pumps and glassware, after use. Proper labeling and secure storage are also essential to prevent any accidental reactions or leaks, especially since halogens can be harmful if improperly handled.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What measures can be implemented to effectively monitor arsenic levels in drinking water and food to address public health risks associated with contamination?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What effective strategies and measures can be adopted to systematically monitor and mitigate arsenic contamination in drinking water and food, considering the associated public health risks, and how can these strategies be implemented within communities to ensure safe consumption?",
+          "llm_answer": "",
+          "correct_answer": "Effective strategies and measures to systematically monitor and mitigate arsenic contamination in drinking water and food include:\n\n1. **Testing Water for Arsenic Levels**: Regular testing of water sources for arsenic levels is crucial. Informing users of the results helps in raising awareness and guiding safe water usage.\n\n2. **Installing Arsenic Removal Systems**: Implementing centralized or domestic arsenic removal systems can help reduce arsenic levels in water. It is important to ensure the appropriate disposal of the removed arsenic to prevent environmental contamination.\n\n3. **Substituting High-Arsenic Sources**: Replacing high-arsenic water sources, such as groundwater, with low-arsenic, microbiologically safe sources like rainwater and treated surface water is recommended. Low-arsenic water should be used for drinking, cooking, and irrigation, while high-arsenic water can be reserved for purposes like bathing and washing.\n\n4. **Discriminating Between Water Sources**: Testing water for arsenic levels and marking tube wells or hand pumps with different colors (e.g., red for high-arsenic and green for low-arsenic) can help communities easily identify safe water sources.\n\n5. **Blending Water Sources**: Mixing low-arsenic water with higher-arsenic water to achieve an acceptable arsenic concentration level is another strategy.\n\n6. **Reducing Occupational Exposure**: Efforts should be made to reduce occupational exposure to arsenic and its compounds.\n\n7. **Raising Awareness**: Educating both the general public and the health sector about the harmful effects of high arsenic intake, sources of exposure, and methods to avoid these sources is essential for community safety.\n\nThese strategies can be implemented within communities by engaging local authorities, health sectors, and community leaders to ensure safe consumption and reduce public health risks associated with arsenic contamination.",
+          "key_points": [
+            "Regular testing of water sources for arsenic levels is crucial for monitoring contamination and raising awareness among users.",
+            "Implementing centralized or domestic arsenic removal systems can reduce arsenic levels in water, with proper disposal of removed arsenic to prevent environmental contamination.",
+            "Replacing high-arsenic water sources with low-arsenic, microbiologically safe sources like rainwater and treated surface water is recommended for drinking, cooking, and irrigation.",
+            "Testing and marking water sources with different colors based on arsenic levels helps communities identify safe water sources easily.",
+            "Blending low-arsenic water with higher-arsenic water to achieve acceptable arsenic concentration levels is a viable strategy.",
+            "Efforts should be made to reduce occupational exposure to arsenic and its compounds.",
+            "Educating the public and health sector about the harmful effects of arsenic, sources of exposure, and avoidance methods is essential for community safety.",
+            "Engaging local authorities, health sectors, and community leaders is crucial for implementing these strategies within communities to ensure safe consumption and reduce public health risks."
+          ]
+        }
+      }
+    },
+    "passage": "Possible measures include: \n testing water for arsenic levels and informing users of the results; \n installing arsenic removal systems, either centralized or domestic, and ensuring \nappropriate disposal of the removed arsenic;  \n substituting high-arsenic sources, such as groundwater, with low-arsenic, \nmicrobiologically safe sources such as rainwater and treated surface water. Low-\narsenic water can be used for drinking, cooking and irrigation purposes, whereas \nhigh-arsenic water can be used for other purposes such as bathing and washing \n discriminating between high-arsenic and low-arsenic sources by testing water for \narsenic levels and painting tube wells or hand pumps different colours (e.g. red \nand green); and  \n blending low-arsenic water with higher-arsenic water to achieve an acceptable \narsenic concentration level. Reduce occupational exposure to arsenic and its compounds. Make both the general public and the health sector aware of the harmful effects of \nhigh arsenic intake and the sources of exposure (including use of high-arsenic water \nfor crops irrigation or food preparation) and how to avoid these sources.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Permits are required for any surface change.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the specific types of activities that require permits under the Construction Codes, and what implications does this have for property owners and contractors in relation to surface changes or modifications?",
+          "llm_answer": "",
+          "correct_answer": "The specific types of activities that require permits under the Construction Codes include:\n\n1. Constructing, enlarging, altering, repairing, moving, demolishing, razing, or changing the occupancy of a building or other structure.\n2. Erecting, installing, enlarging, altering, repairing, removing, converting, or replacing any electrical, gas, mechanical, or plumbing system that is regulated by the Construction Codes, or causing any such work to be done.\n3. Installing tower cranes or other hoisting devices.\n4. Movement, addition, deletion, relocation, or redesignation of any regulated item.\n5. Undertaking any other activity regulated by the Construction Codes.\n\nThe implications for property owners and contractors are that they must apply to the code official and obtain the required permits before undertaking any of these activities. This means that any surface changes or modifications that fall under these categories would also require the appropriate permits to ensure compliance with the Construction Codes. Verbal waivers or permissions cannot be relied upon to bypass these requirements.",
+          "key_points": [
+            "Permits are required for constructing, enlarging, altering, repairing, moving, demolishing, razing, or changing the occupancy of a building or structure.",
+            "Permits are necessary for erecting, installing, enlarging, altering, repairing, removing, converting, or replacing any regulated electrical, gas, mechanical, or plumbing system.",
+            "Installing tower cranes or other hoisting devices requires permits.",
+            "Permits are needed for the movement, addition, deletion, relocation, or redesignation of any regulated item.",
+            "Any activity regulated by the Construction Codes requires a permit.",
+            "Property owners and contractors must obtain permits from the code official before undertaking any regulated activities.",
+            "Surface changes or modifications that fall under these categories require appropriate permits to ensure compliance with the Construction Codes.",
+            "Verbal waivers or permissions are not sufficient to bypass permit requirements."
+          ]
+        }
+      }
+    },
+    "passage": "A verbal waiver or\nverbal grant of permission by the code official or any repre-\nsentative thereof shall not give authority to violate or cancel\nany provisions of the Construction Codes, and shall not be\nrelied upon as a basis for deviation from the provisions of the\nConstruction Codes. SECTION 105\n105.1 Required permits. Unless specifically exempted\nunder Section 105.2, an owner or authorized agent who\nintends to undertake any of the activities set forth in Items 1\nmake application to the code official and obtain the required\npermit(s) relevant to the intended work: \n1. Construct, enlarge, alter, repair, move, demolish, raze,\nor change the occupancy of a building or other struc-\n2. Erect, install, enlarge, alter, repair, remove, convert or\nreplace any electrical, gas, mechanical, or plumbing\nsystem, the installation of which is regulated by the\nConstruction Codes, or to cause any such work to be\n3. Install tower cranes or other hoisting devices. 4. Movement, addition, deletion, relocation or redesigna-\n5. Undertake any other activity regulated by the Construc-\ntion Codes.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "induced earthquakes and human activities affecting seismology",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "In what ways do human activities contribute to the occurrence of induced earthquakes, and how do these seismic events reflect the complexities of seismology? Discuss specific examples from different activities such as reservoir construction, groundwater extraction, and mining that illustrate the mechanisms involved.",
+          "llm_answer": "",
+          "correct_answer": "Human activities contribute to the occurrence of induced earthquakes by altering stress and pressure conditions in the Earth's crust. These activities highlight the complexities of seismology due to the interactions between human interventions and geological structures. Specific examples include:\n\n1. **Reservoir Construction**: The weight of water held in a reservoir applies stresses to the underlying geology, which can activate existing faults or fractures. An example is the earthquake of magnitude 6.4 that occurred in Maharashtra, India, in 1967.\n\n2. **Groundwater Extraction**: This activity reduces pore pressure by removing water, which can lead to seismic events. An earthquake of magnitude 5.1 occurred in Lorca, Spain, in 2011 due to groundwater extraction.\n\n3. **Mining**: The removal of solid material during mining changes pressure characteristics, potentially inducing earthquakes. A notable example is the magnitude 5.6 earthquake associated with coal mining in Newcastle, Australia, in 1989, which resulted in significant casualties and economic losses. Other instances include a magnitude 5.2 earthquake associated with gold mining in Klerksdorp, South Africa, in 1977, and seismic events linked to potash mining in Volkerhausen, Germany, in 1989.\n\n4. **Oil or Gas Extraction**: This reduces the pore pressure within the natural reservoir. An earthquake of magnitude 4.2 was associated with gas extraction from the Pau basin, near Lacq, France.\n\n5. **Liquid Injection**: Often involving wastewater, this raises the pore pressure on faults in the vicinity. An earthquake of magnitude 5.6 occurred in Prague, Oklahoma, in 2011.\n\n6. **Hydraulic Fracturing**: Small volumes of liquid are injected to increase pore pressure, leading to seismic events. Two magnitude 4.4 earthquakes occurred in central west Alberta and northeast British Columbia.\n\n7. **Enhanced Oil Recovery**: Injection of water, chemicals, steam, or carbon dioxide increases pore pressure. An earthquake of magnitude 4.6 occurred in 1978 near Snyder, Texas.\n\n8. **Geothermal Energy Production**: Involves injection or extraction, which can induce seismic activity. An earthquake of magnitude 6.6 occurred at Cerro Prieto, Baja California, Mexico.\n\nThese examples illustrate how human activities can induce seismic events by altering the natural stress and pressure conditions in the Earth's crust, highlighting the intricate relationship between human actions and geological processes.",
+          "key_points": [
+            "Human activities contribute to induced earthquakes by altering stress and pressure conditions in the Earth's crust, reflecting the complexities of seismology.",
+            "Reservoir construction can induce earthquakes by applying stress to underlying geology, as seen in the 1967 Maharashtra earthquake in India.",
+            "Groundwater extraction reduces pore pressure, potentially causing seismic events, exemplified by the 2011 Lorca earthquake in Spain.",
+            "Mining alters pressure characteristics, leading to induced earthquakes, such as the 1989 Newcastle earthquake in Australia and the 1977 Klerksdorp earthquake in South Africa.",
+            "Oil or gas extraction reduces pore pressure, which can induce earthquakes, like the 4.2 magnitude event near Lacq, France.",
+            "Liquid injection, often involving wastewater, raises pore pressure on faults, causing earthquakes, such as the 2011 Prague earthquake in Oklahoma.",
+            "Hydraulic fracturing increases pore pressure through liquid injection, leading to seismic events, as seen in Alberta and British Columbia.",
+            "Enhanced oil recovery techniques, which increase pore pressure, can induce earthquakes, such as the 1978 event near Snyder, Texas.",
+            "Geothermal energy production involves injection or extraction that can induce seismic activity, exemplified by the 6.6 magnitude earthquake at Cerro Prieto, Mexico."
+          ]
+        }
+      }
+    },
+    "passage": "Examples of induced seismic events \nExamples of causative mechanisms and high magnitude earthquakes linked to specific processes are illustrated in Figure 1 \nand described below: \nReservoir construction where the weight of water held in the reservoir applies stresses to underlying geology \nwhich activates existing faults or fractures; an earthquake of M 6.4 occurred in Maharshtra, India in 1967 with \n[IRIS, 2005]; \nRemoval of groundwater from quarries or deep mines to prevent flooding which depresses the water table and \nreduces sub-surface pore pressure as well as the effective overburden load [McGarr, 2002];  \nMining which changes pressure characteristics by removal of solid material; an earthquake of M 5.6 associated \nwith coal mining occurred in 1989 in Newcastle, Australia [Klose, 2012] - this left 13 people dead, 160 injured and \nthousands of buildings damaged, resulting in economic losses equivalent to A$5 billion (3.4% of Australia’s Gross \nassociated with potash mining which occurred in 1989 in Volkerhausen, Germany and an earthquake of M 5.2 \nassociated with gold mining in in 1977 in Klerksdorp, South Africa [cited in McGarr, 2002]; \nGroundwater extraction which reduces pore pressure by removal of water; an earthquake of M 5.1 occurred Lorca, \nSpain 2011 [González, 2012]; \nOil or gas extraction which reduces the pore pressure within the natural reservoir; an earthquake of M 4.2 was \nassociated with gas extraction from the Pau basin, near Lacq, France and occurred 10 years after gas extraction \ncommenced [Grasso, 1990]; \nLiquid injection (often waste water) at depth which raises the pore pressure on faults in the vicinity; an earthquake \nof M 5.6 occurred in Prague, Oklahoma in 2011 [Keranen, 2013]; \nHydraulic fracturing where small volumes of liquid are injected to increase pore pressure; two M 4.4 earthquakes \noccurred in central west Alberta and northeast British Columbia [BC Oil and Gas Commission, 2014]; \nEnhanced oil recovery where injection of water, chemicals, steam or carbon dioxide increases pore pressure \n[Rubinstein, 2015]; an earthquake of M 4.6 occurred in 1978 near Snyder, Texas, where injection for secondary \nrecovery has been ongoing since the 1950s and induced seismic activity has been observed since 1974 to present \n[Frohlich, 2012]; \nGeothermal energy production involving injection or extraction; an earthquake of M 6.6 occurred at Cerro Prieto, \nBaja California, Mexico [Glowacka, 1996].",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Plans for police action must rely on intelligence regarding labor disputes instead of subjective opinions from management or labor, ensuring all necessary details are considered.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How can police action plans be effectively developed using intelligence about labor disputes, and what specific factors should be considered to ensure these plans are comprehensive and objective?",
+          "llm_answer": "",
+          "correct_answer": "Police action plans can be effectively developed using intelligence about labor disputes by basing them on detailed and objective information rather than on complaints from either management or labor. Specific factors to consider in ensuring these plans are comprehensive and objective include:\n\n1. The name, business address, and telephone number of the employer.\n2. The name and address of the union, union local number, affiliation, and telephone number.\n3. The kind of business involved.\n4. The number and occupation of employees involved in the dispute.\n5. The reason for the dispute.\n6. The date the strike was declared.\n7. The number and occupation of employees who will continue to work.\n8. Any trouble anticipated.\n9. The kind of strike (e.g., sympathy, wildcat, lockout, secondary).\n10. Any additional factors that would aid in determining the number and kind of police details required.\n11. The location, size of the plant, number of exits and entrances, loading platforms, etc.\n12. Other buildings or locations that might be affected by the dispute.\n13. The time of arrival and departure of employees who will not strike.\n14. Transit facilities and routes used.\n15. Meal periods for employees and whether they eat on the premises.\n16. Exits, entrances, and routes used by employees during meal periods.\n17. The time when merchandise is to be received or shipped. \n\nBy considering these factors, police can develop action plans that are well-informed and tailored to the specific circumstances of the labor dispute.",
+          "key_points": [
+            "Police action plans for labor disputes should be based on detailed and objective intelligence rather than complaints from management or labor.",
+            "Essential factors for comprehensive and objective plans include employer and union contact information, business type, and details about the employees involved.",
+            "Understanding the reason for the dispute and the date the strike was declared is crucial.",
+            "Information on employees continuing to work and any anticipated trouble should be included.",
+            "The type of strike and additional factors influencing police resource allocation are important considerations.",
+            "Details about the plant's location, size, and logistics such as exits, entrances, and loading platforms are necessary.",
+            "Consideration of other affected buildings or locations is important.",
+            "Knowledge of employee schedules, including arrival, departure, and meal periods, is vital.",
+            "Transit facilities, routes, and the timing of merchandise shipments should be factored into the plans."
+          ]
+        }
+      }
+    },
+    "passage": "Plans for any Police action should be \nbased on this intelligence, and not on complaints of fancied \naggravations made by either management or labor. Intelli-\ngence should include: \n1) Name, business address and telephone number of em-\n2) Name and address of union, union local number, affilia-\ntion and telephone number. 3) Kind of business. 4) Number and occupation of employees involved in the \n5) Reason for the dispute. 6) Date strike declared. 7) Number and occupation of employees who will continue \n8) Trouble anticipated. 9) Kind of strike (sympathy, wildcat, lockout, secondary). 10) Any additional factors which would aid in determining \nthe number and kind of Police details required. 11) Location, size of the plant, number of exits and entran-\nces, loading platforms, etc. 12) Other buildings or locations which might be affected by \nthe dispute. 13) Time of arrival and departure of employees who will not \n14) Transit facilities and routes used. 15) Meal periods for employees, and whether they eat on the \n16) Exits, entrances and routes used by employees during \nmeal periods. 17) Time when merchandise is to be received or shipped.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "I am looking for resources on earthquake hazards mitigation, including contact information for relevant agencies and their phone numbers. Specifically, I want to obtain details of organizations that specialize in earthquake preparedness and risk reduction, as I need to reach out to them for guidance and assistance related to enhancing seismic safety measures in my area. If possible, please provide a comprehensive list including the names of agencies and their associated phone numbers, as well as any additional resources that might be helpful in understanding earthquake hazards.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What resources, including agencies, are available for earthquake hazard mitigation and preparedness according to the passage?",
+          "llm_answer": "",
+          "correct_answer": "The passage lists several resources and agencies related to earthquake hazard mitigation and preparedness. The agencies mentioned include:\n\n1. United States Geological Survey (USGS) - Provides information on the National Seismic Hazard Maps and the Modified Mercalli Intensity Scale.\n2. American Red Cross - Offers resources such as the Disaster Preparedness Plan and Safe and Well program.\n3. California Earthquake Authority (CEA) - Provides guidance on personal preparedness for earthquakes.\n4. Central United States Earthquake Consortium (CUSEC) - Focuses on earthquake safety and preparedness.\n5. Department of Homeland Security (DHS) - Offers resources through www.Ready.gov.\n6. Earthquake Country Alliance (ECA) - Provides 'The Seven Steps to Earthquake Safety.'\n7. Federal Emergency Management Agency (FEMA) - Offers a guide titled 'Reducing the Risks of Nonstructural Earthquake Damage.'\n\nThese organizations assist individuals and communities by providing guidelines, preparedness plans, and practical guides to enhance seismic safety measures and better understand earthquake risks.",
+          "key_points": [
+            "The United States Geological Survey (USGS) provides information on the National Seismic Hazard Maps and the Modified Mercalli Intensity Scale.",
+            "The American Red Cross offers resources such as the Disaster Preparedness Plan and Safe and Well program.",
+            "The California Earthquake Authority (CEA) provides guidance on personal preparedness for earthquakes.",
+            "The Central United States Earthquake Consortium (CUSEC) focuses on earthquake safety and preparedness.",
+            "The Department of Homeland Security (DHS) offers resources through the website www.Ready.gov.",
+            "The Earthquake Country Alliance (ECA) provides 'The Seven Steps to Earthquake Safety.'",
+            "The Federal Emergency Management Agency (FEMA) offers a guide titled 'Reducing the Risks of Nonstructural Earthquake Damage.'",
+            "These organizations assist individuals and communities by providing guidelines, preparedness plans, and practical guides to enhance seismic safety measures and better understand earthquake risks."
+          ]
+        }
+      }
+    },
+    "passage": "USGS, Introduction to the National Seismic Hazard Maps, \nUnited States Geological Survey, Reston, Virginia. USGS, The Modified Mercalli Intensity Scale, \nUnited States Geological Survey, Reston, Virginia. American Red Cross, Disaster Preparedness Plan, \nAmerican Red Cross, Washington, D.C. American Red Cross, Safe and Well, \nAmerican Red Cross, Washington, D.C. CEA, Personal Preparedness – How to be Prepared, for an \nEarthquake,California Earthquake Authority, Sacramento, CA. CUSEC, Earthquake Safety and Preparedness, Central United \nStates Earthquake Consortium, Memphis, Tennessee. DHS, www.Ready.gov, Department of Homeland Security, \nWashington, D.C. ECA, The Seven Steps to Earthquake Safety, Earthquake Country \nAlliance, Los Angeles, California. FEMA, 2012, Reducing the Risks of Nonstructural Earthquake \nDamage, A Practical Guide, FEMA E-74, Section 6.4.2.4 Water \nHeaters, prepared by the Applied Technology Council for the \nFederal Emergency Management Agency, Washington, D.C.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Surveillance for food-borne illness is ongoing.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the key components and collaborative efforts involved in the ongoing surveillance of food-borne illnesses, and how do these initiatives collectively contribute to the detection, prevention, and control of such diseases?",
+          "llm_answer": "",
+          "correct_answer": "The key components and collaborative efforts involved in the ongoing surveillance of food-borne illnesses include several systems and networks:\n\n1. **Laboratory-based Enteric Disease Surveillance**: This collects laboratory data from human Salmonella cases.\n2. **National Notifiable Diseases Surveillance System (NNDSS)**: This system tracks notifiable contagious diseases, including Salmonella.\n3. **Foodborne Disease Active Surveillance Network (FoodNet)**: A sentinel foodborne surveillance system.\n4. **National Molecular Subtyping Network for Foodborne Disease Surveillance (PulseNet)**: This network collects data to connect illnesses and outbreaks across multiple sites.\n5. **National Antimicrobial Resistance Monitoring System—enteric bacteria (NARMS)**: A collaboration between the FDA, CDC, and USDA to track antimicrobial resistance.\n6. **Foodborne Disease Outbreak Surveillance System (FDOSS)**: This system collects and analyzes data on foodborne disease outbreaks.\n7. **CDC Outbreak Response and Prevention Branch (ORPB)**: Collaborates with epidemiologists and other public health officials to investigate clusters of foodborne, waterborne, zoonotic, and other enteric illnesses in the U.S. ORPB ensures rapid and coordinated surveillance, detection, and response to multistate outbreaks caused by enteric bacteria.\n\nThese initiatives collectively contribute to the detection, prevention, and control of food-borne illnesses by ensuring comprehensive data collection, tracking, and analysis of disease outbreaks and antimicrobial resistance. They facilitate rapid and coordinated responses to multistate outbreaks, thereby enhancing public health efforts to manage and mitigate the impact of food-borne diseases.",
+          "key_points": [
+            "Laboratory-based Enteric Disease Surveillance collects laboratory data from human Salmonella cases.",
+            "The National Notifiable Diseases Surveillance System (NNDSS) tracks notifiable contagious diseases, including Salmonella.",
+            "Foodborne Disease Active Surveillance Network (FoodNet) serves as a sentinel foodborne surveillance system.",
+            "National Molecular Subtyping Network for Foodborne Disease Surveillance (PulseNet) connects illnesses and outbreaks across multiple sites.",
+            "National Antimicrobial Resistance Monitoring System (NARMS) is a collaboration between the FDA, CDC, and USDA to track antimicrobial resistance.",
+            "Foodborne Disease Outbreak Surveillance System (FDOSS) collects and analyzes data on foodborne disease outbreaks.",
+            "CDC Outbreak Response and Prevention Branch (ORPB) collaborates with epidemiologists and public health officials to investigate clusters of enteric illnesses and ensures rapid and coordinated responses to multistate outbreaks.",
+            "These initiatives collectively enhance the detection, prevention, and control of food-borne illnesses through comprehensive data collection, tracking, and analysis, facilitating rapid responses to outbreaks."
+          ]
+        }
+      }
+    },
+    "passage": "Current Work\n›› Laboratory-based Enteric Disease Surveillance: Collects laboratory data from human Salmonella cases\n›› National Notifiable Diseases Surveillance System (NNDSS): Tracks notifiable contagious diseases \nincluding Salmonella\n›› Foodborne Disease Active Surveillance Network (FoodNet): Sentinel foodborne surveillance system \n›› National Molecular Subtyping Network for Foodborne Disease Surveillance (PulseNet): Collects data to \nconnect illnesses and outbreaks across multiple sites\n›› National Antimicrobial Resistance Monitoring System—enteric bacteria (NARMS): Collaboration between \nFDA, CDC, and USDA to track antimicrobial resistance\n›› Foodborne Disease Outbreak Surveillance System (FDOSS): Collects and analyzes data on foodborne \ndisease outbreaks\n›› CDC Outbreak Response and Prevention Branch (ORPB): Collaborates with epidemiologists and other \npublic health officials who investigate clusters of foodborne, waterborne, zoonotic, and other enteric \n(gastrointestinal) illnesses in the U.S. ORPB works to ensure rapid and coordinated surveillance, detection, \nand response to multistate outbreaks caused by enteric bacteria[42].",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Best practices for mangrove conservation",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the most effective strategies for enhancing mangrove conservation, particularly in the context of climate change resilience, and how can communities and stakeholders be engaged in these efforts?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines several strategies for enhancing mangrove conservation in the context of climate change resilience. These include:\n\n1. Applying risk-spreading strategies to address climate change uncertainties.\n2. Identifying and protecting critical areas naturally positioned to survive climate change.\n3. Managing human stresses on mangroves.\n4. Establishing greenbelts and buffer zones to facilitate mangrove migration due to sea-level rise and to mitigate impacts from adjacent land-use practices.\n5. Restoring degraded areas that have shown resistance or resilience to climate change.\n6. Understanding and preserving connectivity between mangroves and sources of freshwater and sediment, as well as their associated habitats like coral reefs and seagrasses.\n7. Establishing baseline data and monitoring mangroves' response to climate change.\n8. Implementing adaptive strategies to accommodate changes in species ranges and environmental conditions.\n9. Developing alternative livelihoods for communities dependent on mangroves to reduce mangrove destruction.\n10. Building partnerships with various stakeholders to secure the necessary finances and support for responding to climate change impacts.\n\nCommunities and stakeholders can be engaged in these efforts by developing alternative livelihoods to reduce mangrove destruction and building partnerships to generate the necessary finances and support.",
+          "key_points": [
+            "Applying risk-spreading strategies to address climate change uncertainties in mangrove conservation.",
+            "Identifying and protecting critical mangrove areas naturally positioned to survive climate change.",
+            "Managing human stresses on mangroves to enhance their resilience.",
+            "Establishing greenbelts and buffer zones to facilitate mangrove migration due to sea-level rise and mitigate impacts from adjacent land-use practices.",
+            "Restoring degraded mangrove areas that have shown resistance or resilience to climate change.",
+            "Understanding and preserving connectivity between mangroves and sources of freshwater and sediment, as well as their associated habitats like coral reefs and seagrasses.",
+            "Establishing baseline data and monitoring mangroves' response to climate change.",
+            "Implementing adaptive strategies to accommodate changes in species ranges and environmental conditions.",
+            "Developing alternative livelihoods for communities dependent on mangroves to reduce mangrove destruction.",
+            "Building partnerships with various stakeholders to secure the necessary finances and support for responding to climate change impacts."
+          ]
+        }
+      }
+    },
+    "passage": "Ten recommendation to improve \nresiliency include: 1) Apply risk-spreading strategies to \naddress the uncertainties of climate change. 2) Identify and \nprotect critical areas that are naturally positioned to survive \nclimate change. 3) Manage human stresses on mangroves. 4) \nEstablish greenbelts and buffer zones to allow for mangrove \nmigration in response to sea-level rise, and to reduce impacts \nfrom adjacent land-use practices. 5) Restore degraded areas \nthat have demonstrated resistance or resilience to climate \nchange. 6) Understand and preserve connectivity between \nCharlotte Harbor National Estuary Program \nMangrove Heart Attack: 9/30/2016 \nmangroves and sources of freshwater and sediment, and \nbetween mangroves and their associated habitats like coral \nreefs and seagrasses. 7) Establish baseline data and monitor \nthe response of mangroves to climate change. 8) Implement \nadaptive strategies to compensate for changes in species \nranges and environmental conditions.9) Develop alternative \nlivelihoods for mangrove dependent communities as a means \nto reduce mangrove destruction. 10) Build partnerships with a \nvariety of stakeholders to generate the necessary finances and \nsupport to respond to the impacts of climate change.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What are the economic and environmental impacts of notable invasive species events in the U.S., and what preventative measures are suggested for managing these threats effectively?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "How do notable events of invasive species in the United States impact the economy and environment, and what effective strategies are recommended for the prevention and management of these invasive threats?",
+          "llm_answer": "",
+          "correct_answer": "The passage highlights the economic impact of invasive species in the United States, noting that the control of the zebra mussel cost municipalities and industries almost $70 million a year between 1989 and 1995. Additionally, over the next ten years, the zebra mussel invasion is estimated to cost an additional $3.1 billion, affecting industry, recreation, and fisheries. Florida's ongoing management of the invasive hydrilla plant costs more than $17 million a year.\n\nTo prevent and manage these invasive threats, the passage recommends that the National Invasive Species Council and the Aquatic Nuisance Species Task Force, in collaboration with other entities, establish and implement a national plan for early detection of invasive species. This plan should include a well-publicized system for prompt notification and rapid response. It should provide risk assessments for potentially invasive species, conduct a comprehensive national biological survey and monitoring program for early detection, determine the threshold needed to trigger a rapid response, and develop environmentally sound rapid-response, eradication, and control actions.",
+          "key_points": [
+            "The economic impact of invasive species in the United States is significant, with the zebra mussel alone costing municipalities and industries nearly $70 million annually between 1989 and 1995, and an estimated additional $3.1 billion over the following decade.",
+            "Florida spends over $17 million annually on managing the invasive hydrilla plant.",
+            "A national plan for early detection and management of invasive species is recommended, involving the National Invasive Species Council and the Aquatic Nuisance Species Task Force.",
+            "The plan should include a system for prompt notification and rapid response to invasive species threats.",
+            "Risk assessments for potentially invasive species should be conducted as part of the national plan.",
+            "A comprehensive national biological survey and monitoring program is necessary for early detection of invasive species.",
+            "The plan should determine the threshold for triggering a rapid response to invasive species.",
+            "Environmentally sound rapid-response, eradication, and control actions should be developed as part of the management strategy."
+          ]
+        }
+      }
+    },
+    "passage": "Control of the invasive zebra mussel, an organism first introduced through ballast \nwater discharge, cost municipalities and industries almost $70 million a year between 1989 and 1995.13 Over \nthe next ten years, the zebra mussel invasion will cost an estimated additional $3.1 billion, including costs to \nindustry, recreation, and fisheries. Florida’s ongoing cost of managing the invasive hydrilla plant is more than \n$17 million a year.14  \nRecommendation 17–5. The National Invasive Species Council and the Aquatic Nuisance Species \nTask Force, working with other appropriate entities, should establish and implement a national plan \nfor early detection of invasive species and a well-publicized system for prompt notification and rapid \nThe plan should:  \nprovide risk assessments for potentially invasive species, including possible pathways of introduction. conduct a comprehensive national biological survey and monitoring program for early detection, building upon recent progress \nin this area by academia, the U.S. Geological Survey, the National Oceanic and Atmospheric Administration, and the \nU.S. Environmental Protection Agency. determine the threshold needed to trigger a rapid response and develop environmentally sound rapid-response, eradication, and \ncontrol actions.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "Experimental missions are necessary to test deflection concepts and reduce uncertainties for impacting asteroids before implementation.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What strategies and technologies should be developed and assessed to effectively execute NEO deflection missions, and how can preliminary mission designs mitigate uncertainties associated with potential asteroid impacts?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines several strategies and technologies that should be developed and assessed for effective execution of NEO deflection missions. These include:\n\n1. **Developing Preliminary Mission Designs**: This involves creating initial plans for future NEO deflection mission campaigns, which will help in identifying and assessing the readiness of key technologies.\n\n2. **Technology Assessments**: The passage mentions assessing the most mature in-space concepts such as kinetic deflectors, gravity tractors, and ion beam deflection. It also includes evaluating less mature NEO impact prevention methods.\n\n3. **Risk Analysis**: Performing a risk analysis on the success of planetary defense missions under various assumptions and circumstances is crucial.\n\n4. **Demonstration Campaigns**: Preliminary designs for demonstration campaigns, such as a gravity tractor NEO deflection mission or an ion beams deflection campaign, are included.\n\n5. **Reconnaissance and Measurement**: Mission designs will incorporate reconnaissance spacecraft and methods to measure the achieved deflection.\n\n6. **Resource Allocation Analysis**: Analyzing optimal planetary defense resource allocations between surveys and NEO deflection systems is necessary.\n\n7. **Consideration of Contemporary Work and Synergies**: The designs should consider contemporary work, including potential synergies with private industry interests like asteroid resource surveys.\n\n8. **Addressing Underexplored Scenarios**: The passage suggests considering NEO impact scenarios that may have received insufficient attention, such as binary asteroids and high-speed comets.\n\nBy developing these strategies and technologies, preliminary mission designs can help mitigate uncertainties associated with potential asteroid impacts by ensuring readiness, assessing risks, and optimizing resource allocation.",
+          "key_points": [
+            "Developing preliminary mission designs to identify and assess the readiness of key technologies for NEO deflection missions.",
+            "Assessing mature in-space concepts like kinetic deflectors, gravity tractors, and ion beam deflection, along with evaluating less mature NEO impact prevention methods.",
+            "Performing risk analysis on the success of planetary defense missions under various assumptions and circumstances.",
+            "Creating preliminary designs for demonstration campaigns, such as gravity tractor and ion beam deflection missions.",
+            "Incorporating reconnaissance spacecraft and methods to measure the achieved deflection in mission designs.",
+            "Analyzing optimal planetary defense resource allocations between surveys and NEO deflection systems.",
+            "Considering contemporary work and potential synergies with private industry interests, such as asteroid resource surveys.",
+            "Addressing underexplored NEO impact scenarios, including binary asteroids and high-speed comets."
+          ]
+        }
+      }
+    },
+    "passage": "[Short term; NASA, DOD/USSF] \nDevelop technologies and designs for NEO deflection and disruption missions \n3.3 Develop preliminary mission designs for future NEO deflection mission campaigns. Identify, \nassess the readiness, estimate costs, and propose development paths for key technologies \nrequired by NEO impact prevention concepts. Perform a risk analysis on planetary defense \nmission success under varying assumptions and circumstances. Technology assessments will \ninclude the most mature in-space concepts—kinetic deflectors, gravity tractors, ion beam deflection—\nas well as less mature NEO impact prevention methods. This action includes preliminary designs for \ndemonstration of a gravity tractor NEO deflection mission campaign, and/or an ion beams deflection \ncampaign. Mission designs will include reconnaissance spacecraft and methods to measure the \nachieved deflection. Analyses will include an assessment of optimal planetary defense resource \nallocations between surveys and NEO deflection systems. They should consider contemporary work, \nincluding potential synergies with relevant private industry interests (e.g., asteroid resource surveys), \nas well as NEO impact scenarios that may have received insufficient attention thus far (e.g., binary \nasteroids, high-speed comets).",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What targeted prevention and intervention strategies are recommended for individuals with substance use disorders who are at an increased risk of suicide during and after treatment?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What comprehensive strategies should be implemented to effectively prevent suicide among individuals with substance use disorders during and after treatment, considering both evidence-based practices and the diverse needs of communities at risk?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines several comprehensive strategies to effectively prevent suicide among individuals with substance use disorders during and after treatment:\n\n1. Establish sustainable and reliable funding for upstream approaches that are evidence-based, strengths-based, and trauma-informed.\n2. Create opportunities to address the needs of diverse communities through community-led initiatives.\n3. Support the development and implementation of standards of care and best practices for people with substance use concerns who are at risk of suicide.\n4. Continue to evaluate suicide screening tools and interventions for their effectiveness and scale up those approaches that demonstrate impact.\n5. Prioritize curriculum-based training for current and future providers to improve competencies and comfort in working with people with substance use concerns who are at risk of suicide and mental illnesses.\n6. Continue to support initiatives to standardize the collection of data about substance use and suicide and strive for interoperable health and social service systems that can support coordinated care.\n7. Examine how data are collected and explore ways to collect data about suspected deaths by suicide and drug toxicity deaths to gain a clearer picture of substance use and suicide.\n8. Perform research that includes people with lived or living experiences of substance use concerns, SUDs, and suicide risk as part of discussions about prevention and intervention.",
+          "key_points": [
+            "Establish sustainable and reliable funding for evidence-based, strengths-based, and trauma-informed upstream approaches.",
+            "Create community-led initiatives to address the needs of diverse communities.",
+            "Develop and implement standards of care and best practices for individuals with substance use concerns at risk of suicide.",
+            "Evaluate and scale up effective suicide screening tools and interventions.",
+            "Prioritize curriculum-based training for providers to improve competencies in working with at-risk individuals.",
+            "Support initiatives to standardize data collection on substance use and suicide for coordinated care.",
+            "Examine and improve data collection methods for suspected suicide and drug toxicity deaths.",
+            "Conduct research involving individuals with lived experiences of substance use and suicide risk in prevention discussions."
+          ]
+        }
+      }
+    },
+    "passage": "Establish sustainable and reliable funding for upstream approaches such as coordinated, long-\nterm services and supports that are evidence-based, strengths-based and trauma-informed; \nCreate opportunities to address the needs of diverse communities through community-led \nSupport the development and implementation of standards of care and best practices for people \nwith substance use concerns who are at risk of suicide; \nContinue to evaluate suicide screening tools and interventions for their effectiveness and scale \nup those approaches that demonstrate impact; \nIntersections of Substance Use and Suicide: Evidence and Key Take-Aways \nPrioritize curriculum-based training for current and future providers delivering services to people \nwith substance use concerns to improve competencies and comfort working with people with \nsubstance use concerns who are at risk of suicide and mental illnesses; \nContinue to support initiatives to standardize the collection of data about substance use and \nsuicide and to strive for interoperable health and social service systems that can support \ncoordinated care; \nExamine how data are collected and ways to collect data about suspected deaths by suicide and \ndrug toxicity deaths to gain a clearer picture of substance use and suicide; and \nPerform research that includes people with lived or living experiences of substance use \nconcerns, SUDs and suicide risk as part of discussions about prevention and intervention \nIntersections of Substance Use and Suicide: Evidence and Key Take-Aways",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What organizations or government entities typically provide funding support for disaster relief efforts and in what ways do they contribute financial or logistical assistance? Please list any examples of specific programs or grants as well.",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the various organizations and government entities involved in providing financial and logistical support for disaster relief efforts, and how do these contributions manifest through specific programs, grants, or initiatives? Please provide examples to illustrate the types of assistance offered.",
+          "llm_answer": "",
+          "correct_answer": "The passage lists several organizations and government entities involved in providing financial and logistical support for disaster relief efforts, along with specific programs, grants, or initiatives they offer:\n\n1. **Army Corps of Engineers (USACE)**: Engages in the Continuing Authorities Program (CAP) and the Rehabilitation and Inspection Program (RIP).\n\n2. **National Resources Conservation Service (NRCS)**: Offers the Emergency Watershed Protection (EWP) program.\n\n3. **Rural Development**: Provides support through the Community Facilities Direct Loan and Grant Program and Water and Waste Disposal Revolving Loan Funds.\n\n4. **Department of Housing and Urban Development (HUD)**: Contributes via the Community Development Block Grant Disaster Recovery (CBDG-DR) and the National Disaster Resilience Competition (CBDG-NDR).\n\n5. **U.S. Environmental Protection Agency**: Manages the Clean Water State Revolving Fund (CWSRF) and the Drinking Water State Revolving Fund (DWSRF) for infrastructure rehabilitation.\n\n6. **Federal Railroad Authority**: Offers Railroad Rehab & Improvement Financing.\n\n7. **Federal Aviation Authority (FAA)**: Provides support through the Airport Improvement Program.\n\n8. **Federal Emergency Management Agency (FEMA)**: Administers the Public Assistance (PA) Program, which offers federal assistance to state governments, local governments, tribal governments, and private non-profit organizations.",
+          "key_points": [
+            "The Army Corps of Engineers (USACE) is involved in disaster relief through the Continuing Authorities Program (CAP) and the Rehabilitation and Inspection Program (RIP).",
+            "The National Resources Conservation Service (NRCS) provides support via the Emergency Watershed Protection (EWP) program.",
+            "Rural Development offers assistance through the Community Facilities Direct Loan and Grant Program and Water and Waste Disposal Revolving Loan Funds.",
+            "The Department of Housing and Urban Development (HUD) contributes with the Community Development Block Grant Disaster Recovery (CBDG-DR) and the National Disaster Resilience Competition (CBDG-NDR).",
+            "The U.S. Environmental Protection Agency manages the Clean Water State Revolving Fund (CWSRF) and the Drinking Water State Revolving Fund (DWSRF) for infrastructure rehabilitation.",
+            "The Federal Railroad Authority provides Railroad Rehab & Improvement Financing.",
+            "The Federal Aviation Authority (FAA) supports disaster relief through the Airport Improvement Program.",
+            "The Federal Emergency Management Agency (FEMA) administers the Public Assistance (PA) Program, offering federal assistance to state, local, tribal governments, and private non-profit organizations."
+          ]
+        }
+      }
+    },
+    "passage": "Army Corps of Engineers (USACE)  \nContinuing Authorities \nProgram (CAP) \n LONG TERM NEEDS \nRECOVERY MEASURES AND PROGRAM CROSSWALK \nNational Resources Conservation Service (NRCS) \nEmergency Watershed \nProtection (EWP) \nRural Development \nCommunity Facilities Direct \nLoan and Grant Program \nWater and Waste Disposal \nRevolving Loan Funds \nDepartment of Housing and Urban Development (HUD) \nCommunity Development \nBlock Grant Disaster \nRecovery (CBDG-DR) \nNational Disaster Resilience \nCompetition (CBDG-NDR) \nU.S. Environmental Protection Agency \nClean Water State Revolving \nFund (CWSRF) \nDrinking Water State \nRevolving Fund (DWSRF) \nInfrastructure Rehabilitation \nU.S. Army Corps of Engineers (USACE)  \nRehabilitation and Inspection \nProgram (RIP) \nFederal Railroad Authority  \nRailroad Rehab & \nImprovement Financing \nFederal Aviation Authority (FAA)  \nAirport Improvement Program \n6.1.1 Federal Emergency Management Agency  \nPublic Assistance (PA) Program  \nThe FEMA PA Grant Program offers federal assistance to state governments, \nlocal governments, tribal governments, and private non-profit organizations.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What are the best strategies in risk management for preventing industrial accidents?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What multifaceted strategies can organizations implement in their risk management plans to effectively prevent industrial accidents, and how can these strategies be adapted to promote a safety culture within the workforce?",
+          "llm_answer": "",
+          "correct_answer": "Organizations can implement a variety of multifaceted strategies in their risk management plans to effectively prevent industrial accidents and promote a safety culture within the workforce. These strategies include:\n\n1. Conducting regular \"walk and talk\" inspections where supervisors and senior managers observe safety practices and engage with employees in an educational manner.\n2. Instituting competitions for safe work, though caution is advised as these may discourage accident reporting.\n3. Undertaking skill development programs to enhance employees' safety competencies.\n4. Collaborating with each section of the organization to define specific safety and risk objectives.\n5. Setting safety awareness as a criterion during the recruitment process.\n6. Including safety responsibilities in job descriptions.\n7. Promoting active communication about safety across all levels of the organization during meetings.\n8. Making safety information readily available to all employees.\n9. Holding discussions about accidents in other mines to learn from those incidents.\n10. Conducting risk identification and ranking studies involving a cross-section of the organization.\n11. Inviting specialists from outside the organization to give talks on safety-related topics.\n\nThese strategies can be adapted to promote a safety culture by ensuring that safety is integrated into everyday practices, encouraging open communication about safety issues, and fostering an environment where learning from past incidents is prioritized.",
+          "key_points": [
+            "Organizations should conduct regular 'walk and talk' inspections to observe safety practices and engage employees in educational discussions.",
+            "Competitions for safe work can be instituted, but caution is needed to avoid discouraging accident reporting.",
+            "Skill development programs are essential to enhance employees' safety competencies.",
+            "Collaboration with different sections of the organization is necessary to define specific safety and risk objectives.",
+            "Safety awareness should be a criterion during the recruitment process.",
+            "Job descriptions must include safety responsibilities.",
+            "Active communication about safety should be promoted across all organizational levels during meetings.",
+            "Safety information must be readily available to all employees.",
+            "Discussions about accidents in other mines should be held to learn from those incidents.",
+            "Risk identification and ranking studies should involve a cross-section of the organization.",
+            "Specialists from outside the organization should be invited to give talks on safety-related topics.",
+            "These strategies promote a safety culture by integrating safety into everyday practices, encouraging open communication, and prioritizing learning from past incidents."
+          ]
+        }
+      }
+    },
+    "passage": "Among the approaches which can be adopted to promote effective risk management are: \n• undertaking a regular schedule of “walk and talk” inspections; with supervisors and \nsenior managers walking around the mine (above and below ground) with the specific \naim of observing good and bad safety practices, and talking about them to those they \nsee (in an educative role, not a punitive one); \n• instituting competitions for safe work (but care should be taken, as these have a \ndubious record, providing an incentive for people not to report accidents); \n• undertaking skill development programmes; \n• working with each section to define safety and risk objectives specific to that section; \n• setting safety awareness as a criterion when recruiting; \n• including safety in job descriptions \n• promoting active communication between all levels of the organisation during all \ntypes of meeting \n• making information available about safety \n• holding discussions about accidents in other mines and the lessons to be learned (e.g. of such an accident is rising?”) \n• holding risk identification and ranking studies with vertical slice of organisation \n• getting specialists from elsewhere to give talks (e.g.",
+    "difficulty": "extremely_complex"
+  },
+  {
+    "original_query": "What happens if FEMA loses PSN?",
+    "open_ended": {
+      "gpt40": {
+        "content": {
+          "question": "What are the potential consequences for FEMA and its communication capabilities if the Public Safety Network (PSN) were to fail, and how might this impact their ability to respond to disasters and coordinate with partners?",
+          "llm_answer": "",
+          "correct_answer": "The passage outlines several potential consequences for FEMA and its communication capabilities if the Public Safety Network (PSN) were to fail. The loss of the PSN would significantly compromise FEMA's critical communications capabilities and its ability to coordinate effectively with external partners and customers. Users would face difficulties connecting to vital services due to unreliable connectivity to FEMA's data centers, even if power remains intact. This would render FEMA and DHS computer networks largely inaccessible, impacting resource allocation and disaster response. Additionally, if satellite services also fail, the lack of adequate bandwidth would further hinder FEMA's IT infrastructure nationwide. The collapse of the Civil Wide Area Network (CWIN), which relies on the same central offices as the PSN, would further isolate FEMA from crucial communication channels. Typical landline and cellular phone services, as well as broadband internet provisions, would become useless. Without operational support from data centers and ground control for satellite systems like Iridium, FEMA's communication capabilities would deteriorate dramatically. Although some local communication systems might remain operational if power is available, these alternatives would severely limit communication efficacy compared to a fully operational network.",
+          "key_points": [
+            "The failure of the Public Safety Network (PSN) would significantly compromise FEMA's critical communications capabilities and its ability to coordinate with external partners.",
+            "Unreliable connectivity to FEMA's data centers would make it difficult for users to access vital services, impacting resource allocation and disaster response.",
+            "The inaccessibility of FEMA and DHS computer networks would be a major consequence, affecting their operational efficiency.",
+            "A failure in satellite services would exacerbate the situation by limiting bandwidth, further hindering FEMA's IT infrastructure nationwide.",
+            "The collapse of the Civil Wide Area Network (CWIN), which shares central offices with the PSN, would isolate FEMA from essential communication channels.",
+            "Typical landline, cellular phone services, and broadband internet would become ineffective, severely limiting communication options.",
+            "Without operational support from data centers and satellite systems like Iridium, FEMA's communication capabilities would deteriorate significantly.",
+            "Local communication systems might remain operational if power is available, but they would not match the efficacy of a fully operational network."
+          ]
+        }
+      }
+    },
+    "passage": "The loss of the Public Safety Network (PSN) will significantly compromise the critical communications capabilities of FEMA and its ability to coordinate effectively with external partners and customers. In the absence of reliable connectivity to FEMA's data centers, even when power is intact, users will face difficulties connecting to vital services. This situation would render both FEMA and DHS computer networks largely inaccessible, impacting everything from resource allocation to disaster response. Additionally, a simultaneous failure of satellite services along with the PSN's loss would exacerbate the situation, as the lack of adequate bandwidth would stymie FEMA's IT infrastructure across the country. The Civil Wide Area Network (CWIN), reliant on the same central offices that support the PSN, would also collapse, further isolating FEMA from crucial communication channels. In such scenarios, typical landline and cellular phone services are rendered useless, as are broadband internet provisions. Without operational support from their data centers and ground control for satellite systems like Iridium, FEMAâs communication capabilities would deteriorate dramatically. Nonetheless, in the bleakest of scenarios, some local communication systems would remain operational if power remains available, although these alternatives would severely limit communication efficacy compared to a fully operational network.",
+    "difficulty": "extremely_complex"
+  }
+]

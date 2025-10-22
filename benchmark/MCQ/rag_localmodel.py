@@ -1,0 +1,1826 @@
+"""
+RAG Local Model Evaluation Framework
+
+This script provides a comprehensive evaluation framework for RAG systems using local models.
+It supports 6 different retrieval and generation methods with multiple parameter configurations.
+
+Methods:
+1. keyword_only: BM25 retrieval (1,3,5,8 docs) → Local model generation
+2. vector_only: Vector retrieval (1,3,5,8 docs) → Local model generation  
+3. hybrid_only: BM25+Vector retrieval (1,3,5,8 docs) → Local model generation
+4. keyword_rerank: BM25 retrieval (10,25,50 docs) → CrossEncoder rerank (3,5,8 docs) → Local model generation
+5. vector_rerank: Vector retrieval (10,25,50 docs) → CrossEncoder rerank (3,5,8 docs) → Local model generation
+6. hybrid_rerank: BM25+Vector retrieval (10,25,50 docs) → CrossEncoder rerank (3,5,8 docs) → Local model generation
+
+Total: 18 experimental configurations for comprehensive RAG analysis.
+"""
+
+import os
+import sys
+import json
+import time
+import logging
+import argparse
+import torch
+import numpy as np
+import pandas as pd
+from typing import List, Dict, Any, Optional, Tuple
+from pathlib import Path
+from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer, CrossEncoder
+from sklearn.metrics.pairwise import cosine_similarity
+import openai
+from tqdm import tqdm
+from rank_bm25 import BM25Okapi
+import nltk
+from nltk.tokenize import word_tokenize
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+import threading
+from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig
+from openai import OpenAI
+import pickle
+import re
+
+
+# 加载环境变量
+load_dotenv()
+
+# 设置日志
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+# 模型配置 - 基于HPRC集群硬件优化
+MODEL_CONFIGS = {
+    # 1-2B模型配置 (适合单GPU，高batch_size)
+    "phi-2": {
+        "path": "models/phi-2",
+        "max_new_tokens": 64,
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+        "max_sequence_length": 2048,
+        "generation_config": {
+            "do_sample": True,
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "top_k": 50,
+            "repetition_penalty": 1.2,
+            "length_penalty": 1.0,
+            "no_repeat_ngram_size": 3,
+            "max_new_tokens": 64
+        },
+        "batch_size": 32,  # 小模型可以更高batch_size
+        "is_small_model": True,
+        "num_workers": 8,  # CPU线程数
+        "rerank_batch_size": 256  # 重排序batch_size
+    },
+    "TinyLlama": {
+        "path": "models/TinyLlama-1.1B-Chat-v1.0",
+        "max_new_tokens": 64,
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+        "max_sequence_length": 2048,
+        "generation_config": {
+            "do_sample": True,
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "top_k": 50,
+            "repetition_penalty": 1.2,
+            "length_penalty": 1.0,
+            "no_repeat_ngram_size": 3,
+            "max_new_tokens": 64
+        },
+        "batch_size": 32,  # 小模型可以更高batch_size
+        "is_small_model": True,
+        "num_workers": 8,
+        "rerank_batch_size": 256
+    },
+    
+    # 7-8B模型配置 (适合A100/A40，中等batch_size)
+    "qwen3-8b": {
+        "path": "models/Qwen3-8B",
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+        "max_sequence_length": 8192,
+        "max_new_tokens": 64,
+        "generation_config": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "top_k": 50,
+            "repetition_penalty": 1.2,
+            "no_repeat_ngram_size": 3,
+            "do_sample": True,
+            "max_new_tokens": 64
+        },
+        "batch_size": 24,  # 优化：充分利用GPU显存
+        "num_workers": 16,
+        "rerank_batch_size": 128
+    },
+    "mistral-3-7b": {
+        "path": "models/Mistral-7B-Instruct-v0.2",
+        "max_sequence_length": 8192,
+        "torch_dtype": torch.float16,
+        "max_new_tokens": 64,
+        "device_map": "auto",
+        "generation_config": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "top_k": 50,
+            "repetition_penalty": 1.2,
+            "no_repeat_ngram_size": 3,
+            "do_sample": True,
+            "max_new_tokens": 64
+        },
+        "batch_size": 24,  # 优化：充分利用GPU显存
+        "num_workers": 16,
+        "rerank_batch_size": 128
+    },
+    "llama-3-8b": {
+        "path": "models/Meta-Llama-3-8B-Instruct",
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+        "max_sequence_length": 8192,
+        "max_new_tokens": 64,
+        "generation_config": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "top_k": 50,
+            "repetition_penalty": 1.2,
+            "no_repeat_ngram_size": 3,
+            "do_sample": True,
+            "max_new_tokens": 64
+        },
+        "batch_size": 24,  # 优化：充分利用GPU显存
+        "num_workers": 16,
+        "rerank_batch_size": 128
+    },
+    "deepseek-v3-7b": {
+        "path": "models/deepseek-llm-7b-chat",
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+        "max_sequence_length": 8192,
+        "max_new_tokens": 64,
+        "generation_config": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "top_k": 50,
+            "repetition_penalty": 1.2,
+            "no_repeat_ngram_size": 3,
+            "do_sample": True,
+            "max_new_tokens": 64
+        },
+        "batch_size": 24,  # 优化：充分利用GPU显存
+        "num_workers": 16,
+        "rerank_batch_size": 128
+    },
+    "gemma-7b": {
+        "path": "models/gemma-7b-it",
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+        "max_sequence_length": 8192,
+        "max_new_tokens": 64,
+        "generation_config": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "top_k": 50,
+            "repetition_penalty": 1.2,
+            "no_repeat_ngram_size": 3,
+            "do_sample": True,
+            "max_new_tokens": 64
+        },
+        "batch_size": 24,  # 优化：充分利用GPU显存
+        "num_workers": 16,
+        "rerank_batch_size": 128
+    },
+    
+    # API模型配置 (超高并发，无GPU限制)
+    "gpt-3.5-turbo": {
+        "type": "api",
+        "model_name": "gpt-3.5-turbo",
+        "max_new_tokens": 64,
+        "temperature": 0.7,
+        "max_sequence_length": 8192,  # API模型也需要这个参数
+        "batch_size": 200,  # 超高并发batch_size
+        "num_workers": 128,  # 超高并发线程数
+        "rerank_batch_size": 2000,  # 超大batch_size
+        "max_concurrent_requests": 2000  # 超高并发请求数
+    },
+    "gpt-4o": {
+        "type": "api",
+        "model_name": "gpt-4o",
+        "max_new_tokens": 64,
+        "temperature": 0.7,
+        "max_sequence_length": 8192,  # API模型也需要这个参数
+        "batch_size": 200,  # 超高并发batch_size
+        "num_workers": 128,  # 超高并发线程数
+        "rerank_batch_size": 2000,  # 超大batch_size
+        "max_concurrent_requests": 2000  # GPT-4超高并发
+    }
+}
+
+class RAGLocalModel:
+    def __init__(self, 
+                 corpus_path: str,
+                 index_dir: str = None,
+                 embedding_model: str = "intfloat/e5-small-v2",
+                 reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2",
+                 local_model: str = "llama-3-8b",
+                 max_workers: int = 64,
+                 rerank_batch_size: int = 128,
+                 enable_parallel_rerank: bool = True):
+        """
+        Initialize the RAG baseline with local model
+        
+        Args:
+            corpus_path: Path to the corpus file
+            index_dir: Directory containing pre-built indexes (if None, will build on-the-fly)
+            embedding_model: Model for vector embeddings
+            reranker_model: Model for reranking
+            local_model: Local model name from MODEL_CONFIGS
+            max_workers: Maximum worker threads for retrieval (default: 64)
+            rerank_batch_size: Batch size for CrossEncoder reranking (default: 128)
+            enable_parallel_rerank: Whether to enable parallel reranking (default: True)
+        """
+        # Set PyTorch memory allocation config
+        os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
+        
+        # Load environment variables from .env file
+        # 尝试多个可能的.env文件路径
+        possible_env_paths = [
+            os.path.join(os.path.dirname(__file__), '.env'),  # 相对于脚本文件
+            '.env',  # 当前工作目录
+            os.path.join(os.getcwd(), '.env'),  # 绝对路径
+            '/scratch/user/zhitong.chen18/rag_hprc/.env'  # 硬编码路径
+        ]
+        
+        env_loaded = False
+        for env_path in possible_env_paths:
+            if os.path.exists(env_path):
+                load_dotenv(dotenv_path=env_path)
+                print(f"✅ Loaded .env from: {env_path}")
+                env_loaded = True
+                break
+        
+        if not env_loaded:
+            print("⚠️  Warning: No .env file found in any of the expected locations")
+            print(f"   Searched paths: {possible_env_paths}")
+        
+        self.corpus = self._load_corpus(corpus_path)
+        self.index_dir = index_dir
+        self.embedding_model_name = embedding_model
+        self.embedding_model = SentenceTransformer(embedding_model)
+        
+        # Local model configuration
+        self.local_model_name = local_model
+        if local_model not in MODEL_CONFIGS:
+            raise ValueError(f"Unknown local model: {local_model}. Available models: {list(MODEL_CONFIGS.keys())}")
+        
+        self.model_config = MODEL_CONFIGS[local_model]
+        print(f"🤖 Using local model: {local_model}")
+        
+        # 检查是否为API模型
+        if self.model_config.get('type') == 'api':
+            print(f"🌐 API model: {self.model_config['model_name']}")
+            print(f"📦 Batch size: {self.model_config['batch_size']}")
+        else:
+            print(f"📍 Model path: {self.model_config['path']}")
+            print(f"📦 Batch size: {self.model_config['batch_size']}")
+        
+        # Initialize GPU resources
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.reranker = CrossEncoder(reranker_model, device=device)
+        print(f"🔧 CrossEncoder device: {device}")
+        
+        self.max_workers = max_workers
+        self.rerank_batch_size = rerank_batch_size
+        self.enable_parallel_rerank = enable_parallel_rerank
+        
+        # Load retrieval indexes
+        self._load_indexes()
+        
+        # Load local model and tokenizer
+        self._load_local_model()
+        
+        # Download required NLTK data
+        try:
+            nltk.data.find('tokenizers/punkt')
+        except LookupError:
+            nltk.download('punkt')
+        
+        print(f"🧵 Max worker threads for retrieval: {max_workers}")
+        print(f"📦 Rerank batch size: {rerank_batch_size}")
+        print(f"⚡ Parallel GPU reranking: {'Enabled' if enable_parallel_rerank else 'Disabled'}")
+    
+    def _load_local_model(self):
+        """Load local model and tokenizer"""
+        print(f"\n🔄 Loading local model {self.local_model_name}...")
+        
+        # 检查是否为API模型
+        if self.model_config.get('type') == 'api':
+            print("✅ API model detected - skipping local model loading")
+            self.model = None
+            self.tokenizer = None
+            return
+        
+        # Print initial GPU memory status
+        if torch.cuda.is_available():
+            print("\nInitial GPU Memory Status:")
+            print(f"Total GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GiB")
+            print(f"Allocated Memory: {torch.cuda.memory_allocated() / 1024**3:.2f} GiB")
+            print(f"Cached Memory: {torch.cuda.memory_reserved() / 1024**3:.2f} GiB")
+        
+        try:
+            # Load tokenizer
+            print(f"📝 Loading tokenizer from: {self.model_config['path']}")
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                self.model_config['path'],
+                trust_remote_code=True
+            )
+            
+            # Set padding token and side
+            if self.tokenizer.pad_token is None:
+                self.tokenizer.pad_token = self.tokenizer.eos_token
+            self.tokenizer.padding_side = 'left'
+            
+            # Check if safetensors files exist, fallback to pytorch files
+            model_path = self.model_config['path']
+            safetensors_files = [f for f in os.listdir(model_path) if f.endswith('.safetensors')]
+            pytorch_files = [f for f in os.listdir(model_path) if f.startswith('pytorch_model') and f.endswith('.bin')]
+            
+            use_safetensors = len(safetensors_files) > 0
+            if not use_safetensors and len(pytorch_files) > 0:
+                print(f"⚠️  No safetensors files found, falling back to pytorch_model.bin files")
+            elif not use_safetensors and len(pytorch_files) == 0:
+                raise FileNotFoundError(f"No model files found in {model_path}")
+            
+            print(f"🤖 Loading model with safetensors={use_safetensors}")
+            
+            # Load model
+            self.model = AutoModelForCausalLM.from_pretrained(
+                self.model_config['path'],
+                torch_dtype=self.model_config['torch_dtype'],
+                device_map=self.model_config['device_map'],
+                trust_remote_code=True,
+                use_safetensors=use_safetensors
+            )
+            
+            # Initialize generation config
+            if self.model_config.get("generation_config") is not None:
+                raw_config = self.model_config["generation_config"]
+                gen_config = raw_config if isinstance(raw_config, dict) else raw_config.to_dict()
+                gen_config["eos_token_id"] = self.tokenizer.eos_token_id
+                gen_config["pad_token_id"] = self.tokenizer.pad_token_id or self.tokenizer.eos_token_id
+                self.model_config["generation_config"] = GenerationConfig(**gen_config)
+            
+            print("✅ Local model loaded successfully!")
+            
+            # Clean up GPU memory
+            torch.cuda.empty_cache()
+            
+        except Exception as e:
+            print(f"❌ Error loading model {self.local_model_name}: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            raise e
+    
+    def _load_corpus(self, corpus_path: str) -> List[str]:
+        """Load the corpus"""
+        with open(corpus_path, 'r', encoding='utf-8') as f:
+            corpus = json.load(f)
+        print(f"Loaded {len(corpus)} documents from corpus")
+        return corpus
+    
+    def _load_indexes(self):
+        """Load pre-built indexes or build them on-the-fly"""
+        if self.index_dir and os.path.exists(self.index_dir):
+            self._load_prebuilt_indexes()
+        else:
+            print("⚠️  No pre-built indexes found, building on-the-fly (this will be slow)...")
+            self._build_indexes_on_the_fly()
+    
+    def _load_prebuilt_indexes(self):
+        """Load pre-built BM25 and vector indexes"""
+        print("📂 Loading pre-built indexes...")
+        
+        # Load BM25 index
+        bm25_path = os.path.join(self.index_dir, "bm25_index.pkl")
+        if os.path.exists(bm25_path):
+            with open(bm25_path, 'rb') as f:
+                bm25_data = pickle.load(f)
+                self.bm25 = bm25_data['bm25']
+                self.tokenized_docs = bm25_data['tokenized_docs']
+            print("✅ BM25 index loaded")
+        else:
+            raise FileNotFoundError(f"BM25 index not found at {bm25_path}")
+        
+        # Load precomputed BM25 top50 results (if available)
+        bm25_precomputed_path = os.path.join(self.index_dir, "bm25_top50_precomputed.pkl")
+        if os.path.exists(bm25_precomputed_path):
+            with open(bm25_precomputed_path, 'rb') as f:
+                self.bm25_precomputed = pickle.load(f)
+            print(f"✅ Precomputed BM25 top50 loaded: {len(self.bm25_precomputed)} queries")
+        else:
+            self.bm25_precomputed = None
+            print("⚠️  No precomputed BM25 results found - will compute on-the-fly")
+        
+        # Load vector embeddings
+        embeddings_path = os.path.join(self.index_dir, "embeddings.npy")
+        if os.path.exists(embeddings_path):
+            self.doc_embeddings = np.load(embeddings_path)
+            print(f"✅ Vector embeddings loaded: {self.doc_embeddings.shape}")
+        else:
+            raise FileNotFoundError(f"Embeddings not found at {embeddings_path}")
+        
+        # Load metadata
+        metadata_path = os.path.join(self.index_dir, "index_metadata.json")
+        if os.path.exists(metadata_path):
+            with open(metadata_path, 'r') as f:
+                metadata = json.load(f)
+            print(f"✅ Index metadata loaded: {metadata}")
+        
+        print("🎉 All indexes loaded successfully!")
+    
+    def _build_indexes_on_the_fly(self):
+        """Build indexes on-the-fly (slow, for fallback)"""
+        print("🔨 Building BM25 index...")
+        self.tokenized_docs = [word_tokenize(doc.lower()) for doc in self.corpus]
+        self.bm25 = BM25Okapi(self.tokenized_docs)
+        print("✅ BM25 index built")
+        
+        print("🧠 Computing vector embeddings...")
+        self.doc_embeddings = self.embedding_model.encode(self.corpus, show_progress_bar=True)
+        print(f"✅ Vector embeddings computed: {self.doc_embeddings.shape}")
+    
+    def _load_test_set(self, test_set_path: str, num_questions: int = None) -> List[Dict]:
+        """Load the test set with optional question limit"""
+        with open(test_set_path, 'r', encoding='utf-8') as f:
+            test_set = json.load(f)
+        
+        if num_questions is not None:
+            test_set = test_set[:num_questions]
+            print(f"Limited to {len(test_set)} questions for testing")
+        
+        return test_set
+    
+    def keyword_search(self, query: str, top_k: int = 10) -> List[str]:
+        """BM25-based search using pre-built index or precomputed results"""
+        # Try to use precomputed results first
+        if self.bm25_precomputed and query in self.bm25_precomputed:
+            precomputed = self.bm25_precomputed[query]
+            top_docs = precomputed['top_docs']
+            return top_docs[:top_k]
+        
+        # Fallback to on-the-fly computation
+        tokenized_query = word_tokenize(query.lower())
+        doc_scores = self.bm25.get_scores(tokenized_query)
+        top_indices = np.argsort(doc_scores)[-top_k:][::-1]
+        return [self.corpus[i] for i in top_indices]
+    
+    def vector_search(self, query: str, top_k: int = 10) -> List[str]:
+        """Vector-based semantic search using pre-computed embeddings"""
+        query_embedding = self.embedding_model.encode(query)
+        similarities = cosine_similarity([query_embedding], self.doc_embeddings)[0]
+        top_indices = np.argsort(similarities)[-top_k:][::-1]
+        return [self.corpus[i] for i in top_indices]
+    
+    def hybrid_search(self, query: str, top_k_bm25: int = 25, top_k_vector: int = 25, final_top_k: int = 50) -> List[str]:
+        """Simple hybrid search combining BM25 and vector search candidates"""
+        bm25_docs = self.keyword_search(query, top_k_bm25)
+        vector_docs = self.vector_search(query, top_k_vector)
+        combined_docs = list(dict.fromkeys(bm25_docs + vector_docs))
+        return combined_docs[:final_top_k]
+    
+    def rerank(self, query: str, documents: List[str], top_k: int = 8, batch_size: int = 32) -> List[str]:
+        """Rerank documents using cross-encoder with batching for GPU efficiency"""
+        if not documents:
+            return []
+        
+        pairs = [(query, doc) for doc in documents]
+        scores = self.reranker.predict(pairs, batch_size=batch_size, show_progress_bar=False)
+        doc_scores = list(zip(documents, scores))
+        doc_scores.sort(key=lambda x: x[1], reverse=True)
+        return [doc for doc, _ in doc_scores[:top_k]]
+    
+    def _truncate_context_for_small_model(self, context: List[str], max_tokens_per_passage: int = 200) -> List[str]:
+        """截断context以适应小模型的token限制"""
+        if not self.model_config.get('is_small_model', False):
+            return context
+        
+        truncated_context = []
+        for passage in context:
+            # 简单按字符数截断，大约4个字符=1个token
+            if len(passage) > max_tokens_per_passage * 4:
+                passage = passage[:max_tokens_per_passage * 4] + "..."
+            truncated_context.append(passage)
+        
+        return truncated_context
+
+    def generate_answer_with_context(self, question: str, options: List[str], context: List[str]) -> str:
+        """Generate answer using local model with retrieved context"""
+        # 为小模型截断context
+        context = self._truncate_context_for_small_model(context)
+        
+        context_str = "\n\n".join([f"Passage {i+1}: {doc}" for i, doc in enumerate(context)])
+        options_str = "\n".join(options)
+        
+        # 检查是否为API模型
+        if self.model_config.get('type') == 'api':
+            return self._generate_answer_with_api(question, options, context_str)
+        
+        # 检查是否为小模型，使用不同的prompt策略
+        is_small_model = self.model_config.get('is_small_model', False)
+        
+        if is_small_model:
+            # 小模型使用简洁的prompt，但添加few-shot示例
+            prompt = f"""Based on the passage, choose the correct answer:
+
+Passage: The sun is the star at the center of the Solar System.
+
+Question: What is the sun?
+A. A moon
+B. A star  
+C. A planet
+D. A galaxy
+
+Answer: B
+
+---
+
+Passage: {context_str}
+
+Question: {question}
+Options:
+{options_str}
+
+Answer:"""
+        else:
+            # 大模型使用详细的prompt
+            prompt = f"""You are a helpful assistant that answers multiple-choice questions based on the passage provided. Please provide your answer in the following format:
+
+Answer: [A/B/C/D]
+Explanation: [Your explanation]
+
+Example:
+Passage: The sun is the star at the center of the Solar System.
+
+Question: What is the sun?
+Options:
+A. A moon
+B. A star
+C. A planet
+D. A galaxy
+
+Answer: B
+Explanation: The passage clearly states that the sun is a star.
+
+---
+
+Now answer the following:
+
+Passage:
+{context_str}
+
+Question: {question}
+
+Options:
+{options_str}
+
+Answer:"""
+        
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                # Tokenize input
+                inputs = self.tokenizer(
+                    prompt,
+                    return_tensors="pt",
+                    truncation=True,
+                    max_length=self.model_config['max_sequence_length']
+                ).to(self.model.device)
+                
+                # Generate response
+                with torch.no_grad():
+                    outputs = self.model.generate(
+                        **inputs,
+                        generation_config=self.model_config["generation_config"]
+                    )
+                
+                # Decode response
+                response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+                response = response[len(prompt):].strip()
+                
+                if response:
+                    return response
+                    
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    print(f"Error generating answer: {e}")
+                    return ""
+                print(f"Attempt {attempt + 1} failed: {str(e)}")
+                time.sleep(1)
+        
+        return ""
+    
+    def _generate_answer_with_api(self, question: str, options: List[str], context_str: str) -> str:
+        """Generate answer using OpenAI API"""
+        try:
+            # 从环境变量获取API密钥
+            api_key = os.getenv('OPENAI_API_KEY')
+            if not api_key or api_key == 'your_openai_api_key_here':
+                print(f"❌ OPENAI_API_KEY not set in .env file")
+                print(f"   Current value: '{api_key}'")
+                return ""
+            
+            print(f"🔑 API key found: {api_key[:10]}...{api_key[-4:] if len(api_key) > 14 else '***'}")
+            
+            # 设置OpenAI客户端
+            client = OpenAI(api_key=api_key)
+            
+            # 改进的prompt，明确要求输出格式
+            prompt = f"""Based on the passage below, answer the multiple-choice question. You must respond with ONLY the letter (A, B, C, or D) of the correct answer.
+
+Passage: {context_str}
+
+Question: {question}
+Options:
+{options}
+
+Answer (only the letter A, B, C, or D):"""
+            
+            print(f"📤 Sending API request to {self.model_config['model_name']}...")
+            print(f"📝 Prompt length: {len(prompt)} characters")
+            
+            response = client.chat.completions.create(
+                model=self.model_config['model_name'],
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant that answers multiple-choice questions based on the provided passage."},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=self.model_config['max_new_tokens'],
+                temperature=self.model_config['temperature']
+            )
+            
+            result = response.choices[0].message.content.strip()
+            print(f"📥 API response received: '{result}'")
+            return result
+            
+        except Exception as e:
+            print(f"❌ Error with API call: {e}")
+            print(f"❌ Exception type: {type(e).__name__}")
+            import traceback
+            traceback.print_exc()
+            return ""
+    
+    def parse_answer(self, response: str) -> str:
+        """Parse model's answer from response"""
+        try:
+            # Try to match "Answer: X" format
+            answer_match = re.search(r'Answer:\s*([A-D])', response)
+            if answer_match:
+                return answer_match.group(1)
+            
+            # Try to match direct A/B/C/D
+            answer_match = re.search(r'[A-D]', response)
+            if answer_match:
+                return answer_match.group(0)
+            
+            # Try to match option prefix
+            answer_match = re.search(r'([A-D])\.', response)
+            if answer_match:
+                return answer_match.group(1)
+            
+            return ""  # Default fallback
+            
+        except Exception as e:
+            print(f"Error parsing answer: {str(e)}")
+            return ""
+    
+    def generate_answers_batch(self, questions: List[str], options_list: List[List[str]], contexts: List[List[str]]) -> List[str]:
+        """Generate answers for a batch of questions"""
+        
+        # 检查是否为API模型
+        if self.model_config.get('type') == 'api':
+            # API模型使用并发请求
+            return self._generate_answers_batch_api(questions, options_list, contexts)
+        
+        # 本地模型使用原有的batch处理逻辑
+        batch_prompts = []
+        
+        # 检查是否为小模型
+        is_small_model = self.model_config.get('is_small_model', False)
+        
+        for question, options, context in zip(questions, options_list, contexts):
+            # 为小模型截断context
+            context = self._truncate_context_for_small_model(context)
+            
+            context_str = "\n\n".join([f"Passage {i+1}: {doc}" for i, doc in enumerate(context)])
+            options_str = "\n".join(options)
+            
+            if is_small_model:
+                # 小模型使用简洁的prompt
+                prompt = f"""Answer this multiple-choice question based on the passage:
+
+Passage:
+{context_str}
+
+Question: {question}
+Options:
+{options_str}
+
+Answer:"""
+            else:
+                # 大模型使用详细的prompt
+                prompt = f"""You are a helpful assistant that answers multiple-choice questions based on the passage provided. Please provide your answer in the following format:
+
+Answer: [A/B/C/D]
+Explanation: [Your explanation]
+
+Example:
+Passage: The sun is the star at the center of the Solar System.
+
+Question: What is the sun?
+Options:
+A. A moon
+B. A star
+C. A planet
+D. A galaxy
+
+Answer: B
+Explanation: The passage clearly states that the sun is a star.
+
+---
+
+Now answer the following:
+
+Passage:
+{context_str}
+
+Question: {question}
+
+Options:
+{options_str}
+
+Answer:"""
+            batch_prompts.append(prompt)
+        
+        try:
+            print(f"🔧 Preparing batch with {len(batch_prompts)} prompts...")
+            
+            # Tokenize batch
+            inputs = self.tokenizer(
+                batch_prompts,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+                max_length=self.model_config['max_sequence_length']
+            ).to(self.model.device)
+            
+            print(f"🔧 Input shape: {inputs['input_ids'].shape}")
+            print(f"🔧 Starting model generation...")
+            
+            # Generate batch responses
+            with torch.no_grad():
+                outputs = self.model.generate(
+                    **inputs,
+                    generation_config=self.model_config["generation_config"]
+                )
+            
+            print(f"🔧 Generation completed, decoding {len(outputs)} responses...")
+            
+            # Decode responses
+            responses = []
+            for i, output in enumerate(outputs):
+                try:
+                    response = self.tokenizer.decode(output, skip_special_tokens=True)
+                    # Remove the original prompt from the response
+                    if len(response) > len(batch_prompts[i]):
+                        response = response[len(batch_prompts[i]):].strip()
+                    else:
+                        # If response is shorter than prompt, something went wrong
+                        print(f"⚠️  Warning: Response {i} is shorter than prompt")
+                        response = response.strip()
+                    
+                    if not response:
+                        print(f"⚠️  Warning: Empty response for question {i}")
+                        response = "A"  # Default fallback
+                    
+                    responses.append(response)
+                    print(f"📝 Response {i}: '{response[:100]}{'...' if len(response) > 100 else ''}'")
+                    
+                except Exception as e:
+                    print(f"❌ Error decoding response {i}: {str(e)}")
+                    responses.append("A")  # Default fallback
+            
+            print(f"✅ Batch generation completed with {len(responses)} responses")
+            return responses
+            
+        except Exception as e:
+            print(f"❌ Error in batch generation: {str(e)}")
+            print(f"❌ Exception type: {type(e).__name__}")
+            import traceback
+            traceback.print_exc()
+            
+            # Fallback to individual generation
+            print("🔄 Falling back to individual generation...")
+            responses = []
+            for i, (question, options, context) in enumerate(zip(questions, options_list, contexts)):
+                try:
+                    print(f"🔧 Processing individual question {i+1}/{len(questions)}")
+                    response = self.generate_answer_with_context(
+                        question, options, context
+                    )
+                    responses.append(response)
+                except Exception as e:
+                    print(f"❌ Error processing individual question {i}: {str(e)}")
+                    responses.append("A")  # Default fallback
+            
+            return responses
+    
+    def _generate_answers_batch_api(self, questions: List[str], options_list: List[List[str]], contexts: List[List[str]]) -> List[str]:
+        """Generate answers for a batch of questions using API with high concurrency"""
+        responses = []
+        
+        # 使用ThreadPoolExecutor进行并发API调用
+        max_workers = min(self.model_config.get('max_concurrent_requests', 100), len(questions))
+        
+        def process_single_api_call(args):
+            try:
+                # 重新加载环境变量（解决ThreadPoolExecutor中的环境变量传递问题）
+                from dotenv import load_dotenv
+                possible_env_paths = [
+                    '/scratch/user/zhitong.chen18/rag_hprc/.env',  # 硬编码路径
+                    os.path.join(os.path.dirname(__file__), '.env'),  # 相对于脚本文件
+                    '.env',  # 当前工作目录
+                ]
+                
+                env_loaded = False
+                for env_path in possible_env_paths:
+                    if os.path.exists(env_path):
+                        load_dotenv(dotenv_path=env_path)
+                        print(f"🔧 Thread loaded .env from: {env_path}")
+                        env_loaded = True
+                        break
+                
+                if not env_loaded:
+                    print("❌ Thread failed to load .env file")
+                
+                question, options, context = args
+                print(f"🔧 Starting API call for question: {question[:50]}...")
+                context_str = "\n\n".join([f"Passage {i+1}: {doc}" for i, doc in enumerate(context)])
+                result = self._generate_answer_with_api(question, options, context_str)
+                print(f"✅ API call completed, result: '{result}'")
+                return result
+            except Exception as e:
+                print(f"❌ Exception in process_single_api_call: {e}")
+                print(f"❌ Exception type: {type(e).__name__}")
+                import traceback
+                traceback.print_exc()
+                return ""
+        
+        # 准备参数
+        args_list = [(question, options, context) for question, options, context in zip(questions, options_list, contexts)]
+        
+        print(f"🌐 Processing {len(questions)} API calls with {max_workers} concurrent workers...")
+        print(f"🔧 Args list length: {len(args_list)}")
+        
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # 提交所有任务
+            future_to_idx = {executor.submit(process_single_api_call, args): i for i, args in enumerate(args_list)}
+            print(f"🔧 Submitted {len(future_to_idx)} tasks to executor")
+            
+            # 收集结果
+            temp_responses = [None] * len(questions)
+            for future in tqdm(as_completed(future_to_idx), total=len(questions), desc="🌐 API calls"):
+                idx = future_to_idx[future]
+                try:
+                    response = future.result()
+                    temp_responses[idx] = response
+                    print(f"📝 Got response for idx {idx}: '{response}'")
+                except Exception as e:
+                    print(f"❌ API call {idx} failed: {e}")
+                    print(f"❌ Exception type: {type(e).__name__}")
+                    import traceback
+                    traceback.print_exc()
+                    temp_responses[idx] = ""
+            
+            responses = temp_responses
+        
+        print(f"🔧 Final responses: {responses}")
+        return responses
+    
+    def evaluate_method(self, test_set_path: str, method: str, top_k_retrieval: int = 50, top_k_rerank: int = 8, num_questions: int = None) -> Dict:
+        """
+        Evaluate a specific retrieval method with local model
+        
+        Args:
+            test_set_path: Path to test set
+            method: 'keyword_only', 'vector_only', 'hybrid_only', 'keyword_rerank', 'vector_rerank', 'hybrid_rerank'
+            top_k_retrieval: Number of documents to retrieve initially
+            top_k_rerank: Number of documents after reranking (only for *_rerank methods)
+            num_questions: Limit number of questions for testing (None for all)
+        """
+        test_set = self._load_test_set(test_set_path, num_questions)
+        
+        results = {
+            "method": method,
+            "local_model": self.local_model_name,
+            "total_questions": len(test_set),
+            "correct_answers": 0,
+            "accuracy": 0.0,
+            "predictions": [],
+            "config": {
+                "top_k_retrieval": top_k_retrieval,
+                "top_k_rerank": top_k_rerank,
+                "batch_size": self.model_config['batch_size'],
+                "num_questions_tested": len(test_set)
+            }
+        }
+        
+        print(f"\nEvaluating {method} method with {self.local_model_name} on {len(test_set)} questions...")
+        print(f"Using top_k_retrieval={top_k_retrieval}, top_k_rerank={top_k_rerank}")
+        print(f"📦 Batch size: {self.model_config['batch_size']}")
+        
+        # Prepare all retrieval data
+        print(f"🔍 Phase 1: Parallel retrieval and batch reranking...")
+        self.monitor_resources("Start Processing")
+        
+        # Extract query data
+        query_data = []
+        for item in test_set:
+            question = item["multiple_choice"]["gpt40"]["content"]["question"]
+            options = item["multiple_choice"]["gpt40"]["content"]["options"]
+            correct_answer = item["multiple_choice"]["gpt40"]["content"]["correct_option"]
+            
+            query_data.append({
+                "question": question,
+                "options": options,
+                "correct_answer": correct_answer,
+                "retrieval_query": question
+            })
+        
+        # Step 1: Parallel retrieval
+        queries = [item["retrieval_query"] for item in query_data]
+        
+        # Determine retrieval method and parameters based on method type
+        if method.endswith("_rerank"):
+            retrieval_method = method.replace("_rerank", "")
+            use_rerank = True
+            print(f"🔍 Step 1: Parallel {retrieval_method} retrieval (with rerank)...")
+        else:
+            retrieval_method = method.replace("_only", "")  
+            use_rerank = False
+            print(f"🔍 Step 1: Parallel {retrieval_method} retrieval (no rerank)...")
+        
+        all_retrieved_docs = self.retrieve_parallel(queries, retrieval_method, top_k_retrieval)
+        self.monitor_resources("After Retrieval")
+        
+        # Step 2: GPU reranking (only for *_rerank methods)
+        if use_rerank:
+            print(f"🔄 Step 2: Batch GPU reranking with CrossEncoder...")
+            all_reranked_docs = self.rerank_batch(queries, all_retrieved_docs, top_k_rerank, batch_size=self.rerank_batch_size)
+            self.monitor_resources("After Reranking")
+        else:
+            print(f"⏭️  Step 2: Skipping reranking for {method}")
+            all_reranked_docs = all_retrieved_docs  # Use retrieved docs directly
+            self.monitor_resources("After Skipping Reranking")
+        
+        # Step 3: Local model generation with batching
+        print(f"🤖 Step 3: Local model generation with batching...")
+        batch_size = self.model_config['batch_size']
+        total = len(query_data)
+        
+        for i in range(0, total, batch_size):
+            batch = query_data[i:i + batch_size]
+            current_batch = i // batch_size + 1
+            total_batches = (total + batch_size - 1) // batch_size
+            
+            print(f"\nProcessing batch {current_batch}/{total_batches} (questions {i+1}-{min(i+batch_size, total)}/{total})...")
+            
+            # Print current GPU memory status
+            self.monitor_resources(f"Batch {current_batch}")
+            
+            try:
+                # Prepare batch data
+                batch_questions = [item['question'] for item in batch]
+                batch_options = [item['options'] for item in batch]
+                batch_contexts = [all_reranked_docs[i + j] for j in range(len(batch))]
+                
+                # Generate answers for batch
+                batch_responses = self.generate_answers_batch(batch_questions, batch_options, batch_contexts)
+                
+                # Process each response
+                for item, response in zip(batch, batch_responses):
+                    try:
+                        # Debug: print raw response to understand what model is generating
+                        print(f"🔧 Raw response: '{response[:200]}{'...' if len(response) > 200 else ''}'")
+                        
+                        predicted_answer = self.parse_answer(response)
+                        is_correct = predicted_answer == item['correct_answer']
+                        
+                        # Validate predicted answer
+                        if not predicted_answer or predicted_answer not in ['A', 'B', 'C', 'D']:
+                            print(f"⚠️  Invalid predicted answer: '{predicted_answer}', defaulting to 'A'")
+                            predicted_answer = 'A'
+                        
+                        result = {
+                            "question": item['question'],
+                            "options": item['options'],
+                            "correct_answer": item['correct_answer'],
+                            "predicted_answer": predicted_answer,
+                            "is_correct": is_correct,
+                            "retrieval_query": item['retrieval_query'],
+                            "model_response": response
+                        }
+                        results["predictions"].append(result)
+                        
+                        if is_correct:
+                            results["correct_answers"] += 1
+                        
+                        print(f"Q: {item['question'][:100]}...")
+                        print(f"Correct: {item['correct_answer']}, Predicted: {predicted_answer}, Match: {is_correct}")
+                        
+                    except Exception as e:
+                        print(f"❌ Error processing answer: {str(e)}")
+                        print(f"❌ Exception type: {type(e).__name__}")
+                        import traceback
+                        traceback.print_exc()
+                        
+                        results["predictions"].append({
+                            "question": item['question'],
+                            "options": item['options'],
+                            "correct_answer": item['correct_answer'],
+                            "predicted_answer": "E",
+                            "is_correct": False,
+                            "retrieval_query": item['retrieval_query'],
+                            "model_response": f"Error: {str(e)}"
+                        })
+                
+                # Clean up GPU cache
+                torch.cuda.empty_cache()
+                
+            except Exception as e:
+                print(f"Error processing batch: {str(e)}")
+                # Fallback to individual processing
+                for j, item in enumerate(batch):
+                    try:
+                        response = self.generate_answer_with_context(
+                            item['question'], item['options'], all_reranked_docs[i + j]
+                        )
+                        predicted_answer = self.parse_answer(response)
+                        is_correct = predicted_answer == item['correct_answer']
+                        
+                        results["predictions"].append({
+                            "question": item['question'],
+                            "options": item['options'],
+                            "correct_answer": item['correct_answer'],
+                            "predicted_answer": predicted_answer,
+                            "is_correct": is_correct,
+                            "retrieval_query": item['retrieval_query'],
+                            "model_response": response
+                        })
+                        
+                        if is_correct:
+                            results["correct_answers"] += 1
+                            
+                    except Exception as e:
+                        print(f"Error processing single item: {str(e)}")
+                        results["predictions"].append({
+                            "question": item['question'],
+                            "options": item['options'],
+                            "correct_answer": item['correct_answer'],
+                            "predicted_answer": "A",
+                            "is_correct": False,
+                            "retrieval_query": item['retrieval_query'],
+                            "model_response": str(e)
+                        })
+                
+                torch.cuda.empty_cache()
+        
+        # Calculate final results
+        results["accuracy"] = results["correct_answers"] / len(test_set) if len(test_set) > 0 else 0
+        
+        self.monitor_resources("Evaluation Complete")
+        
+        print(f"\n{method} method with {self.local_model_name} results:")
+        print(f"  Total questions: {results['total_questions']}")
+        print(f"  Correct answers: {results['correct_answers']}")
+        print(f"  Accuracy: {results['accuracy']:.3f}")
+        
+        return results
+    
+    def _save_results_organized(self, results: Dict, test_set_name: str, method: str, config_name: str, output_dir: str):
+        """按照合理的目录结构保存结果文件
+        
+        Args:
+            results: 结果数据
+            test_set_name: 测试集名称
+            method: 方法名称
+            config_name: 配置名称
+            output_dir: 输出根目录
+        """
+        # 创建目录结构: output_dir/model_name/method/
+        model_dir = os.path.join(output_dir, self.local_model_name)
+        method_dir = os.path.join(model_dir, method)
+        os.makedirs(method_dir, exist_ok=True)
+        
+        # 创建文件名
+        if method == "baseline":
+            filename = "all_baseline_results.json"
+        elif method in ["hybrid_only", "vector_only", "keyword_only"]:
+            # 从config_name提取retrieval数量
+            retrieval_k = config_name.split('_')[1]  # retrieval_X -> X
+            filename = f"retrieval_{retrieval_k}_results.json"
+        elif method in ["hybrid_rerank", "vector_rerank", "keyword_rerank"]:
+            # 从config_name提取retrieval和rerank数量
+            parts = config_name.split('_')
+            retrieval_k = parts[1]  # retrieval_X -> X
+            rerank_k = parts[3]     # rerank_Y -> Y
+            filename = f"retrieval_{retrieval_k}_rerank_{rerank_k}_results.json"
+        else:
+            filename = f"{config_name}_results.json"
+        
+        # 保存文件
+        result_file = os.path.join(method_dir, filename)
+        if os.path.exists(result_file):
+            print(f"⏩ 跳过已存在的结果: {result_file}")
+            return result_file
+        
+        with open(result_file, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
+        
+        print(f"   ✅ Results saved to: {result_file}")
+        return result_file
+
+    def run_all_baselines(self, test_set_paths: List[str], output_dir: str, methods: List[str] = None, num_questions: int = None):
+        """Run all baseline methods on all test sets with local model
+        
+        Args:
+            methods: List of methods to run. If None, runs all methods.
+            num_questions: Limit number of questions for testing (None for all)
+        """
+        if methods is None:
+            methods = ["keyword_only", "vector_only", "hybrid_only", "keyword_rerank", "vector_rerank", "hybrid_rerank"]
+        
+        all_results = {}
+        
+        # Create output directory
+        os.makedirs(output_dir, exist_ok=True)
+        
+        for test_set_path in test_set_paths:
+            test_set_name = os.path.basename(test_set_path).replace('.json', '')
+            print(f"\n{'='*60}")
+            print(f"Processing test set: {test_set_name}")
+            print(f"{'='*60}")
+            
+            all_results[test_set_name] = {}
+            
+            for method in methods:
+                # Handle comprehensive mode
+                if method == "comprehensive":
+                    # Run all 39 configurations
+                    print(f"\n🎯 Running COMPREHENSIVE mode - all 39 configurations")
+                    
+                    # Define all experimental configurations
+                    experiments = []
+                    
+                    # 1. Only methods (12 experiments)
+                    only_methods = ["keyword_only", "vector_only", "hybrid_only"]
+                    only_doc_counts = [1, 3, 5, 8]
+                    
+                    for only_method in only_methods:
+                        for doc_count in only_doc_counts:
+                            experiments.append({
+                                "method": only_method,
+                                "top_k_retrieval": doc_count,
+                                "top_k_rerank": 0,
+                                "description": f"{only_method} with {doc_count} docs"
+                            })
+                    
+                    # 2. Rerank methods (27 experiments)
+                    rerank_methods = ["keyword_rerank", "vector_rerank", "hybrid_rerank"]
+                    retrieval_counts = [10, 25, 50]
+                    rerank_counts = [3, 5, 8]
+                    
+                    for rerank_method in rerank_methods:
+                        for retrieval_count in retrieval_counts:
+                            for rerank_count in rerank_counts:
+                                experiments.append({
+                                    "method": rerank_method,
+                                    "top_k_retrieval": retrieval_count,
+                                    "top_k_rerank": rerank_count,
+                                    "description": f"{rerank_method} with retrieval={retrieval_count}, rerank={rerank_count}"
+                                })
+                    
+                    print(f"   Total experiments: {len(experiments)}")
+                    
+                    # Run all experiments
+                    for i, exp in enumerate(experiments, 1):
+                        print(f"\n📊 Experiment {i}/{len(experiments)}: {exp['description']}")
+                        
+                        config_name = f"retrieval_{exp['top_k_retrieval']}"
+                        if exp['top_k_rerank'] > 0:
+                            config_name += f"_rerank_{exp['top_k_rerank']}"
+                        
+                        results = self.evaluate_method(
+                            test_set_path, 
+                            exp['method'], 
+                            top_k_retrieval=exp['top_k_retrieval'],
+                            top_k_rerank=exp['top_k_rerank'], 
+                            num_questions=num_questions
+                        )
+                        
+                        # Add config info to results
+                        results['config_name'] = config_name
+                        results['config_params'] = exp
+                        
+                        # Initialize method in results if not exists
+                        if exp['method'] not in all_results[test_set_name]:
+                            all_results[test_set_name][exp['method']] = {}
+                        
+                        all_results[test_set_name][exp['method']][config_name] = results
+                        
+                        # Save individual results with organized structure
+                        self._save_results_organized(results, test_set_name, exp['method'], config_name, output_dir)
+                    
+                    continue
+                
+                # Define parameter configurations for different method types
+                if method.endswith("_only"):
+                    # For *_only methods: different retrieval amounts, no reranking
+                    param_configs = [
+                        {"top_k_retrieval": 1, "top_k_rerank": 0},
+                        {"top_k_retrieval": 3, "top_k_rerank": 0},
+                        {"top_k_retrieval": 5, "top_k_rerank": 0}, 
+                        {"top_k_retrieval": 8, "top_k_rerank": 0}
+                    ]
+                elif method.endswith("_rerank"):
+                    # For *_rerank methods: retrieval + rerank combinations
+                    param_configs = [
+                        {"top_k_retrieval": 10, "top_k_rerank": 3},
+                        {"top_k_retrieval": 25, "top_k_rerank": 5},
+                        {"top_k_retrieval": 50, "top_k_rerank": 8}
+                    ]
+                else:
+                    # Fallback to single config
+                    param_configs = [{"top_k_retrieval": 50, "top_k_rerank": 8}]
+                
+                all_results[test_set_name][method] = {}
+                
+                # Run evaluation for each parameter configuration
+                for config_idx, config in enumerate(param_configs):
+                    config_name = f"retrieval_{config['top_k_retrieval']}"
+                    if config['top_k_rerank'] > 0:
+                        config_name += f"_rerank_{config['top_k_rerank']}"
+                    
+                    print(f"\n--- Running {method} with {config_name} ---")
+                    
+                    results = self.evaluate_method(
+                        test_set_path, 
+                        method, 
+                        top_k_retrieval=config['top_k_retrieval'],
+                        top_k_rerank=config['top_k_rerank'], 
+                        num_questions=num_questions
+                    )
+                    
+                    # Add config info to results
+                    results['config_name'] = config_name
+                    results['config_params'] = config
+                    
+                    all_results[test_set_name][method][config_name] = results
+                    
+                    # Save individual results with organized structure
+                    self._save_results_organized(results, test_set_name, method, config_name, output_dir)
+        
+        # Save combined results in the model directory
+        model_dir = os.path.join(output_dir, self.local_model_name)
+        os.makedirs(model_dir, exist_ok=True)
+        combined_output_file = os.path.join(model_dir, "all_baseline_results.json")
+        with open(combined_output_file, 'w', encoding='utf-8') as f:
+            json.dump(all_results, f, indent=2, ensure_ascii=False)
+        print(f"\nAll results saved to: {combined_output_file}")
+        
+        # Print summary
+        self._print_summary(all_results)
+        
+        return all_results
+    
+    def _print_summary(self, all_results: Dict):
+        """Print summary of all results"""
+        print(f"\n{'='*80}")
+        print(f"SUMMARY OF ALL BASELINE RESULTS - {self.local_model_name}")
+        print(f"{'='*80}")
+        
+        for test_set_name, test_results in all_results.items():
+            print(f"\nTest Set: {test_set_name}")
+            print("-" * 80)
+            
+            for method, configs in test_results.items():
+                method_display = {
+                    "keyword_only": f"BM25 + {self.local_model_name}",
+                    "vector_only": f"MiniLM + {self.local_model_name}",
+                    "hybrid_only": f"BM25+MiniLM + {self.local_model_name}",
+                    "keyword_rerank": f"BM25 + CrossEncoder + {self.local_model_name}",
+                    "vector_rerank": f"MiniLM + CrossEncoder + {self.local_model_name}",
+                    "hybrid_rerank": f"BM25+MiniLM + CrossEncoder + {self.local_model_name}"
+                }.get(method, method)
+                
+                print(f"\n📋 {method_display}:")
+                
+                # Sort configs by retrieval amount for better readability
+                sorted_configs = sorted(configs.items(), 
+                                      key=lambda x: x[1]['config_params']['top_k_retrieval'])
+                
+                for config_name, results in sorted_configs:
+                    config_params = results['config_params']
+                    if config_params['top_k_rerank'] > 0:
+                        param_str = f"Ret:{config_params['top_k_retrieval']}→Rerank:{config_params['top_k_rerank']}"
+                    else:
+                        param_str = f"Ret:{config_params['top_k_retrieval']}"
+                    
+                    print(f"  {param_str:20} | Accuracy: {results['accuracy']:.3f} ({results['correct_answers']}/{results['total_questions']})")
+    
+    def rerank_batch(self, queries: List[str], documents_list: List[List[str]], top_k: int = 8, batch_size: int = 64) -> List[List[str]]:
+        """Batch rerank documents using cross-encoder with GPU efficiency
+        
+        Args:
+            queries: List of queries
+            documents_list: List of document lists for each query
+            top_k: Number of top documents to return for each query
+            batch_size: Batch size for GPU processing
+        """
+        if not queries or not documents_list:
+            return [[] for _ in queries]
+        
+        # Prepare all pairs for batch processing
+        all_pairs = []
+        query_doc_mapping = []  # Track which pairs belong to which query
+        
+        for query_idx, (query, documents) in enumerate(zip(queries, documents_list)):
+            if not documents:
+                query_doc_mapping.append((query_idx, 0, 0))  # query_idx, start_idx, count
+                continue
+                
+            start_idx = len(all_pairs)
+            pairs = [(query, doc) for doc in documents]
+            all_pairs.extend(pairs)
+            query_doc_mapping.append((query_idx, start_idx, len(pairs)))
+        
+        if not all_pairs:
+            return [[] for _ in queries]
+        
+        # Batch predict - PyTorch handles multi-threading internally
+        all_scores = self.reranker.predict(all_pairs, batch_size=batch_size, show_progress_bar=False)
+        
+        # Reconstruct results for each query
+        results = []
+        for query_idx, start_idx, count in query_doc_mapping:
+            if count == 0:
+                results.append([])
+                continue
+                
+            query_scores = all_scores[start_idx:start_idx + count]
+            query_documents = documents_list[query_idx]
+            
+            # Sort and get top_k
+            doc_scores = list(zip(query_documents, query_scores))
+            doc_scores.sort(key=lambda x: x[1], reverse=True)
+            results.append([doc for doc, _ in doc_scores[:top_k]])
+        
+        return results
+    
+    def process_single_query(self, query_data: Tuple[str, str, int]) -> Tuple[int, List[str]]:
+        """Process a single query for retrieval (thread-safe)
+        
+        Args:
+            query_data: (method, query, top_k_retrieval, query_index)
+        
+        Returns:
+            (query_index, retrieved_documents)
+        """
+        method, query, top_k_retrieval, query_idx = query_data
+        
+        try:
+            if method == "keyword":
+                retrieved_docs = self.keyword_search(query, top_k_retrieval)
+            elif method == "vector":
+                # Vector search with GPU encoding (thread-safe)
+                query_embedding = self.embedding_model.encode(query)
+                # CPU operations for similarity calculation
+                similarities = cosine_similarity([query_embedding], self.doc_embeddings)[0]
+                top_indices = np.argsort(similarities)[-top_k_retrieval:][::-1]
+                retrieved_docs = [self.corpus[i] for i in top_indices]
+            elif method == "hybrid":
+                retrieved_docs = self.hybrid_search(query, final_top_k=top_k_retrieval)
+            else:
+                raise ValueError(f"Unknown method: {method}")
+            
+            return query_idx, retrieved_docs
+        except Exception as e:
+            print(f"Error processing query {query_idx}: {e}")
+            return query_idx, []
+    
+    def retrieve_parallel(self, queries: List[str], method: str, top_k_retrieval: int = 50) -> List[List[str]]:
+        """Parallel retrieval for multiple queries
+        
+        Args:
+            queries: List of query strings
+            method: Retrieval method ('keyword', 'vector', 'hybrid')
+            top_k_retrieval: Number of documents to retrieve per query
+            
+        Returns:
+            List of retrieved document lists for each query
+        """
+        # Process in parallel with thread pool
+        results = [None] * len(queries)
+        
+        # Prepare query data for parallel processing
+        query_data = [(method, query, top_k_retrieval, i) for i, query in enumerate(queries)]
+        
+        print(f"🔧 Using threads: {self.max_workers} workers")
+        
+        with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
+            # Submit all tasks
+            future_to_idx = {executor.submit(self.process_single_query, qd): qd[3] for qd in query_data}
+            
+            # Process completed tasks with progress bar
+            for future in tqdm(as_completed(future_to_idx), total=len(queries), 
+                             desc=f"🔍 {method.upper()} retrieval (parallel)"):
+                query_idx = future_to_idx[future]
+                try:
+                    idx, retrieved_docs = future.result()
+                    results[idx] = retrieved_docs
+                except Exception as e:
+                    print(f"Query {query_idx} failed: {e}")
+                    results[query_idx] = []
+        
+        return results
+
+    def monitor_resources(self, stage_name: str):
+        """Monitor and display memory and GPU usage"""
+        try:
+            import psutil
+            import torch
+            
+            # Memory usage
+            memory = psutil.virtual_memory()
+            memory_used_gb = memory.used / 1024**3
+            memory_percent = memory.percent
+            
+            # GPU usage
+            if torch.cuda.is_available():
+                gpu_used = torch.cuda.memory_allocated(0) / 1024**3
+                gpu_total = torch.cuda.get_device_properties(0).total_memory / 1024**3
+                gpu_percent = (gpu_used / gpu_total) * 100
+                
+                print(f"📊 {stage_name} - Memory: {memory_used_gb:.1f}GB ({memory_percent:.1f}%) | GPU: {gpu_used:.1f}GB/{gpu_total:.1f}GB ({gpu_percent:.1f}%)")
+                
+                # Warning if approaching limits
+                if gpu_used > 25:  # > 25GB
+                    print(f"⚠️  Warning: High GPU memory usage ({gpu_used:.1f}GB)")
+                if memory_used_gb > 100:  # > 100GB
+                    print(f"⚠️  Warning: High memory usage ({memory_used_gb:.1f}GB)")
+            else:
+                print(f"📊 {stage_name} - Memory: {memory_used_gb:.1f}GB ({memory_percent:.1f}%) | GPU: Not available")
+                
+        except Exception as e:
+            print(f"📊 {stage_name} - Resource monitoring failed: {e}")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="RAG Local Model Evaluation")
+    parser.add_argument("--method", type=str, choices=[
+        "keyword_only", "vector_only", "hybrid_only", 
+        "keyword_rerank", "vector_rerank", "hybrid_rerank", 
+        "all_only", "all_rerank", "all", "comprehensive"
+    ], default="all", help="""Method to evaluate:
+    - keyword_only: BM25 retrieval only (no reranking)
+    - vector_only: Vector retrieval only (no reranking)  
+    - hybrid_only: BM25+Vector retrieval only (no reranking)
+    - keyword_rerank: BM25 retrieval + CrossEncoder reranking
+    - vector_rerank: Vector retrieval + CrossEncoder reranking
+    - hybrid_rerank: BM25+Vector retrieval + CrossEncoder reranking
+    - all_only: Run all *_only methods
+    - all_rerank: Run all *_rerank methods  
+    - all: Run all 6 methods (default)
+    - comprehensive: Run all 39 configurations (12 only + 27 rerank)""")
+    parser.add_argument("--model", type=str, choices=list(MODEL_CONFIGS.keys()) + ["all"],
+                        default="llama-3-8b", help="Local model to use (default: llama-3-8b)")
+    parser.add_argument("--corpus", type=str, 
+                        default="corpus/ordered_corpus.json",
+                        help="Path to corpus file")
+    parser.add_argument("--index_dir", type=str,
+                        default="indexes",
+                        help="Directory containing pre-built indexes")
+    parser.add_argument("--test_sets", type=str, nargs="+",
+                        default=[
+                            "test_sets/test_set_base_simple.json"
+                        ],
+                        help="Paths to test set files")
+    parser.add_argument("--output_dir", type=str, 
+                        default="results",
+                        help="Output directory for results")
+    parser.add_argument("--top_k_retrieval", type=int, default=50,
+                        help="Number of documents to retrieve initially")
+    parser.add_argument("--top_k_rerank", type=int, default=8,
+                        help="Number of documents after reranking (8 for richer context, 5 for shorter)")
+    parser.add_argument("--num_questions", type=int, default=None,
+                        help="Limit number of questions for testing (None for all)")
+    parser.add_argument("--max_workers", type=int, default=64,
+                        help="Maximum worker threads for parallel retrieval (default: 64)")
+    parser.add_argument("--rerank_batch_size", type=int, default=128,
+                        help="Batch size for CrossEncoder reranking (default: 128)")
+    parser.add_argument("--enable_parallel_rerank", action="store_true", default=True,
+                        help="Enable parallel reranking (default: True)")
+    parser.add_argument("--disable_parallel_rerank", action="store_true", default=False,
+                        help="Disable parallel reranking")
+    parser.add_argument("--embedding_model", type=str, default="intfloat/e5-small-v2",
+                        help="Embedding model to use for vector search (default: intfloat/e5-small-v2)")
+    
+    args = parser.parse_args()
+    
+    # Handle parallel rerank setting
+    enable_parallel_rerank = not args.disable_parallel_rerank
+    
+    # Determine which models to test
+    if args.model == "all":
+        # Run all available models
+        models = list(MODEL_CONFIGS.keys())
+        # Filter out placeholder models
+        models = [m for m in models if not m.endswith("_placeholder")]
+    else:
+        models = [args.model]
+    
+    # Determine which methods to run
+    if args.method == "all":
+        methods = ["keyword_only", "vector_only", "hybrid_only", "keyword_rerank", "vector_rerank", "hybrid_rerank"]
+    elif args.method == "all_only":
+        methods = ["keyword_only", "vector_only", "hybrid_only"]
+    elif args.method == "all_rerank":
+        methods = ["keyword_rerank", "vector_rerank", "hybrid_rerank"]
+    elif args.method == "comprehensive":
+        # Comprehensive mode: run all 39 configurations
+        methods = ["comprehensive"]
+    else:
+        methods = [args.method]
+    
+    # Create main output directory
+    os.makedirs(args.output_dir, exist_ok=True)
+    
+    print(f"\n🎯 STARTING RAG LOCAL MODEL EVALUATION")
+    print(f"   - Models: {len(models)} ({', '.join(models)})")
+    print(f"   - Methods: {len(methods)} ({', '.join(methods)})")
+    print(f"   - Test sets: {len(args.test_sets)}")
+    print(f"   - Available models: {list(MODEL_CONFIGS.keys())}")
+    
+    # Run evaluation for each model
+    for model_idx, model in enumerate(models, 1):
+        print(f"\n{'='*80}")
+        print(f"🚀 EVALUATING LOCAL MODEL: {model.upper()}")
+        print(f"{'='*80}")
+        
+        # Check if model path exists (only for local models, not API models)
+        if 'type' in MODEL_CONFIGS[model] and MODEL_CONFIGS[model]['type'] == 'api':
+            # API model - no local path needed
+            model_path = "API"
+            print(f"✅ API model: {model}")
+        else:
+            # Local model - check path
+            model_path = MODEL_CONFIGS[model]['path']
+            if not os.path.exists(model_path):
+                print(f"⚠️  Model path does not exist: {model_path}")
+                print(f"⚠️  Skipping model: {model}")
+                continue
+            print(f"✅ Local model path: {model_path}")
+        
+        # Create model-specific output directory
+        model_output_dir = os.path.join(args.output_dir, model.replace("-", "_"))
+        os.makedirs(model_output_dir, exist_ok=True)
+        
+        # Initialize baseline with current model
+        print("Initializing RAG Local Model...")
+        print(f"Model: {model}")
+        print(f"Model path: {model_path}")
+        if 'batch_size' in MODEL_CONFIGS[model]:
+            print(f"Batch size: {MODEL_CONFIGS[model]['batch_size']}")
+        print(f"Corpus: {args.corpus}")
+        print(f"Index directory: {args.index_dir}")
+        print(f"Method(s): {args.method}")
+        print(f"Retrieval top-k: {args.top_k_retrieval}")
+        print(f"Rerank top-k: {args.top_k_rerank}")
+        if args.num_questions:
+            print(f"🧪 Testing with limited questions: {args.num_questions}")
+        else:
+            print(f"🔥 Testing with all questions")
+        
+        try:
+            baseline = RAGLocalModel(
+                corpus_path=args.corpus, 
+                index_dir=args.index_dir,
+                embedding_model=args.embedding_model,
+                local_model=model, 
+                max_workers=args.max_workers,
+                rerank_batch_size=args.rerank_batch_size,
+                enable_parallel_rerank=enable_parallel_rerank
+            )
+            
+            # Run evaluation (always use run_all_baselines now due to multi-config support)
+            baseline.run_all_baselines(args.test_sets, model_output_dir, methods, args.num_questions)
+                
+        except Exception as e:
+            print(f"❌ Error evaluating model {model}: {str(e)}")
+            print(f"❌ Skipping model: {model}")
+            continue
+    
+    # Generate comparison report if testing multiple models
+    if len([m for m in models if os.path.exists(MODEL_CONFIGS[m]['path'])]) > 1:
+        print(f"\n{'='*80}")
+        print("📊 GENERATING COMPARISON REPORT")
+        print(f"{'='*80}")
+        generate_comparison_report_local(args.output_dir, models, methods, args.test_sets)
+    
+    print(f"\n✅ RAG LOCAL MODEL EVALUATION FINISHED!")
+    print(f"📁 Results saved in: {args.output_dir}")
+    print("🚀 Ready for analysis!")
+
+def generate_comparison_report_local(output_dir: str, models: List[str], methods: List[str], test_sets: List[str]):
+    """Generate a comparison report between different local models"""
+    comparison_results = {}
+    
+    # Load results for each model
+    for model in models:
+        # Skip if model path doesn't exist
+        if not os.path.exists(MODEL_CONFIGS[model]['path']):
+            continue
+            
+        model_key = model.replace("-", "_")
+        model_dir = os.path.join(output_dir, model_key)
+        
+        if not os.path.exists(model_dir):
+            continue
+            
+        comparison_results[model] = {}
+        
+        # Load results for each test set and method
+        for test_set_path in test_sets:
+            test_set_name = os.path.basename(test_set_path).replace('.json', '')
+            comparison_results[model][test_set_name] = {}
+            
+            for method in methods:
+                comparison_results[model][test_set_name][method] = {}
+                
+                # Load all configuration results for this method
+                method_files = [f for f in os.listdir(model_dir) if f.startswith(f"{test_set_name}_{method}_") and f.endswith(f"_{model}_results.json")]
+                
+                for result_file in method_files:
+                    result_path = os.path.join(model_dir, result_file)
+                    if os.path.exists(result_path):
+                        with open(result_path, 'r', encoding='utf-8') as f:
+                            results = json.load(f)
+                            config_name = results.get('config_name', 'default')
+                            comparison_results[model][test_set_name][method][config_name] = {
+                                "accuracy": results["accuracy"],
+                                "correct_answers": results["correct_answers"],
+                                "total_questions": results["total_questions"],
+                                "local_model": results.get("local_model", model),
+                                "config_params": results.get("config_params", {})
+                            }
+    
+    # Generate comparison report
+    report = {
+        "comparison_summary": comparison_results,
+        "model_rankings": {},
+        "method_rankings": {},
+        "report_type": "local_models"
+    }
+    
+    # Calculate average accuracy for each model
+    model_avg_accuracy = {}
+    for model in models:
+        if model in comparison_results:
+            all_accuracies = []
+            for test_set in comparison_results[model]:
+                for method in comparison_results[model][test_set]:
+                    for config in comparison_results[model][test_set][method]:
+                        all_accuracies.append(comparison_results[model][test_set][method][config]["accuracy"])
+            
+            if all_accuracies:
+                model_avg_accuracy[model] = sum(all_accuracies) / len(all_accuracies)
+    
+    # Rank models by average accuracy
+    report["model_rankings"] = dict(sorted(model_avg_accuracy.items(), key=lambda x: x[1], reverse=True))
+    
+    # Calculate average accuracy for each method across all models
+    method_avg_accuracy = {}
+    for method in methods:
+        all_accuracies = []
+        for model in comparison_results:
+            for test_set in comparison_results[model]:
+                if method in comparison_results[model][test_set]:
+                    for config in comparison_results[model][test_set][method]:
+                        all_accuracies.append(comparison_results[model][test_set][method][config]["accuracy"])
+        
+        if all_accuracies:
+            method_avg_accuracy[method] = sum(all_accuracies) / len(all_accuracies)
+    
+    # Rank methods by average accuracy
+    report["method_rankings"] = dict(sorted(method_avg_accuracy.items(), key=lambda x: x[1], reverse=True))
+    
+    # Save comparison report
+    report_file = os.path.join(output_dir, "local_models_comparison_report.json")
+    with open(report_file, 'w', encoding='utf-8') as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
+    
+    # Generate human-readable report
+    readable_report = generate_readable_report_local(report)
+    readable_report_file = os.path.join(output_dir, "local_models_comparison_report.md")
+    with open(readable_report_file, 'w', encoding='utf-8') as f:
+        f.write(readable_report)
+    
+    print(f"📄 Local models comparison report saved to: {report_file}")
+    print(f"📄 Readable report saved to: {readable_report_file}")
+    
+    # Print summary
+    print("\n" + "="*60)
+    print("🏆 LOCAL MODEL RANKING (by average accuracy)")
+    print("="*60)
+    for i, (model, accuracy) in enumerate(report["model_rankings"].items(), 1):
+        model_size = "1-2B" if model in ["phi-2", "TinyLlama"] else "7-8B"
+        print(f"{i}. {model} ({model_size}): {accuracy:.3f}")
+    
+    print("\n" + "="*60)
+    print("🥇 METHOD RANKING (by average accuracy)")
+    print("="*60)
+    for i, (method, accuracy) in enumerate(report["method_rankings"].items(), 1):
+        method_name = {
+            "keyword": "BM25 + CrossEncoder + Local Model",
+            "vector": "MiniLM + CrossEncoder + Local Model", 
+            "hybrid": "BM25 + MiniLM + CrossEncoder + Local Model"
+        }.get(method, method)
+        print(f"{i}. {method_name}: {accuracy:.3f}")
+
+def generate_readable_report_local(report: Dict) -> str:
+    """Generate a human-readable markdown report for local models"""
+    markdown = "# RAG Local Model Evaluation Report\n\n"
+    
+    # Model rankings
+    markdown += "## 🏆 Local Model Rankings\n\n"
+    markdown += "| Rank | Model | Size | Average Accuracy |\n"
+    markdown += "|------|-------|------|------------------|\n"
+    for i, (model, accuracy) in enumerate(report["model_rankings"].items(), 1):
+        model_size = "1-2B" if model in ["phi-2", "TinyLlama"] else "7-8B"
+        markdown += f"| {i} | {model} | {model_size} | {accuracy:.3f} |\n"
+    
+    # Method rankings
+    markdown += "\n## 🥇 Method Rankings\n\n"
+    markdown += "| Rank | Method | Average Accuracy |\n"
+    markdown += "|------|--------|------------------|\n"
+    for i, (method, accuracy) in enumerate(report["method_rankings"].items(), 1):
+        method_name = {
+            "keyword": "BM25 + CrossEncoder + Local Model",
+            "vector": "MiniLM + CrossEncoder + Local Model", 
+            "hybrid": "BM25 + MiniLM + CrossEncoder + Local Model"
+        }.get(method, method)
+        markdown += f"| {i} | {method_name} | {accuracy:.3f} |\n"
+    
+    # Model details
+    markdown += "\n## 📋 Model Configuration Details\n\n"
+    markdown += "| Model | Size | Batch Size | Path |\n"
+    markdown += "|-------|------|------------|------|\n"
+    for model in report["comparison_summary"]:
+        if model in MODEL_CONFIGS:
+            config = MODEL_CONFIGS[model]
+            model_size = "1-2B" if model in ["phi-2", "TinyLlama"] else "7-8B"
+            markdown += f"| {model} | {model_size} | {config['batch_size']} | {config['path']} |\n"
+    
+    # Detailed results
+    markdown += "\n## 📊 Detailed Results\n\n"
+    
+    for model in report["comparison_summary"]:
+        model_size = "1-2B" if model in ["phi-2", "TinyLlama"] else "7-8B"
+        markdown += f"### {model} ({model_size})\n\n"
+        for test_set in report["comparison_summary"][model]:
+            markdown += f"#### {test_set}\n\n"
+            markdown += "| Method | Configuration | Accuracy | Correct/Total |\n"
+            markdown += "|--------|---------------|----------|---------------|\n"
+            for method in report["comparison_summary"][model][test_set]:
+                method_name = {
+                    "keyword_only": "BM25 + Local Model",
+                    "vector_only": "MiniLM + Local Model",
+                    "hybrid_only": "BM25+MiniLM + Local Model",
+                    "keyword_rerank": "BM25 + CrossEncoder + Local Model",
+                    "vector_rerank": "MiniLM + CrossEncoder + Local Model", 
+                    "hybrid_rerank": "BM25+MiniLM + CrossEncoder + Local Model"
+                }.get(method, method)
+                
+                for config_name, result in report["comparison_summary"][model][test_set][method].items():
+                    config_params = result.get('config_params', {})
+                    if config_params.get('top_k_rerank', 0) > 0:
+                        config_str = f"Ret:{config_params['top_k_retrieval']}→Rerank:{config_params['top_k_rerank']}"
+                    else:
+                        config_str = f"Ret:{config_params.get('top_k_retrieval', 'N/A')}"
+                    markdown += f"| {method_name} | {config_str} | {result['accuracy']:.3f} | {result['correct_answers']}/{result['total_questions']} |\n"
+            markdown += "\n"
+    
+    return markdown
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# 大型模型文件
+models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# 预构建索引文件
+indexes/
+*.pkl
+*.index
+embeddings.npy
+
+# 临时文件
+*.tmp
+*.log
+*.cache
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.tgz
+
+# 大型数据文件
+# data/corpus/ordered_corpus.json
+
+# 实验结果目录中的大型文件
+model_results/*/detailed_results/
+
+# 日志文件
+*.log
+
+# 数据库文件
+*.db
+*.sqlite
+
+# IDE文件
+.vscode/
+.idea/
+
+# Jupyter Notebook检查点
+.ipynb_checkpoints/
+
+# 环境变量文件
+.env
+
+# 其他不需要的文件
+ngrok-test/
+ngrok-*

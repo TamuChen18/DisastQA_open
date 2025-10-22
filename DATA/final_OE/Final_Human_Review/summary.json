@@ -1,0 +1,114 @@
+{
+  "total_questions": 200,
+  "total_models": 18,
+  "model_summary": {
+    "Yi-6B-Chat": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "gemma-7b": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "Hunyuan-7B-Instruct": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "qwen-3-4b": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "Mistral-7B-Instruct-v0.2": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "qwen-3-8b": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "phi-2": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "deepseek-v3-7b": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "Hunyuan-4B-Instruct": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "llama-3.2-3b-instruct": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "AceMath-1.5B-Instruct": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "Llama-3.2-1B-Instruct": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "Falcon3-1B-Instruct": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "qwen-2.5-3b-instruct": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "gemini-1.5-pro": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "qwen-3-0.6b": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "llama-3-8b": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    },
+    "gpt-4o": {
+      "base_count": 200,
+      "golden_count": 200,
+      "mix_count": 200,
+      "total_count": 600
+    }
+  }
+}

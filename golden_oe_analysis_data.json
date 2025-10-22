@@ -1,0 +1,4023 @@
+{
+  "total_samples": 1000,
+  "keypoints": {
+    "mean": 4.395,
+    "min": 1,
+    "max": 14,
+    "std": 1.5470515079881368
+  },
+  "question_tokens": {
+    "mean": 31.073,
+    "min": 7,
+    "max": 78,
+    "std": 10.415188291487924
+  },
+  "answer_tokens": {
+    "mean": 103.429,
+    "min": 11,
+    "max": 350,
+    "std": 52.48849398678725
+  },
+  "scatter_data": [
+    {
+      "keypoints": 2,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 28
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 24
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 21
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 27
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 29
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 94
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 25
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 163
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 58
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 34
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 26
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 54
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 31
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 30
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 55
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 47
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 25
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 100
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 70
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 77
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 52
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 20
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 42
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 55
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 137
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 51
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 25
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 70
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 31
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 155
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 24
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 83
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 91
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 64
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 19
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 64
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 110
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 71
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 101
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 35
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 19
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 117
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 91
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 136
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 64
+    },
+    {
+      "keypoints": 9,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 36
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 129
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 71
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 47
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 48
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 127
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 186
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 165
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 62
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 168
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 174
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 122
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 33
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 116
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 156
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 84
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 180
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 175
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 124
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 100
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 103
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 84
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 59
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 67
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 65
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 64
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 89
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 103
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 20
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 130
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 34
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 133
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 114
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 186
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 54
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 167
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 109
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 178
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 126
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 133
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 76
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 194
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 156
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 49
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 122
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 39
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 108
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 107
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 162
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 63
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 72
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 94
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 182
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 48
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 164
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 152
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 94
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 146
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 50
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 166
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 96
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 30
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 40
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 34
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 168
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 127
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 177
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 269
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 155
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 117
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 205
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 71
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 65
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 109
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 46
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 109
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 221
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 107
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 24
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 182
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 35
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 30
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 148
+    },
+    {
+      "keypoints": 10,
+      "answer_tokens": 250
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 129
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 39
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 161
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 248
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 203
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 154
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 54
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 34
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 46
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 161
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 167
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 135
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 124
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 36
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 67
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 169
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 66
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 138
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 28
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 96
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 191
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 51
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 136
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 96
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 78
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 10,
+      "answer_tokens": 129
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 154
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 232
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 95
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 65
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 133
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 291
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 89
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 81
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 192
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 241
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 155
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 39
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 128
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 24
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 136
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 66
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 108
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 228
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 58
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 124
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 187
+    },
+    {
+      "keypoints": 9,
+      "answer_tokens": 246
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 126
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 1,
+      "answer_tokens": 11
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 164
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 76
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 177
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 137
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 128
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 198
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 138
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 47
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 130
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 17
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 58
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 85
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 152
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 85
+    },
+    {
+      "keypoints": 9,
+      "answer_tokens": 237
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 199
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 135
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 201
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 214
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 14,
+      "answer_tokens": 240
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 192
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 145
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 116
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 129
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 298
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 166
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 165
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 123
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 70
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 114
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 183
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 128
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 64
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 138
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 210
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 158
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 166
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 72
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 115
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 158
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 137
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 177
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 31
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 67
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 270
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 110
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 91
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 84
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 55
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 145
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 46
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 39
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 89
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 98
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 121
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 145
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 155
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 98
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 179
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 55
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 141
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 214
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 160
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 152
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 117
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 137
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 49
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 84
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 137
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 36
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 127
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 161
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 147
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 145
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 49
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 47
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 110
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 149
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 56
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 108
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 95
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 89
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 9,
+      "answer_tokens": 67
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 60
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 63
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 62
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 127
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 115
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 159
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 204
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 103
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 162
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 54
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 180
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 76
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 29
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 151
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 62
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 35
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 59
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 63
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 126
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 163
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 162
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 54
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 147
+    },
+    {
+      "keypoints": 1,
+      "answer_tokens": 24
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 54
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 101
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 29
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 164
+    },
+    {
+      "keypoints": 1,
+      "answer_tokens": 13
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 127
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 117
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 207
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 91
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 71
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 24
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 167
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 15
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 122
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 204
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 52
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 72
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 33
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 95
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 46
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 121
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 264
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 62
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 47
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 30
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 173
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 157
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 123
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 241
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 172
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 183
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 71
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 161
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 175
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 88
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 204
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 94
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 55
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 94
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 166
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 214
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 41
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 123
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 32
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 31
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 141
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 116
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 164
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 95
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 141
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 72
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 50
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 136
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 47
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 36
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 157
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 162
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 60
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 107
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 145
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 71
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 41
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 51
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 96
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 31
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 16
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 26
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 103
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 198
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 60
+    },
+    {
+      "keypoints": 9,
+      "answer_tokens": 350
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 128
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 175
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 289
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 36
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 67
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 196
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 156
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 20
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 41
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 83
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 26
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 30
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 202
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 41
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 115
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 179
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 1,
+      "answer_tokens": 16
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 135
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 116
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 76
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 23
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 263
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 20
+    },
+    {
+      "keypoints": 9,
+      "answer_tokens": 243
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 15
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 25
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 101
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 117
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 25
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 39
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 41
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 28
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 118
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 18
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 107
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 59
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 214
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 52
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 133
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 96
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 27
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 41
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 138
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 20
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 65
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 17
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 100
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 85
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 177
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 94
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 91
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 52
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 108
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 92
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 110
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 32
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 155
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 1,
+      "answer_tokens": 13
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 141
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 43
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 56
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 58
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 77
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 198
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 124
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 78
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 167
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 175
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 51
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 77
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 98
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 65
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 85
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 36
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 214
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 109
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 36
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 25
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 32
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 211
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 40
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 176
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 33
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 178
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 67
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 42
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 31
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 28
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 42
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 29
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 81
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 53
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 101
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 17
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 121
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 172
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 22
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 27
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 28
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 130
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 42
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 218
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 101
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 61
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 72
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 48
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 202
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 12
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 170
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 114
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 64
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 37
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 186
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 64
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 84
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 56
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 83
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 41
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 76
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 146
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 20
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 59
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 81
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 68
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 18
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 82
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 209
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 133
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 121
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 72
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 115
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 76
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 118
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 96
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 115
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 57
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 162
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 129
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 97
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 60
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 95
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 100
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 54
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 156
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 52
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 115
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 153
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 84
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 211
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 139
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 63
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 62
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 117
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 65
+    },
+    {
+      "keypoints": 10,
+      "answer_tokens": 187
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 137
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 71
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 94
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 123
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 128
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 96
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 122
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 127
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 107
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 55
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 120
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 178
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 110
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 62
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 240
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 79
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 180
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 122
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 74
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 49
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 113
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 91
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 181
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 45
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 106
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 132
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 121
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 122
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 103
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 38
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 62
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 44
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 140
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 98
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 102
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 123
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 90
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 99
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 214
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 109
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 93
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 122
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 58
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 110
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 164
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 159
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 154
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 189
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 107
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 138
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 135
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 144
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 75
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 138
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 124
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 237
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 98
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 73
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 104
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 47
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 142
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 167
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 56
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 207
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 89
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 131
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 134
+    },
+    {
+      "keypoints": 3,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 98
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 178
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 197
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 127
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 121
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 166
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 137
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 123
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 160
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 175
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 158
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 212
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 218
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 176
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 117
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 112
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 174
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 135
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 129
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 105
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 265
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 145
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 103
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 136
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 141
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 133
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 86
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 89
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 139
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 138
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 196
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 111
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 89
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 78
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 144
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 200
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 116
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 141
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 149
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 155
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 123
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 118
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 69
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 133
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 80
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 119
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 125
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 166
+    },
+    {
+      "keypoints": 2,
+      "answer_tokens": 17
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 139
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 206
+    },
+    {
+      "keypoints": 4,
+      "answer_tokens": 161
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 146
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 158
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 181
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 143
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 261
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 155
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 230
+    },
+    {
+      "keypoints": 12,
+      "answer_tokens": 209
+    },
+    {
+      "keypoints": 5,
+      "answer_tokens": 169
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 161
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 101
+    },
+    {
+      "keypoints": 7,
+      "answer_tokens": 244
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 87
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 150
+    },
+    {
+      "keypoints": 8,
+      "answer_tokens": 186
+    },
+    {
+      "keypoints": 6,
+      "answer_tokens": 177
+    }
+  ]
+}

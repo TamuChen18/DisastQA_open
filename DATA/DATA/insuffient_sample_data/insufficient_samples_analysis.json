@@ -1,0 +1,972 @@
+{
+  "total_insufficient": 155,
+  "category_distribution": {
+    "NLI_technological": 10,
+    "QAdoc_technological": 2,
+    "NLI_meteorological_hydrological": 9,
+    "NLI_biological": 8,
+    "QAdoc_chemical": 4,
+    "QAdoc_meteorological_hydrological": 4,
+    "Twitter_societal": 3,
+    "QAdoc_environmental": 3,
+    "QAdoc_societal": 2,
+    "NLI_chemical": 10,
+    "Twitter_geohazard": 2,
+    "FactCheck_meteorological_hydrological": 4,
+    "Twitter_chemical": 9,
+    "QA_chemical": 2,
+    "Twitter_biological": 5,
+    "NLI_societal": 8,
+    "NLI_environmental": 7,
+    "FactCheck_environmental": 2,
+    "QAdoc_geohazard": 2,
+    "NLI_geohazard": 9,
+    "FactCheck_biological": 4,
+    "QA_geohazard": 3,
+    "FactCheck_societal": 3,
+    "QAdoc_extraterrestrial": 3,
+    "QA_meteorological_hydrological": 1,
+    "FactCheck_extraterrestrial": 4,
+    "Twitter_environmental": 1,
+    "Twitter_meteorological_hydrological": 4,
+    "Twitter_technological": 5,
+    "QA_environmental": 1,
+    "Twitter_extraterrestrial": 6,
+    "QAdoc_biological": 2,
+    "NLI_extraterrestrial": 9,
+    "QA_societal": 1,
+    "FactCheck_chemical": 3
+  },
+  "insufficient_samples": [
+    {
+      "index": 0,
+      "original_query": "Designing a comprehensive road system that ensures quick access for emergency vehicles is crucial for effective emergency response. Roads should be structurally sound and clear of obstacles such as fallen trees and excessive growth. This will enable fire-fighting vehicles, including those for initial attack, to reach properties without delay. Special attention must be given to maintaining a vegetation-free area along the roads to allow smooth transit for emergency services and prevent fire hazards from obstructing access during critical times.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 2,
+      "original_query": "Use durable materials for traffic posts.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage provides information on the advantages and disadvantages of using noncombustible materials for traffic posts in wildfire-prone areas. \n\nAdvantages:\n- Noncombustible materials, such as steel, concrete, or flame-retardant PVC, are effective for reducing vulnerability to wildfire damage in all fire severity zones.\n- Steel poles, in particular, are lighter and easier to install compared to wooden or concrete poles.\n\nDisadvantages:\n- The passage does not explicitly mention disadvantages of using noncombustible materials, but it implies that wooden poles, which are combustible, may ignite and are therefore less effective in wildfire-prone areas.\n\nComparison with Traditional Wooden Posts:\n- Wooden poles are combustible and may be treated with creosote, which, while protecting the wood from decay, makes it highly combustible and prone to ignition when exposed to fire.\n- Noncombustible materials are more effective in reducing wildfire damage compared to traditional wooden posts.\n\nThe passage does not provide sufficient information on any specific disadvantages of noncombustible materials beyond the comparison with wooden poles."
+    },
+    {
+      "index": 5,
+      "original_query": "The Seismic Task Committee consists of a diverse group of highly qualified professionals specializing in earthquake engineering, encompassing notable figures such as Neil M. Hawkins and Satyendra K. Ghosh who carry multiple engineering credentials. Their collective expertise in concrete and masonry structures ensures that they are well-equipped to address complex seismic challenges, from design phase innovations to post-disaster recovery strategies. This committee is instrumental in formulating industry standards and best practices necessary for enhancing structural resilience against seismic hazards.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 6,
+      "original_query": "The Fire and Explosion Risk Assessment (FERA) study is a critical process that ensures safety within Upper Tier and Lower Tier Major Hazard Facilities, as defined in the EGPC Safety Case Standard. It requires highly skilled and competent personnel to conduct the assessments to guarantee accuracy and effectiveness. This study is comprehensive and cannot be done in isolation, necessitating an interdisciplinary approach that encompasses all engineering considerations. It must also utilize reliable data, appropriate software, and detailed methodologies to adequately represent potential risks. The core objective of a FERA study is to minimize risks associated with fire and explosion incidents in facilities like process units, equipment, and infrastructure rather than simply proving that environments are acceptable for operations. This process spans the entire lifecycle of a facility, impacting initial siting and design considerations during the greenfield phase as well as throughout the operational life in brownfield scenarios.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions that the FERA study should not be conducted in isolation and should consider all other engineering issues and related studies, implying an interdisciplinary approach. However, it does not detail how this approach contributes to enhancing safety measures or the specific challenges that might arise during its implementation throughout the facility lifecycle."
+    },
+    {
+      "index": 7,
+      "original_query": "During a nuclear explosion, materials reach extreme temperatures, leading to a rapid emission of energy. This energy is primarily radiated in forms such as ultraviolet, visible light, and infrared radiation. The thermal radiation produced can be severe, affecting everything within a considerable distance from the blast. The fireball generates high-intensity heat that can cause significant harm, igniting flammable materials and leading to burns or destruction of property. The shockwave generated simultaneously can cause injuries or fatalities due to debris and pressure forces, impacting the surrounding area beyond the immediate blast circumference. Notably, while thermal radiation can severely affect human health and infrastructure, other radiation types also contribute to the overall impact felt by the environment, complicating disaster response and recovery efforts. Observing safety protocols becomes vital in areas around nuclear facilities to minimize potential risks associated with such explosions.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 8,
+      "original_query": "Responding HMU technicians must wear appropriate personal protective equipment (PPE) to ensure their safety while handling hazardous materials. This gear is crucial for preventing exposure to harmful substances during emergency response activities. The effective use of PPE allows technicians to identify and manage potential threats while mitigating risks to themselves and the environment. Without such equipment, they put themselves at significant danger while attempting to control hazardous situations.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 11,
+      "original_query": "The procedure for enhancing the structural integrity of corners in reinforced concrete involves using a combination of diagonal bars and concrete haunches. This approach is crucial due to the risk of blast loads that can increase force impacts in these areas. Properly implementing these reinforcements ensures that high shear forces, which might compromise the stability of the corners, are effectively transferred to supportive elements. Specifically, diagonal bars are essential even in walls featuring haunches to preserve the cornerâs integrity under adverse conditions.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that reinforcement techniques are implemented to enhance the structural integrity of corners to withstand high shear forces and potential blast impacts, but it does not specify what those techniques are or how they synergize to ensure stability."
+    },
+    {
+      "index": 12,
+      "original_query": "The significant oil spills represented on the map illustrate not only the scale of marine pollution but also the ongoing risk posed by maritime activities that have had grave consequences for marine ecosystems and coastal economies.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 14,
+      "original_query": "The role of security guards often exposes them to various risks, particularly biological hazards that they may encounter during their duties. It is essential that employers take steps to provide adequate training and information regarding these hazards. For instance, understanding how to properly handle situations that involve contact with bodily fluids is crucial for preventing the spread of infections, such as HIV and hepatitis. Security guards must receive education about the nature of biological risks and the preventive measures they can take if they come into contact with these materials. Vaccination against certain biological agents may also be necessary based on risk assessments. Continuous training and adherence to protocols for hygiene, such as washing their bodies after exposure, are vital aspects of safeguarding their health. Only with comprehensive training can security personnel effectively minimize their exposure to hazards in their work environments and protect themselves in situations that are increasingly complex and dangerous.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question specifically for security guards. However, it outlines general preventive measures for managing biological hazards related to bloodborne pathogens, which include:\n\n1. Practicing Universal Precautions by assuming all blood, bloody body fluids, and tissue are positive for bloodborne pathogens such as HIV, Hepatitis B, and Hepatitis C.\n2. Obtaining the Hepatitis B vaccine and quantitative titer.\n3. Using Personal Protective Equipment (PPE) such as gloves, gowns, and face shields to decrease exposure.\n4. Eliminating risky practices, such as not recapping needles, not overfilling sharps containers, and not attempting invasive skills without training and/or supervision.\n5. Containing sharps and other contaminated waste in identifiable biohazard containers.\n6. If exposure occurs, washing or flushing the area, reporting the incident to an immediate supervisor, and accessing health services within 1-2 hours of exposure."
+    },
+    {
+      "index": 24,
+      "original_query": "Pre-shift inspection is essential for scaffold safety.",
+      "type_category": "NLI_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It details the requirements for an installation inspection of scaffolds, including the need for a qualified person to perform the inspection and document the results in an installation inspection report. However, it does not specifically address the elements and procedures involved in conducting a pre-shift inspection for scaffolding or explain why this process is vital for ensuring safety on construction sites."
+    },
+    {
+      "index": 29,
+      "original_query": "What regional cooperation strategies can be implemented to tackle marine debris and enhance waste management practices effectively?",
+      "type_category": "QAdoc_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 44,
+      "original_query": "What environmental factors should maritime emergency planners consider when forecasting freezing spray occurrences to mitigate risks for vessels like those affected by the F/V Scandies Rose incident?",
+      "type_category": "QAdoc_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 53,
+      "original_query": "The research highlighted in Chapter 5 presents significant findings regarding cyclone tracking, emphasizing the variation in cyclones in terms of size and structure. These variances challenge current automated tracking algorithms that have been developed over the years. Chapter 5 not only summarizes the implications and limitations of the study but also suggests potential future work to improve cyclone tracking methods further, making contributions to the field of meteorology and disaster management.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions that Chapter 5 discusses the main results, implications, limitations, and future work directions, but it does not detail the findings regarding the variation in cyclone size and structure or their impact on the effectiveness of automated tracking algorithms. Additionally, it does not specify the future research directions suggested to overcome these challenges."
+    },
+    {
+      "index": 54,
+      "original_query": "Following dilution and neutralisation, discharge to the sewer with plenty of water may be permitted. The requirements of the local water authority must be complied with if contaminated water is flushed directly to the sewer. Care must be taken to avoid spills and ensure proper handling to meet safety standards. For personal protection, itâs essential to refer to the safety data sheet guidelines provided in Section 8, while Section 12 elaborates on ecological hazards.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 60,
+      "original_query": "NWS may also issue a blizzard warning when snow and strong winds combine to produce the potential for blinding snow, deep drifts, and wind chill. These conditions can create extreme hazards for travel and outdoor activities, as visibility drops dramatically and snow drifts can make roads impassable. It's crucial for residents to prepare adequately for such storms to ensure their safety and minimize risks associated with severe winter weather.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that the NWS may issue a blizzard warning when snow and strong winds combine to produce blinding snow, deep drifts, and wind chill, but it does not detail the impact on public safety and preparedness or the steps individuals and communities should take in response."
+    },
+    {
+      "index": 64,
+      "original_query": "Many herders are deeply reliant on securing loans in order to finance their cashmere harvests. One herder expressed his commitment to paying back his loan in spring immediately after harvesting his cashmere. This strategy has become vital for his survival, as having access to immediate funds allows for ongoing operations. He emphasized that this cycle of borrowing and repayment is necessary for staying afloat in a cyclical market where cash flow is tightly linked to seasonal overlaps such as harvesting. Besides loans, they also must prepare for the winter by storing hay and fodder which can be traced back to the strategy of sustaining their livelihood while waiting for new cashmere growth. This dual approach of using loans for financing operations and preparing for seasonal challenges forms a strong survival strategy for herders in the harsh conditions they face.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that securing loans helps herders manage cashmere harvesting expenses and maintain financial sustainability, but it does not detail additional measures they take to ensure their livelihood during harsh winters or how they adapt their financial strategies specifically in response to seasonal variations in the cashmere market."
+    },
+    {
+      "index": 68,
+      "original_query": "Exposure to second-hand smoke is linked to a wide array of health issues, particularly in vulnerable populations such as infants and those with pre-existing health conditions. Individuals exposed to second-hand smoke may experience respiratory symptoms, which can lead to the development of chronic respiratory diseases over time. Furthermore, the risks include serious long-term conditions like lung cancer and coronary heart disease. Children exposed to this type of smoke are at greater risk of middle ear infections and other developmental problems, highlighting the critical need for effective smoke-free policies to protect public health.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 70,
+      "original_query": "The study indicates that recent storm analogues exhibit a greater persistence and intensity compared to earlier analogues, suggesting that extreme weather phenomena such as severe storms are becoming more frequent due to climate change. Notably, the findings reveal that accumulated daily precipitation in certain regions has doubled during the factual analysis period, correlating with stronger winds and heavier rainfall. As the seasonal patterns of these storms shift from spring to autumn, it becomes evident that the frequency of storms like Alex is likely to increase, posing a higher risk of severe impacts on affected areas.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions the increasing trend in intensity and frequency of storm analogues and changes in precipitation patterns, predicting more frequent extreme weather events and associated risks. However, it does not discuss the impact on environmental and community resilience or the implications for future climate action and preparedness."
+    },
+    {
+      "index": 71,
+      "original_query": "Particle pollution, particularly in the form of PM2.5 and PM10, plays a significant role in shaping the climate through its interactions with sunlight and cloud dynamics. By absorbing or reflecting sunlight, these particles can modify the temperature atmosphere and consequently alter weather phenomena. This interaction often contributes not just to local climate disturbances but may also have far-reaching impacts on global weather patterns, potentially influencing the distribution of rainfall. Additionally, the Environmental Protection Agency (EPA) actively monitors and enforces standards regarding PM2.5 levels to prevent adverse health and ecological effects, encouraging a holistic approach to understanding these particles' myriad influences. Adhering to a comprehensive understanding of particle pollution's trajectory, the agency aims to bolster public awareness and compliance for better urban air quality. Current standards about visibility impairment stress how granularity in air quality management supports varied environmental parts, showcasing an intricate link between air purity and weather consistency.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that the interaction of particle pollution with sunlight and cloud formation leads to alterations in local and global weather patterns, influencing rainfall distribution significantly. However, it does not specify the roles of PM2.5 and PM10, nor does it discuss the implications for urban air quality management."
+    },
+    {
+      "index": 73,
+      "original_query": "ERG has provided Centralina COG with all supplemental spatially-resolved data, including cancer risk data and non-cancer hazard data, which are essential to accurately score individual projects. This information can improve our understanding of environmental justice communities and enable tailored responses to various hazards. By inputting this detailed data into their assessments, project scorers can identify impacts more effectively and advocate for measures that will mitigate risks associated with new construction projects. With clear visibility of emissions estimates and health-related data alongside best practices informed by sound research, informed decisions can promote better community health outcomes, enhance strategic planning, and support sustainable development throughout the region.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 74,
+      "original_query": "Flood forecasting for surface water currently includes flood risk modeling and assessments, especially in urbanized areas where natural permeable regions have diminished. These areas frequently experience flooding because their drainage systems cannot manage heavy rainfall effectively, leading to overwhelmed sewer capacities. Additionally, urban infrastructure is factored into surface water modeling to simulate how floodwaters flow overland when drainage networks fail. In city centers where traffic is critical, flood forecasts are crucial for anticipating significant disruptions caused by road closures. The risks associated with surface water flooding are evaluated using various flood models that utilize both design rainfall events and actual observed data. Telemetry systems employed for early warning in established flood-prone regions across several countries show that sophisticated methodologies can help mitigate urban flooding issues and aid in planning responses to intense rainfall.",
+      "type_category": "NLI_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 80,
+      "original_query": "The increasing implementation of diphtheria toxoid vaccination from the late 1920s and its universal use from the late 1940s led to a steady decline in diphtheria. In the United States, the highest number of diphtheria cases reported since national reporting began in 1920 was 206,939 in 1921, which had an incidence rate of 191 per 100,000 population. That same year, 15,520 deaths from diphtheria were documented, resulting in a mortality rate of 14.3 per 100,000 population, with a case fatality ratio of 7.5%. Over the following years, diphtheria incidence and mortality rates saw a consistent decrease, while the case fatality rate remained relatively unchanged. The lowering of case fatality ratios during the 1970s reflected a higher proportion of cutaneous diphtheria cases, which are typically not fatal, reported during that time period.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that the widespread utilization of diphtheria vaccines significantly reduced the rates of infections and deaths, demonstrating the effectiveness of vaccination in controlling infectious diseases. However, it does not detail how the implementation contributed specifically to the decline in the United States from the 1920s onwards, nor does it discuss the factors influencing the changing case fatality ratios during this period."
+    },
+    {
+      "index": 84,
+      "original_query": "The economic importance of Contagious Bovine Pleuropneumonia (CBPP) highlights the significant risks it poses to livestock health and productivity, impacting personal households as well as national economies.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question regarding the specific effects of Contagious Bovine Pleuropneumonia (CBPP) on the economic stability of households and national economies, nor does it detail measures that can be taken to mitigate its impact. It only mentions that CBPP induces significant economic losses and leads to serious livestock production problems, negatively influencing people’s livelihoods in affected countries."
+    },
+    {
+      "index": 86,
+      "original_query": "The Canadian Environmental Protection Act necessitated a thorough risk assessment for the introduction of five Rotavirus strains by Merck Frosst Canada Ltd. These strains were evaluated under the New Substances Notification Regulations (Organisms) to ensure they meet the safety and environmental standards mandated by Canadian regulations. The assessment took into consideration each individual strain from a mixture found in the product formulation. The regulatory decision includes detailed analysis and specific measures required to allow import and subsequent use throughout Canada. The evaluation is crucial to determine any potential risks these organisms might pose to public health, the environment, and domestic agriculture, ensuring that any decision made aligns with Canada's health and environmental protection strategies.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that the five Rotavirus strains were assessed individually as substances under the Canadian Environmental Protection Act, 1999, but it does not elaborate on how this reflects the principles of public health and environmental safety, nor does it discuss the significance or implications of the regulatory measures taken."
+    },
+    {
+      "index": 87,
+      "original_query": "The VNT was performed on 432 serum samples from Mali, showing high sensitivity and specificity rates of 98.1% and 98.8% respectively, indicating accurate neutralization results for both CHIKV and ONNV viruses. The assay involved culturing the serum samples alongside viruses to detect neutralization. About 387 samples tested positive for anti-CHIK IgG, lending credibility to the methods used.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 88,
+      "original_query": "The 16S rRNA gene sequence, which spans about 1500 base pairs, contains key information for phylogenetic analysis and remains functionally stable over extended periods. It plays an essential role in accurately identifying and classifying bacteria at various levels, aiding in comprehending antibiotic resistance in different bacterial strains.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 93,
+      "original_query": "The proper handling and disposal of agricultural chemicals is crucial for environmental safety. Mishandling these substances can lead to significant contamination of our natural resources, affecting not only the soil and waterways but also the agricultural practices that rely on these ecosystems. Therefore, using approved Agricultural Management Practices (AMPs) is recommended to ensure that chemicals and drugs are buried, incinerated, or disposed of in compliance with regulations regarding hazardous materials. Furthermore, marked withdrawal times for substances should be closely followed to lessen any adverse effects on aquatic organisms and animal health. Anyone applying chemicals should meticulously adhere to the product label directions, while also consulting with experts when necessary to minimize risks. Emphasizing these practices aids in enabling a sustainable agricultural environment and maintains the health of our ecosystems, aquatic life, and public health overall, reflecting best practices in managing agricultural products and waste.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 95,
+      "original_query": "The Task Force deployed in response to the outbreak of ASF is made up of specialized personnel, including field epidemiologists and quarantine staff, ensuring that the proper containment and control measures coexist with the strategic response to manage the impacted areas effectively and swiftly.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 96,
+      "original_query": "The objective of sentinel surveillance in Kenya is to enhance the response to yellow fever outbreaks through comprehensive training and educational programs tailored for healthcare professionals. These initiatives are designed to increase awareness of yellow fever among the medical community and public health practitioners, thereby improving their capacity to detect and diagnose the disease effectively. Additionally, the establishment of sentinel stations plays a crucial role in collecting samples and sending them to designated laboratories for thorough pathological examination and immunohistochemical techniques. These upgraded diagnostics will not only strengthen the detection abilities for yellow fever but also for other viral hemorrhagic fevers, ultimately fostering a rapid response mechanism. This systematic approach is expected to stimulate proactive measures, including initiating isolation precautions for suspected cases, creating a safer healthcare environment for both practitioners and the communities they serve.",
+      "type_category": "NLI_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 105,
+      "original_query": "What are the recommended types and placement guidelines for carbon monoxide alarms in homes to ensure optimal safety?",
+      "type_category": "QAdoc_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question regarding guidelines and recommended practices for the installation and placement of carbon monoxide alarms in residential settings. It primarily discusses requirements for carbon monoxide detection systems in specific non-residential settings, such as Group E occupancies, and mentions the interconnection of alarms according to NFPA 720."
+    },
+    {
+      "index": 108,
+      "original_query": "What are the regulatory requirements and safety guidelines for handling and transporting Methyl Alcohol in disaster management scenarios?",
+      "type_category": "QAdoc_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions that the MSDS includes regulatory information and guidelines for safe transportation of Methyl Alcohol but does not specify what those regulatory requirements and safety protocols are, nor does it detail how these measures mitigate health and environmental risks in the context of disaster management."
+    },
+    {
+      "index": 115,
+      "original_query": "What specific strategies can legitimate pharmaceutical businesses implement to address the challenges posed by counterfeit drugs in Nigeria, considering their impact on public health and the drug market? ",
+      "type_category": "QAdoc_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 119,
+      "original_query": "What safer alternatives to highly hazardous pesticides can be implemented in forestry management to comply with FSC standards?",
+      "type_category": "QAdoc_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question specifically for forestry managers or in accordance with FSC standards. It focuses on agricultural practices in Costa Rica, such as Integrated Pest Management (IPM), the use of biopesticides, crop rotation, and polyculture strategies, which are aimed at reducing reliance on hazardous pesticides by promoting biodiversity and ecological balance. However, it does not mention forestry management or FSC standards."
+    },
+    {
+      "index": 130,
+      "original_query": "What specific measures are being taken by the Mongolian government and international organizations to address the risks associated with Dzud, and how is the Early Warning System enhancing disaster management in this context?",
+      "type_category": "QAdoc_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions the involvement of the Mongolian Red Cross Society (MRCS), the International Federation of Red Cross and Red Crescent Societies (IFRC), and the UN's Food and Agricultural Organization (FAO) in implementing the Dzud Early Action Protocol (EAP) to assist people affected by dzud. However, it does not detail the specific ways in which the Mongolian government and various international organizations are collaborating, nor does it explain how the EAP contributes to enhancing disaster preparedness and response through its Early Warning System."
+    },
+    {
+      "index": 140,
+      "original_query": "What are the structural considerations and design methodologies for improving coastal flood defenses in South Florida, specifically in relation to FEMA's SWAN+ADCIRC model shortcomings?",
+      "type_category": "QAdoc_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It focuses on the technical review of FEMA's SWAN+ADCIRC model and its shortcomings in accurately representing storm surge dynamics and flood hazards in Palm Beach County. However, it does not discuss specific structural improvements or design methodologies for enhancing flood defenses."
+    },
+    {
+      "index": 146,
+      "original_query": "What outreach strategies can be implemented to enhance community preparedness for tsunami hazards at the ports of Los Angeles and Long Beach?",
+      "type_category": "QAdoc_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 149,
+      "original_query": "How are local authorities in Enfield preparing for and financing flood risk management, especially in light of increased flooding risks due to climate change?",
+      "type_category": "QAdoc_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It outlines the flood risk management strategies for proposed developments in Enfield, emphasizing adherence to the National Policy Planning Framework (NPPF) and the necessity of conducting sequential and exception tests. It also mentions the local plan's Draft Policy SE8, which mandates Flood Risk Assessments (FRAs) and the importance of Sustainable Drainage Systems (SuDS). However, it does not detail specific strategies for preparing for and financially supporting flood risk management initiatives or how these align with national guidelines and local planning policies."
+    },
+    {
+      "index": 153,
+      "original_query": "Burundi Landmine victims",
+      "type_category": "Twitter_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 156,
+      "original_query": "What are the current environmental issues facing Northeast Asia related to climate change?",
+      "type_category": "Twitter_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question, as it focuses on climate change impacts in the Northeast of the United States, not Northeast Asia."
+    },
+    {
+      "index": 163,
+      "original_query": "How is the support-based approach in humanitarian law being applied in current emergency situations like natural disasters?",
+      "type_category": "Twitter_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that NGOs are adopting a support-based approach per International Humanitarian Law (IHL) in response to the floods in Libya and that resources and local knowledge from responders improve efficiency in rescue missions. However, it does not detail specific ways in which the support-based approach is implemented or how it enhances the efficiency of relief efforts in contemporary emergency situations."
+    },
+    {
+      "index": 180,
+      "original_query": "What policies are suggested for financial institutions to address the risks associated with biodiversity loss as highlighted in the Cambridge CISL report?",
+      "type_category": "QAdoc_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 185,
+      "original_query": "What guidelines does the BC Forest Safety Council provide regarding the use of personal protective equipment to enhance worker safety in forestry operations?",
+      "type_category": "QAdoc_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question about the BC Forest Safety Council's emphasis on personal protective equipment (PPE) in forestry operations. It discusses general guidelines for PPE, including that the employer must provide necessary equipment that fits properly and is designed to protect against hazards. It also mentions that safety materials, equipment, devices, and clothing must be Canadian Standards Association (CSA) approved and lists types of protective equipment such as headwear, footwear, eye and face protection, respiratory protection, skin protection, fall protection systems, and reflective safety vests. Additionally, it states that protective equipment should be selected, maintained, inspected, tested, and kept clean and sanitary, involving a purchasing and issuance system and life cycle management. However, it does not specifically mention the BC Forest Safety Council or its guidelines."
+    },
+    {
+      "index": 195,
+      "original_query": "What specific drainage and risk mitigation measures should be implemented in newly developed residential areas to address susceptibility to liquefaction and landslides as outlined in the Newport Beach General Plan?",
+      "type_category": "QAdoc_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question regarding the specific guidelines outlined in the Newport Beach General Plan. However, it does mention general strategies for mitigating liquefaction hazards, which include:\n\n1. Removal and densification of liquefiable soils.\n2. Permanently lowering the groundwater by dewatering.\n3. Using edge containment structures to provide lateral support.\n4. Modifying site geometry to reduce the risk of movement.\n5. Implementing drainage to lower groundwater below the level of the liquefiable soils.\n\nAdditionally, a common method near harbors and marinas involves restricting movement with edge containment and using deep dynamic compaction to densify and compact subsurface soils."
+    },
+    {
+      "index": 231,
+      "original_query": "What were the primary causes of banking failures during the 2008 financial crisis, particularly focusing on the housing market collapse and its effects on financial institutions?",
+      "type_category": "QAdoc_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question fully. It mentions that the Federal Reserve and other regulators did not take necessary actions to constrain the credit bubble, and their policies encouraged the growth of mortgage debt and the housing bubble. Lending standards collapsed, and there was a failure of accountability and responsibility across all levels of the lending system, involving borrowers, mortgage brokers, appraisers, originators, securitizers, credit rating agencies, and investors. Loans were often made based on the assumption of ever-rising home prices, regardless of the borrower's ability to pay. The nonprime mortgage securitization process facilitated the spread of risky mortgages throughout the financial system. However, the passage does not explicitly connect these factors to specific banking failures during the 2008 financial crisis."
+    },
+    {
+      "index": 249,
+      "original_query": "How does the Workplace Violence Prevention Plan at California State University, Fullerton align with state regulations regarding workplace safety?",
+      "type_category": "QAdoc_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 250,
+      "original_query": "The USDA's Agricultural Marketing Service has been charged with implementing the Pesticide Data Program to gather information on pesticide residues found in food. This initiative, established by the 1996 Food Quality Protection Act, aims to provide vital data that addresses the safety of foods that are primarily consumed by vulnerable populations, especially infants and children. The program plays a crucial role in ensuring that food safety standards are met, allowing parents to trust that the food their families consume is free from harmful pesticide levels. Regular monitoring through this program aids in safeguarding public health by identifying potential risks associated with pesticide use.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 251,
+      "original_query": "The history of childhood fatalities linked to medical interventions in Nigeria raises significant concerns about the safety and regulation of pharmaceutical products administered to children.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 252,
+      "original_query": "The use of this pesticide presents serious risks to various organ systems, including potential adverse effects on the liver, central nervous system, kidneys, and the respiratory system. Specifically, individuals exposed to high levels of this fungicide might experience inflammation, chronic lung disease, and other severe conditions. Additionally, there is evidence that suggests aspiration hazards may arise from its inhalation. Furthermore, the ecological impact of this product cannot be ignored, as it has been found to be extremely toxic to aquatic life. Studies indicate that this pesticide leads to contamination of water bodies, especially through runoff, potentially lasting for several months post-application. Given the known toxicological profiles, the need for careful stewardship when handling, storing, and applying this product is paramount to mitigate its deleterious effects not only on human health but also on the surrounding environment. Such findings highlight the importance of regulatory measures in limiting exposure and protecting vital ecosystems from this chemical's lingering toxicity.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that the pesticide poses a significant risk to water quality due to its toxicity, but does not elaborate on the potential risks to human health or the environment, nor does it discuss the need for regulatory measures."
+    },
+    {
+      "index": 254,
+      "original_query": "Storage regulations for hazardous materials are crucial to ensure the safety and well-being of all individuals who may be in proximity to these substances. For instance, it is essential to segregate containers based on their characteristics, such as flammable or toxic materials, and to keep them away from any combustible materials. This type of segregation helps prevent potentially dangerous reactions and ensures that, in the event of an incident, exposure to harmful agents is minimized. Adequate engineering measures, such as explosion-proof ventilation and accessible emergency wash stations, are also necessary to maintain safety compliance.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 256,
+      "original_query": "In a study examining the health effects of aflatoxicosis, we enlisted 40 individuals suffering from the condition and 80 control participants who were randomly selected. The case-patients and controls were matched based on demographic factors such as age, gender, and overall health status to ensure that the comparisons we made were valid. We inspected maize samples for levels of aflatoxins and analyzed serum for specific biomarkers to evaluate the potential relationship between maize consumption and aflatoxicosis.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 257,
+      "original_query": "Halve the fluoride concentration in water",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions a recommendation to halve the concentration of fluoride added to water and states that fluoridation has conferred substantial protective benefits and remains an effective and equitable means of achieving community-wide exposure, with no evidence of adverse health effects. However, it does not discuss the implications or potential outcomes of reducing fluoride concentration in drinking water."
+    },
+    {
+      "index": 262,
+      "original_query": "Health risks to those exposed- These can be short or long term risks associated with the toxicological properties of the chemical. Safety risks to persons or property due to the physiochemical hazards. Considerations when assessing health risk include the routes of entry by which the chemical can impact health, the physical form and concentration, and the chemical and physical properties of the substance. Additionally, it's important to determine who could be exposed and when this could occur, how often exposure is likely to happen, and for how long. In scenarios where people at the workplace might be exposed to air concentrations that surpass standard safety levels, engaging a qualified individual to conduct air monitoring is necessary. Should the results indicate levels nearing or exceeding the exposure threshold, further measures must be implemented to mitigate these risks.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions the importance of adhering to occupational exposure limits to ensure safety and health but does not detail the critical factors in assessing health risks associated with chemical exposure or how adherence to safety guidelines specifically mitigates these risks."
+    },
+    {
+      "index": 265,
+      "original_query": "Microplastics are found in commercial bivalves.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions that microplastic ingestion has been documented in commercially grown bivalve molluscs, but it does not elaborate on the implications of this ingestion or how it relates to broader trends in marine ecosystems."
+    },
+    {
+      "index": 270,
+      "original_query": "The employer must create a written compliance program to minimize employee exposure when permissible exposure limits (PEL) are surpassed, ensuring respiratory protection as necessary to meet these standards.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 272,
+      "original_query": "Applicators are required to take EPA-approved paraquat training every 3 years.",
+      "type_category": "NLI_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 285,
+      "original_query": "North American transportation agencies are collaborating on rockfall and landslide management strategies.",
+      "type_category": "Twitter_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 290,
+      "original_query": "Updates on the Hazardous Industry Planning Advisory Paper's regulations are crucial for ensuring safety in our communities.",
+      "type_category": "Twitter_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 325,
+      "original_query": "Baroclinic zones are essential in influencing cyclonic structures by regulating heat distribution and precipitation patterns, which affect the overall dynamics of extratropical cyclones.",
+      "type_category": "FactCheck_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 339,
+      "original_query": "Community feedback improves GLOF risk management.",
+      "type_category": "FactCheck_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer the question about how community feedback can be utilized to enhance the management of risks associated with glacier lake outburst floods (GLOFs). However, it does mention the use of visual communication tools and community engagement strategies. Specifically, hazard maps and evacuation maps are used to visually communicate risks and safe evacuation routes to residents. Additionally, a supplementary leaflet with a cartoon helps explain key processes and encourages self-evaluation of preparedness for GLOF emergencies. Community engagement is facilitated through workshops and meetings where residents can ask questions and discuss concerns, actively involving them in the disaster preparedness process."
+    },
+    {
+      "index": 340,
+      "original_query": "Customized flood monitoring programs can significantly improve response effectiveness on varying landscapes, contingent upon resource availability and communication infrastructure. The adaptability of these systems must be evaluated to determine their effectiveness in different environments, especially in regions facing distinct meteorological challenges.",
+      "type_category": "FactCheck_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 343,
+      "original_query": "The building stock data used by PHIVOLCS in Metro Manila is reliable and accurate.",
+      "type_category": "FactCheck_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer how the building stock data utilized by PHIVOLCS specifically contributes to assessing exposure to risks in Metro Manila. However, it does describe the methods used to ensure the reliability and accuracy of the data. The building inventory database was developed by combining spatial datasets representing the settlement pattern of the Greater Metro Manila Area with statistical information on buildings and population. This statistical information was derived from data provided by the Assessor’s Office from LGUs, projects such as the Metro Manila Earthquake Impact Reduction Study (MMEIRS), and the structural information collection in the Census of Population and Housing conducted by the National Statistical Office (NSO). Additionally, digital and analog maps and aerial photographs available at the National Mapping and Resource Information Agency (NAMRIA), as well as LIDAR data, were used to derive the exposure information."
+    },
+    {
+      "index": 354,
+      "original_query": "WHO is stepping up their emergency health measures during the flood crisis in South Asia!",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 356,
+      "original_query": "Recent incidents of food and medicine contamination in Nigeria and Haiti involving di-ethylene glycol highlight serious public health risks.",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only details specific incidents in Nigeria involving counterfeit drugs and tainted teething syrup but does not mention Haiti or broader implications related to public health and regulation in these countries."
+    },
+    {
+      "index": 358,
+      "original_query": "What are the fluoride levels in breast milk, especially in fluoridated communities?",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that 44% of breast milk samples from Canadian mothers had detectable fluoride levels ranging from <0.002 to 0.097 mg/L, but it does not specify how these levels vary in communities with fluoridated water or discuss the implications for infant health and development."
+    },
+    {
+      "index": 361,
+      "original_query": "Discuss the International Labour Conference's recognition of pesticide exposure as a rights issue.",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 363,
+      "original_query": "California wildfires and organizations involved in firefighting",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 366,
+      "original_query": "New Jersey ban on microbeads",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 369,
+      "original_query": "The recent harmful algal blooms are causing serious public health warnings and affecting marine life.",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 372,
+      "original_query": "What are the best methods for disposing of COVID-19 PPE to ensure safety?",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 374,
+      "original_query": "asbestos fibers and safety protocols in laboratory environments",
+      "type_category": "Twitter_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It focuses on safety protocols for handling asbestos materials during demolition or renovation, not specifically in laboratory environments."
+    },
+    {
+      "index": 376,
+      "original_query": "What are the symptoms of zinc phosphide exposure?",
+      "type_category": "QA_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question specifically about zinc phosphide. It discusses symptoms associated with exposure to phosphine, which include chest tightness, shortness of breath, dry mouth, recurrent vomiting, abdominal pain, fever, chills, weakness, dizziness, and incoordination. These symptoms illustrate the hazards of phosphine exposure, particularly in emergency situations, as they can lead to rapidly developing shock, metabolic acidosis, cardiac arrhythmias, and acute respiratory distress syndrome, all of which contribute to a high mortality rate. Emergency service personnel may also face the risk of contamination when caring for affected individuals."
+    },
+    {
+      "index": 399,
+      "original_query": "Can you provide insights into the toxicity classification of common chemicals, focusing on LD50 values? I'm particularly interested in understanding how different entities and organizations interpret different levels of toxicity, including what specific LD50 ranges indicate in terms of health risks. It would be great to know about the distinctions between chemicals with low toxicity compared to those that fall into more hazardous categories. Additionally, it would be helpful to get a clearer picture of how to read the symbols associated with these classifications, as well as the potential safety precautions that should be taken based on the LD50 values. Any anecdotal examples or specific real-world cases would enhance the clarity of this information as well, so feel free to include any additional relevant facts or statistical data that shed light on these measures.",
+      "type_category": "QA_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only discusses the general interpretation of LD50 values in terms of toxicity levels but does not mention how different organizations define or interpret these levels, nor does it provide details on visual symbols, specific safety measures, or concrete examples and statistics illustrating differences between low and high toxicity chemicals."
+    },
+    {
+      "index": 400,
+      "original_query": "The spread of fungal diseases like ramorum is devastating Tanoak and other hardwood forests.",
+      "type_category": "Twitter_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 401,
+      "original_query": "What do you think about the approval of Brincidofovir by the EMA and FDA for treating smallpox?",
+      "type_category": "Twitter_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that Brincidofovir is approved by the FDA for the treatment of human smallpox disease and does not discuss its approval by the EMA, its safety profile, or a detailed comparison with Cidofovir."
+    },
+    {
+      "index": 402,
+      "original_query": "What safety measures should be taken for pets of EBOV-infected individuals during the Ebola Virus outbreak?",
+      "type_category": "Twitter_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question comprehensively. It only suggests that pets should be isolated and handling them should be avoided if someone in the house is infected with Ebola."
+    },
+    {
+      "index": 403,
+      "original_query": "Department of Agriculture's efforts to control bovine TB along the US-Mexico border are crucial.",
+      "type_category": "Twitter_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 420,
+      "original_query": "I want to learn about the struggles of farmers in Ecuador dealing with NWS myiasis on their cattle.",
+      "type_category": "Twitter_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 425,
+      "original_query": "Communication regarding the workplace violence restraining order application process will be conducted by Human Resources while ensuring confidentiality standards mandated by law are strictly followed to protect all involved parties.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 427,
+      "original_query": "In response to recent natural disasters, the government has allocated substantial emergency funds to enhance disaster response capabilities, including advanced training for first responders and improved technological support for management systems during crises. With these resources, local agencies have begun to develop better infrastructure that allows for more efficient recovery processes, ultimately resulting in swifter assistance to affected communities. This funding aims to shorten response times and improve coordination among various agencies involved in disaster management.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 429,
+      "original_query": "The danger posed by explosive remnants of war (ERW) to refugees returning to Angola is significant, and it has had detrimental effects on agricultural development and transportation infrastructure in Namibia, therefore, the government plays a crucial role in addressing these issues.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 433,
+      "original_query": "In the Sahel, expanding commodity production encroached on land traditionally used by pastoralists, forcing them into smaller areas. The weakness of pastoral societies in relation to the emerging African state precluded effective protest. This combined with rapid demographic and livestock growth to produce intense pressure on smaller grazing areas. Given the fragile, semi-arid nature of the environment, the margin for disaster was narrow. Deepening drought, desertification and outmigration followed.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 437,
+      "original_query": "Rare earth mining in Myanmar poses significant environmental threats, particularly due to the toxic byproducts that result from the mining processes. The widespread pollution not only degrades air and water quality but also disrupts local ecosystems and damages the livelihoods of communities dependent on agriculture and fishing. Furthermore, the accumulation of toxic waste in nearby water bodies raises concerns for food safety and public health. Given the reliance of locals on these resources, the impacts of such harmful practices may linger for generations, resulting in extensive socio-economic difficulties. The insights from SentinelHub signify increasing risks that communities may be facing as unregulated mining activities continue to proliferate, amplifying their suffering.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 439,
+      "original_query": "States Parties assess the needs of ERW victims.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 440,
+      "original_query": "Users outside the core field of mine action, such as donors and the general public, seek to assess contamination levels across various global regions while keeping exact locations of explosive remnants of war (ERW) confidential. Therefore, it is imperative that the visual information conveyed by the map remains both intuitive in its understanding and free of ambiguity, aligning with widespread needs for clarity among non-experts. Through this awareness-raising process, employing an accessible representation method, like the proposed worldwide map enhanced by a universal color ramp and basic ordinal legend in accordance with established Open Geospatial Consortium (OGC) standards, can significantly heighten sensitivity regarding global mine contamination issues. Nevertheless, these initiatives demand significant collaboration with national mine action authorities to ensure the availability of reliable polygon data, reinforcing communal resource-sharing in fighting contamination challenges effectively.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 442,
+      "original_query": "Protests and civil unrest are occurring far more often, requiring businesses to be vigilant and proactive in safeguarding their operations. This increase in tumultuous situations necessitates working closely with insurers to identify and monitor core risks that could jeopardize their performance. Businesses are urged to protect their premises, personnel, and supply chains while concurrently establishing comprehensive business continuity plans to ensure resilience in the face of such disruptions. Risk managers play a pivotal role by developing and implementing pre-emptive action plans while focusing on the right insurance coverage tailored to combat the unique challenges presented by escalating civil unrest. Effectively, firms must engage in claim-scenario planning to estimate potential risks and prepare strategies accordingly. Even with predictions and robust frameworks in place, it's crucial for businesses to continually reassess and ensure their insurance policies provide sufficient coverage for various catastrophic circumstances, potentially preserving stability amid chaos.",
+      "type_category": "NLI_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 450,
+      "original_query": "Increases in temperature and changes in precipitation patterns are expected to have impacts on soil quality, including nutrient availability and assimilation. Those climate-related changes are expected to have net negative impacts on agricultural productivity, particularly in tropical regions, though the magnitude of impacts depends on the models used. Anticipated supply-side issues linked to land and climate relate to biocapacity factors, including whether there is enough water to support agriculture, production factors such as chemical pollution of soil and water resources or lack of soil nutrients, and distribution issues like decreased availability of and/or accessibility to the necessary diversity of quality food where and when it is needed. Climate-sensitive transport infrastructure is also problematic for food security.",
+      "type_category": "NLI_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It discusses the decline in productivity of major crops due to climate change, particularly from increasing temperatures, but does not specifically address the impacts on soil quality, altered precipitation patterns, nutrient availability, or water resources. It mentions the expected decline in crop yields and the pressure on food security due to rising temperatures and increased demand, but it does not provide details specific to tropical regions or the challenges related to nutrient availability and water resources."
+    },
+    {
+      "index": 451,
+      "original_query": "Soil organic carbon (SOC) plays a crucial role in the assessment of land degradation neutrality (LDN). Monitoring SOC intensively is necessary in regions where there is significant variability in land use and where SOC is used as a key indicator for LDN. As identified in the 2019 refinement to the IPCC guidelines, evaluating SOC allows stakeholders to analyze different indices associated with land degradation status and response actions. Areas where net primary productivity is stable or where soil carbon trading practices are installed benefit directly from SOC metrics. Employing various strategies that involve robust SOC monitoring enables countries to fulfill their land degradation neutrality commitments while ensuring sustainable land management practices. This means incorporating SOC assessments not only assists in understanding the current health of the soil but also aids in developing effective policies designed for enhanced land resilience and productivity in the face of ongoing environmental challenges.",
+      "type_category": "NLI_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 453,
+      "original_query": "Essential infrastructure includes transportation like BART and Highway 101.",
+      "type_category": "NLI_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 456,
+      "original_query": "Advancements in soil erosion risk modeling incorporate local data and innovative algorithms to create more effective strategies for managing watersheds. Notably, using GCM-supported models enhanced by extensive climate data has shown potential in identifying targeted soil conservation measures that protect vulnerable infrastructure from erosive damage during extreme weather events. These developments emphasize the necessity of integrating local information for improved watershed analysis and response mechanisms.",
+      "type_category": "NLI_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 457,
+      "original_query": "The vital stages implemented by the National Coordination Body and the Steering Committee for the National Adaptation Plan, or NAP, consist of several key components aimed at enhancing climate resilience. Initially, there is a prolonged emphasis on raising awareness among stakeholders, utilizing extensive information dissemination to educate on climate risks and necessary actions to address them. Following this, a meticulous analysis of the current status of desertification control is undertaken, which informs subsequent stages. Integral to the process is local and regional consultation, ensuring that the NAP is based on collaborative results sourced from various concerned parties, including government agencies and community organizations. To strengthen the effectiveness of the adaptation strategies, focus studies are conducted to align existing plans with innovative solutions and financial backing from the government. Ultimately, the government's support for the adoption and implementation of the NAP is outlined through explicit provisions that enhance its feasibility.",
+      "type_category": "NLI_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 465,
+      "original_query": "Air-purifying respirators are classified by their Assigned Protection Factors (APFs) that indicate the level of respiratory protection they provide against airborne contaminants. For instance, any powered air-purifying respirator equipped with a high-efficiency particulate filter (100-series) offers an APF of 25 and can effectively filter out particles from the surrounding environment to maintain air quality for the wearer. Similarly, a supplied-air respirator that operates in a continuous-flow mode also falls under the same APF classification of 25. In contrast, if the concentration of airborne particles increases, then specific models reach an APF of 50; an example being any full-facepiece air-purifying respirator fitted with either an N100, R100, or P100 filter, enhancing protection under more hazardous conditions.",
+      "type_category": "NLI_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 473,
+      "original_query": "Inappropriate land management practices, particularly in agriculture, lead to soil degradation through the loss of topsoil. This process occurs when runoff water carries away the essential A horizon of the soil, a vital layer that supports healthy crop growth. Factors such as insufficient soil cover and poor soil structure contribute to excessive water runoff. Hence, these practices can severely decrease soil health and result in lower crop productivity. Along with soil erosion, the degradation can disrupt local ecosystems and affect agricultural sustainability across regions, particularly in South and Southeast Asia.",
+      "type_category": "NLI_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 479,
+      "original_query": "California's sea level will rise by 1 foot.",
+      "type_category": "FactCheck_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 489,
+      "original_query": "The 2004 tsunami in Thailand caused damage to exactly 5,397 fishing boats, contributing significantly to the losses in the fishing industry.",
+      "type_category": "FactCheck_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 511,
+      "original_query": "What are the findings and recommendations regarding the risk of landslide-triggered tsunamis for the communities of Prince Rupert, Port Edward, and Metlakatla, and how could these impact local disaster management strategies?",
+      "type_category": "QAdoc_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to detail how the findings specifically inform local disaster management strategies or enhance community preparedness and response efforts. However, it does mention a recommendation to conduct a geotechnical study to further assess slope stability, which could be a step towards improving understanding and preparedness for potential landslide-triggered tsunamis."
+    },
+    {
+      "index": 521,
+      "original_query": "What strategies can communities employ to conduct collective risk assessments and implement mitigation practices for earthquake readiness, particularly in relation to understanding peak ground acceleration and structural vulnerabilities?",
+      "type_category": "QAdoc_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 526,
+      "original_query": "This book aims to highlight various exemplary sustainable Managed Aquifer Recharge (MAR) schemes from across the globe. It is designed to be helpful for a wide range of stakeholders including water suppliers, planners, managers, and farming collectives. The book emphasizes the importance of implementing long-term sustainability indicators that can guide those involved in planning, investing in, or regulating MAR projects. In addition, it intends to provide economic assessments that outline the costs and benefits associated with different MAR projects. With 28 distinct case studies included, the book provides a comprehensive view that should aid readers in grasping the essential features and advantages of these sustainable initiatives.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 528,
+      "original_query": "In light of the geological survey findings detailing site-amplification factors for Salt Lake City, urban planning must account for varying soil types and their impact on earthquake intensity. The identified spatial variances in amplification factors highlight areas where infrastructure is more vulnerable to seismic activity, suggesting that building codes and safety measures need to be comprehensively integrated into local developmen plans.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 532,
+      "original_query": "The average root cohesion across various vegetation classes was estimated by analyzing data from literature and direct measurements, which involved calculating root critical force and measuring root diameters over designated surface areas. By transforming these measurements into tensile strength, researchers aimed to quantify the cohesive strength roots contribute to soil, crucial for understanding soil stability and erosion control.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 536,
+      "original_query": "The use of a dynamic model in plant operations provides significant advantages in troubleshooting control issues, allowing for safer and uninterrupted production. This model allows engineers to simulate various scenarios and test solutions without the risks associated with intervening directly in the operational plant. The potential to quantify these benefits clearly is enhanced as engineers can ensure operational continuity while exploring corrective measures. Ultimately, having this modeling capability can lead to improved reliability in problem-solving situations because engineers can utilize a controlled environment to assess outcomes before applications in real scenarios.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 538,
+      "original_query": "Accurate rise in seismic hazard assessment is paramount for risk mitigation strategies. Through the detailed analysis of rupture rates based on paleoseismic studies, researchers can better understand the frequencies and magnitudes of potential earthquakes. This understanding is crucial for developing infrastructure capable of withstanding seismic events and for informing governmental agencies on disaster preparedness measures. Data gathered from improved earthquake models allows cities to prioritize resources toward areas with the highest potential risk. Furthermore, accurately estimating rupture rates enriches the scientific community's discussions, leading to advancements in geological methods and models. Any discrepancies between predicted and observed rates can suggest statistical anomalies or weaknesses in the predictive models used, making it essential to recalibrate these tools regularly. As a result, proper assessment through paleoseismic data can enhance community resilience, saving lives during unforeseen natural disasters.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 540,
+      "original_query": "Explosive volcanic eruptions threaten nearby towns.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 541,
+      "original_query": "Severe wind speeds between 100 and 119 mph in coastal areas can lead to extensive damage, affecting trees in forests, structures, vehicles, and utility services. Historical data shows that between 1997 and 2007, multiple incidents such as tree uprooting and flooding directly influenced infrastructure, causing widespread disruptions and severe financial implications, with damages amounting to over $180 million during different severe weather events in Oregon.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 543,
+      "original_query": "The estimated coastal inundation height for tsunami scenarios, including Mw8.7 to Mw9.3, indicates a wide range of impacts that coastal areas can face following seismic events. While these events have low probabilities of occurrence, the consequences can be devastating, with maximum inundation heights possibly reaching up to 5 m in more severe cases. Given that traveling times for these tsunamis are several hours, there's a practical opportunity for alerts and evacuations. Past occurrences, including the Mw 9.3 scenario, remind us that substantial threats lie within these parameters. Despite the expectation that more powerful events would emerge less frequently, the acknowledgment of various source zones reveals the increasing and unavoidable risk. The current standard coastal warning mechanisms need to evolve continuously to accommodate these potential and catastrophic scenarios effectively.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 548,
+      "original_query": "Tephra deposition is highest near the vent.",
+      "type_category": "NLI_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions that tephra deposition is highest near the vent and lists parameters used in modeling tephra dispersion, but it does not explain how the spatial distribution influences modeling or what factors should be considered in assessing the extent of deposition."
+    },
+    {
+      "index": 551,
+      "original_query": "The establishment of introduced diseases in wild populations significantly impacts farmed stocks by creating reservoirs of infection.",
+      "type_category": "FactCheck_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer how introduced diseases in wild populations affect farmed marine species specifically. It does mention that movements of animals carry the risk of introducing pathogens into new areas, potentially resulting in infections in native species. It also highlights that there are many case histories of the effects of introduced pathogens and parasites, suggesting the need for national and international action. However, specific measures to mitigate these risks based on historical data and case studies are not detailed in the passage."
+    },
+    {
+      "index": 563,
+      "original_query": "72% of households are engaged in informal milk trade.",
+      "type_category": "FactCheck_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 566,
+      "original_query": "Recent global initiatives have significantly reduced chronic hunger worldwide.",
+      "type_category": "FactCheck_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer how recent global initiatives have contributed to the decline of chronic hunger in developing countries. It does mention that the percentage of starving individuals in developing countries has decreased from 35 percent in 1970 to an expected 12 percent in 2010, despite a doubling of the population. Additionally, the absolute number of starving people has decreased from almost 920 million in 1971 to an expected 680 million in 2010. However, the passage does not specify any global initiatives responsible for this decline. Regarding calorie intake trends, the passage notes a worldwide increase of 15 percent and a 25 percent increase in developing countries, but it also warns that these averages might conceal a mixture of overeating and starvation."
+    },
+    {
+      "index": 571,
+      "original_query": "MERS-CoV infecting humans shows significant genetic similarity to strains found in dromedary camels in Africa.",
+      "type_category": "FactCheck_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 583,
+      "original_query": "What are the specific rockfall activity scores or indices from surveys at Redcliffs, especially focusing on any data collected around May 3, 2011? I'm curious to understand the risks better and to see how these scores compare over the years to assess the stability of the area. Are there detailed indexes reported that evaluate the likelihood of rock falling based on those surveys? Any information related to where these scores land on the scale of activity would be greatly appreciated as it might inform future preventive measures or construction guidelines in the vicinity to reduce hazards from potential rockfalls.",
+      "type_category": "QA_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that the Rockfall Activity Index and Rockfall Activity Score from the May 3, 2011 survey at Redcliffs indicate varying levels of activity and provide a quantified measure of risks, respectively. However, it does not offer detailed analysis, specific scores, or indices, nor does it discuss how these scores reflect on the scale of activity or inform preventive measures or construction guidelines."
+    },
+    {
+      "index": 595,
+      "original_query": "How does statistical modeling help landslide predictions?",
+      "type_category": "QA_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 597,
+      "original_query": "What organizations collected tsunami data for the study?",
+      "type_category": "QA_geohazard",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 603,
+      "original_query": "Japan initiated discussions on a pan-Asian financial stability forum.",
+      "type_category": "FactCheck_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 618,
+      "original_query": "Government reports on flood fatalities often contain inaccuracies that significantly alter the severity of the situation.",
+      "type_category": "FactCheck_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that recent studies indicate government-report errors can miscount flood fatalities by over 30%, but it does not elaborate on the impact of these inaccuracies on public perception and policy decisions."
+    },
+    {
+      "index": 624,
+      "original_query": "IMF reforms helped member countries during the crisis.",
+      "type_category": "FactCheck_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions the role of the IMF during financial crises as a lender of last resort, coordinator of financial assistance packages, monitor of macroeconomic conditions, and provider of technical assistance, but it does not detail specific reforms proposed by the IMF or how these align with principles of free market economics."
+    },
+    {
+      "index": 629,
+      "original_query": "What specific public communication strategies and preparedness initiatives does FEMA recommend to mitigate risks from geomagnetic storms and solar flares based on historical events like the Carrington-Hodgson event?",
+      "type_category": "QAdoc_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions that the FEMA report includes recommendations for improving command, control, and communications capabilities and emphasizes maintaining operational readiness and resilience. However, it does not detail specific public communication strategies or preparedness initiatives, nor does it elaborate on lessons learned from past incidents like the Carrington-Hodgson superstorm to enhance current and future initiatives."
+    },
+    {
+      "index": 639,
+      "original_query": "What types of disaster events are proposed in the draft typology mentioned in the document discussing hydro-meteorological events and their impacts on global policy frameworks?",
+      "type_category": "QAdoc_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 644,
+      "original_query": "What interdisciplinary research collaborations were involved in identifying precursors for Large-Scale Traveling Ionospheric Disturbances to enhance warning systems during geomagnetic storms?",
+      "type_category": "QAdoc_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It does not mention interdisciplinary research collaborations or their contributions to identifying precursors for LSTIDs. Additionally, it does not discuss the implications of these findings for enhancing early warning systems during geomagnetic storms beyond the context of the specific study."
+    },
+    {
+      "index": 658,
+      "original_query": "What are the ongoing research areas in glacier hazards?",
+      "type_category": "QA_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions that the review synthesizes glacial lake and GLOF hazard datasets to assess ongoing and projected changes, documents the global and regional distribution of glacial lakes, assesses characteristics and historical trends of GLOFs, discusses future projections, and ends with research priorities. However, it does not specify the current and emerging research areas or how these research priorities aim to mitigate risks to communities."
+    },
+    {
+      "index": 679,
+      "original_query": "Asteroid collisions cause quicker and more severe environmental changes than volcanic eruptions.",
+      "type_category": "FactCheck_extraterrestrial",
+      "llm_answer": "The passage states that asteroid impacts cause rapid environmental changes that outpace volcanic eruptions significantly. However, it does not provide specific details or evidence supporting how asteroid collisions lead to more rapid and severe environmental changes compared to volcanic eruptions. The passage does not provide sufficient information to answer this question fully."
+    },
+    {
+      "index": 680,
+      "original_query": "The BIT-58 sample contains porphyritic olivine and dendritic iron spinel.",
+      "type_category": "FactCheck_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 683,
+      "original_query": "Collaboration between space agencies is crucial for the success of planetary defense initiatives. Joint efforts can enhance technology development and improve strategies for asteroid impacts. Organizations like the Association of Space Explorers play a vital role in promoting such collaborations to ensure a unified global response to potential threats from space.",
+      "type_category": "FactCheck_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions the importance of international cooperation in addressing NEO threats and suggests that a unified global approach could enhance resource allocation and response efficiency. However, it does not specify the roles of organizations like the Association of Space Explorers in facilitating these efforts."
+    },
+    {
+      "index": 697,
+      "original_query": "Bacillus species found in Martian soil samples.",
+      "type_category": "FactCheck_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 724,
+      "original_query": "What actions are being taken by the Global Mangrove Alliance to save our worldâs mangroves amid natural disasters?",
+      "type_category": "Twitter_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 732,
+      "original_query": "Polk County Hazard Mitigation Plan includes crucial strategies for our community's disaster preparedness.",
+      "type_category": "Twitter_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 733,
+      "original_query": "Parker and Thorpe's research into frontal downdrafts and sublimating snow is intriguing!",
+      "type_category": "Twitter_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 741,
+      "original_query": "How has Marsh Risk Consulting helped during the recent floods and hurricanes?",
+      "type_category": "Twitter_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that Marsh Risk Consulting, led by Lim Sek Seong, was incredible during the recent hurricanes and that their expertise in business continuity planning helped many businesses bounce back quickly. However, it does not detail specific strategies or actions they implemented."
+    },
+    {
+      "index": 742,
+      "original_query": "Recent floods are impacting communities across the Midwest, raising awareness on flood severity and preparedness.",
+      "type_category": "Twitter_meteorological_hydrological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 757,
+      "original_query": "How are Water Service Institutions implementing the W2RAP guidelines for wastewater systems?",
+      "type_category": "Twitter_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 760,
+      "original_query": "Agencia EspaÃ±ola de ProtecciÃ³n de Datos must step up its game in regulating data privacy, especially with all the AI developments happening!",
+      "type_category": "Twitter_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 762,
+      "original_query": "Hurricane relief efforts are ramping up! How is the NCS Government Emergency Telecommunications Service helping with communication during the disaster?",
+      "type_category": "Twitter_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions the Government Emergency Telecommunications Service (GETS) as part of the NCS's priority service programs, which help ensure critical calls are completed during congestion or damage to the national commercial communications infrastructure. However, it does not specify the roles and functions of GETS in the context of Hurricane relief efforts or how it enhances communication and coordination among federal, state, and local response teams during significant disasters."
+    },
+    {
+      "index": 770,
+      "original_query": "What are the health risks linked to lead exposure in e-waste recycling?",
+      "type_category": "Twitter_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions adverse health effects associated with unregulated e-waste recycling, but it does not specifically link these effects to lead exposure or detail how they impact human health across different populations."
+    },
+    {
+      "index": 774,
+      "original_query": "What are the latest updates on Construction Codes in the District of Columbia regarding labeling and testing requirements?",
+      "type_category": "Twitter_technological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 788,
+      "original_query": "I want to understand how the UK's imports affect the areas of forests around the world. Are these imports making it harder for forests to stay intact? What kind of commodities are we talking about? What statistics exist to show the impact in clear terms? If someone in the UK buys a lot of specific products, does it translate to land loss elsewhere? Please provide information instead of just figures; I need a comparative take on various imports and their resulting impact as well.",
+      "type_category": "QA_environmental",
+      "llm_answer": "The passage does not provide sufficient information to answer this question comprehensively. It mentions that the UK's demand for certain commodities like soy, palm oil, timber, beef, and leather requires a significant land area, over 13.6 million hectares per year, but it does not detail the specific ways these imports influence global forest ecosystems or the exact nature of deforestation and land use changes in exporting countries. It notes that imports of beef and leather have the largest land footprints, followed by timber, soy, and palm oil, and that the UK's footprint is concentrated in a few regions globally. However, the passage does not provide a detailed comparative analysis of the land footprints or discuss broader implications for forest conservation and sustainability. It also states that the exact contribution of the UK to deforestation and social problems is unknown due to the difficulty in tracing commodity imports back to individual farms or plantations. Therefore, the passage lacks sufficient information to fully address the question regarding consumer choices in the UK and their environmental impacts elsewhere."
+    },
+    {
+      "index": 805,
+      "original_query": "What does Executive Order 12196 mean for federal employee safety in emergencies?",
+      "type_category": "Twitter_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only mentions that Executive Order 12196 is crucial for keeping federal workers safe during emergencies and ensures necessary safety programs are in place, but it does not specify the ways it enhances safety or the specific safety programs it implements."
+    },
+    {
+      "index": 809,
+      "original_query": "AWS Fourth Weather Wing is collecting data related to solar activity.",
+      "type_category": "Twitter_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 811,
+      "original_query": "Hurricane Ian recovery efforts in Florida",
+      "type_category": "Twitter_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 817,
+      "original_query": "International Federation of Red Cross and Red Crescent Societies providing humanitarian assistance during floods in Africa.",
+      "type_category": "Twitter_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 820,
+      "original_query": "COVID-19 Vaccination Clinics are important to ensure our community is protected.",
+      "type_category": "Twitter_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 824,
+      "original_query": "What are the implications of geomagnetic disturbances on global power grids and communication networks?",
+      "type_category": "Twitter_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question regarding the effects of geomagnetic disturbances on global power grids and communication networks, nor does it detail specific strategies for mitigation based on historical events and current technological challenges. It focuses specifically on the U.S. power grid and mentions the need for improved modeling and preparedness strategies to mitigate impacts on critical infrastructure, but does not elaborate on global effects or communication networks."
+    },
+    {
+      "index": 842,
+      "original_query": "What are the objectives and global significance of the upcoming UN General Assembly High-Level Meeting on Antimicrobial Resistance (AMR) scheduled for 2024?",
+      "type_category": "QAdoc_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions the upcoming UN General Assembly High-Level Meeting in 2024 as a critical opportunity for global leaders to reaffirm commitments and mobilize resources against AMR, but it does not detail specific objectives of the meeting or how they align with the global health priorities identified in the WHO's briefing. Additionally, the passage does not discuss the implications for international healthcare collaboration and resource mobilization."
+    },
+    {
+      "index": 849,
+      "original_query": "What training materials and guidelines does the University of Nebraska-Lincoln provide for laboratory personnel to address the risks of zoonotic diseases in their work?",
+      "type_category": "QAdoc_biological",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 856,
+      "original_query": "NOAA utilizes contractors to enhance its operational workforce through direct support roles.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to determine how NOAA's use of contractors impacts its operational efficiency. However, it does describe the distinct roles and categories of contractors utilized by NOAA. NOAA contracts with private sector organizations to supplement its workforce and provide goods and services. The term contractor/contract employee includes:\n\n1. Direct support contractors/contract employees: These contractors directly supplement NOAA’s employee workforce and are referred to as NOAA affiliates.\n2. Support services contractors: These contractors perform specific services such as building maintenance, repair, and janitorial services and are not considered NOAA affiliates.\n3. Other contractor relationships: This includes chartering aircraft and marine vessels, with crews often included in the contract package. These crews are also not considered NOAA affiliates."
+    },
+    {
+      "index": 858,
+      "original_query": "The current training procedures for the M258 kit are inadequate, as field reports highlight issues with breaking the glass vial in the solution #2 container. This problem has arisen partly due to personnel's lack of hands-on experience with the kit, which has previously caused confusion when best practices were not clearly communicated in training manuals. Some users noted that although they had attempted to understand the procedures, the conflicting information in 'the book' left them uncertain. Additionally, it has been observed that after repeated usage in a tactical environment without further complications, it suggests that hands-on experience significantly alleviates issues related to the kit. Therefore, it is vital to revise the training methods to provide greater opportunities for practical use of the kit, ensuring personnel can familiarize themselves with the contents and operate them properly during real-life situations. Such adjustments will facilitate both better performance and safety.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 862,
+      "original_query": "Recovery of ARS can also be hindered by changes of the immune status, including from combined skin burns and blood system depletion, and a slower wound-healing process. NASA has identified these effects, as well as risks associated with fertility and sterility, as part of the acute radiation effects. Current permissible exposure limits are established to avoid significant health repercussions for astronauts.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 863,
+      "original_query": "The study of Space Weather events has evolved significantly over centuries, revealing their profound impact on human activities and technological infrastructure. Historical observations, like theå¤§Carrington Event in 1859, demonstrated how solar outbursts could disrupt telegraph communications and influence terrestrial weather patterns. The foundational work by scientists like Kristian Birkeland provided insights into the mechanisms behind these disturbances, conceptualizing interactions between solar radiation and the Earth's magnetosphere. This relationship not only expanded our understanding of the physical processes involved but also paved the way for further research on how solar phenomena shape modern technology. As we continue to face technological advancements, recognizing these effects is crucial for disaster management and infrastructure resilience in the face of future Space Weather events. Continual study and adaptation of our systems in anticipation of solar activity can help mitigate potential risks.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions historical instances of space weather impacts, such as disruptions to telegraph systems in the 19th century, but does not specifically reference the Carrington Event or the research of Kristian Birkeland. Therefore, it does not detail how these events have influenced our understanding of space weather's impact on technology and societal infrastructure or the implications for future preparedness."
+    },
+    {
+      "index": 864,
+      "original_query": "In developing and integrating the RISC, the Provider must choose qualified personnel with the necessary expertise to ensure effective management and accurate documentation of safety-related issues. This involves careful assignment of responsibilities to individuals who have the education and experience needed to oversee the development and maintenance of the RISC, along with managing contributions from other organizations.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 865,
+      "original_query": "The study of meteorites, such as the Orgueil meteorite, provides valuable insights into the building blocks of life in the universe. Research has focused on the microstructural analysis of these meteorites, revealing organic material that may play a role in understanding the biochemical foundations necessary for life beyond Earth. Studies employing techniques like electron probe microanalysis have uncovered compounds that hint at extraterrestrial biological processes, while investigations using radioisotopic probes have aimed to detect signs of past or present life. These findings have profound implications for astrobiology, as they offer potential evidence that the ingredients for life could have originated from space and contributed to life's emergence on Earth. Consequently, as science advances in analyzing these cosmic specimens, it becomes increasingly plausible that life may exist elsewhere in the universe.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 867,
+      "original_query": "The recent analysis of an onshore object impact involved simulations that considered diverse impact parameters including pressure, thermal effects, seismic activity, crater formation, and ejecta dispersion. The study also examined tsunami formation due to this impact, evaluating different scenarios based on various distances offshore. The simulations were conducted with precise geographical coordinates (Latitude: 22.98Â°S, Longitude: 43.22Â°W) to predict the consequences of such impactful events on coastal infrastructure given the simulated data from case study one. Understanding these dynamics is crucial for effective disaster management and coastal protection strategies, as objects impacting near shore can generate destructive waves alongside potential physical damage to coastal structures such as houses, roads, and utilities.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 872,
+      "original_query": "For the evaluation of the models, we calculate Probability of Detection (PoD) and Critical Success Index (CSI) as a function of year. Major results from this study are as follows. First, PoD and CSI depend on solar cycle phase and have the highest values in the decaying phase around 2004. Second, Shue et al. (1998) has the best CSI and PoD in solar cycle 23. Third, Shue et al. (1997, 1998) have similar values of average of PoD in solar cycle 23. In addition, we are looking for a good nowcasting proxy to indicate magnetopause crossings of geosynchronous satellites: whether the satellites are in the magnetosphere or solar wind. We will compare the performance of several proxies using typical examples of magnetopause crossing events. Parker, Linda (Jacobs Technology) Poster Number: S15 Poster - The Advanced Composition Explorer Shock Database and Application to Particle Acceleration Theory Authors: L. Neergaard Parker and G. P. Zank Abstract: The theory of particle acceleration via diffusive shock acceleration (DSA) has been studied in depth by Gosling et al.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    },
+    {
+      "index": 873,
+      "original_query": "In the realm of space operations, oversight is critical to maintaining national security and protecting public welfare. Thus, the Secretary holds the authority to intervene in space launches or reentries, particularly in situations where the absence of a required license, authorization, or permit raises significant concerns. For instance, should an imminent launch present risks to public health or safety, the Secretary can decisively act to prevent it from proceeding. This mechanism is especially crucial in today's environment, where the interconnectedness of technology means that a malfunction or hazard in one location can have far-reaching effects on other areas. Similarly, incidents related to foreign policy interests might necessitate a careful review of scheduled launches. Through this infrastructure of checks and balances, the Secretary plays an essential role in ensuring that launches do not lead to catastrophic public safety failures during unpredictably challenging circumstances.",
+      "type_category": "NLI_extraterrestrial",
+      "llm_answer": "The passage does not provide sufficient information to answer this question, particularly regarding the context of increased technological interconnectedness and potential foreign policy implications. It only mentions that the Secretary's decision to halt a space launch can mitigate potential hazards to public health and safety that might affect local communities and urban areas near the launch site."
+    },
+    {
+      "index": 914,
+      "original_query": "In light of ongoing discussions about the influence of climate change on social stability and conflict, it appears essential to explore the evidence behind these assertions. While many assert that environmental factors play a significant role in exacerbating tension and violence within and between nations, it is crucial to inquire about the validity of these claims. What does the recent scholarly literature indicate regarding the link between climate change, environmental degradation, and various forms of conflict? Are there specific types of conflicts that have been notably associated with climate and environment, or do current datasets not support this alleged correlation? An investigation into credible data sources will enhance our understanding of the nuances of this pressing challenge. Additionally, examining the intersections of socio-economic conditions, governance issues, and environmental factors may shed light on when and why conflicts arise, either symbolically or practically, in relation to climate change.",
+      "type_category": "QA_societal",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It does not discuss recent scholarly findings on the relationship between climate change and social conflict, nor does it elaborate on the role of socio-economic factors and governance issues in this dynamic. Additionally, while it mentions the distinction between traditional resource conflicts and those induced by environmental changes, it does not provide detailed insights from the literature on this topic."
+    },
+    {
+      "index": 979,
+      "original_query": "There is evidence that the International Agency for Research on Cancer (IARC) has classified chlorine as a potential human carcinogen, raising concerns about its safety in various applications. It is crucial to analyze whether IARC's classification aligns with other agencies' positions, such as the National Toxicology Program and EPA, regarding chlorine's carcinogenic potential.",
+      "type_category": "FactCheck_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It mentions classifications related to carcinogenicity and other toxicological concerns but does not specifically address chlorine or compare the positions of the International Agency for Research on Cancer (IARC) with those of the National Toxicology Program or the Environmental Protection Agency (EPA). Additionally, it does not discuss the implications for public health and regulatory policies."
+    },
+    {
+      "index": 982,
+      "original_query": "Methyl ethyl ketone has a boiling point of 80Â°C and a flash point of -9Â°C.",
+      "type_category": "FactCheck_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question. It only states the boiling point and flash point of methyl ethyl ketone but does not discuss the implications of these properties on its handling and safety measures in industrial applications."
+    },
+    {
+      "index": 995,
+      "original_query": "Chlorfenvinphos shows significant bioaccumulation in aquatic organisms, affecting the ecosystem and marine life health, particularly as it might lead to increased toxicity in food chains.",
+      "type_category": "FactCheck_chemical",
+      "llm_answer": "The passage does not provide sufficient information to answer this question."
+    }
+  ]
+}

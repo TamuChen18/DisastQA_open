@@ -1,0 +1,1522 @@
+{
+  "results": [
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 61.79766666666667
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 74.4430894308943
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 76.11581395348837
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 81.6675
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 84.32566666666666
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 87.19699186991869
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 85.53395348837209
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 93.75
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 83.33333333333333
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 85.20398373983738
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 84.34093023255814
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 83.75
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 70.26966666666667
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 71.79634146341465
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 77.26674418604651
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 78.33500000000001
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 90.21433333333333
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 88.97414634146342
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 91.37744186046511
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 91.6675
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 69.57933333333334
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 71.5741463414634
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 65.18279069767442
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 60.417500000000004
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 38.07133333333333
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 37.33926829268293
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 46.9953488372093
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 42.917500000000004
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 69.69
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 82.11878048780487
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 80.38
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 83.3325
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 68.41266666666667
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 73.27292682926829
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 73.5432558139535
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 75.0
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 74.62700000000001
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 76.49593495934963
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 77.91767441860465
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 76.6675
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 91.22766666666666
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 91.29869918699187
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 94.22813953488372
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 82.5
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 78.94433333333333
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 83.16967479674796
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 87.81441860465117
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 81.25
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 74.01866666666666
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 76.57536585365854
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 75.79209302325582
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 88.75
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 92.27766666666666
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 91.24764227642277
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 92.47116279069768
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 89.5825
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 81.05533333333332
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 87.22626016260162
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 82.35837209302325
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 95.8325
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 70.61066666666666
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 82.00284552845527
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 77.68255813953489
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 70.83500000000001
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 91.25133333333335
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 95.15365853658537
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 92.85953488372093
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 88.69
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 86.68233333333335
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 85.73585365853658
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 91.14046511627907
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.1775
+    },
+    {
+      "model": "phi-2",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 67.31466666666667
+    },
+    {
+      "model": "phi-2",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 74.11764227642277
+    },
+    {
+      "model": "phi-2",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 77.13186046511628
+    },
+    {
+      "model": "phi-2",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 86.6675
+    },
+    {
+      "model": "phi-2",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 85.83333333333333
+    },
+    {
+      "model": "phi-2",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 86.2610569105691
+    },
+    {
+      "model": "phi-2",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 89.35348837209303
+    },
+    {
+      "model": "phi-2",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 89.5825
+    },
+    {
+      "model": "phi-2",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 76.18233333333335
+    },
+    {
+      "model": "phi-2",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 83.54894308943089
+    },
+    {
+      "model": "phi-2",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 81.87604651162789
+    },
+    {
+      "model": "phi-2",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 81.25
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 71.65066666666665
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 75.60121951219513
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 69.4767441860465
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 65.4175
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 91.35266666666666
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 92.26008130081301
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 92.32534883720929
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 86.00999999999999
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 77.57933333333334
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 86.79528455284552
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 81.40488372093024
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 78.75
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 63.67433333333334
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 65.69528455284555
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 73.43953488372094
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 70.4175
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 94.27766666666666
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 90.18959349593496
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 93.0086046511628
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.0
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 80.33333333333333
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 86.35447154471544
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 81.91
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 84.525
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 67.72266666666668
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 77.70747967479677
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 79.11395348837209
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 83.095
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 91.91666666666667
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 91.86780487804877
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 92.29930232558138
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 93.75
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 77.23800000000001
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 83.98138211382114
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 90.53720930232559
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 80.3575
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 55.51533333333334
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 68.48349593495936
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 75.13511627906976
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 62.917500000000004
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 92.68666666666668
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 92.02658536585366
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 92.15930232558138
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 100.0
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 88.19033333333333
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 87.13569105691056
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 83.6246511627907
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.8325
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 77.89933333333333
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 72.68113821138212
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 75.24558139534884
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 95.0
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 91.22233333333334
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 90.37975609756099
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 89.81162790697675
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.1775
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 83.61133333333333
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 86.130081300813
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 88.86441860465116
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 91.6675
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 61.524
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 71.16926829268293
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 77.13000000000001
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 74.375
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 91.222
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 92.74666666666666
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 91.19581395348837
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 96.4275
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 84.74199999999999
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 83.54674796747969
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 85.74953488372093
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 79.525
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 73.10333333333332
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 78.28365853658536
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 75.1853488372093
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 81.66499999999999
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 93.37033333333332
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 94.22235772357723
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 91.46441860465117
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.8325
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 84.44466666666668
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 85.19081300813009
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 86.1986046511628
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.1775
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 78.00033333333334
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 85.0719512195122
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 86.96999999999998
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.1775
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 94.57933333333334
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 95.01032520325204
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 95.47488372093024
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 95.8325
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 81.07400000000001
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 84.23544715447153
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 86.89348837209303
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 66.6675
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 57.650666666666666
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 71.35146341463415
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 72.0427906976744
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 85.1775
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 91.47233333333334
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 90.08544715447154
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 90.43744186046511
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 75.0
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 85.93633333333334
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 84.64268292682927
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 87.51930232558139
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 95.0
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 74.41266666666667
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 78.99666666666668
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 77.4474418604651
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 53.75
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 93.55566666666667
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 93.59325203252033
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 93.67627906976745
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 85.41499999999999
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 84.714
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 83.81626016260164
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 87.76837209302326
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 96.4275
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "base",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 84.47033333333333
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "base",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 83.57203252032518
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "base",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 83.70930232558139
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "base",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 81.25
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "golden",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 96.5
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "golden",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 95.53414634146343
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "golden",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 94.60372093023256
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "golden",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 90.1775
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "mix",
+      "difficulty": "easy",
+      "total_samples": 30,
+      "avg_coverage": 87.94433333333333
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "mix",
+      "difficulty": "medium",
+      "total_samples": 123,
+      "avg_coverage": 90.22260162601626
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "mix",
+      "difficulty": "hard",
+      "total_samples": 43,
+      "avg_coverage": 89.00302325581396
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "mix",
+      "difficulty": "extremely_complex",
+      "total_samples": 4,
+      "avg_coverage": 100.0
+    }
+  ],
+  "difficulty_ranges": {
+    "easy": "1-2",
+    "medium": "3-5",
+    "hard": "6-7",
+    "extremely_complex": "8-14"
+  }
+}

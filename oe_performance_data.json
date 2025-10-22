@@ -1,0 +1,600 @@
+{
+  "results": [
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.22821252693198033,
+      "avg_bleu_4": 0.04681705839745928,
+      "avg_bertscore_f1": 0.32859026785372214
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3180492902457035,
+      "avg_bleu_4": 0.1014280859072882,
+      "avg_bertscore_f1": 0.4489282051343195
+    },
+    {
+      "model": "Yi-6B-Chat",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2863702011027451,
+      "avg_bleu_4": 0.08116230722084006,
+      "avg_bertscore_f1": 0.4122066039266367
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2302371289348551,
+      "avg_bleu_4": 0.05043841358638899,
+      "avg_bertscore_f1": 0.32279498797311507
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.41967398690328583,
+      "avg_bleu_4": 0.17072583142648912,
+      "avg_bertscore_f1": 0.5441291025777553
+    },
+    {
+      "model": "gemma-7b",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3504334382563661,
+      "avg_bleu_4": 0.1336247462051401,
+      "avg_bertscore_f1": 0.45944462220354493
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.10970200307380587,
+      "avg_bleu_4": 0.0028386485417290297,
+      "avg_bertscore_f1": 0.15219300684747814
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.22686052829799752,
+      "avg_bleu_4": 0.03621329696535752,
+      "avg_bertscore_f1": 0.3497802816673461
+    },
+    {
+      "model": "Hunyuan-7B-Instruct",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.212759685167608,
+      "avg_bleu_4": 0.03112791167886811,
+      "avg_bertscore_f1": 0.3302974722437708
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.20408695952557096,
+      "avg_bleu_4": 0.02578268164817515,
+      "avg_bertscore_f1": 0.3032362061745233
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.30949511874179153,
+      "avg_bleu_4": 0.06936354714764509,
+      "avg_bertscore_f1": 0.4442637380288982
+    },
+    {
+      "model": "qwen-3-4b",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2782543631352986,
+      "avg_bleu_4": 0.0566400486271464,
+      "avg_bertscore_f1": 0.40117396692222834
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2133367802760009,
+      "avg_bleu_4": 0.034191778084816334,
+      "avg_bertscore_f1": 0.31177245193757597
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.33826913021719773,
+      "avg_bleu_4": 0.09804131762093639,
+      "avg_bertscore_f1": 0.47313535736757095
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.2",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.303377871230007,
+      "avg_bleu_4": 0.07659186416347794,
+      "avg_bertscore_f1": 0.4300724462209158
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.20444971198228903,
+      "avg_bleu_4": 0.02611219509319426,
+      "avg_bertscore_f1": 0.30874503690723815
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.31040948248198447,
+      "avg_bleu_4": 0.071051783930391,
+      "avg_bertscore_f1": 0.4511854898726839
+    },
+    {
+      "model": "qwen-3-8b",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.28091633115585285,
+      "avg_bleu_4": 0.06045077776051568,
+      "avg_bertscore_f1": 0.411520189404561
+    },
+    {
+      "model": "phi-2",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.22378972444345682,
+      "avg_bleu_4": 0.04155570569171729,
+      "avg_bertscore_f1": 0.3273307543618743
+    },
+    {
+      "model": "phi-2",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3147360400866906,
+      "avg_bleu_4": 0.09329652370426546,
+      "avg_bertscore_f1": 0.4542112657053728
+    },
+    {
+      "model": "phi-2",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2881322691039972,
+      "avg_bleu_4": 0.07820470960701942,
+      "avg_bertscore_f1": 0.4169646338251358
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.24076340970393265,
+      "avg_bleu_4": 0.0534316303979577,
+      "avg_bertscore_f1": 0.34190723968263287
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3790211996191847,
+      "avg_bleu_4": 0.14334533510195097,
+      "avg_bertscore_f1": 0.5081787826756039
+    },
+    {
+      "model": "deepseek-v3-7b",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3401860926420264,
+      "avg_bleu_4": 0.11756616772879237,
+      "avg_bertscore_f1": 0.4600531730324202
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.16510178590320918,
+      "avg_bleu_4": 0.015533925111305403,
+      "avg_bertscore_f1": 0.26519570380761825
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.24143472936392182,
+      "avg_bleu_4": 0.047363452114767855,
+      "avg_bertscore_f1": 0.3912007054523538
+    },
+    {
+      "model": "Hunyuan-4B-Instruct",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.22055414432899156,
+      "avg_bleu_4": 0.036632208591731955,
+      "avg_bertscore_f1": 0.3604671294179656
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2408913622758871,
+      "avg_bleu_4": 0.05321870524009953,
+      "avg_bertscore_f1": 0.3388840358337674
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3712374717978708,
+      "avg_bleu_4": 0.13274544867608842,
+      "avg_bertscore_f1": 0.5084201829566745
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.33286120187032286,
+      "avg_bleu_4": 0.1100329604700759,
+      "avg_bertscore_f1": 0.4575484410942522
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2176534480297481,
+      "avg_bleu_4": 0.037930242242824944,
+      "avg_bertscore_f1": 0.329273327318584
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.32845367678301457,
+      "avg_bleu_4": 0.1037709369963423,
+      "avg_bertscore_f1": 0.4989495492590865
+    },
+    {
+      "model": "AceMath-1.5B-Instruct",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2964068795324289,
+      "avg_bleu_4": 0.08676462913300002,
+      "avg_bertscore_f1": 0.4521622695821439
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.22569324486468115,
+      "avg_bleu_4": 0.04362476741169221,
+      "avg_bertscore_f1": 0.32940424499268967
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3313718146782242,
+      "avg_bleu_4": 0.11017428799137798,
+      "avg_bertscore_f1": 0.4832827911577299
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3002072565977132,
+      "avg_bleu_4": 0.0919334050048738,
+      "avg_bertscore_f1": 0.43688548318075016
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.21971759897164034,
+      "avg_bleu_4": 0.03540889175589344,
+      "avg_bertscore_f1": 0.31770337062622805
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.3511535972931196,
+      "avg_bleu_4": 0.09991833506514236,
+      "avg_bertscore_f1": 0.483167610735167
+    },
+    {
+      "model": "Falcon3-1B-Instruct",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.30714180174286737,
+      "avg_bleu_4": 0.0790680637829912,
+      "avg_bertscore_f1": 0.4316892157497803
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.20718070187118312,
+      "avg_bleu_4": 0.02709195943732603,
+      "avg_bertscore_f1": 0.3094169957862541
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.31346358994082774,
+      "avg_bleu_4": 0.07410835522896653,
+      "avg_bertscore_f1": 0.4435854031207814
+    },
+    {
+      "model": "qwen-2.5-3b-instruct",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2822721266186622,
+      "avg_bleu_4": 0.06074613357140564,
+      "avg_bertscore_f1": 0.4019886349430312
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.17289632716605952,
+      "avg_bleu_4": 0.010625293273618532,
+      "avg_bertscore_f1": 0.2689881967956032
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2657019275309247,
+      "avg_bleu_4": 0.03544592494147271,
+      "avg_bertscore_f1": 0.3945868689639318
+    },
+    {
+      "model": "gemini-1.5-pro",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.23747654124580936,
+      "avg_bleu_4": 0.027195329002441145,
+      "avg_bertscore_f1": 0.35867377782977405
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.2137225321348553,
+      "avg_bleu_4": 0.03453239126203675,
+      "avg_bertscore_f1": 0.33517370371654925
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.26696343609982365,
+      "avg_bleu_4": 0.06263793038893387,
+      "avg_bertscore_f1": 0.4387065034972484
+    },
+    {
+      "model": "qwen-3-0.6b",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.24703416613336962,
+      "avg_bleu_4": 0.0519518232636264,
+      "avg_bertscore_f1": 0.40437440749663756
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.24105256343474224,
+      "avg_bleu_4": 0.05642299755381796,
+      "avg_bertscore_f1": 0.33978866331005364
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.37870961532159764,
+      "avg_bleu_4": 0.1416712527948108,
+      "avg_bertscore_f1": 0.5185183534835175
+    },
+    {
+      "model": "llama-3-8b",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.33414343167511207,
+      "avg_bleu_4": 0.11320346791834816,
+      "avg_bertscore_f1": 0.465344678184423
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "base",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.20031825751765092,
+      "avg_bleu_4": 0.02845943197420898,
+      "avg_bertscore_f1": 0.30675344590203424
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "golden",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.32259628998389284,
+      "avg_bleu_4": 0.08313621162097767,
+      "avg_bertscore_f1": 0.4610653987789811
+    },
+    {
+      "model": "gpt-4o",
+      "test_type": "mix",
+      "total_samples": 1000,
+      "avg_rouge_l": 0.28984902108839794,
+      "avg_bleu_4": 0.06848732014398766,
+      "avg_bertscore_f1": 0.41860102906616703
+    }
+  ],
+  "coverage_data": [
+    {
+      "base_coverage": 83.69,
+      "base_count": 200,
+      "golden_coverage": 95.37,
+      "golden_count": 200,
+      "mix_coverage": 89.81,
+      "mix_count": 200,
+      "model": "gpt-4o"
+    },
+    {
+      "base_coverage": 84.52,
+      "base_count": 200,
+      "golden_coverage": 95.06,
+      "golden_count": 200,
+      "mix_coverage": 83.98,
+      "mix_count": 200,
+      "model": "gemini-1.5-pro"
+    },
+    {
+      "base_coverage": 79.14,
+      "base_count": 200,
+      "golden_coverage": 93.95,
+      "golden_count": 200,
+      "mix_coverage": 87.13,
+      "mix_count": 200,
+      "model": "qwen-3-8b"
+    },
+    {
+      "base_coverage": 77.47,
+      "base_count": 200,
+      "golden_coverage": 93.44,
+      "golden_count": 200,
+      "mix_coverage": 85.05,
+      "mix_count": 200,
+      "model": "llama-3-8b"
+    },
+    {
+      "base_coverage": 76.91,
+      "base_count": 200,
+      "golden_coverage": 93.43,
+      "golden_count": 200,
+      "mix_coverage": 85.4,
+      "mix_count": 200,
+      "model": "qwen-2.5-3b-instruct"
+    },
+    {
+      "base_coverage": 67.86,
+      "base_count": 200,
+      "golden_coverage": 92.31,
+      "golden_count": 200,
+      "mix_coverage": 86.61,
+      "mix_count": 200,
+      "model": "AceMath-1.5B-Instruct"
+    },
+    {
+      "base_coverage": 71.07,
+      "base_count": 200,
+      "golden_coverage": 92.26,
+      "golden_count": 200,
+      "mix_coverage": 84.12,
+      "mix_count": 200,
+      "model": "Falcon3-1B-Instruct"
+    },
+    {
+      "base_coverage": 73.49,
+      "base_count": 200,
+      "golden_coverage": 92.01,
+      "golden_count": 200,
+      "mix_coverage": 84.09,
+      "mix_count": 200,
+      "model": "deepseek-v3-7b"
+    },
+    {
+      "base_coverage": 76.62,
+      "base_count": 200,
+      "golden_coverage": 92.01,
+      "golden_count": 200,
+      "mix_coverage": 84.31,
+      "mix_count": 200,
+      "model": "llama-3.2-3b-instruct"
+    },
+    {
+      "base_coverage": 76.52,
+      "base_count": 200,
+      "golden_coverage": 91.74,
+      "golden_count": 200,
+      "mix_coverage": 83.5,
+      "mix_count": 200,
+      "model": "qwen-3-4b"
+    },
+    {
+      "base_coverage": 76.27,
+      "base_count": 200,
+      "golden_coverage": 91.63,
+      "golden_count": 200,
+      "mix_coverage": 85.43,
+      "mix_count": 200,
+      "model": "Mistral-7B-Instruct-v0.2"
+    },
+    {
+      "base_coverage": 67.15,
+      "base_count": 200,
+      "golden_coverage": 91.41,
+      "golden_count": 200,
+      "mix_coverage": 84.46,
+      "mix_count": 200,
+      "model": "Hunyuan-4B-Instruct"
+    },
+    {
+      "base_coverage": 74.46,
+      "base_count": 200,
+      "golden_coverage": 90.38,
+      "golden_count": 200,
+      "mix_coverage": 86.45,
+      "mix_count": 200,
+      "model": "Llama-3.2-1B-Instruct"
+    },
+    {
+      "base_coverage": 69.72,
+      "base_count": 200,
+      "golden_coverage": 90.07,
+      "golden_count": 200,
+      "mix_coverage": 85.66,
+      "mix_count": 200,
+      "model": "qwen-3-0.6b"
+    },
+    {
+      "base_coverage": 72.87,
+      "base_count": 200,
+      "golden_coverage": 89.73,
+      "golden_count": 200,
+      "mix_coverage": 69.68,
+      "mix_count": 200,
+      "model": "gemma-7b"
+    },
+    {
+      "base_coverage": 74.0,
+      "base_count": 200,
+      "golden_coverage": 86.93,
+      "golden_count": 200,
+      "mix_coverage": 82.04,
+      "mix_count": 200,
+      "model": "phi-2"
+    },
+    {
+      "base_coverage": 73.05,
+      "base_count": 200,
+      "golden_coverage": 86.54,
+      "golden_count": 200,
+      "mix_coverage": 84.71,
+      "mix_count": 200,
+      "model": "Yi-6B-Chat"
+    },
+    {
+      "base_coverage": 39.64,
+      "base_count": 200,
+      "golden_coverage": 79.9,
+      "golden_count": 200,
+      "mix_coverage": 72.64,
+      "mix_count": 200,
+      "model": "Hunyuan-7B-Instruct"
+    }
+  ]
+}

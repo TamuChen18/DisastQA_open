@@ -56,9 +56,6 @@ DisastQA/
 │
 ├── assets/
 │   ├── pipeline.png
-│   ├── event_breakdown.png
-│   ├── oe_difficulty_curve.png
-│   └── disastqa_results_overview.png
 │
 ├── requirements.txt
 ├── LICENSE

@@ -1,200 +1,107 @@
-# DisastQA: Large-Scale RAG Evaluation Framework
+# DisastQA: Datasets and Evaluation for Disaster-domain QA
 
-## 📋 Project Overview
+## Overview
+DisastQA provides finalized datasets and evaluation scripts for disaster-domain question answering. It supports two tasks:
+- MCQ: Multiple-choice questions
+- OE: Open-ended questions
 
-This project builds a large-scale, multi-dimensional RAG (Retrieval-Augmented Generation) evaluation framework for systematically assessing the performance of different retrieval methods, generation models, and configuration combinations on question-answering tasks. This is one of the most comprehensive RAG system evaluation studies to date.
+This repository contains:
+- `benchmark/`: scripts to generate MCQ/OE test sets from corpus/query/qrels
+- `DATA/`: finalized datasets, human annotations, and evaluation results/scripts
+- Root-level analysis scripts and reports
 
-### 🎯 Key Features
-- **Large-scale Experiments**: 1.8M+ question processing, 312 experimental configurations
-- **Multi-dimensional Evaluation**: 8 models × 6 retrieval methods × 39 configuration combinations
-- **Dual Task Support**: MCQ (Multiple Choice Questions) + OE (Open-ended Questions)
-- **Human Annotation**: High-quality human-annotated data with 2000 MCQs + 1000 OEs
-- **Complete Pipeline**: End-to-end solution from data construction to result analysis
+Folder names and paths are stable and must NOT be changed.
 
-## 🏗️ System Architecture
-
-### RAG Pipeline Architecture
-```
-User Query → Retrieval Layer → Re-ranking Layer → Generation Layer → Final Answer
-    ↓            ↓              ↓                ↓              ↓
-  Question   BM25/Vector   CrossEncoder        LLM         Answer
-```
-
-### Technology Stack
-- **Retrieval**: BM25, Vector Retrieval, Hybrid Retrieval, Elasticsearch
-- **Re-ranking**: CrossEncoder (ms-marco-MiniLM-L-6-v2)
-- **Generation**: 7 local models + 1 API model
-- **Evaluation**: Accuracy, ROUGE, BLEU, BERTScore
-- **Engineering**: Parallel Processing, Batch Processing Optimization
-
-## 📊 Experimental Scale
-
-### Dataset Scale
-- **Corpus**: 239,704 documents
-- **Test Questions**: 5,740 high-quality questions
-- **Annotated Data**: Complete relevance annotations for 7,998 queries
-- **Domain Coverage**: Biology, Chemistry, Environment, Geology, Meteorology, Society, Technology, etc.
-
-### Experimental Configuration
-- **Number of Models**: 8 (7 local + 1 API)
-- **Retrieval Methods**: 6 types (keyword_only, vector_only, hybrid_only, keyword_rerank, vector_rerank, hybrid_rerank)
-- **Configuration Combinations**: 39 types (different retrieval quantities and re-ranking parameters)
-- **Total Experiments**: 312
-- **Total Question Processing**: 1,791,360 questions
-
-## 📁 Project Structure
-
+## Repository Structure
 ```
 DisastQA/
-├── data/                    # Dataset directory
-│   ├── final_mcq/          # Final MCQ dataset
-│   ├── final_OE/           # Final OE dataset
-│   ├── corpus/             # Corpus
-│   ├── test_queries/       # Original test queries
-│   └── annotation_mcq/     # Human-annotated data
-├── code/                   # Code directory
-│   ├── data_preparation/   # Data preparation scripts
-│   ├── EXPERIENCE/         # Evaluation scripts
-│   └── analysis/           # Analysis scripts
-├── results/                # Experimental results
-├── model_results/          # Model evaluation results
-└── docs/                   # Documentation
+├── benchmark/
+│   ├── MCQ/
+│   │   ├── data_prepare.py             # Build (query, passage) with score=3
+│   │   └── generate_mcq_set.py         # Generate base/mix/golden MCQ sets
+│   └── OE/
+│       ├── generate_oe_set.py          # Generate OE from corpus (if used)
+│       └── generate_oe_from_mcq.py     # Generate OE from MCQ leftovers
+│
+├── DATA/
+│   ├── final_mcq/                      # Finalized MCQ test sets
+│   │   ├── base_2000.json
+│   │   ├── mix_2000.json
+│   │   └── golden_2000.json
+│   ├── final_OE/                       # Finalized OE test sets and reviews
+│   │   ├── base_oe.json
+│   │   ├── mix_oe.json
+│   │   ├── golden_oe.json
+│   │   ├── base_oe_with_difficulty.json
+│   │   └── Human_review_question/ ...  # Manually reviewed subset (~200)
+│   ├── DATA/                           # Intermediate/annotation materials
+│   │   ├── annotation_mcq/
+│   │   │   └── ground_truth_MCQ_correctly_balanced.json  # Human-verified 2000 MCQs
+│   │   └── data_prepare/ ...           # score=3 selections per event type
+│   ├── MCQ_evaluation/                 # MCQ evaluation scripts
+│   │   ├── local_evaluation.py         # For local/open models
+│   │   └── evaluate_closemodel.py      # For closed-source API models
+│   ├── OE_evaluation/                  # OE evaluation scripts
+│   │   ├── local_evaluation.py
+│   │   └── local_evaluation_with_difficulty.py
+│   ├── local_MCQ/                      # Model-specific MCQ results
+│   ├── local_OE/                       # Model-specific OE results
+│   └── MMLUE-PRO/                      # MMLU-PRO subset used in MCQ
+│
+├── requirements.txt
+├── LICENSE
+└── README.md
 ```
 
-## 🚀 Quick Start
+## Data Pipeline (Summary)
+1. In `benchmark/MCQ/data_prepare.py`, build per-file mappings from `qrels` and `test_query`; extract pairs with score=3.
+2. In `benchmark/MCQ/generate_mcq_set.py`, generate candidate MCQs; then human annotate/correct.
+3. Human-balanced selection to 2000 MCQs → `DATA/DATA/annotation_mcq/ground_truth_MCQ_correctly_balanced.json`.
+4. Final MCQ test sets written to `DATA/final_mcq/` as `base_2000.json`, `mix_2000.json`, `golden_2000.json`.
+5. OE sets generated from remaining (5740−2000) balanced items → `DATA/final_OE/` as `base_oe.json`, etc. Difficulty variants consider keypoint counts.
+6. Evaluation results for models are stored under `DATA/local_MCQ/` and `DATA/local_OE/`.
 
-### 1. Environment Setup
+## Quick Start
+### 1) Environment
 ```bash
-# Clone the project
-git clone [your-repo-url]
-cd DisastQA
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Data Preparation
+### 2) MCQ Evaluation (local models)
 ```bash
-# Run data preparation scripts
-python code/data_preparation/data_prepare.py
-python code/data_preparation/generate_mcq_set.py
+python DATA/MCQ_evaluation/local_evaluation.py \
+  --mcq_path DATA/final_mcq/base_2000.json \
+  --model_name <your_local_model>
 ```
 
-### 3. Run Evaluation
+### 3) OE Evaluation (local models, difficulty-aware)
 ```bash
-# Run MCQ evaluation
-python code/evaluation/mcq_evaluation/local_evaluation.py
-
-# Run OE evaluation
-python code/evaluation/oe_evaluation/local_evaluation.py
+python DATA/OE_evaluation/local_evaluation_with_difficulty.py \
+  --oe_path DATA/final_OE/base_oe_with_difficulty.json \
+  --model_name <your_local_model>
 ```
 
-### 4. View Results
-```bash
-# View experimental results
-ls results/performance_reports/
-cat results/performance_reports/mcq_performance_report.md
-```
+### 4) Closed-source models
+Use the corresponding `evaluate_closemodel*.py` in `DATA/MCQ_evaluation/` or `DATA/OE_evaluation/`.
 
-## 📈 Main Experimental Results
+### 5) Regenerate datasets (optional)
+- MCQ: `benchmark/MCQ/data_prepare.py` → `benchmark/MCQ/generate_mcq_set.py`
+- OE: `benchmark/OE/generate_oe_from_mcq.py` or `benchmark/OE/generate_oe_set.py`
 
-### Retrieval Method Performance Ranking
-| Rank | Method | MRR@1 | MAP@10 | Features |
-|------|--------|-------|--------|----------|
-| 1 | Elasticsearch | 0.550 | 0.353 | Best overall performance |
-| 2 | BM25+ | 0.538 | 0.343 | Best traditional algorithm |
-| 3 | BM25 | 0.510 | 0.321 | Standard BM25 |
-| 4 | TF-IDF | 0.448 | 0.293 | Basic vector method |
+Note: Do not change directory names or relative paths.
 
-### Model Performance Ranking (MCQ Task)
-| Rank | Model | Size | Accuracy | Features |
-|------|-------|------|----------|----------|
-| 1 | gpt-4o | Large | 95.5% | Best commercial model |
-| 2 | qwen-3-8b | 8B | 94.9% | Best open-source model |
-| 3 | phi-2 | 2.7B | 94.0% | Best small model |
-| 4 | llama-3-8b | 8B | 94.0% | Stable performance |
+## Metrics
+- MCQ: Accuracy
+- OE: ROUGE-L, BLEU-4, BERTScore-F1
 
-### Configuration Optimization Findings
-- **Best Retrieval Method**: BM25 + Vector retrieval hybrid
-- **Best Retrieval Quantity**: 25 documents → re-rank to 8
-- **Performance Improvement**: 15-20% improvement over single methods
-- **Cost-Effectiveness**: Local models outperform API models in cost-effectiveness
+## Notes
+- Large models, prebuilt indexes, and temporary files are excluded via `.gitignore`.
+- `DATA/MMLUE-PRO` is included as plain data; embedded git metadata was removed.
+- All documentation, comments, and code are in English.
 
-## 📊 Dataset Description
+## License
+This project is licensed under the MIT License. See `LICENSE` for details.
 
-### MCQ Dataset
-- **base_2000.json**: Base test set, 2000 questions
-- **golden_2000.json**: Golden test set, 2000 questions
-- **mix_2000.json**: Mixed test set, 2000 questions
-
-### OE Dataset
-- **base_oe.json**: Base OE test set, 1000 questions
-- **golden_oe.json**: Golden OE test set, 1000 questions
-- **mix_oe.json**: Mixed OE test set, 1000 questions
-
-### Corpus
-- **ordered_corpus.json**: Corpus with 239,704 documents
-
-## 🔧 Technical Details
-
-### Model Configuration Strategy
-```python
-# Small model configuration (1-2B)
-{
-    "batch_size": 32,
-    "num_workers": 8,
-    "rerank_batch_size": 256,
-    "torch_dtype": torch.float16
-}
-
-# Medium model configuration (7-8B)
-{
-    "batch_size": 16,
-    "num_workers": 16,
-    "rerank_batch_size": 128,
-    "torch_dtype": torch.float16
-}
-```
-
-### Evaluation Metrics
-- **MCQ Task**: Accuracy
-- **OE Task**: ROUGE-L, BLEU-4, BERTScore-F1
-- **Retrieval Task**: MRR@1, MAP@10, NDCG@10
-
-## 📚 Related Documentation
-
-- [Complete Project Overview](docs/COMPLETE_PROJECT_OVERVIEW.md)
-- [Methodology](docs/methodology.md)
-- [Experimental Setup](docs/experimental_setup.md)
-- [Results Interpretation](docs/results_interpretation.md)
-
-## 🤝 Contributing
-
-### How to Contribute
-1. Fork this project
-2. Create a feature branch
-3. Submit code changes
-4. Create a Pull Request
-
-### Issue Reporting
-- Use GitHub Issues to report bugs
-- Provide detailed error information and reproduction steps
-- Include system environment information
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-- Project Maintainer: [Your Name]
-- Email: [your.email@example.com]
-- Project URL: [GitHub Repository URL]
-
-## 🙏 Acknowledgments
-
-Thanks to all researchers and developers who contributed to this project.
-
----
-
-*Last updated: December 2024*
+## Contact
+- Maintainer: DisastQA Team
+- Repository: https://github.com/TamuChen18/DisastQA

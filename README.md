@@ -79,10 +79,13 @@ DisastQA/
 ## 🧮 DisastQA Construction Pipeline
 
 <p align="center">
-  <img src="./assets/pipeline.png" alt="DisastQA Construction Pipeline" width="85%"/>
+  <img src="https://raw.githubusercontent.com/TamuChen18/DisastQA/main/assets/pipeline.png" 
+       alt="DisastQA Construction Pipeline" width="85%"/>
 </p>
 
-*Figure: Overview of the Human–LLM collaborative pipeline for DisastQA construction and evaluation. The pipeline integrates query rewriting, human validation, and keypoint-based evaluation across MCQ and OE tracks.*
+*Figure: Overview of the Human–LLM collaborative pipeline for DisastQA construction and evaluation. 
+The pipeline integrates query rewriting, human validation, and keypoint-based evaluation across MCQ and OE tracks.*
+
 
 ---
 

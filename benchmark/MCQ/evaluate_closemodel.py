@@ -537,7 +537,7 @@ def print_test_set_statistics(test_sets: List[str]):
 def main():
     # Specify the model to use
     # Options: "gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o", "gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash"
-    model_name = "gpt-3.5-turbo"  # Change this to the model you want to use
+    model_name = "gpt-4o"  # Change this to the model you want to use
     
     # Set number of test cases to process (None for all)
     num_tests = None  # Process all test cases

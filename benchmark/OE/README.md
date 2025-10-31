@@ -1,96 +1,109 @@
 # Open-Ended (OE) Question Generation System
 
-This directory contains the Open-Ended Question Generation System, which is specifically designed to generate comprehensive open-ended questions and detailed answers for RAG (Retrieval-Augmented Generation) evaluation.
+This module generates **open-ended questions** and **comprehensive answers** for evaluating Retrieval-Augmented Generation (RAG) systems.  
+It complements the Multiple-Choice (MCQ) generation pipeline by focusing on **factual completeness**, **reasoning depth**, and **answer comprehensiveness**.
 
-## 🔄 Differences from MCQ System
+---
+
+## Overview: MCQ vs. OE
 
 | Aspect | MCQ System | OE System |
-|--------|------------|-----------|
-| **Question Type** | Multiple choice with 4 options | Open-ended questions requiring detailed answers |
-| **Answer Format** | Single letter (A/B/C/D) | Comprehensive paragraphs (3-5 paragraphs) |
-| **Evaluation Focus** | Option quality, distractors | Answer comprehensiveness, depth |
+|--------|-------------|------------|
+| **Question Type** | Multiple-choice (4 options) | Open-ended, paragraph-level responses |
+| **Answer Format** | Single letter (A/B/C/D) | Multi-paragraph text (3–5 paragraphs) |
+| **Evaluation Focus** | Option plausibility, distractors | Factual completeness, reasoning depth |
 | **Output Structure** | `multiple_choice.gpt40.content` | `open_ended.gpt40.content` |
-| **Quality Metrics** | Option quality, correct/incorrect | Answer quality, completeness |
+| **Quality Metrics** | Option quality, correctness | Clarity, relevance, answer quality, completeness |
 
-## 📁 File Structure
+---
+
+## Directory Structure
 
 ```
 benchmark/
-├── .env                    # API keys (create this file)
+├── .env                    # API keys (create this manually)
 ├── OE/
-│   ├── generate_oe_set.py      # Main OE generation system
+│   ├── generate_oe_set.py      # Core OE generation logic
 │   ├── test_oe_generation.py   # Test script for validation
 │   └── README.md               # This documentation
 └── MCQ/
-    └── ...                     # MCQ system files
+    └── ...                     # MCQ generation system
 ```
 
-## 🚀 Features
+---
 
-### 1. Open-Ended Question Generation
-- **Enhanced Questions**: Refines user queries into clear, comprehensive questions
-- **Detailed Answers**: Generates 3-5 paragraph answers with evidence from reference documents
-- **Key Points Extraction**: Identifies main points covered in the answer
-- **Reasoning**: Provides explanation of how the answer addresses the question
+## Core Capabilities
 
-### 2. Quality Assessment
-Evaluates questions and answers on 7 dimensions:
-- **Clarity**: How clear and well-formulated is the question?
-- **Difficulty**: How challenging is the question?
-- **Relevance**: How relevant to the reference document?
-- **Educational Value**: How well does it test understanding?
-- **Answer Quality**: How comprehensive and well-structured is the answer?
-- **Cognitive Level**: Does it test higher-order thinking?
-- **Answerability**: Can it be answered using the reference document?
+### 1. Open-Ended QA Generation
+- **Enhanced Question Refinement**: Converts raw user queries into clear, contextualized questions.  
+- **Comprehensive Answer Synthesis**: Generates 3–5 paragraph answers grounded in evidence.  
+- **Keypoint Extraction**: Identifies factual elements covered in the answer.  
+- **Reasoning Explanation**: Provides rationale for how the answer addresses the question.
+
+### 2. Quality Assessment Framework
+Each QA pair is automatically evaluated across **seven dimensions**:
+
+| Dimension | Description |
+|------------|--------------|
+| **Clarity** | Is the question well-phrased and unambiguous? |
+| **Difficulty** | How conceptually challenging is it? |
+| **Relevance** | Is it grounded in the given passage? |
+| **Educational Value** | Does it test higher-order understanding? |
+| **Answer Quality** | Is the answer comprehensive and coherent? |
+| **Cognitive Level** | Does it require reasoning or synthesis? |
+| **Answerability** | Can the passage support a correct answer? |
 
 ### 3. Multi-Setting Generation
-- **Base**: Questions without reference passages
-- **Golden**: Questions with high-quality (score=3) passages
-- **Mix**: Questions with mixed-quality passages (30% replaced with lower-quality)
+| Setting | Description |
+|----------|--------------|
+| **Base** | Questions generated without any reference passages. |
+| **Golden** | Questions generated from high-quality (score=3) passages. |
+| **Mix** | Mixed set with ~30% of passages replaced by lower-quality ones. |
 
-## 🛠️ Setup
+---
 
-### 1. Environment Setup
-Create a `.env` file in the `benchmark/` directory:
+## Setup Instructions
+
+### 1. Environment Configuration
+Create a `.env` file in the benchmark directory:
 ```bash
 cd benchmark/
 echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
 ```
 
 ### 2. Dependencies
-Make sure you have the required Python packages:
 ```bash
 pip install openai python-dotenv tqdm sentence-transformers scikit-learn nltk
 ```
 
-## 📖 Usage
+---
 
-### Basic Usage
+## Example Usage
+
+### Basic Generation
 ```python
 from generate_oe_set import TestSetGenerator
 
-# Initialize the generator
 generator = TestSetGenerator(
-    data_prepare_dir="path/to/your/data",
+    data_prepare_dir="path/to/data",
     output_dir="path/to/output"
 )
 
-# Initialize and load data
 generator.initialize()
-
-# Generate test cases
 test_set = generator.generate_test_set(num_cases=10)
 ```
 
-### Test the System
+### Command-Line Test
 ```bash
 cd benchmark/OE
 python test_oe_generation.py
 ```
 
-## 📊 Output Format
+---
 
-### Question-Answer Structure
+## Output Format
+
+### QA Example
 ```json
 {
   "original_query": "What are the main benefits of renewable energy?",
@@ -104,8 +117,8 @@ python test_oe_generation.py
   "open_ended": {
     "gpt40": {
       "content": {
-        "question": "Enhanced version of the original question...",
-        "answer": "Comprehensive 3-5 paragraph answer...",
+        "question": "Enhanced question version...",
+        "answer": "Comprehensive 3–5 paragraph answer...",
         "key_points": ["Point 1", "Point 2", "Point 3"],
         "reasoning": "Explanation of how the answer addresses the question"
       }
@@ -114,7 +127,7 @@ python test_oe_generation.py
 }
 ```
 
-### Quality Assessment
+### Quality Assessment Example
 ```json
 {
   "clarity": 5,
@@ -124,58 +137,64 @@ python test_oe_generation.py
   "answer_quality": 5,
   "cognitive_level": 4,
   "answerability": 5,
-  "explanation": "Detailed quality assessment...",
   "final_score": 4.6,
   "is_valid": true
 }
 ```
 
-## 🎯 Use Cases
+---
 
-1. **RAG System Evaluation**: Generate comprehensive test sets for evaluating retrieval-augmented generation systems
-2. **Educational Assessment**: Create open-ended questions for testing deep understanding
-3. **Content Quality Evaluation**: Assess the quality of generated answers against reference documents
-4. **Benchmark Creation**: Build standardized datasets for comparing different AI systems
+## Application Scenarios
 
-## 🔧 Configuration
+- **RAG Evaluation** – Benchmark retrieval and generation under different context settings.  
+- **Educational Assessment** – Design open-ended comprehension or reasoning tests.  
+- **Answer Quality Auditing** – Assess factual completeness in model outputs.  
+- **Benchmark Dataset Creation** – Build standardized OE evaluation datasets.
+
+---
+
+## Configuration Highlights
 
 ### Quality Thresholds
-Questions are considered valid if they meet these minimum thresholds:
-- Clarity ≥ 4
+Questions are marked *valid* if:
+- Clarity ≥ 4  
 - Relevance ≥ 4  
-- Answer Quality ≥ 4
-- Answerability ≥ 4
+- Answer Quality ≥ 4  
+- Answerability ≥ 4  
 - Final Score ≥ 4.0
 
-### Batch Processing
-- Batch size: 50 test cases per save operation
-- Thread pool: Up to 300 concurrent workers
-- API rate limiting: 500 concurrent requests
+### Batch Parameters
+| Parameter | Value |
+|------------|--------|
+| **Batch Size** | 50 samples per save |
+| **Thread Pool** | 300 concurrent workers |
+| **API Rate Limit** | 500 concurrent requests |
 
-## 🚨 Important Notes
+---
 
-1. **API Costs**: Open-ended generation typically requires more tokens than MCQ generation
-2. **Processing Time**: Answer generation takes longer than multiple choice options
-3. **Quality Focus**: Emphasis on answer comprehensiveness and depth rather than correctness of options
-4. **Manual Review**: Consider manual review of generated answers for critical applications
+## Notes
 
-## 🤝 Comparison with MCQ
+1. **API Costs** – OE generation consumes significantly more tokens than MCQ.  
+2. **Longer Runtime** – Paragraph-level generation takes 2–3× longer per sample.  
+3. **Manual Review Recommended** – For critical datasets, human curation improves reliability.  
+4. **Focus on Depth** – Prioritizes reasoning and completeness, not short factual accuracy.
 
-Choose **OE System** when you need:
-- Detailed, comprehensive answers
-- Assessment of reasoning and explanation abilities
-- Evaluation of synthesis and analysis skills
-- Open-ended response generation testing
+---
 
-Choose **MCQ System** when you need:
-- Quick, objective assessment
-- Large-scale automated evaluation
-- Testing of specific facts or concepts
-- Reduced evaluation complexity
+## Choosing Between MCQ and OE
 
-## 📞 Support
+| Use Case | Recommended System |
+|-----------|--------------------|
+| Objective factual checks | MCQ |
+| Large-scale automatic grading | MCQ |
+| Reasoning and synthesis testing | OE |
+| Realistic RAG evaluation | OE |
+| Human-level comprehension benchmarks | OE |
 
-For issues or questions about the OE generation system, please check:
-1. Console output for detailed error messages
-2. Quality assessment scores for validation
-3. Generated test cases for format verification 
+---
+
+## Support
+If you encounter issues:
+1. Review console logs for error messages.  
+2. Check the quality assessment scores.  
+3. Inspect generated test cases for structural validity.

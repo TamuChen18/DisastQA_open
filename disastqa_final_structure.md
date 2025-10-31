@@ -51,10 +51,10 @@ DisastQA/
 │
 ├── 📁 code/                            # Code directory
 │   ├── data_preparation/              # Data preparation scripts
-│   │   ├── data_prepare.py            # Copy from benchmark/MCQ/
-│   │   ├── generate_mcq_set.py        # Copy from benchmark/MCQ/
-│   │   ├── generate_oe_set.py         # Copy from benchmark/OE/
-│   │   └── generate_oe_from_mcq.py    # Copy from benchmark/OE/
+│   │   ├── data_prepare.py            
+│   │   ├── generate_mcq_set.py        
+│   │   ├── generate_oe_set.py         
+│   │   └── generate_oe_from_mcq.py    
 │   │
 │   ├── evaluation/                     # Evaluation scripts
 │   │   ├── mcq_evaluation/            # MCQ evaluation

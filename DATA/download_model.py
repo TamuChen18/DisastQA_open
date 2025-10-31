@@ -2,8 +2,8 @@ from huggingface_hub import snapshot_download
 
 MODELS = {
     "Mistral-7B-Instruct-v0.2": "mistralai/Mistral-7B-Instruct-v0.2",
-    "qwen-3-8b": "Qwen/Qwen3-8B",  # ✅ 最新的 Qwen 3！
-    "deepseek-v3-7b": "deepseek-ai/deepseek-llm-7b-chat",  # ✅ V3 最新
+    "qwen-3-8b": "Qwen/Qwen3-8B",  # 
+    "deepseek-v3-7b": "deepseek-ai/deepseek-llm-7b-chat", 
     "gemma-7b": "google/gemma-7b-it",
     "llama-3-8b": "meta-llama/Meta-Llama-3-8B-Instruct",
     "Hunyuan-7B-Instruct": "tencent/Hunyuan-7B-Instruct",

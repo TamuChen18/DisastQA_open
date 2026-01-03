@@ -47,7 +47,7 @@ DisastQA/
 │
 ├── DATA/
 │   ├── final_mcq/                   # base_2000.json, mix_2000.json, golden_2000.json
-│   ├── final_OE/                    # base_oe.json, ... , base_oe_with_difficulty.json
+│   ├── final_OE/                    # base_oe_with_difficulty.json, mix_oe_with_difficulty.json, golden_oe_with_difficulty.json
 │   ├── local_MCQ/                   # model-specific MCQ results
 │   ├── local_OE/                    # model-specific OE results
 │   ├── MCQ_evaluation/              # evaluation scripts (local/closed)
@@ -55,7 +55,7 @@ DisastQA/
 │   └── DATA/                        # annotation/intermediate artifacts
 │
 ├── assets/
-│   ├── pipeline.png
+│   └── pipeline.png                 # Pipeline diagram (optional)
 │
 ├── requirements.txt
 ├── LICENSE
@@ -73,48 +73,113 @@ DisastQA/
 5. Generate difficulty levels via keypoint count (OE).
 6. Evaluate 18 models under Base, Mix, and Golden settings.
 
-
 ---
 
 ## 🧮 DisastQA Construction Pipeline
 
-<p align="center"> <img src="./assets/pipeline.png" alt="DisastQA Construction Pipeline" width="85%"/> </p>
+<p align="center">
+<img src="./assets/pipeline.png" alt="DisastQA Construction Pipeline" width="85%"/>
+</p>
 
-*Figure: Overview of the Human–LLM collaborative pipeline for DisastQA construction and evaluation. 
-The pipeline integrates query rewriting, human validation, and keypoint-based evaluation across MCQ and OE tracks.*
+*Figure: Overview of the Human–LLM collaborative pipeline for DisastQA construction and evaluation. The pipeline integrates query rewriting, human validation, and keypoint-based evaluation across MCQ and OE tracks.*
 
+> **Note**: If the pipeline diagram is not available, you can generate it from the paper or skip this section.
 
 ---
 
-
-
-
 ## 🚀 Quick Start
 
-### 1️⃣ Setup
+### 1️⃣ Prerequisites
+
+- Python 3.8+ (tested with Python 3.8-3.12)
+- CUDA-capable GPU (recommended for local model evaluation)
+- At least 16GB GPU memory for 7B-8B models
+
+### 2️⃣ Installation
+
 ```bash
+# Clone the repository
+git clone https://github.com/TamuChen18/DisastQA.git
+cd DisastQA
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Run MCQ Evaluation
-```bash
-python DATA/MCQ_evaluation/local_evaluation.py \
-  --mcq_path DATA/final_mcq/base_2000.json \
-  --model_name <your_local_model>
+### 3️⃣ Configure Model Paths
+
+The evaluation scripts use model configurations defined in `DATA/MCQ_evaluation/local_evaluation.py` and `DATA/OE_evaluation/local_evaluation_with_difficulty.py`. 
+
+**To use your own models**, you need to:
+1. Download models to a local directory (e.g., `DATA/models/`)
+2. Update the `MODEL_CONFIGS` dictionary in the evaluation scripts with your model paths
+
+Example configuration:
+```python
+MODEL_CONFIGS = {
+    "qwen-3-8b": {
+        "path": "/path/to/your/models/qwen-3-8b",
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+    },
+    # ... add more models
+}
 ```
 
-### 3️⃣ Run OE Evaluation (Keypoint-Aware)
+### 4️⃣ Run MCQ Evaluation
+
+The MCQ evaluation script automatically processes all three settings (base, mix, golden) for the specified model.
+
 ```bash
+# Evaluate a specific model
+python DATA/MCQ_evaluation/local_evaluation.py --model qwen-3-8b
+
+# Evaluate all configured models (if no --model specified)
+python DATA/MCQ_evaluation/local_evaluation.py
+
+# Test mode (first 10 questions only)
+python DATA/MCQ_evaluation/local_evaluation.py --model qwen-3-8b --test_mode
+```
+
+**Output**: Results are saved to `DATA/local_MCQ/{model_name}/{setting}_test.json`
+
+### 5️⃣ Run OE Evaluation (Keypoint-Aware)
+
+The OE evaluation script supports evaluating specific settings or all settings.
+
+```bash
+# Evaluate a specific model on all settings (base, mix, golden)
+python DATA/OE_evaluation/local_evaluation_with_difficulty.py --model qwen-3-8b
+
+# Evaluate specific settings only
 python DATA/OE_evaluation/local_evaluation_with_difficulty.py \
-  --oe_path DATA/final_OE/base_oe_with_difficulty.json \
-  --model_name <your_local_model>
+  --model qwen-3-8b \
+  --settings base,mix
+
+# Test mode (first 10 questions only)
+python DATA/OE_evaluation/local_evaluation_with_difficulty.py \
+  --model qwen-3-8b \
+  --test_mode
 ```
 
-### 4️⃣ Regenerate Benchmark (Optional)
-- MCQ: `benchmark/MCQ/data_prepare.py` → `benchmark/MCQ/generate_mcq_set.py`
-- OE: `benchmark/OE/generate_oe_from_mcq.py` or `benchmark/OE/generate_oe_set.py`
+**Output**: Results are saved to `DATA/local_OE/{model_name}/{setting}_oe_with_difficulty.json`
 
-⚠️ Keep all folder names and paths unchanged for compatibility.
+### 6️⃣ Regenerate Benchmark (Optional)
+
+- **MCQ**: 
+  ```bash
+  python benchmark/MCQ/data_prepare.py
+  python benchmark/MCQ/generate_mcq_set.py
+  ```
+
+- **OE**: 
+  ```bash
+  python benchmark/OE/generate_oe_from_mcq.py
+  # or
+  python benchmark/OE/generate_oe_set.py
+  ```
+
+⚠️ **Note**: Keep all folder names and paths unchanged for compatibility.
 
 ---
 
@@ -133,7 +198,7 @@ Keypoint coverage explicitly measures whether models recall all essential disast
 ## 🧠 Highlighted Findings
 
 - Retrieval quality strongly governs performance: Base < Mix < Golden across all models.
-- DisastQA rankings diverge from general-domain benchmarks (Spearman’s ρ ≈ 0.2 vs. MMLU-Pro).
+- DisastQA rankings diverge from general-domain benchmarks (Spearman's ρ ≈ 0.2 vs. MMLU-Pro).
 - GPT-4o achieves 95.4% factual coverage, while open models like Qwen-3-8B reach 99.6% MCQ accuracy under Golden retrieval.
 - High factual density: OE answers contain on average 4.4 atomic keypoints, reflecting multi-fact reasoning complexity.
 - Surface metrics (ROUGE/BERTScore) overestimate factuality—models often omit crucial details even when fluently written.
@@ -167,6 +232,25 @@ DisastQA thus serves as a foundation for future work on:
 
 ---
 
+## 🔧 Troubleshooting
+
+### Model Loading Issues
+- **Error**: `Model path does not exist`
+  - **Solution**: Check that model paths in `MODEL_CONFIGS` are correct and models are downloaded.
+
+- **Error**: `CUDA out of memory`
+  - **Solution**: Use smaller batch sizes, reduce model precision (float16), or use a smaller model.
+
+### Data File Issues
+- **Error**: `FileNotFoundError` for data files
+  - **Solution**: Ensure you're in the repository root directory and data files exist in `DATA/final_mcq/` and `DATA/final_OE/`.
+
+### Dependency Issues
+- **Error**: `ModuleNotFoundError`
+  - **Solution**: Ensure all dependencies are installed: `pip install -r requirements.txt`
+
+---
+
 ## 🪪 License
 
 This project is released under the MIT License. See `LICENSE` for details.
@@ -177,7 +261,7 @@ This project is released under the MIT License. See `LICENSE` for details.
 
 If you use DisastQA in your research, please cite:
 
-```
+```bibtex
 @dataset{chen2025disastqa,
   title   = {DisastQA: A Benchmark for Disaster-Domain Question Answering},
   author  = {Chen, Zhitong and collaborators},
@@ -197,5 +281,9 @@ We thank all annotators and domain experts for their contributions.
 
 ## 🔗 Repository
 
-- Maintainer: Zhitong Chen
-- Repository: https://github.com/TamuChen18/DisastQA
+- **Maintainer**: Zhitong Chen
+- **Repository**: https://github.com/TamuChen18/DisastQA
+- **Issues**: Please report bugs or request features via GitHub Issues
+
+---
+

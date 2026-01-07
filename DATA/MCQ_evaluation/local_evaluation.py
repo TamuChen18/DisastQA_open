@@ -10,46 +10,53 @@ import re
 from dotenv import load_dotenv
 import random
 
-# 模型配置 - 更新为实际下载的模型
+# Get base directory (project root) - can be customized via environment variable
+_BASE_DIR = os.getenv("DISASTQA_BASE_DIR", None)
+if _BASE_DIR is None:
+    _BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# model configurations - updated to actual downloaded models
+# Note: Model paths are relative to the project root. Users should download models
+# and update these paths, or set DISASTQA_BASE_DIR environment variable.
 MODEL_CONFIGS = {
     "llama-3-8b": {
-        "path": "/home/shared/RAG_DATA/DATA/models/llama-3-8b",
+        "path": os.path.join(_BASE_DIR, "models", "llama-3-8b"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 8192,
         "max_new_tokens": 32,
         "generation_config": {
-            # "temperature": 1e-5,  # 极低温度，接近确定性
-            "do_sample": False,   # 贪婪解码
+            # "temperature": 1e-5,  # very low temperature, close to deterministic
+            "do_sample": False,   # greedy decoding
             "max_new_tokens": 32
         }
     },
     "llama-3.2-3b-instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/llama-3.2-3b-instruct",
+        "path": os.path.join(_BASE_DIR, "models", "llama-3.2-3b-instruct"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 8192,
         "max_new_tokens": 32,
         "generation_config": {
-            # "temperature": 1e-5,  # 极低温度，接近确定性
-            "do_sample": False,   # 贪婪解码
+            # "temperature": 1e-5,  # very low temperature, close to deterministic
+            "do_sample": False,   # greedy decoding
             "max_new_tokens": 32
         }
     },
     "Mistral-7B-Instruct-v0.2": {
-        "path": "/home/shared/RAG_DATA/DATA/models/Mistral-7B-Instruct-v0.2",
-        "max_sequence_length": 8192,  # 32K max, 使用8K作为安全值
+        "path": os.path.join(_BASE_DIR, "models", "Mistral-7B-Instruct-v0.2"),
+        "max_sequence_length": 8192,  # 32K max, use 8K as safe value
         "torch_dtype": torch.float16,
-        "max_new_tokens": 32,  # MCQ答案通常很短
+        "max_new_tokens": 32,  # usually short answer for MCQ (32 tokens)
         "device_map": "auto",
         "generation_config": {
-            "temperature": 1e-5,  # 极低温度，接近确定性
-            "do_sample": False,   # 贪婪解码
+            "temperature": 1e-5,  # very low temperature, close to deterministic
+            "do_sample": False,   # greedy decoding
             "max_new_tokens": 32
         }
     },
     "qwen-2.5-3b-instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/qwen-2.5-3b-instruct",
+        "path": os.path.join(_BASE_DIR, "models", "qwen-2.5-3b-instruct"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 8192,
@@ -61,7 +68,7 @@ MODEL_CONFIGS = {
         }
     },
     "qwen-3-4b": {
-        "path": "/home/shared/RAG_DATA/DATA/models/qwen-3-4b",
+        "path": os.path.join(_BASE_DIR, "models", "qwen-3-4b"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 8192,
@@ -73,55 +80,55 @@ MODEL_CONFIGS = {
         }
     },
     "qwen-3-8b": {
-        "path": "/home/shared/RAG_DATA/DATA/models/qwen-3-8b",
-        "max_new_tokens": 32,  # MCQ答案通常很短
+        "path": os.path.join(_BASE_DIR, "models", "qwen-3-8b"),
+        "max_new_tokens": 32,  # usually short answer for MCQ (32 tokens)
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 8192,
         "generation_config": {
-            # "temperature": 1e-5,  # 极低温度，接近确定性
-            "do_sample": False,   # 贪婪解码
+            # "temperature": 1e-5,  # very low temperature, close to deterministic
+            "do_sample": False,   # greedy decoding
             "max_new_tokens": 32
         }
     },
     "deepseek-v3-7b": {
-        "path": "/home/shared/RAG_DATA/DATA/models/deepseek-v3-7b",
+        "path": os.path.join(_BASE_DIR, "models", "deepseek-v3-7b"),
         "max_new_tokens": 32,
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 8192,
         "generation_config": {
-            # "temperature": 1e-5,  # 极低温度，接近确定性
-            "do_sample": False,    # 启用采样但温度极低
+            # "temperature": 1e-5,  # very low temperature, close to deterministic
+            "do_sample": False,    # Enable sampling but with very low temperature
             "max_new_tokens": 32
         }
     },
     "phi-2": {
-        "path": "/home/shared/RAG_DATA/DATA/models/phi-2",
+        "path": os.path.join(_BASE_DIR, "models", "phi-2"),
         "max_new_tokens": 32,
         "torch_dtype": torch.float16,
         "device_map": "auto",
-        "max_sequence_length": 2048,  # 实际限制就是2K
+        "max_sequence_length": 2048,  # actually limited to 2K
         "generation_config": {
-            # "temperature": 1e-5,  # 极低温度，接近确定性
-            "do_sample": False,    # 启用采样但温度极低
+            # "temperature": 1e-5,  # very low temperature, close to deterministic
+            "do_sample": False,    # greedy decoding
             "max_new_tokens": 32
         }
     },
     "gemma-7b": {
-        "path": "/home/shared/RAG_DATA/DATA/models/gemma-7b",
+        "path": os.path.join(_BASE_DIR, "models", "gemma-7b"),
         "max_new_tokens": 32,
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 2048,
         "generation_config": {
-            # "temperature": 1e-5,  # 极低温度，接近确定性
-            "do_sample": False,    # 启用采样但温度极低
+            # "temperature": 1e-5,  # very low temperature, close to deterministic
+            "do_sample": False,    # greedy decoding
             "max_new_tokens": 32
         }
     },
     "Llama-3.2-1B-Instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/Llama-3.2-1B-Instruct",
+        "path": os.path.join(_BASE_DIR, "models", "Llama-3.2-1B-Instruct"),
         "torch_dtype": torch.float16,
         "max_new_tokens": 32,
         "device_map": "auto",
@@ -133,19 +140,19 @@ MODEL_CONFIGS = {
         }
     },
     "qwen-3-0.6b": {
-        "path": "/home/shared/RAG_DATA/DATA/models/qwen-3-0.6b",
+        "path": os.path.join(_BASE_DIR, "models", "qwen-3-0.6b"),
         "torch_dtype": torch.float16,
         "max_new_tokens": 32,
         "device_map": "auto",
-        "max_sequence_length": 8192,  # 40K max, 使用8K作为安全值
+        "max_sequence_length": 8192,  # 40K max, use 8K as safe value
         "generation_config": {
-            # "temperature": 1e-5,
+            # "temperature": 1e-5,  # very low temperature, close to deterministic  
             "do_sample": False,
             "max_new_tokens": 32
         }
     },
     "Hunyuan-7B-Instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/Hunyuan-7B-Instruct",
+        "path": os.path.join(_BASE_DIR, "models", "Hunyuan-7B-Instruct"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "trust_remote_code": True,
@@ -157,7 +164,7 @@ MODEL_CONFIGS = {
         }
     },
     "Hunyuan-4B-Instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/Hunyuan-4B-Instruct",
+        "path": os.path.join(_BASE_DIR, "models", "Hunyuan-4B-Instruct"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "trust_remote_code": True,
@@ -169,7 +176,7 @@ MODEL_CONFIGS = {
         }
     },
     "Yi-6B-Chat": {
-        "path": "/home/shared/RAG_DATA/DATA/models/Yi-6B-Chat",
+        "path": os.path.join(_BASE_DIR, "models", "Yi-6B-Chat"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 8192,
@@ -181,7 +188,7 @@ MODEL_CONFIGS = {
     },
 
     "Hunyuan-0.5B-Instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/Hunyuan-0.5B-Instruct",
+        "path": os.path.join(_BASE_DIR, "models", "Hunyuan-0.5B-Instruct"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "trust_remote_code": True,
@@ -193,7 +200,7 @@ MODEL_CONFIGS = {
         }
     },
     "AceMath-1.5B-Instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/AceMath-1.5B-Instruct",
+        "path": os.path.join(_BASE_DIR, "models", "AceMath-1.5B-Instruct"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 2048,
@@ -204,7 +211,7 @@ MODEL_CONFIGS = {
         }
     },
     "Falcon3-1B-Instruct": {
-        "path": "/home/shared/RAG_DATA/DATA/models/Falcon3-1B-Instruct",
+        "path": os.path.join(_BASE_DIR, "models", "Falcon3-1B-Instruct"),
         "torch_dtype": torch.float16,
         "device_map": "auto",
         "max_sequence_length": 2048,
@@ -226,12 +233,12 @@ class LocalModelEvaluator:
         self.model_config = MODEL_CONFIGS[model_name]
         self.setting = os.path.basename(test_set_path).split('_')[0]  # base/golden/mix
         
-        # 如果是 mix 设置，加载 golden 结果作为查找表
-        self.golden_lookup = {}
+        # Load passages_by_score data for mix setting (to construct 5 passages)
+        self.passages_data = {}
         if self.setting == "mix":
-            self._load_golden_lookup()
+            self._load_passages_data()
         
-        # 打印初始 GPU 内存状态
+        # print initial GPU memory status
         print("\nInitial GPU Memory Status:")
         print(f"Total GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GiB")
         print(f"Allocated Memory: {torch.cuda.memory_allocated() / 1024**3:.2f} GiB")
@@ -246,13 +253,23 @@ class LocalModelEvaluator:
         for item in raw_data:
             if 'multiple_choice' in item and 'gpt40' in item['multiple_choice']:
                 content = item['multiple_choice']['gpt40']['content']
-                passage = item.get('passage', '')  # 保存原始 passage
+                passage = item.get('passage', '')  # Save original passage (for golden/base)
+                original_query = item.get('original_query', '')  # For mix setting to load passages_by_score
+                
+                # For mix setting, construct 5 passages (1 golden + 4 distractors)
+                if self.setting == "mix" and original_query:
+                    five_passages = self._construct_five_passages(original_query)
+                else:
+                    five_passages = None
+                
                 processed_item = {
                     'question': content['question'],
-                    'options': content['options'],  # 保留原始选项
+                    'options': content['options'],  # Keep original options
                     'correct_answer': content['correct_option'],
-                    'context': [passage] if self.setting in ['golden', 'mix'] and passage else [],  # Use passage only in golden and mix settings
-                    'passage': passage  # 保存 passage 用于查找
+                    'context': [passage] if self.setting in ['golden'] and passage else [],  # Single passage for golden
+                    'passage': passage,  # Save passage for reference
+                    'five_passages': five_passages,  # 5 passages for mix setting
+                    'original_query': original_query  # Save original_query for mix
                 }
                 self.test_set.append(processed_item)
         
@@ -270,10 +287,10 @@ class LocalModelEvaluator:
                 self.model_config['path'],
                 trust_remote_code=True
             )
-            # 设置 padding token 和 padding side
+            # set padding token and padding side
             if self.tokenizer.pad_token is None:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
-            self.tokenizer.padding_side = 'left'  # 设置 padding side 为 left
+            self.tokenizer.padding_side = 'left'  # set padding side to left
             
             self.model = AutoModelForCausalLM.from_pretrained(
                 self.model_config['path'],
@@ -285,12 +302,12 @@ class LocalModelEvaluator:
         else:
             self.model = model
             self.tokenizer = tokenizer
-            # 设置 padding token 和 padding side
+            # set padding token and padding side
             if self.tokenizer.pad_token is None:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
-            self.tokenizer.padding_side = 'left'  # 设置 padding side 为 left
+            self.tokenizer.padding_side = 'left'  # set padding side to left
         
-        # Initialize generation config - 注释掉，避免DynamicCache错误
+        # Initialize generation config - comment out to avoid DynamicCache error
         if self.model_config.get("generation_config") is not None:
             raw_config = self.model_config["generation_config"]
             gen_config = raw_config if isinstance(raw_config, dict) else raw_config.to_dict()
@@ -302,23 +319,108 @@ class LocalModelEvaluator:
         # random.seed(42)
         torch.cuda.empty_cache()  # Clean up GPU memory
 
+    def _load_passages_data(self):
+        """Load passages_by_score data from DATA/DATA/data_prepare for mix setting"""
+        try:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            base_dir = os.path.dirname(os.path.dirname(script_dir))
+            data_prepare_dir = os.path.join(base_dir, "DATA", "DATA", "data_prepare")
+            
+            if not os.path.exists(data_prepare_dir):
+                print(f"Warning: data_prepare directory not found at {data_prepare_dir}")
+                return
+            
+            # Load all *_by_score.json files
+            import glob
+            json_files = glob.glob(os.path.join(data_prepare_dir, "*_by_score.json"))
+            
+            print(f"Loading passages data from {len(json_files)} files...")
+            
+            for json_file in json_files:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    
+                    for item in data:
+                        user_query = item.get('user_query', '')
+                        if user_query:
+                            passages_by_score = item.get('passages_by_score', {})
+                            if passages_by_score:
+                                self.passages_data[user_query] = passages_by_score
+            
+            print(f"Loaded passages data for {len(self.passages_data)} queries")
+            
+        except Exception as e:
+            print(f"Error loading passages data: {e}")
+            import traceback
+            traceback.print_exc()
+    
+    def _construct_five_passages(self, original_query: str) -> List[str]:
+        """Construct 5 passages for mix setting: 1 golden (score=3) + 4 distractors (one from each score 0,1,2,3)"""
+        if original_query not in self.passages_data:
+            print(f"Warning: No passages data found for query: {original_query[:50]}...")
+            return None
+        
+        passages_by_score = self.passages_data[original_query]
+        
+        # Get golden passage (score=3)
+        golden_passages = passages_by_score.get('3', [])
+        if not golden_passages:
+            print(f"Warning: No golden passages (score=3) found for query: {original_query[:50]}...")
+            return None
+        
+        golden_passage = golden_passages[0]  # Use first golden passage
+        
+        # Get one distractor from each score (0, 1, 2)
+        distractors = []
+        for score in ['0', '1', '2']:
+            score_passages = passages_by_score.get(score, [])
+            if score_passages:
+                distractors.append(random.choice(score_passages))
+            else:
+                # If no passage for this score, use another from available scores
+                for alt_score in ['0', '1', '2']:
+                    if alt_score != score and alt_score in passages_by_score:
+                        alt_passages = passages_by_score[alt_score]
+                        if alt_passages:
+                            distractors.append(random.choice(alt_passages))
+                            break
+        
+        # Add one more distractor if we don't have 4 yet (can be from any low score)
+        if len(distractors) < 4:
+            all_low_passages = []
+            for score in ['0', '1', '2']:
+                all_low_passages.extend(passages_by_score.get(score, []))
+            if all_low_passages:
+                while len(distractors) < 4 and all_low_passages:
+                    distractors.append(random.choice(all_low_passages))
+                    all_low_passages.remove(distractors[-1])
+        
+        # Combine: 1 golden + 4 distractors = 5 passages total
+        five_passages = [golden_passage] + distractors[:4]
+        
+        # Randomly shuffle the order (so golden is not always first)
+        random.shuffle(five_passages)
+        
+        return five_passages
+
     def _load_golden_lookup(self):
         """Load golden results as lookup table for mix optimization"""
         try:
-            # 构建 golden 结果文件路径
-            base_dir = "/home/shared/RAG_DATA"
-            golden_path = f"{base_dir}/DATA/local_MCQ/{self.model_name}/golden_test.json"
+            # Build golden result file path
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            base_dir = os.path.dirname(os.path.dirname(script_dir))
+            golden_path = os.path.join(base_dir, "DATA", "local_MCQ", self.model_name, "golden_test.json")
             
             if os.path.exists(golden_path):
                 print(f"Loading golden results from: {golden_path}")
                 with open(golden_path, 'r', encoding='utf-8') as f:
                     golden_data = json.load(f)
                 
-                # 构建查找表
+                # Build lookup table
                 for item in golden_data:
-                    # 使用 question + passage 作为 key
+                    # Use question + passage as key
                     question = item['question']
-                    passage = item.get('passage', '')  # 从原始数据中获取 passage
+                    passage = item.get('passage', '')  # Get passage from original data
                     key = f"{question}_{passage}"
                     self.golden_lookup[key] = {
                         'model_answer': item['model_answer'],
@@ -337,39 +439,47 @@ class LocalModelEvaluator:
             print("Will process mix without optimization")
     
     def _truncate_context_for_small_model(self, context: List[str], max_tokens_per_passage: int = 200) -> List[str]:
-        """截断context以适应小模型的token限制"""
+        """truncate context to fit the token limit of small models"""
         if not self.model_config.get('is_small_model', False):
             return context
         
         truncated_context = []
         for passage in context:
-            # 简单按字符数截断，大约4个字符=1个token
+            # simple truncation by character count, approximately 4 characters = 1 token
             if len(passage) > max_tokens_per_passage * 4:
                 passage = passage[:max_tokens_per_passage * 4] + "..."
             truncated_context.append(passage)
         
         return truncated_context
 
-    def generate_answer(self, query: str, context: List[str], options: List[str]) -> str:
+    def generate_answer(self, query: str, context: List[str] = None, options: List[str] = None, five_passages: List[str] = None) -> str:
         """Generate answer for a question"""
         max_retries = 3
         for attempt in range(max_retries):
             try:
-                # 为小模型截断context
-                context = self._truncate_context_for_small_model(context)
-                
                 # Format options as A, B, C, D
                 options_str = "\n".join([f"{chr(65+i)}. {opt}" for i, opt in enumerate(options)])
-                context_str = "\n".join(context) if context else ""
                 
-                # 检查是否为小模型
-                is_small_model = self.model_config.get('is_small_model', False)
-                
-                # Build prompt based on setting and model size
-                # 统一为0-shot prompt
-                if context_str:
+                # Build prompt based on setting
+                if five_passages and len(five_passages) == 5:
+                    # Mix setting: 5 passages with selection instruction
+                    passages_text = "\n\n".join([f"Passage {i+1}: {passage}" for i, passage in enumerate(five_passages)])
+                    prompt = f"""You are given 5 passages (some may be irrelevant). You must select ONLY ONE passage that is most relevant to answer the question. Write the passage used: Passage: <single number between 1 and 5> (only one number, no commas or multiple numbers), then provide your answer.
+
+{passages_text}
+
+Question: {query}
+Options:
+{options_str}
+
+Answer:"""
+                elif context:
+                    # Golden setting: single passage
+                    context = self._truncate_context_for_small_model(context)
+                    context_str = "\n".join(context) if isinstance(context, list) else context
                     prompt = f"""Passage: {context_str}\n\nQuestion: {query}\nOptions:\n{options_str}\n\nAnswer:"""
                 else:
+                    # Base setting: no passage
                     prompt = f"""Question: {query}\nOptions:\n{options_str}\n\nAnswer:"""
                 
                 print("\nGenerating response...")
@@ -384,7 +494,7 @@ class LocalModelEvaluator:
                     max_length=self.model_config['max_sequence_length']
                 ).to(self.model.device)
                 
-                # 移除token_type_ids以避免与某些模型的兼容性问题
+                # remove token_type_ids to avoid compatibility issues with some models
                 if 'token_type_ids' in inputs:
                     del inputs['token_type_ids']
                 
@@ -397,7 +507,7 @@ class LocalModelEvaluator:
                         # Add progress indicator
                         print("Generating tokens...", end="", flush=True)
                         start_time = time.time()
-                        # 使用更简单的生成参数，避免版本兼容性问题
+                        # use simpler generation parameters to avoid version compatibility issues
                         outputs = self.model.generate(
                             **inputs,
                             max_new_tokens=self.model_config["max_new_tokens"],
@@ -440,24 +550,24 @@ class LocalModelEvaluator:
     def parse_answer(self, response: str) -> Dict[str, str]:
         """Parse model's answer from response"""
         try:
-            # 首先尝试匹配 "Answer: X" 格式
+            # first try to match "Answer: X" format
             answer_match = re.search(r'Answer:\s*([A-D])', response)
             if answer_match:
                 answer = answer_match.group(1)
             else:
-                # 如果没有找到标准格式，尝试直接匹配 A/B/C/D
+                # if not found standard format, try to match A/B/C/D
                 answer_match = re.search(r'[A-D]', response)
                 if answer_match:
                     answer = answer_match.group(0)
                 else:
-                    # 如果还是没有找到，尝试匹配选项前缀
+                    # if still not found, try to match option prefix
                     answer_match = re.search(r'([A-D])\.', response)
                     if answer_match:
                         answer = answer_match.group(1)
                     else:
                         raise ValueError("No valid answer found in response")
             
-            # 尝试匹配解释
+            # try to match explanation
             explanation_match = re.search(r'Explanation:\s*(.*?)(?=\n|$)', response, re.DOTALL)
             explanation = explanation_match.group(1).strip() if explanation_match else ""
             
@@ -478,30 +588,30 @@ class LocalModelEvaluator:
         results = []
         total = len(self.test_set)
         
-        # 根据设置类型调整批处理大小
+        # adjust batch size based on setting type
         if self.setting == "base":
             batch_size = 16
-        else:  # mix 和 golden 设置使用更小的批处理大小
-            batch_size = 8 # 改为4，因为每个prompt会更大
+        else:  # mix and golden settings use smaller batch size
+            batch_size = 8 # changed to 4, because each prompt is larger
         
         print(f"\nTotal questions: {total}")
         print(f"Batch size: {batch_size}")
         print(f"Number of batches: {(total + batch_size - 1) // batch_size}\n")
         
-        # 按批次处理
+        # process by batches
         for i in range(0, total, batch_size):
             batch = self.test_set[i:i + batch_size]
             current_batch = i // batch_size + 1
             total_batches = (total + batch_size - 1) // batch_size
             print(f"\nProcessing batch {current_batch}/{total_batches} (questions {i+1}-{min(i+batch_size, total)}/{total})...")
             
-            # 打印当前 GPU 内存状态
+            # print current GPU memory status
             print("\nCurrent GPU Memory Status:")
             print(f"Allocated Memory: {torch.cuda.memory_allocated() / 1024**3:.2f} GiB")
             print(f"Cached Memory: {torch.cuda.memory_reserved() / 1024**3:.2f} GiB")
             
             try:
-                # 对于 mix 设置，过滤掉已经在 golden 查找表中的问题
+                # for mix setting, filter out questions already in golden lookup table
                 if self.setting == "mix":
                     filtered_batch = []
                     for item in batch:
@@ -512,48 +622,48 @@ class LocalModelEvaluator:
                             filtered_batch.append(item)
                     
                     if filtered_batch:
-                        # 准备批次数据（只包含需要模型推理的问题）
+                        # prepare batch data (only include questions that need model inference)
                         batch_queries = [item['question'] for item in filtered_batch]
                         batch_contexts = [item['context'] for item in filtered_batch]
                         batch_options = [item['options'] for item in filtered_batch]
                         
-                        # 生成答案
+                        # generate answers
                         batch_responses = self.generate_answer_batch(
                             queries=batch_queries,
                             contexts=batch_contexts,
                             options_list=batch_options
                         )
                     else:
-                        # 所有问题都在 golden 查找表中，不需要模型推理
+                        # all questions are in golden lookup table, no model inference needed
                         batch_responses = []
                         filtered_batch = []
                 else:
-                    # 非 mix 设置，正常处理
+                    # non-mix setting, normal processing
                     filtered_batch = batch
                     batch_queries = [item['question'] for item in batch]
                     batch_contexts = [item['context'] for item in batch]
                     batch_options = [item['options'] for item in batch]
                     
-                    # 生成答案
+                    # generate answers
                     batch_responses = self.generate_answer_batch(
                         queries=batch_queries,
                         contexts=batch_contexts,
                         options_list=batch_options
                     )
                 
-                # 处理每个答案（包括从 golden 查找表获取的和模型生成的）
+                # process each answer (including from golden lookup table and model generated)
                 processed_items = set()
                 
-                # 处理模型生成的结果
+                # process model generated results
                 for item, response in zip(filtered_batch, batch_responses):
                     try:
-                        # 检查是否可以从 golden 查找表中获取结果
+                            # check if result can be obtained from golden lookup table
                         question = item['question']
                         passage = item.get('passage', '')
                         lookup_key = f"{question}_{passage}"
                         
                         if self.setting == "mix" and lookup_key in self.golden_lookup:
-                            # 直接使用 golden 结果
+                            # directly use golden result
                             golden_result = self.golden_lookup[lookup_key]
                             result = {
                                 'question': item['question'],
@@ -564,19 +674,19 @@ class LocalModelEvaluator:
                                 'is_correct': golden_result['is_correct']
                             }
                             
-                            # 确保passage字段正确传递到结果中
+                            # ensure passage field is correctly passed to the result
                             if 'passage' in item:
                                 result['passage'] = item['passage']
                                 
                             print(f"✅ Found in golden lookup: {item['question'][:50]}...")
                         else:
-                            # 解析模型生成的答案
+                            # parse model generated answer
                             parsed_answer = self.parse_answer(response)
                             
-                            # 验证答案
+                            # verify answer
                             is_correct = parsed_answer['answer'] == item['correct_answer']
                             
-                            # 保存结果
+                            # save result
                             result = {
                                 'question': item['question'],
                                 'options': item['options'],
@@ -586,13 +696,13 @@ class LocalModelEvaluator:
                                 'is_correct': is_correct
                             }
                             
-                            # 确保passage字段正确传递到结果中
+                            # ensure passage field is correctly passed to the result
                             if 'passage' in item:
                                 result['passage'] = item['passage']
                         
                         results.append(result)
                         
-                        # 打印进度
+                        # print progress
                         if self.setting == "mix" and lookup_key in self.golden_lookup:
                             print(f"Question: {item['question'][:100]}... (from golden)")
                             print(f"Correct answer: {item['correct_answer']}")
@@ -617,14 +727,14 @@ class LocalModelEvaluator:
                             'is_correct': False
                         }
                         
-                        # 确保passage字段正确传递到结果中
+                        # ensure passage field is correctly passed to the result
                         if 'passage' in item:
                             error_result['passage'] = item['passage']
                             
                         results.append(error_result)
                         processed_items.add(lookup_key)
                 
-                # 处理在 golden 查找表中但不在 filtered_batch 中的问题
+                # process questions in golden lookup table but not in filtered_batch
                 if self.setting == "mix":
                     for item in batch:
                         question = item['question']
@@ -641,25 +751,26 @@ class LocalModelEvaluator:
                                 'is_correct': golden_result['is_correct']
                             }
                             
-                            # 确保passage字段正确传递到结果中
+                            # ensure passage field is correctly passed to the result
                             if 'passage' in item:
                                 result['passage'] = item['passage']
                                 
                             results.append(result)
                             print(f"✅ Added from golden lookup: {item['question'][:50]}...")
                 
-                # 清理缓存
+                # clear cache
                 torch.cuda.empty_cache()
                 
             except Exception as e:
                 print(f"Error processing batch: {str(e)}")
-                # 如果批处理失败，回退到单个处理
+                # if batch processing fails, fall back to single processing
                 for item in batch:
                     try:
                         response = self.generate_answer(
                             query=item['question'],
-                            context=item['context'],
-                            options=item['options']
+                            context=item.get('context', []),
+                            options=item['options'],
+                            five_passages=item.get('five_passages')
                         )
                         parsed_answer = self.parse_answer(response)
                         is_correct = parsed_answer['answer'] == item['correct_answer']
@@ -672,7 +783,7 @@ class LocalModelEvaluator:
                             'is_correct': is_correct
                         }
                         
-                        # 确保passage字段正确传递到结果中
+                        # ensure passage field is correctly passed to the result
                         if 'passage' in item:
                             single_result['passage'] = item['passage']
                             
@@ -688,22 +799,22 @@ class LocalModelEvaluator:
                             'is_correct': False
                         }
                         
-                        # 确保passage字段正确传递到结果中
+                        # ensure passage field is correctly passed to the result
                         if 'passage' in item:
                             error_result['passage'] = item['passage']
                             
                         results.append(error_result)
                 
-                # 清理缓存
+                # clear cache
                 torch.cuda.empty_cache()
         
-        # 保存结果
+        # save results
         print("\nSaving results...")
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
         print("Results saved successfully!")
         
-        # 计算统计信息
+        # calculate statistics
         total_questions = len(results)
         correct_answers = sum(1 for r in results if r['is_correct'])
         accuracy = (correct_answers / total_questions) * 100 if total_questions > 0 else 0
@@ -716,26 +827,26 @@ class LocalModelEvaluator:
     def generate_answer_batch(self, queries: List[str], contexts: List[List[str]], options_list: List[List[str]]) -> List[str]:
         """Generate answers for a batch of questions"""
         try:
-            # 检查是否为小模型
+            # check if small model
             is_small_model = self.model_config.get('is_small_model', False)
             
-            # 准备批次提示词
+            # prepare batch prompts
             batch_prompts = []
             for query, context, options in zip(queries, contexts, options_list):
-                # 为小模型截断context
+                # truncate context for small model
                 context = self._truncate_context_for_small_model(context)
-                # 移除选项前缀
+                # remove option prefix
                 clean_options = [opt.split('. ', 1)[1] for opt in options]
                 options_str = "\n".join([f"{chr(65+i)}. {opt}" for i, opt in enumerate(clean_options)])
                 context_str = "\n".join(context) if context else ""
-                # 统一为0-shot prompt
+                # uniform 0-shot prompt
                 if context_str:
                     prompt = f"""Passage: {context_str}\n\nQuestion: {query}\nOptions:\n{options_str}\n\nAnswer:"""
                 else:
                     prompt = f"""Question: {query}\nOptions:\n{options_str}\n\nAnswer:"""
                 batch_prompts.append(prompt)
             
-            # 准备输入
+            # prepare input
             print("\nTokenizing batch input...")
             inputs = self.tokenizer(
                 batch_prompts,
@@ -745,13 +856,13 @@ class LocalModelEvaluator:
                 max_length=self.model_config['max_sequence_length']
             ).to(self.model.device)
             
-            # 移除token_type_ids以避免与某些模型的兼容性问题
+            # remove token_type_ids to avoid compatibility issues with some models
             if 'token_type_ids' in inputs:
                 del inputs['token_type_ids']
             
             print(f"Batch input shape: {inputs['input_ids'].shape}")
             
-            # 生成回答
+            # generate answers
             print("\nGenerating batch responses...")
             with torch.no_grad():
                 outputs = self.model.generate(
@@ -762,12 +873,12 @@ class LocalModelEvaluator:
                     eos_token_id=self.tokenizer.eos_token_id
                 )
             
-            # 解码输出
+            # decode output
             print("Decoding batch responses...")
             responses = []
             for i, output in enumerate(outputs):
                 response = self.tokenizer.decode(output, skip_special_tokens=True)
-                # 移除提示词
+                # remove prompt
                 response = response[len(batch_prompts[i]):].strip()
                 responses.append(response)
             
@@ -782,14 +893,16 @@ def main():
     parser.add_argument('--test_mode', action='store_true', help='Run in test mode (first 10 items only)')
     args = parser.parse_args()
 
-    base_dir = "/home/shared/RAG_DATA"
+    # Get base directory (project root)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_dir = os.path.dirname(os.path.dirname(script_dir))
     test_sets = [
-        f"{base_dir}/DATA/final_mcq/base_2000.json",
-        f"{base_dir}/DATA/final_mcq/golden_2000.json",  # golden一般还是用原始的
-        f"{base_dir}/DATA/final_mcq/mix_2000.json"
+        os.path.join(base_dir, "DATA", "final_mcq", "base_2000.json"),
+        os.path.join(base_dir, "DATA", "final_mcq", "golden_2000.json"),
+        os.path.join(base_dir, "DATA", "final_mcq", "mix_2000.json")
     ]
 
-    # 你要评测的所有模型
+    # all models to evaluate
     model_names = list(MODEL_CONFIGS.keys())
 
     for model_name in model_names:

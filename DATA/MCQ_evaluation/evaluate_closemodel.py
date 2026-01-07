@@ -27,10 +27,20 @@ class GeneratorBenchmark:
         "required": ["choice"]
     }
 
-    PROMPT_TEMPLATE = """Question: {q}
+    PROMPT_TEMPLATE_SINGLE = """Question: {q}
 Options:
 {opts}
 {passage_block}
+
+Answer only the letter: A, B, C, or D""".strip()
+
+    PROMPT_TEMPLATE_MULTI = """You are given 5 passages (some may be irrelevant). You must select ONLY ONE passage that is most relevant to answer the question. Write the passage used: Passage: <single number between 1 and 5> (only one number, no commas or multiple numbers), then provide your answer.
+
+{passages_block}
+
+Question: {q}
+Options:
+{opts}
 
 Answer only the letter: A, B, C, or D""".strip()
     
@@ -50,10 +60,10 @@ Answer only the letter: A, B, C, or D""".strip()
         self.setting = os.path.basename(test_set_path).split('_')[0]  # base/golden/mix
         self.model_name = model_name
         
-        # 如果是 mix 设置，加载 golden 结果作为查找表
-        self.golden_lookup = {}
-        if self.setting == "mix" and model_name:
-            self._load_golden_lookup()
+        # Load passages_by_score data for mix setting (to construct 5 passages)
+        self.passages_data = {}
+        if self.setting == "mix":
+            self._load_passages_data()
         
         # API keys
         self.openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -84,53 +94,109 @@ Answer only the letter: A, B, C, or D""".strip()
         with open(test_set_path, 'r', encoding='utf-8') as f:
             return json.load(f)
     
-    def _load_golden_lookup(self):
-        """Load golden results as lookup table for mix optimization"""
+    def _load_passages_data(self):
+        """Load passages_by_score data from DATA/DATA/data_prepare for mix setting"""
         try:
-            # 构建 golden 结果文件路径
-            base_dir = "/home/shared/RAG_DATA"
-            golden_path = f"{base_dir}/DATA/local_MCQ/{self.model_name}/golden_test.json"
+            # Get the project root directory (3 levels up from this script)
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            base_dir = os.path.dirname(os.path.dirname(script_dir))
+            data_prepare_dir = os.path.join(base_dir, "DATA", "DATA", "data_prepare")
             
-            if os.path.exists(golden_path):
-                print(f"Loading golden results from: {golden_path}")
-                with open(golden_path, 'r', encoding='utf-8') as f:
-                    golden_data = json.load(f)
-                
-                # 构建查找表
-                for item in golden_data:
-                    # 使用 question + passage 作为 key
-                    question = item['question']
-                    passage = item.get('passage', '')  # 从原始数据中获取 passage
-                    key = f"{question}_{passage}"
-                    self.golden_lookup[key] = {
-                        'model_answer': item['model_answer'],
-                        'model_explanation': item.get('model_explanation', ''),
-                        'is_correct': item['is_correct'],
-                        'correct_answer': item['correct_answer'],
-                    }
-                
-                print(f"Loaded {len(self.golden_lookup)} golden results for lookup")
-            else:
-                print(f"Warning: Golden results not found at {golden_path}")
-                print("Will process mix without optimization")
-                
+            if not os.path.exists(data_prepare_dir):
+                print(f"Warning: data_prepare directory not found at {data_prepare_dir}")
+                return
+            
+            # Load all *_by_score.json files
+            import glob
+            json_files = glob.glob(os.path.join(data_prepare_dir, "*_by_score.json"))
+            
+            print(f"Loading passages data from {len(json_files)} files...")
+            
+            for json_file in json_files:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    
+                    for item in data:
+                        user_query = item.get('user_query', '')
+                        if user_query:
+                            passages_by_score = item.get('passages_by_score', {})
+                            if passages_by_score:
+                                self.passages_data[user_query] = passages_by_score
+            
+            print(f"Loaded passages data for {len(self.passages_data)} queries")
+            
         except Exception as e:
-            print(f"Error loading golden lookup: {e}")
-            print("Will process mix without optimization")
+            print(f"Error loading passages data: {e}")
+            import traceback
+            traceback.print_exc()
     
-    async def generate_answer(self, query: str, context: List[str], model: str, options: List[str]) -> str:
+    def _construct_five_passages(self, original_query: str) -> List[str]:
+        """Construct 5 passages for mix setting: 1 golden (score=3) + 4 distractors (one from each score 0,1,2,3)"""
+        if original_query not in self.passages_data:
+            print(f"Warning: No passages data found for query: {original_query[:50]}...")
+            return None
+        
+        passages_by_score = self.passages_data[original_query]
+        
+        # Get golden passage (score=3)
+        golden_passages = passages_by_score.get('3', [])
+        if not golden_passages:
+            print(f"Warning: No golden passages (score=3) found for query: {original_query[:50]}...")
+            return None
+        
+        golden_passage = golden_passages[0]  # Use first golden passage
+        
+        # Get one distractor from each score (0, 1, 2)
+        distractors = []
+        for score in ['0', '1', '2']:
+            score_passages = passages_by_score.get(score, [])
+            if score_passages:
+                distractors.append(random.choice(score_passages))
+            else:
+                # If no passage for this score, use another from available scores
+                for alt_score in ['0', '1', '2']:
+                    if alt_score != score and alt_score in passages_by_score:
+                        alt_passages = passages_by_score[alt_score]
+                        if alt_passages:
+                            distractors.append(random.choice(alt_passages))
+                            break
+        
+        # Add one more distractor if we don't have 4 yet (can be from any low score)
+        if len(distractors) < 4:
+            all_low_passages = []
+            for score in ['0', '1', '2']:
+                all_low_passages.extend(passages_by_score.get(score, []))
+            if all_low_passages:
+                while len(distractors) < 4 and all_low_passages:
+                    distractors.append(random.choice(all_low_passages))
+                    all_low_passages.remove(distractors[-1])
+        
+        # Combine: 1 golden + 4 distractors = 5 passages total
+        five_passages = [golden_passage] + distractors[:4]
+        
+        # Randomly shuffle the order (so golden is not always first)
+        random.shuffle(five_passages)
+        
+        return five_passages
+    
+    async def generate_answer(self, query: str, context: List[str], model: str, options: List[str], five_passages: List[str] = None) -> str:
         """Generate answer for MCQ using structured JSON output"""
         # Build options string - remove original prefixes and re-number sequentially  
         clean_options = [opt.split('. ', 1)[1] if '. ' in opt else opt for opt in options]
         options_str = "\n".join([f"{chr(65+i)}. {opt}" for i, opt in enumerate(clean_options)])
         
-        # Build passage block
-        passage_block = ""
-        if context:
+        # Build prompt based on setting
+        if five_passages and len(five_passages) == 5:
+            # Mix setting: 5 passages with selection instruction
+            passages_block = "\n\n".join([f"Passage {i+1}: {passage}" for i, passage in enumerate(five_passages)])
+            prompt = self.PROMPT_TEMPLATE_MULTI.format(q=query, opts=options_str, passages_block=passages_block)
+        elif context:
+            # Golden setting: single passage
             passage_block = "Passage:\n" + "\n".join(context)
-        
-        # Use the structured prompt template
-        prompt = self.PROMPT_TEMPLATE.format(q=query, opts=options_str, passage_block=passage_block)
+            prompt = self.PROMPT_TEMPLATE_SINGLE.format(q=query, opts=options_str, passage_block=passage_block)
+        else:
+            # Base setting: no passage
+            prompt = self.PROMPT_TEMPLATE_SINGLE.format(q=query, opts=options_str, passage_block="")
         
         # Call the appropriate model
         return await self._call_model(model, prompt)
@@ -145,9 +211,9 @@ Answer only the letter: A, B, C, or D""".strip()
         Returns:
             str: Model's response
         """
-        if model_name in ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o"]:  # Add gpt-4o to supported models
+        if model_name in ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o", "gpt-5.2"]:  # Add gpt-5.2
             return await self._call_openai(model_name, prompt)
-        elif model_name in ["gemini-2.5-pro", "gemini-2.5-flash", "gemini-1.5-flash", "gemini-1.5-pro"]:  # Add Gemini models
+        elif model_name in ["gemini-2.5-pro", "gemini-2.5-flash", "gemini-1.5-flash", "gemini-1.5-pro", "gemini-3-pro"]:  # Add gemini-3-pro
             return await self._call_google(model_name, prompt)
         else:
             raise ValueError(f"Unknown model: {model_name}")
@@ -185,7 +251,7 @@ Answer only the letter: A, B, C, or D""".strip()
         
         for attempt in range(max_retries):
             try:
-                # 使用标准Generative Language API
+                # use standard Generative Language API
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
                 headers = {"Content-Type": "application/json"}
                 params = {"key": self.google_api_key}
@@ -200,7 +266,7 @@ Answer only the letter: A, B, C, or D""".strip()
                     }],
                     "generationConfig": {
                         "temperature": 0.0,
-                        "maxOutputTokens": 1000,  # 给Gemini 2.5 Pro的思考+输出足够空间，但不保存详细响应
+                        "maxOutputTokens": 1000,  # enough space for Gemini 2.5 Pro's thinking and output, but do not save detailed response
                     },
                     "safetySettings": [
                         {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
@@ -210,7 +276,7 @@ Answer only the letter: A, B, C, or D""".strip()
                     ]
                 }
                 
-                # 检查API Key
+                # check API Key
                 if not self.google_api_key:
                     raise Exception("Google API Key not found in environment variables")
                 
@@ -230,26 +296,26 @@ Answer only the letter: A, B, C, or D""".strip()
                                 if "content" in candidate:
                                     content = candidate["content"]
                                     if "parts" in content and content["parts"]:
-                                        # 正常情况：有parts数组
+                                        # normal case: has parts array
                                         return content["parts"][0]["text"]
                                     elif "text" in content:
-                                        # 备选：直接text字段
+                                        # alternative: directly text field
                                         return content["text"]
                                     elif content.get("role") == "model" and not content.get("parts"):
-                                        # Gemini 2.5 Pro的特殊情况：content只有role，没有实际内容
-                                        # 这通常意味着模型没有生成任何文本，可能是prompt问题
+                                        # special case for Gemini 2.5 Pro: content only has role, no actual content
+                                        # this usually means the model did not generate any text, possibly a prompt problem
                                         return "Unable to generate response - empty model output"
                                 elif "text" in candidate:
                                     return candidate["text"]
                                 
-                            # 如果没有返回，抛异常由重试兜底
+                            # if no return, throw exception for retry fallback
                             raise Exception(f"Unexpected response format: {result}")
                         elif response.status in (429, 500, 502, 503, 504):
-                            # 显式抛出可重试错误
+                            # explicitly throw retryable error
                             text = await response.text()
                             raise RuntimeError(f"RETRYABLE {response.status}: {text}")
                         else:
-                            # 不可重试
+                            # not retryable
                             text = await response.text()
                             raise Exception(f"API call failed {response.status}: {text}")
                 
@@ -257,11 +323,11 @@ Answer only the letter: A, B, C, or D""".strip()
                 msg = str(e).lower()
                 retryable = isinstance(e, RuntimeError) or "quota" in msg or "rate" in msg or "limit" in msg
                 if retryable and attempt < max_retries - 1:
-                    # 对于429错误，使用更长的等待时间
+                    # For 429 errors, use longer wait time
                     if "429" in str(e) or "quota" in str(e).lower():
-                        wait = 60 + random.uniform(0, 30)  # 等待60-90秒
+                        wait = 60 + random.uniform(0, 30)  # Wait 60-90 seconds
                     else:
-                        wait = base * (2 ** attempt) + random.uniform(0, 0.5)  # 其他错误正常退避
+                        wait = base * (2 ** attempt) + random.uniform(0, 0.5)  # Other errors normal backoff
                     print(f"[Retry {attempt+1}/{max_retries}] {model_name}: {e} -> sleep {wait:.2f}s")
                     await asyncio.sleep(wait)
                     continue
@@ -370,36 +436,28 @@ Answer only the letter: A, B, C, or D""".strip()
             options = item["multiple_choice"]["gpt40"]["content"]["options"]
             correct_answer = item["multiple_choice"]["gpt40"]["content"]["correct_option"]
             
-            # Get context based on setting
+            # Get context and five_passages based on setting
+            context = []
+            passage = ""
+            five_passages = None
+            
             if self.setting == "base":
                 context = []
                 passage = ""
-            else:
+            elif self.setting == "golden":
                 context = [item["passage"]] if "passage" in item else []
                 passage = item.get("passage", "")
                 if not context:
-                    return None  # Skip items without passage for mix/golden settings
-            
-            # 检查是否可以从 golden 查找表中获取结果
-            lookup_key = f"{question}_{passage}"
-            if self.setting == "mix" and lookup_key in self.golden_lookup:
-                # 直接使用 golden 结果
-                golden_result = self.golden_lookup[lookup_key]
-                result = {
-                    "question": question,
-                    "options": options,
-                    "correct_answer": correct_answer,
-                    "model_answer": golden_result['model_answer'],
-                    "is_correct": golden_result['is_correct']
-                }
-                # 确保passage字段正确传递到结果中
-                if passage:
-                    result['passage'] = passage
-                print(f"✅ Found in golden lookup: {question[:50]}...")
-                return result
+                    return None  # Skip items without passage for golden setting
+            elif self.setting == "mix":
+                # For mix setting, construct 5 passages
+                original_query = item.get("original_query", "")
+                if original_query:
+                    five_passages = self._construct_five_passages(original_query)
+                passage = item.get("passage", "")  # Save original passage for reference
             
             # Generate answer
-            raw_answer = await self.generate_answer(question, context, model_name, options)
+            raw_answer = await self.generate_answer(question, context, model_name, options, five_passages)
             
             # Parse the answer and explanation
             answer, explanation = self._parse_response(raw_answer)
@@ -421,11 +479,11 @@ Answer only the letter: A, B, C, or D""".strip()
                 "is_correct": answer == correct_answer
             }
             
-            # 确保passage字段正确传递到结果中
+            # ensure passage field is correctly passed to the result
             if passage:
                 result['passage'] = passage
             
-            # 添加original_query字段以便分类分析
+            # add original_query field for classification analysis
             if 'original_query' in item:
                 result['original_query'] = item['original_query']
             
@@ -450,12 +508,12 @@ Answer only the letter: A, B, C, or D""".strip()
         """
         resp = response.strip()
         
-        # 1) 找第一个独立的 A/B/C/D（最常见情况）
+        # 1) find the first independent A/B/C/D (most common case)
         m = re.search(r'\b([A-D])\b', resp, flags=re.IGNORECASE)
         if m:
             return m.group(1).upper(), resp
         
-        # 2) 如果没找到，返回空答案
+        # 2) if not found, return empty answer
         return "", resp
 
     async def process_test_set(self, test_set: List[Dict[str, Any]], model_name: str, num_tests: int = None, concurrency: int = 500) -> List[Dict[str, Any]]:
@@ -549,15 +607,18 @@ def main():
     # Based on testing, 500 concurrent seems optimal
     concurrency = 500 if model_name.startswith("gemini") else 3000  # Optimal 500 concurrent
     
-    # Set paths
+    # Set paths (relative to project root)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_dir = os.path.dirname(os.path.dirname(script_dir))
+    
     test_sets = [
-        "/home/shared/RAG_DATA/DATA/final_mcq/base_2000.json",
-        "/home/shared/RAG_DATA/DATA/final_mcq/golden_2000.json",  # 如果有
-        "/home/shared/RAG_DATA/DATA/final_mcq/mix_2000.json"
+        os.path.join(base_dir, "DATA", "final_mcq", "base_2000.json"),
+        os.path.join(base_dir, "DATA", "final_mcq", "golden_2000.json"),
+        os.path.join(base_dir, "DATA", "final_mcq", "mix_2000.json")
     ]
     
     # Create output directory
-    output_dir = f"/home/shared/RAG_DATA/DATA/local_MCQ/{model_name}"
+    output_dir = os.path.join(base_dir, "DATA", "local_MCQ", model_name)
     os.makedirs(output_dir, exist_ok=True)
     
     # Print statistics for all test sets

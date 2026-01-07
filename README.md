@@ -1,4 +1,4 @@
-# 🧠 DisastQA: Datasets and Evaluation for Disaster-Domain Question Answering
+# 🧠 DisastQA: A Comprehensive Benchmark for Evaluating Question Answering in Disaster Management
 
 **DisastQA** is the first large-scale benchmark for disaster-response question answering (QA).
 It explicitly models retrieval uncertainty and factual completeness—two defining characteristics of real disaster scenarios—to evaluate how well LLMs reason and respond under incomplete, noisy, or conflicting information.
@@ -40,8 +40,6 @@ The repository focuses on the evaluation datasets and scoring scripts to facilit
 ```
 DisastQA/
 ├── DATA/
-│   ├── final_mcq/                   # Dataset: base_2000.json, mix_2000.json, golden_2000.json
-│   ├── final_OE/                    # Dataset: base/mix/golden_oe_with_difficulty.json
 │   ├── MCQ_evaluation/              # Scripts: evaluation for MCQ (accuracy)
 │   └── OE_evaluation/               # Scripts: evaluation for OE (keypoint coverage)
 │
@@ -90,8 +88,9 @@ To construct DisastQA, we employed a Human-LLM collaborative pipeline (detailed 
 
 ```bash
 # Clone the repository
-git clone https://github.com/anonymous/DisastQA.git
-cd DisastQA
+git clone https://github.com/TamuChen18/DisastQA_open.git
+cd DisastQA_open
+
 
 # Install dependencies
 pip install -r requirements.txt
@@ -157,10 +156,21 @@ python DATA/OE_evaluation/local_evaluation_with_difficulty.py \
 
 ### 6️⃣ Dataset Access
 
-The final evaluation datasets are provided in `DATA/final_mcq/` and `DATA/final_OE/`. These datasets were constructed using the collaborative pipeline described above.
+The full DisastQA datasets are hosted on **Hugging Face**:
 
-- **MCQ Data**: JSON files containing questions, options, and ground truth indices.
-- **OE Data**: JSON files containing questions, reference answers, and annotated keypoints used for the coverage metric.
+👉 https://huggingface.co/datasets/tamuzc/DisastQA
+
+The dataset includes:
+- **MCQ**: base, mix, and golden settings
+- **OE**: base, mix, and golden settings with annotated keypoints and difficulty levels
+
+To load the dataset programmatically:
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("tamuzc/DisastQA")
+This GitHub repository focuses on evaluation scripts and reproducibility.
 
 ---
 
@@ -241,12 +251,13 @@ This project is released under the MIT License. See `LICENSE` for details.
 If you use DisastQA in your research, please cite:
 
 ```bibtex
-@dataset{disastqa_2025_anonymous,
-  title   = {DisastQA: A Benchmark for Disaster-Domain Question Answering},
-  author  = {Anonymous Authors},
-  year    = {2025},
-  note    = {Under Review}
+@dataset{disastqa_2025_chen,
+  title  = {DisastQA: A Comprehensive Benchmark for Evaluating Question Answering in Disaster Management},
+  author = {Chen, Tamu and collaborators},
+  year   = {2025},
+  url    = {https://huggingface.co/datasets/tamuzc/DisastQA}
 }
+
 ```
 
 ---
@@ -259,7 +270,13 @@ This benchmark was developed by an academic research team in collaboration with 
 
 ## 🔗 Repository
 
-- **Repository**: [Link to Anonymous Repository]
+- **Repository**: https://github.com/TamuChen18/DisastQA_open
 - **Issues**: Please report bugs via GitHub Issues.
+
+## 👤 Authors
+
+- Tamu Chen (Texas A&M University)
+- Collaborators
+
 
 ---

@@ -170,6 +170,7 @@ To load the dataset programmatically:
 from datasets import load_dataset
 
 dataset = load_dataset("tamuzc/DisastQA")
+```
 This GitHub repository focuses on evaluation scripts and reproducibility.
 
 ---
@@ -185,6 +186,9 @@ This GitHub repository focuses on evaluation scripts and reproducibility.
 Keypoint coverage explicitly measures whether models recall all essential disaster facts—e.g., hazard type, impact region, casualties, and response measures—offering a more trustworthy assessment than traditional overlap metrics.
 
 ---
+
+> **Note**: Reported results reflect evaluations conducted at the time of study and may vary with model updates or configuration changes.
+
 
 ## 🧠 Highlighted Findings
 

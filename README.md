@@ -23,39 +23,30 @@ DisastQA bridges this gap by providing a retrieval-aware, factual, and human-val
 
 ## 📚 Key Features and Contributions
 
-- Retrieval-Aware Design: Evaluates models under Base (no context), Mix (noisy retrieval), and Golden (oracle evidence) settings.
-- Human–LLM Pipeline: Combines LLM scalability with expert validation and rewriting (~40% human-revised).
-- Keypoint-Based Evaluation: A novel factual-completeness metric measuring how many atomic facts a model correctly reproduces.
-- Dual QA Tracks:
+- **Retrieval-Aware Design**: Evaluates models under Base (no context), Mix (noisy retrieval), and Golden (oracle evidence) settings.
+- **Human–LLM Pipeline**: Combines LLM scalability with expert validation and rewriting (~40% human-revised).
+- **Keypoint-Based Evaluation**: A novel factual-completeness metric measuring how many atomic facts a model correctly reproduces.
+- **Dual QA Tracks**:
   - MCQ: Tests discriminative reasoning and factual discrimination.
   - OE: Tests factual completeness, keypoint recall, and reasoning depth.
-- Comprehensive Evaluation: 18 LLMs (0.6B–8B + APIs) benchmarked under consistent retrieval contexts.
+- **Comprehensive Evaluation**: 20 LLMs (0.6B–8B + APIs) benchmarked under consistent retrieval contexts.
 
 ---
 
 ## 🧩 Repository Structure
 
+The repository focuses on the evaluation datasets and scoring scripts to facilitate reproducibility of the paper's results.
+
 ```
 DisastQA/
-├── benchmark/
-│   ├── MCQ/
-│   │   ├── data_prepare.py
-│   │   └── generate_mcq_set.py
-│   └── OE/
-│       ├── generate_oe_set.py
-│       └── generate_oe_from_mcq.py
-│
 ├── DATA/
-│   ├── final_mcq/                   # base_2000.json, mix_2000.json, golden_2000.json
-│   ├── final_OE/                    # base_oe_with_difficulty.json, mix_oe_with_difficulty.json, golden_oe_with_difficulty.json
-│   ├── local_MCQ/                   # model-specific MCQ results
-│   ├── local_OE/                    # model-specific OE results
-│   ├── MCQ_evaluation/              # evaluation scripts (local/closed)
-│   ├── OE_evaluation/               # evaluation scripts (local/difficulty)
-│   └── DATA/                        # annotation/intermediate artifacts
+│   ├── final_mcq/                   # Dataset: base_2000.json, mix_2000.json, golden_2000.json
+│   ├── final_OE/                    # Dataset: base/mix/golden_oe_with_difficulty.json
+│   ├── MCQ_evaluation/              # Scripts: evaluation for MCQ (accuracy)
+│   └── OE_evaluation/               # Scripts: evaluation for OE (keypoint coverage)
 │
 ├── assets/
-│   └── pipeline.png                 # Pipeline diagram (optional)
+│   └── pipeline.png                 # Figure: Pipeline diagram
 │
 ├── requirements.txt
 ├── LICENSE
@@ -66,24 +57,24 @@ DisastQA/
 
 ## ⚙️ Data Pipeline Summary
 
-1. Extract (query, passage) pairs with relevance score = 3 from DisastIR corpus.
-2. Use an LLM to rewrite queries → QA-style questions (MCQ/OE).
-3. Human annotators rewrite, validate, and construct distractors or reference answers.
-4. Verify every item through multi-annotator solve-checking and consensus resolution.
-5. Generate difficulty levels via keypoint count (OE).
-6. Evaluate 18 models under Base, Mix, and Golden settings.
+To construct DisastQA, we employed a Human-LLM collaborative pipeline (detailed in the paper):
+
+1. **Extraction**: Extract (query, passage) pairs with relevance score = 3 from DisastIR corpus.
+2. **Drafting**: Use an LLM to rewrite queries → QA-style questions (MCQ/OE).
+3. **Refinement**: Human annotators rewrite, validate, and construct distractors or reference answers.
+4. **Validation**: Verify every item through multi-annotator solve-checking and consensus resolution.
+5. **Stratification**: Generate difficulty levels via keypoint count (OE).
+6. **Evaluation**: Evaluate 20 models under Base, Mix, and Golden settings.
 
 ---
 
 ## 🧮 DisastQA Construction Pipeline
 
 <p align="center">
-<img src="./assets/pipeline.png" alt="DisastQA Construction Pipeline" width="85%"/>
+<img src="assets/pipeline.png" alt="DisastQA Construction Pipeline" width="85%"/>
 </p>
 
-*Figure: Overview of the Human–LLM collaborative pipeline for DisastQA construction and evaluation. The pipeline integrates query rewriting, human validation, and keypoint-based evaluation across MCQ and OE tracks.*
-
-> **Note**: If the pipeline diagram is not available, you can generate it from the paper or skip this section.
+*Figure: Overview of the Human–LLM collaborative pipeline. The pipeline integrates query rewriting, human validation, and keypoint-based evaluation across MCQ and OE tracks.*
 
 ---
 
@@ -99,7 +90,7 @@ DisastQA/
 
 ```bash
 # Clone the repository
-git clone https://github.com/TamuChen18/DisastQA.git
+git clone https://github.com/anonymous/DisastQA.git
 cd DisastQA
 
 # Install dependencies
@@ -108,13 +99,13 @@ pip install -r requirements.txt
 
 ### 3️⃣ Configure Model Paths
 
-The evaluation scripts use model configurations defined in `DATA/MCQ_evaluation/local_evaluation.py` and `DATA/OE_evaluation/local_evaluation_with_difficulty.py`. 
+The evaluation scripts use model configurations defined in `DATA/MCQ_evaluation/local_evaluation.py` and `DATA/OE_evaluation/local_evaluation_with_difficulty.py`.
 
 **To use your own models**, you need to:
 1. Download models to a local directory (e.g., `DATA/models/`)
 2. Update the `MODEL_CONFIGS` dictionary in the evaluation scripts with your model paths
 
-Example configuration:
+Example configuration inside the python scripts:
 ```python
 MODEL_CONFIGS = {
     "qwen-3-8b": {
@@ -164,22 +155,12 @@ python DATA/OE_evaluation/local_evaluation_with_difficulty.py \
 
 **Output**: Results are saved to `DATA/local_OE/{model_name}/{setting}_oe_with_difficulty.json`
 
-### 6️⃣ Regenerate Benchmark (Optional)
+### 6️⃣ Dataset Access
 
-- **MCQ**: 
-  ```bash
-  python benchmark/MCQ/data_prepare.py
-  python benchmark/MCQ/generate_mcq_set.py
-  ```
+The final evaluation datasets are provided in `DATA/final_mcq/` and `DATA/final_OE/`. These datasets were constructed using the collaborative pipeline described above.
 
-- **OE**: 
-  ```bash
-  python benchmark/OE/generate_oe_from_mcq.py
-  # or
-  python benchmark/OE/generate_oe_set.py
-  ```
-
-⚠️ **Note**: Keep all folder names and paths unchanged for compatibility.
+- **MCQ Data**: JSON files containing questions, options, and ground truth indices.
+- **OE Data**: JSON files containing questions, reference answers, and annotated keypoints used for the coverage metric.
 
 ---
 
@@ -197,11 +178,13 @@ Keypoint coverage explicitly measures whether models recall all essential disast
 
 ## 🧠 Highlighted Findings
 
-- Retrieval quality strongly governs performance: Base < Mix < Golden across all models.
-- DisastQA rankings diverge from general-domain benchmarks (Spearman's ρ ≈ 0.2 vs. MMLU-Pro).
-- GPT-4o achieves 95.4% factual coverage, while open models like Qwen-3-8B reach 99.6% MCQ accuracy under Golden retrieval.
-- High factual density: OE answers contain on average 4.4 atomic keypoints, reflecting multi-fact reasoning complexity.
-- Surface metrics (ROUGE/BERTScore) overestimate factuality—models often omit crucial details even when fluently written.
+- **Retrieval quality strongly governs performance**: Base < Mix < Golden across all models, with GPT-5.2 achieving 93.1% accuracy in Base (no-context) setting.
+- **Performance gaps narrow in optimal conditions**: Open models like Qwen-3-8B reach 99.65% MCQ accuracy under Golden retrieval, matching frontier models, but gaps persist in Base setting (88.7% vs. GPT-5.2's 93.1%).
+- **Robustness to noise differs across models**: While GPT-5.2 achieves the highest absolute accuracy in Mix (96.7%), Gemini-3 Pro exhibits the strongest relative robustness with the smallest performance drop from Golden to Mix, indicating superior ability to filter irrelevant passages.
+- **Factual completeness vs. fluency trade-off**: Gemini-3 Pro achieves 96.5% Keypoint Coverage (highest for OE), while GPT-5.2 reaches 99.65% MCQ accuracy (highest). Gemma-7B achieves high ROUGE-L scores but lower factual completeness, revealing a critical fluency-factuality trade-off.
+- **Domain transfer gaps**: DisastQA rankings diverge substantially from general-domain benchmarks (Spearman's ρ ≈ 0.2 vs. MMLU-Pro), confirming that general-domain performance does not guarantee reliability in safety-critical scenarios.
+- **High factual density**: OE answers contain on average 4.4 atomic keypoints (SD=1.55), reflecting the multi-fact reasoning complexity characteristic of disaster-response QA.
+- **Surface metrics overestimate factuality**: ROUGE/BERTScore overestimate correctness—models often omit crucial quantitative details even when producing fluently written responses.
 
 ---
 
@@ -209,11 +192,13 @@ Keypoint coverage explicitly measures whether models recall all essential disast
 
 | Model | Params | MCQ (Golden) | OE Coverage (%) | Comment |
 | --- | --- | --- | --- | --- |
-| GPT-4o | — | 99.4 | 95.4 | Best factual completeness |
-| Gemini-1.5 Pro | — | 98.7 | 95.1 | Balanced fluency & accuracy |
-| Qwen-3-8B | 8B | 99.6 | 93.9 | Best open-source MCQ model |
-| Llama-3-8B | 8B | 99.1 | 93.4 | Strong reasoning; factual gaps |
-| Gemma-7B | 8.5B | 98.0 | 89.7 | Best ROUGE-L, lower factuality |
+| GPT-5.2 | — | 99.65 | 94.6 | Best MCQ accuracy |
+| Gemini-3 Pro | — | 96.70 | 96.5 | Best factual completeness (OE) |
+| GPT-4o | — | 99.35 | 95.4 | Strong overall performance |
+| Gemini-1.5 Pro | — | 98.70 | 95.1 | Balanced fluency & accuracy |
+| Qwen-3-8B | 8B | 99.65 | 94.0 | Best open-source MCQ model |
+| Llama-3-8B | 8B | 99.10 | 93.4 | Strong reasoning; factual gaps |
+| Gemma-7B | 8.5B | 98.10 | 89.7 | Best ROUGE-L, lower factuality |
 
 (Full results and difficulty breakdowns are available in the paper and Appendix.)
 
@@ -234,20 +219,14 @@ DisastQA thus serves as a foundation for future work on:
 
 ## 🔧 Troubleshooting
 
-### Model Loading Issues
-- **Error**: `Model path does not exist`
-  - **Solution**: Check that model paths in `MODEL_CONFIGS` are correct and models are downloaded.
+**Error**: Model path does not exist
+- **Solution**: Check that model paths in `MODEL_CONFIGS` are correct and models are downloaded locally.
 
-- **Error**: `CUDA out of memory`
-  - **Solution**: Use smaller batch sizes, reduce model precision (float16), or use a smaller model.
+**Error**: CUDA out of memory
+- **Solution**: Use smaller batch sizes, reduce model precision (float16), or use a smaller model variant.
 
-### Data File Issues
-- **Error**: `FileNotFoundError` for data files
-  - **Solution**: Ensure you're in the repository root directory and data files exist in `DATA/final_mcq/` and `DATA/final_OE/`.
-
-### Dependency Issues
-- **Error**: `ModuleNotFoundError`
-  - **Solution**: Ensure all dependencies are installed: `pip install -r requirements.txt`
+**Error**: ModuleNotFoundError
+- **Solution**: Ensure all dependencies are installed via `pip install -r requirements.txt`.
 
 ---
 
@@ -262,11 +241,11 @@ This project is released under the MIT License. See `LICENSE` for details.
 If you use DisastQA in your research, please cite:
 
 ```bibtex
-@dataset{chen2025disastqa,
+@dataset{disastqa_2025_anonymous,
   title   = {DisastQA: A Benchmark for Disaster-Domain Question Answering},
-  author  = {Chen, Zhitong and collaborators},
+  author  = {Anonymous Authors},
   year    = {2025},
-  url     = {https://github.com/TamuChen18/DisastQA}
+  note    = {Under Review}
 }
 ```
 
@@ -274,16 +253,13 @@ If you use DisastQA in your research, please cite:
 
 ## 🙌 Acknowledgments
 
-This benchmark was developed by researchers at Texas A&M University and collaborators in disaster resilience and information retrieval.
-We thank all annotators and domain experts for their contributions.
+This benchmark was developed by an academic research team in collaboration with disaster resilience and information retrieval experts. We thank all annotators for their rigorous contributions.
 
 ---
 
 ## 🔗 Repository
 
-- **Maintainer**: Zhitong Chen
-- **Repository**: https://github.com/TamuChen18/DisastQA
-- **Issues**: Please report bugs or request features via GitHub Issues
+- **Repository**: [Link to Anonymous Repository]
+- **Issues**: Please report bugs via GitHub Issues.
 
 ---
-

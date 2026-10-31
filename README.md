@@ -254,35 +254,62 @@ This project is released under the MIT License. See `LICENSE` for details.
 
 ## 📬 Citation
 
-If you use DisastQA in your research, please cite:
+DisastQA was published in **Findings of the Association for Computational Linguistics (ACL 2026)** and presented at ACL 2026 in San Diego, California.
+
+If you use DisastQA in your research, please cite our paper:
 
 ```bibtex
-@dataset{disastqa_2025_chen,
-  title  = {DisastQA: A Comprehensive Benchmark for Evaluating Question Answering in Disaster Management},
-  author = {Chen, Tamu and collaborators},
-  year   = {2025},
-  url    = {https://huggingface.co/datasets/tamuzc/DisastQA}
+@inproceedings{chen-etal-2026-disastqa,
+    title = "{D}isast{QA}: A Comprehensive Benchmark for Evaluating Question Answering in Disaster Management",
+    author = "Chen, Zhitong and
+      Yin, Kai and
+      Dong, Xiangjue and
+      Liu, Chengkai and
+      Li, Xiangpeng and
+      Li, Bo and
+      Ma, Junwei and
+      Xiao, Yiming and
+      Mostafavi, Ali and
+      Caverlee, James",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2026",
+    year = "2026",
+    month = jul,
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    pages = "15402--15427",
+    url = "https://aclanthology.org/2026.findings-acl.756/",
+    doi = "10.18653/v1/2026.findings-acl.756"
 }
-
 ```
+
+**Paper:** https://aclanthology.org/2026.findings-acl.756/
+
+**Dataset:** https://huggingface.co/datasets/tamuzc/DisastQA
 
 ---
 
 ## 🙌 Acknowledgments
 
-This benchmark was developed by an academic research team in collaboration with disaster resilience and information retrieval experts. We thank all annotators for their rigorous contributions.
+We thank all contributors and annotators for their efforts in dataset construction, annotation, and validation. We also appreciate the valuable feedback and support from our collaborators in disaster management and information retrieval.
 
 ---
 
 ## 🔗 Repository
 
-- **Repository**: https://github.com/TamuChen18/DisastQA_open
-- **Issues**: Please report bugs via GitHub Issues.
+- **GitHub Repository:** https://github.com/TamuChen18/DisastQA_open
+- **Dataset:** https://huggingface.co/datasets/tamuzc/DisastQA
+- **Publication:** https://aclanthology.org/2026.findings-acl.756/
+- **Issues:** Please report bugs, questions, or feature requests through [GitHub Issues](https://github.com/TamuChen18/DisastQA_open/issues).
+
+---
 
 ## 👤 Authors
 
-- Tamu Chen (Texas A&M University)
-- Collaborators
+**Zhitong Chen**, Kai Yin, Xiangjue Dong, Chengkai Liu, Xiangpeng Li, Bo Li, Junwei Ma, Yiming Xiao, Ali Mostafavi, and James Caverlee.
 
+For the complete author information and affiliations, please refer to our [ACL 2026 Findings paper](https://aclanthology.org/2026.findings-acl.756/).
 
----
+**Repository Maintainer:** [Zhitong Chen](https://github.com/TamuChen18)
+
+For questions or suggestions, please open an issue in this repository.
+
